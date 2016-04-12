@@ -296,12 +296,19 @@ namespace GestorTFG
             cargar.FilterIndex = 1;
             if (cargar.ShowDialog() == DialogResult.OK)
             {
-                Fichero.CerrarEscritura();
-                Fichero.AbrirLectura(cargar.FileName);
-                Fichero.LeerArchivo();
-                vista.ActualizarVistaTabla(ref listView1, 0);
-                toolStripStatusLabel1.Text = Fichero.ArchivoActual;
-                Fichero.CerrarLectura();
+                string fichero = Fichero.ArchivoActual;
+                try {
+                    Fichero.CerrarEscritura();
+                    Fichero.AbrirLectura(cargar.FileName);
+                    Fichero.LeerArchivo();
+                    vista.ActualizarVistaTabla(ref listView1, 0);
+                    toolStripStatusLabel1.Text = Fichero.ArchivoActual;
+                    Fichero.CerrarLectura();
+                } catch (Exception ex)
+                {
+                    MessageBox.Show("El archivo no tiene el formato especificado.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    Fichero.ArchivoActual = fichero;
+                }
             }
             toolStripStatusLabel1.Text = Fichero.ArchivoActual;
             vista.GuardarLista();

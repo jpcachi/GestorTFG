@@ -38,8 +38,6 @@ namespace GestorTFG
                         mProyecto.getMTFG.Finalizar(datos[13], datos[14], nota);
                     }
                 }
-                //
-                //
                 MListaProyectos.getMListaProyectos.getMProyectos.Añadir(mProyecto);
                 return proyecto;
             }

@@ -540,7 +540,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 2;
-            this.button1.Text = "Cancelar";
+            this.button1.Text = "Limpiar";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -1038,6 +1038,7 @@
             // 
             // listView1
             // 
+            this.listView1.BackColor = System.Drawing.SystemColors.Window;
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.Titulo,
             this.Descripcion,
@@ -1497,7 +1498,6 @@
             // 
             // toolStrip2
             // 
-            this.toolStrip2.AutoSize = false;
             this.toolStrip2.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.toolStrip2.Dock = System.Windows.Forms.DockStyle.None;
             this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -1518,7 +1518,7 @@
             this.toolStrip2.Location = new System.Drawing.Point(3, 0);
             this.toolStrip2.Name = "toolStrip2";
             this.toolStrip2.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.toolStrip2.Size = new System.Drawing.Size(314, 25);
+            this.toolStrip2.Size = new System.Drawing.Size(283, 25);
             this.toolStrip2.TabIndex = 2;
             // 
             // newToolStripButton1
@@ -1687,6 +1687,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
             this.toolStripContainer1.ContentPanel.ResumeLayout(false);
             this.toolStripContainer1.TopToolStripPanel.ResumeLayout(false);
+            this.toolStripContainer1.TopToolStripPanel.PerformLayout();
             this.toolStripContainer1.ResumeLayout(false);
             this.toolStripContainer1.PerformLayout();
             this.toolStrip2.ResumeLayout(false);

@@ -19,6 +19,10 @@ namespace GestorTFG
             {
                 return path;
             }
+            set
+            {
+                path = value;
+            }
         }
 
         public LeerEscribirArchivo()
