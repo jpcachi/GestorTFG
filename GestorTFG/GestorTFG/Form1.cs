@@ -346,6 +346,24 @@ namespace GestorTFG
         {
             toolStrip2.Size = new Size(Width, 25);
         }
+
+        private void button7_EnabledChanged(object sender, EventArgs e)
+        {
+            if (button7.Enabled) removeStripButton1.Enabled = true;
+            else removeStripButton1.Enabled = false;
+        }
+
+        private void button8_EnabledChanged(object sender, EventArgs e)
+        {
+            if (button8.Enabled) addStripButton1.Enabled = true;
+            else addStripButton1.Enabled = false;
+        }
+
+        private void button9_EnabledChanged(object sender, EventArgs e)
+        {
+            if (button9.Enabled) deleteStripButton1.Enabled = true;
+            else deleteStripButton1.Enabled = false;
+        }
     }
 
     public class ToolStripSystemRendererFix : ToolStripSystemRenderer //soluciona el bug al cambiar la propiedad de renderizado del toolstrip a system

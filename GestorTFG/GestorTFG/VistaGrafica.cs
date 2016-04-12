@@ -157,7 +157,7 @@ namespace GestorTFG
             string[] datosAlumno = new string[5];
             Form2 AsignarAlumno = new Form2(datosAlumno);
             AsignarAlumno.VentanaAnterior = ventanaAnterior;
-            AsignarAlumno.ShowDialog();
+            if (AsignarAlumno.ShowDialog() == DialogResult.Cancel) return;
             if (datosAlumno != null)
             {
                 if (tabControl3.SelectedIndex == 0)

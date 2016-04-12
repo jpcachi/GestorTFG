@@ -778,6 +778,7 @@
             this.button9.TabIndex = 2;
             this.button9.Text = "Eliminar TFG";
             this.button9.UseVisualStyleBackColor = true;
+            this.button9.EnabledChanged += new System.EventHandler(this.button9_EnabledChanged);
             this.button9.Click += new System.EventHandler(this.button12_Click);
             // 
             // button8
@@ -788,6 +789,7 @@
             this.button8.TabIndex = 1;
             this.button8.Text = "Asignar Alumno";
             this.button8.UseVisualStyleBackColor = true;
+            this.button8.EnabledChanged += new System.EventHandler(this.button8_EnabledChanged);
             this.button8.Click += new System.EventHandler(this.button11_Click);
             // 
             // button7
@@ -798,6 +800,7 @@
             this.button7.TabIndex = 0;
             this.button7.Text = "Eliminar Alumno";
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.EnabledChanged += new System.EventHandler(this.button7_EnabledChanged);
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button5
@@ -1605,6 +1608,7 @@
             this.addStripButton1.Name = "addStripButton1";
             this.addStripButton1.Size = new System.Drawing.Size(23, 22);
             this.addStripButton1.Text = "Añadir Alumno";
+            this.addStripButton1.Click += new System.EventHandler(this.button11_Click);
             // 
             // removeStripButton1
             // 
@@ -1614,6 +1618,7 @@
             this.removeStripButton1.Name = "removeStripButton1";
             this.removeStripButton1.Size = new System.Drawing.Size(23, 22);
             this.removeStripButton1.Text = "Eliminar Alumno";
+            this.removeStripButton1.Click += new System.EventHandler(this.button7_Click);
             // 
             // deleteStripButton1
             // 
@@ -1623,6 +1628,7 @@
             this.deleteStripButton1.Name = "deleteStripButton1";
             this.deleteStripButton1.Size = new System.Drawing.Size(23, 22);
             this.deleteStripButton1.Text = "Eliminar TFG";
+            this.deleteStripButton1.Click += new System.EventHandler(this.button12_Click);
             // 
             // toolStripSeparator13
             // 

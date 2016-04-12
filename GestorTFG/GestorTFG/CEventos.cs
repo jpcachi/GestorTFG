@@ -129,7 +129,7 @@ namespace GestorTFG
             }
         }
 
-        public void OnListView2SelectedIndexChange(ListView listView, params Button[] buttons)
+        public void OnListView2SelectedIndexChange(ListView listView, params Button[] buttons) //8 y 9
         {
             buttons[1].Enabled = true;
             if (listView.SelectedItems.Count == 1)
