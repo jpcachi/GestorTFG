@@ -142,9 +142,9 @@ namespace GestorTFG
             cEventos.OnListViewSelectedIndexChange(ListView, modificar, modificarValue, botones, ref finalizar, 2);
         }
 
-        public void ItemSeleccionadoLista(ListView listView, ComboBox comboBox1, TextBox textBox8, DateTimePicker dateTimePicker3, NumericUpDown numericUpDown1, GroupBox groupBox3, RichTextBox richTextBox2, params Button[] buttons)
+        public void ItemSeleccionadoLista(ListView listView, ref ComboBox comboBox1, TextBox textBox8, DateTimePicker dateTimePicker3, NumericUpDown numericUpDown1, GroupBox groupBox3, RichTextBox richTextBox2, params Button[] buttons)
         {
-            cEventos.OnListView1SelectedIndexChange(listView, comboBox1, textBox8, dateTimePicker3, numericUpDown1, groupBox3, richTextBox2, buttons);
+            cEventos.OnListView1SelectedIndexChange(listView, ref comboBox1, textBox8, dateTimePicker3, numericUpDown1, groupBox3, richTextBox2, buttons);
         }
 
         public void ItemSeleccionadoLista2(ListView listView, params Button[] buttons)
@@ -209,6 +209,28 @@ namespace GestorTFG
         public void GuardarLista()
         {
             cProyectos.GuardarProyectos();
-        }     
+        }
+        
+        public void BotonModificar(ComboBox comboBox1, TextBox textBox8, ComboBox comboBox3, DateTimePicker dateTimePicker3, NumericUpDown numericUpDown1, ref ListView listView)
+        {
+            string valor = "";
+            int indice = listView.SelectedIndices[0];
+            switch (comboBox1.SelectedIndex)
+            {
+                case 2: case 6: case 7: valor = dateTimePicker3.Text; break;
+                case 8: valor = comboBox3.Text; break;
+                case 9: valor = numericUpDown1.Value.ToString(); break;
+                default: valor = textBox8.Text; break;
+            }
+            cProyectos.ModificarProyecto(comboBox1.SelectedIndex, valor, indice);
+            ActualizarVistaTabla(ref listView, 0);
+            listView.Items[indice].Selected = true;
+        }
+        
+        public void ActualizarComboBoxModificar(ref ComboBox comboBox1, ListView listView1) 
+        {
+            cEventos.ActualizarComboBoxModificar(ref comboBox1, listView1);
+        }
+             
     }
 }

@@ -14,6 +14,9 @@ namespace GestorTFG
     {
         private VistaGrafica vista;
         private LeerEscribirArchivo Fichero;
+        //Splitter splitterLeft;
+        //Splitter splitterRight;
+        private Splitter splitterDown;
 
         public Form1()
         {
@@ -43,8 +46,77 @@ namespace GestorTFG
             button7.Enabled = false;
             button8.Enabled = false;
             button9.Enabled = false;
+
+            
+            //splitterLeft = new Splitter();
+            //splitterRight = new Splitter();
+            splitterDown = new Splitter();
+            //splitterLeft.Dock = DockStyle.Left;
+            //splitterRight.Dock = DockStyle.Right;
+            splitterDown.Dock = DockStyle.Bottom;
+
+            panel2.Parent = toolStripContainer1.ContentPanel;
+            tabControl1.Parent = toolStripContainer1.ContentPanel;
+            tabControl2.Parent = toolStripContainer1.ContentPanel;
+            //splitterLeft.Parent = toolStripContainer1.ContentPanel;
+            //splitterRight.Parent = toolStripContainer1.ContentPanel;
+            splitterDown.Parent = toolStripContainer1.ContentPanel;
+
+           // splitterLeft.BringToFront();
+            //splitterRight.BringToFront();
+            tabControl2.BringToFront();
+            tabControl3.BringToFront();
+            splitterDown.BringToFront();
+
+            //splitterLeft.Cursor = Cursors.SizeWE;
+            //splitterRight.Cursor = Cursors.SizeWE;
+            splitterDown.Cursor = Cursors.SizeNS;
+            //splitterLeft.SplitterMoving += SplitterLeft_SplitterMoving;
+            //splitterRight.SplitterMoving += SplitterRight_SplitterMoving;
+            splitterDown.MouseDown += SplitterDown_MouseDown;
+            splitterDown.SplitterMoving += SplitterDown_SplitterMoving;
+            splitterDown.SplitterMoved += SplitterDown_SplitterMoved;
+            splitterDown.MinSize = 100;
+            //
         }
 
+        private void SplitterDown_MouseDown(object sender, MouseEventArgs e)
+        {
+            splitterDown.Invalidate();
+        }
+
+        private void SplitterDown_SplitterMoved(object sender, SplitterEventArgs e)
+        {
+            splitterDown.Invalidate();
+        }
+
+        private void SplitterDown_SplitterMoving(object sender, SplitterEventArgs e)
+        {
+            tabControl2.Height = Height - e.SplitY - 113;
+            tabControl2.Refresh();
+            tabControl3.Refresh();
+            toolStripContainer1.ContentPanel.Refresh();
+        }
+
+        private void SplitterLeft_SplitterMoving(object sender, SplitterEventArgs e)
+        {
+            panel2.Width = e.SplitX;
+            panel2.Refresh();
+            tabControl2.Refresh();
+            tabControl3.Refresh();
+            toolStripContainer1.ContentPanel.Refresh();
+            
+        }
+
+        private void SplitterRight_SplitterMoving(object sender, SplitterEventArgs e)
+        {
+            tabControl1.Width = Width - e.SplitX - 42;
+            tabControl1.Refresh();
+            tabControl2.Refresh();
+            tabControl3.Refresh();
+            toolStripContainer1.ContentPanel.Refresh();
+            
+        }
 
         private void Form1_Shown(object sender, EventArgs e)
         {
@@ -67,13 +139,14 @@ namespace GestorTFG
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            vista.ItemSeleccionadoLista(listView1, comboBox1, textBox8, dateTimePicker3, numericUpDown1, groupBox3, richTextBox2, button5, button6, button7, button8, button9);
+            vista.ItemSeleccionadoLista(listView1, ref comboBox1, textBox8, dateTimePicker3, numericUpDown1, groupBox3, richTextBox2, button5, button6, button7, button8, button9);
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             tabControl3.SelectedIndex = 0;
             vista.BotonAñadirProyecto(textBox1, textBox2, dateTimePicker1, textBox3, textBox4, textBox5, textBox6, textBox7, ref listView1, ref listView2);
+            vista.ActualizarComboBoxModificar(ref comboBox1, listView1);
             toolStripStatusLabel1.Text = Fichero.ArchivoActual + '*';
         }
 
@@ -133,6 +206,7 @@ namespace GestorTFG
         private void button11_Click(object sender, EventArgs e)
         {
             vista.BotonAñadirAlumno(this, ref tabControl3, ref listView1, listView2, ref button7, ref button8);
+            vista.ActualizarComboBoxModificar(ref comboBox1, listView1);
             toolStripStatusLabel1.Text = Fichero.ArchivoActual + '*';
 
         }
@@ -307,6 +381,7 @@ namespace GestorTFG
                 } catch (Exception ex)
                 {
                     MessageBox.Show("El archivo no tiene el formato especificado.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    Console.WriteLine(ex.Message);
                     Fichero.ArchivoActual = fichero;
                 }
             }
@@ -363,6 +438,30 @@ namespace GestorTFG
         {
             if (button9.Enabled) deleteStripButton1.Enabled = true;
             else deleteStripButton1.Enabled = false;
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            vista.BotonModificar(comboBox1, textBox8, comboBox3, dateTimePicker3, numericUpDown1, ref listView1);
+        }
+
+        private void textBox8_comboBox3_TextChanged(object sender, EventArgs e)
+        {
+            string texto = "";
+            if (textBox8.Visible) texto = textBox8.Text;
+            else if (comboBox3.Visible) texto = comboBox3.Text;
+
+            if (string.IsNullOrWhiteSpace(texto + comboBox1.Text))
+            {
+                button5.Enabled = false;
+            }
+            else button5.Enabled = true;
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            if (textBox8.Visible) textBox8.Clear();
+            else if (comboBox3.Visible) comboBox3.ResetText();
         }
     }
 

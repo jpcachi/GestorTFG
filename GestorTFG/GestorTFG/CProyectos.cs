@@ -47,11 +47,21 @@ namespace GestorTFG
             cambios = true;
         }
 
-        public void ModificarProyecto(string opcion, int index)
+        public void ModificarProyecto(int opcion, string valor, int index)
         {
             switch(opcion)
             {
-                
+                case 0: MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[index].getMTFG.Titulo = valor; break;
+                case 1: MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[index].getMTFG.Descripcion = valor; break;
+                case 2: MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[index].getMTFG.Fecha = valor; break;
+                case 3: MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[index].Alumno.Nombre = valor; break;
+                case 4: MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[index].Alumno.PrimerApellido = valor; break;
+                case 5: MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[index].Alumno.SegundoApellido = valor; break;
+                case 6: MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[index].Alumno.FechaInicio = valor; break;
+                case 7: MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[index].getMTFG.getMFinalizado.Defensa = valor; break;
+                case 8: MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[index].getMTFG.getMFinalizado.Convocatoria = valor; break;
+                case 9: MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[index].getMTFG.getMFinalizado.Nota = float.Parse(valor); break;
+                default: break;
             }
             cambios = true;
         }

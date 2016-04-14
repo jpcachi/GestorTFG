@@ -72,7 +72,7 @@ namespace GestorTFG
             }
         }
 
-        public void OnListView1SelectedIndexChange(ListView listView, ComboBox comboBox1, TextBox textBox8, DateTimePicker dateTimePicker3, NumericUpDown numericUpDown1, GroupBox groupBox3, RichTextBox richTextBox2, params Button[] buttons)
+        public void OnListView1SelectedIndexChange(ListView listView, ref ComboBox comboBox1, TextBox textBox8, DateTimePicker dateTimePicker3, NumericUpDown numericUpDown1, GroupBox groupBox3, RichTextBox richTextBox2, params Button[] buttons)
         {
             if (listView.SelectedItems.Count > 1)
             {
@@ -111,7 +111,7 @@ namespace GestorTFG
                     buttons[3].Enabled = true;
                     buttons[2].Enabled = false;
                 }
-
+                ActualizarComboBoxModificar(ref comboBox1, listView);
             }
             else
             {
@@ -139,6 +139,32 @@ namespace GestorTFG
             else {
                 buttons[1].Enabled = false;
                 buttons[1].Enabled = false;
+            }
+        }
+
+        public void ActualizarComboBoxModificar(ref ComboBox comboBox1, ListView listView)
+        {
+            /*comboBox1.Items.Clear();
+            comboBox1.Items.Add("Título");
+            comboBox1.Items.Add("Descripción");
+            comboBox1.Items.Add("Fecha de registro");*/
+            int longitud = comboBox1.Items.Count;
+            if (longitud >= 3)
+            {
+                for (int i = longitud - 1; i > 2; i--) comboBox1.Items.RemoveAt(i);
+            }
+            if (MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[listView.SelectedIndices[0]].Asignado)
+            {
+                comboBox1.Items.Add("Nombre del Alumno");
+                comboBox1.Items.Add("Primer Apellido");
+                comboBox1.Items.Add("Segundo Apellido");
+                comboBox1.Items.Add("Fecha de inicio");
+                if (MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[listView.SelectedIndices[0]].getMTFG.Finalizado)
+                {
+                    comboBox1.Items.Add("Fecha de defensa");
+                    comboBox1.Items.Add("Convocatoria");
+                    comboBox1.Items.Add("Calificación");
+                }
             }
         }
     }
