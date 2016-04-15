@@ -41,7 +41,5 @@ namespace GestorTFG
                 MessageBox.Show("Rellene todos los campos.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
-
-        
     }
 }
