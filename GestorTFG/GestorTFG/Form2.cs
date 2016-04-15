@@ -35,11 +35,18 @@ namespace GestorTFG
                 datosAlumno[2] = textBox3.Text.Trim();
                 datosAlumno[3] = textBox4.Text.Trim();
                 datosAlumno[4] = dateTimePicker1.Text;
+                DialogResult = DialogResult.OK;
                 Close();
             } else
             {
                 MessageBox.Show("Rellene todos los campos.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            DialogResult = DialogResult.Cancel;
         }
     }
 }

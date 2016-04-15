@@ -148,6 +148,11 @@ namespace GestorTFG
             vista.BotonAñadirProyecto(textBox1, textBox2, dateTimePicker1, textBox3, textBox4, textBox5, textBox6, textBox7, ref listView1, ref listView2);
             vista.ActualizarComboBoxModificar(ref comboBox1, listView1);
             toolStripStatusLabel1.Text = Fichero.ArchivoActual + '*';
+            if(MessageBox.Show("El Proyecto se ha añadido correctamente. ¿Desea asignar un nuevo alumno?", "Añadir Proyecto", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+            {
+                vista.BotonAñadirAlumno(this, ref tabControl3, ref listView1, listView2, ref button7, ref button8);
+            }
+            limpiarCamposAñadir();
         }
 
         private void tabControl3_Deselected(object sender, TabControlEventArgs e)
@@ -234,6 +239,11 @@ namespace GestorTFG
         }
         
         private void button1_Click(object sender, EventArgs e)
+        {
+            limpiarCamposAñadir();
+        }
+
+        private void limpiarCamposAñadir()
         {
             textBox1.Clear();
             textBox2.Clear();
