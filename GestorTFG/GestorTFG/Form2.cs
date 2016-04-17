@@ -39,7 +39,7 @@ namespace GestorTFG
                 Close();
             } else
             {
-                MessageBox.Show("Rellene todos los campos.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Rellene todos los campos antes de continuar.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
 
         }

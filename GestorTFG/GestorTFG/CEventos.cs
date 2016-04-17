@@ -83,9 +83,19 @@ namespace GestorTFG
                 groupBox3.Enabled = false;
                 buttons[0].Enabled = false;
                 buttons[1].Enabled = false;
-                buttons[2].Enabled = true;
+                bool enc = false;
+                for(int i = 0; i < listView.SelectedIndices.Count; i++)
+                {
+                    if (!MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[listView.SelectedIndices[i]].Asignado) enc = true;
+                    if (enc) break;
+                }
+                if (!enc)
+                    buttons[2].Enabled = true;
+                else
+                    buttons[2].Enabled = false;
                 buttons[3].Enabled = false;
                 buttons[4].Enabled = true;
+
                 richTextBox2.Clear();
             }
             else if (listView.SelectedItems.Count == 1)
@@ -94,17 +104,28 @@ namespace GestorTFG
                 textBox8.Enabled = true;
                 dateTimePicker3.Enabled = true;
                 numericUpDown1.Enabled = true;
-                groupBox3.Enabled = true;
+                if (MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[listView.SelectedIndices[0]].Asignado)
+                {
+                    if (!MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[listView.SelectedIndices[0]].getMTFG.Finalizado)
+                        groupBox3.Enabled = true;
+                }
+                else groupBox3.Enabled = false;
                 buttons[0].Enabled = true;
                 buttons[1].Enabled = true;
                 buttons[4].Enabled = true;
                 
-                richTextBox2.Text = "NOMBRE: " + MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[listView.SelectedIndices[0]].Profesor.Nombre + " PRIMER APELLIDO: " + MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[listView.SelectedIndices[0]].Profesor.PrimerApellido + " SEGUNDO APELLIDO " + MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[listView.SelectedIndices[0]].Profesor.SegundoApellido + "\nCORREO: " +
-                    MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[listView.SelectedIndices[0]].Profesor.Correo + " DESPACHO: " + MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[listView.SelectedIndices[0]].Profesor.Despacho;
+                richTextBox2.Text = "NOMBRE: " + 
+                    MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[listView.SelectedIndices[0]].Profesor.Nombre + " PRIMER APELLIDO: " +
+                    MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[listView.SelectedIndices[0]].Profesor.PrimerApellido + " SEGUNDO APELLIDO: " +
+                    MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[listView.SelectedIndices[0]].Profesor.SegundoApellido + "\nCORREO: " +
+                    MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[listView.SelectedIndices[0]].Profesor.Correo + " DESPACHO: " + 
+                    MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[listView.SelectedIndices[0]].Profesor.Despacho;
+
                 if (MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[listView.SelectedIndices[0]].Asignado)
                 {
                     buttons[3].Enabled = false;
-                    buttons[2].Enabled = true;
+                    if(!MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[listView.SelectedIndices[0]].getMTFG.Finalizado)
+                        buttons[2].Enabled = true;
                 }
                 else
                 {

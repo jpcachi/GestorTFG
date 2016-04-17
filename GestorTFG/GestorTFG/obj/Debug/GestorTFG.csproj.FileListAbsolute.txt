@@ -8,3 +8,4 @@ f:\users\juan pedro_2\documents\visual studio 2015\Projects\GestorTFG\GestorTFG\
 f:\users\juan pedro_2\documents\visual studio 2015\Projects\GestorTFG\GestorTFG\obj\Debug\GestorTFG.csprojResolveAssemblyReference.cache
 F:\Users\Juan Pedro_2\documents\visual studio 2015\Projects\GestorTFG\GestorTFG\obj\Debug\GestorTFG.Form2.resources
 F:\Users\Juan Pedro_2\documents\visual studio 2015\Projects\GestorTFG\GestorTFG\obj\Debug\GestorTFG.Form3.resources
+F:\Users\Juan Pedro_2\Documents\Visual Studio 2015\Projects\GestorTFG\GestorTFG\obj\Debug\GestorTFG.Form4.resources

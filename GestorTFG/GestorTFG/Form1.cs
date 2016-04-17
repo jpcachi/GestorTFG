@@ -14,15 +14,18 @@ namespace GestorTFG
     {
         private VistaGrafica vista;
         private LeerEscribirArchivo Fichero;
+        private Buscador buscador;
         //Splitter splitterLeft;
         //Splitter splitterRight;
         private Splitter splitterDown;
+        private Timer SelectedIndexChangedTimer = new Timer();
+        private bool SelectedIndexChangedFired;
 
         public Form1()
         {
             InitializeComponent();
             vista = new VistaGrafica();
-            
+            buscador = new Buscador();
             Fichero = new LeerEscribirArchivo();
 
             toolStripStatusLabel1.Text = Fichero.ArchivoActual;
@@ -46,7 +49,9 @@ namespace GestorTFG
             button7.Enabled = false;
             button8.Enabled = false;
             button9.Enabled = false;
-
+            comboBox8.SelectedIndex = 0;
+            comboBox9.SelectedIndex = 0;
+            comboBox10.SelectedIndex = 0;
             
             //splitterLeft = new Splitter();
             //splitterRight = new Splitter();
@@ -78,6 +83,17 @@ namespace GestorTFG
             splitterDown.SplitterMoved += SplitterDown_SplitterMoved;
             splitterDown.MinSize = 100;
             //
+
+            SelectedIndexChangedTimer.Interval = 1;
+            SelectedIndexChangedTimer.Tick += SelectedIndexChangedTimer_Tick;
+
+            SelectedIndexChangedFired = true;
+        }
+
+        private void SelectedIndexChangedTimer_Tick(object sender, EventArgs e)
+        {
+            vista.ItemSeleccionadoLista(listView1, ref comboBox1, textBox8, dateTimePicker3, numericUpDown1, groupBox3, richTextBox2, button5, button6, button7, button8, button9);
+            SelectedIndexChangedTimer.Stop();
         }
 
         private void SplitterDown_MouseDown(object sender, MouseEventArgs e)
@@ -139,18 +155,27 @@ namespace GestorTFG
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            vista.ItemSeleccionadoLista(listView1, ref comboBox1, textBox8, dateTimePicker3, numericUpDown1, groupBox3, richTextBox2, button5, button6, button7, button8, button9);
+            if(listView1.SelectedIndices.Count > 0)
+                vista.ItemSeleccionadoLista(listView1, ref comboBox1, textBox8, dateTimePicker3, numericUpDown1, groupBox3, richTextBox2, button5, button6, button7, button8, button9);
+            else
+            {
+                SelectedIndexChangedTimer.Enabled = true;
+                SelectedIndexChangedTimer.Interval = 1;
+                SelectedIndexChangedTimer.Start();
+                SelectedIndexChangedTimer.Tick += SelectedIndexChangedTimer_Tick;
+            }
+
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             tabControl3.SelectedIndex = 0;
-            vista.BotonAñadirProyecto(textBox1, textBox2, dateTimePicker1, textBox3, textBox4, textBox5, textBox6, textBox7, ref listView1, ref listView2);
+            vista.BotonAñadirProyecto(textBox6, textBox7, dateTimePicker1, textBox1, textBox2, textBox3, textBox4, textBox5, ref listView1, ref listView2);
             vista.ActualizarComboBoxModificar(ref comboBox1, listView1);
             toolStripStatusLabel1.Text = Fichero.ArchivoActual + '*';
             if(MessageBox.Show("El Proyecto se ha añadido correctamente. ¿Desea asignar un nuevo alumno?", "Añadir Proyecto", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
             {
-                vista.BotonAñadirAlumno(this, ref tabControl3, ref listView1, listView2, ref button7, ref button8);
+                vista.BotonAñadirAlumno(this, ref tabControl3, ref listView1, listView2, ref button7, ref button8, ref groupBox3);
             }
             limpiarCamposAñadir();
         }
@@ -210,7 +235,7 @@ namespace GestorTFG
 
         private void button11_Click(object sender, EventArgs e)
         {
-            vista.BotonAñadirAlumno(this, ref tabControl3, ref listView1, listView2, ref button7, ref button8);
+            vista.BotonAñadirAlumno(this, ref tabControl3, ref listView1, listView2, ref button7, ref button8, ref groupBox3);
             vista.ActualizarComboBoxModificar(ref comboBox1, listView1);
             toolStripStatusLabel1.Text = Fichero.ArchivoActual + '*';
 
@@ -235,6 +260,9 @@ namespace GestorTFG
             if (e.TabPageIndex == 1)
             {
                 vista.ActualizarVistaTabla(ref listView2, 1);
+            } else if (e.TabPageIndex == 2)
+            {
+                vista.ActualizarVistaTabla(ref listView3, 2);
             }
         }
         
@@ -282,8 +310,9 @@ namespace GestorTFG
 
         private void button7_Click(object sender, EventArgs e)
         {
-            vista.BotonEliminarAlumno(ref listView1, ref button7, ref button8);
-            toolStripStatusLabel1.Text = Fichero.ArchivoActual + '*';
+            vista.BotonEliminarAlumno(ref listView1, ref button7, ref button8, ref groupBox3);
+            vista.ActualizarComboBoxModificar(ref comboBox1, listView1);
+            toolStripStatusLabel1.Text = Fichero.ArchivoActual + '*'; 
         }
 
         private void Añadir_TextBoxChanged(object sender, EventArgs e)
@@ -472,6 +501,114 @@ namespace GestorTFG
         {
             if (textBox8.Visible) textBox8.Clear();
             else if (comboBox3.Visible) comboBox3.ResetText();
+        }
+
+        private void textBox1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Down || e.KeyCode == Keys.Enter) textBox2.Focus();
+        }
+
+        private void textBox2_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Up) textBox1.Focus();
+            else if (e.KeyCode == Keys.Down || e.KeyCode == Keys.Enter) textBox3.Focus();
+        }
+
+        private void textBox3_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Up) textBox2.Focus();
+            else if (e.KeyCode == Keys.Down || e.KeyCode == Keys.Enter) textBox4.Focus();
+        }
+
+        private void textBox4_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Up) textBox3.Focus();
+            else if (e.KeyCode == Keys.Down || e.KeyCode == Keys.Enter) textBox5.Focus();
+        }
+
+        private void textBox5_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Up) textBox4.Focus();
+            else if (e.KeyCode == Keys.Down || e.KeyCode == Keys.Enter) textBox6.Focus();
+        }
+
+        private void textBox6_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Up) textBox5.Focus();
+            else if (e.KeyCode == Keys.Down || e.KeyCode == Keys.Enter) dateTimePicker1.Focus();
+        }
+
+        private void dateTimePicker1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Back) textBox6.Focus();
+            else if (e.KeyCode == Keys.Enter) textBox7.Focus();
+        }
+
+        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        {
+
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            buscador.BuscarProyecto(comboBox7.Text.Trim(), (TCampos)comboBox10.SelectedIndex, comboBox9.SelectedIndex, comboBox8.SelectedIndex, dateTimePicker4, numericUpDown4);
+            comboBox7.Items.Add(comboBox7.Text.Trim());
+        }
+
+        private void comboBox9_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBox9.SelectedIndex > 0) dateTimePicker4.Enabled = true;
+            else dateTimePicker4.Enabled = false;
+        }
+
+        private void comboBox8_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBox8.SelectedIndex > 0) numericUpDown4.Enabled = true;
+            else numericUpDown4.Enabled = false;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            vista.BotonFinalizar(dateTimePicker2, comboBox2, numericUpDown2, ref listView1);
+            groupBox3.Enabled = false;
+            button7.Enabled = false;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            ResetearDatosFinalizar(ref comboBox2, ref numericUpDown2, ref dateTimePicker2);
+        }
+
+        private void comboBox2_TextChanged(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(comboBox2.Text))
+            {
+                button4.Enabled = false;
+            }
+            else button4.Enabled = true;
+        }
+
+        private void groupBox3_EnabledChanged(object sender, EventArgs e)
+        {
+            if(!groupBox3.Enabled)
+            {
+                ResetearDatosFinalizar(ref comboBox2, ref numericUpDown2, ref dateTimePicker2);
+            }
+        }
+
+        private void ResetearDatosFinalizar(ref ComboBox comboBox2, ref NumericUpDown numericUpDown2, ref DateTimePicker dateTimePicker2)
+        {
+            comboBox2.ResetText();
+            numericUpDown2.Value = 0;
+            dateTimePicker2.Value = DateTime.Today;
+        }
+
+        private void listView1_ItemSelectionChanged(object sender, ListViewItemSelectionChangedEventArgs e)
+        {
+            if(e.IsSelected)
+            {
+                //vista.ItemSeleccionadoLista(listView1, ref comboBox1, textBox8, dateTimePicker3, numericUpDown1, groupBox3, richTextBox2, button5, button6, button7, button8, button9);
+            }
         }
     }
 

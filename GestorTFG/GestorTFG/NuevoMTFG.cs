@@ -7,9 +7,9 @@ namespace GestorTFG
 {
     class NuevoMTFG
     {
-        public MTFG Crear(string titulo, string descripcion, string fecha)
+        public MTFG Crear(string titulo, string descripcion, string fecha, MProyecto mProyecto)
         {
-            return new MTFG(titulo, descripcion, fecha);
+            return new MTFG(titulo, descripcion, fecha, mProyecto);
         }
     }
 }

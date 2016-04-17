@@ -12,6 +12,7 @@ namespace GestorTFG
         private string fecha;
         private bool finalizado;
         private MFinalizado mFinalizado;
+        private MProyecto mProyecto;
 
         public MFinalizado getMFinalizado
         {
@@ -68,8 +69,9 @@ namespace GestorTFG
             }
         }
 
-        public MTFG(string titulo, string descripcion, string fecha)
+        public MTFG(string titulo, string descripcion, string fecha, MProyecto mProyecto)
         {
+            this.mProyecto = mProyecto;
             this.titulo = titulo;
             this.descripcion = descripcion;
             this.fecha = fecha;
@@ -81,6 +83,7 @@ namespace GestorTFG
             mFinalizado = Instanciar.NuevoFinalizado.Crear(defensa, convocatoria, nota);
             if(mFinalizado != null)
             {
+                MListaProyectos.getMListaProyectos.getMProyectos.getProyectosFinalizados.Add(mProyecto);
                 finalizado = true;
             }
         }

@@ -46,7 +46,7 @@ namespace GestorTFG
         public MProyecto(string titulo, string descripcion, string fecha, string nombre, string apellido1, string apellido2, string despacho, string correo)
         {
             asignado = false;
-            mTFG = Instanciar.NuevoTFG.Crear(titulo, descripcion, fecha);
+            mTFG = Instanciar.NuevoTFG.Crear(titulo, descripcion, fecha, this);
             profesor = Instanciar.NuevaPersona.CrearProfesor(nombre, apellido1, apellido2, despacho, correo, this);
         }
 
