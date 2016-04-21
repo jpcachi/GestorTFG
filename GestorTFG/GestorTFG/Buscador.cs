@@ -98,7 +98,7 @@ namespace GestorTFG
                                     MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[3].Remove(MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[3][i]);
                                 break;
                         }
-                    }
+                    } else if (index2 > 0) MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[3].Remove(MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[3][i]);
                 }
             }
         }

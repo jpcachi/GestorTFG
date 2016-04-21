@@ -9,3 +9,4 @@ f:\users\juan pedro_2\documents\visual studio 2015\Projects\GestorTFG\GestorTFG\
 F:\Users\Juan Pedro_2\documents\visual studio 2015\Projects\GestorTFG\GestorTFG\obj\Debug\GestorTFG.Form2.resources
 F:\Users\Juan Pedro_2\documents\visual studio 2015\Projects\GestorTFG\GestorTFG\obj\Debug\GestorTFG.Form3.resources
 F:\Users\Juan Pedro_2\Documents\Visual Studio 2015\Projects\GestorTFG\GestorTFG\obj\Debug\GestorTFG.Form4.resources
+F:\Users\Juan Pedro_2\Documents\Visual Studio 2015\Projects\GestorTFG\GestorTFG\obj\Debug\GestorTFG.Form5.resources
