@@ -134,7 +134,7 @@ namespace GestorTFG
                         //op.ListaProyectosDespues = aux;
                         break;
                     case TOperacion.FinalizarTFG:
-                        MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[op.ListaProyectosAntes[0].Indice].getMTFG.Finalizar(op.ListaProyectosAntes[0].Proyecto.getMTFG.getMFinalizado);
+                        MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[op.ListaProyectosAntes[0].Indice].getMTFG.Finalizar(op.ListaProyectosDespues[0].Proyecto.getMTFG.getMFinalizado);
                         break;
                         /*switch (op.IndiceModificar)
                         {

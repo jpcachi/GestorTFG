@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Reflection;
 using System.Windows.Forms;
 
 namespace GestorTFG
@@ -15,6 +16,7 @@ namespace GestorTFG
         {
             InitializeComponent();
             textBox1.Text = "María del Carmen Gutierrez de Gregorio\r\nDavid Merinero Haro\r\nJuan Pedro Cachinero Bocanegra\r\nDavid Rodríguez Ardila\r\nGuillermo Escolar Fernández\r\nDaniel Martínez Hortelano";
+            label2.Text = "Versión " + Application.ProductVersion + "a. (Compilación " + Assembly.GetEntryAssembly().ImageRuntimeVersion + ").";
         }
     }
 }

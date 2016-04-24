@@ -189,7 +189,6 @@ namespace GestorTFG
         {
             if (listView1.SelectedIndices.Count > 0)
                 vista.ItemSeleccionadoLista(listView1, ref comboBox1, textBox8, dateTimePicker3, numericUpDown1, groupBox3, richTextBox2, button5, button6, button7, button8, button9);
-            else
             {
                 SelectedIndexChangedTimer.Enabled = true;
                 SelectedIndexChangedTimer.Interval = 1;
@@ -208,6 +207,9 @@ namespace GestorTFG
             Operacion operacionAñadir = new Operacion(TOperacion.Crear);
             operacionAñadir.ListaProyectosDespues.Add(proyectoAñadido);
             deshacer.Pila.Push(operacionAñadir);
+            deshacer.VaciarRehacer();
+            rehacerToolStripMenuItem.Enabled = false;
+            ForwardStripButton1.Enabled = false;
             deshacerToolStripMenuItem.Enabled = true;
             BackToolStripButton1.Enabled = true;
             toolStripStatusLabel1.Text = Fichero.ArchivoActual + '*';
@@ -220,6 +222,8 @@ namespace GestorTFG
                     operacionAñadirAlumno.ListaProyectosDespues.Add(despuesAñadirAlumno);
                     deshacer.Pila.Push(operacionAñadirAlumno);
                     deshacer.VaciarRehacer();
+                    rehacerToolStripMenuItem.Enabled = false;
+                    ForwardStripButton1.Enabled = false;
                     vista.ActualizarComboBoxModificar(ref comboBox1, listView1);
                 }
             }
@@ -288,6 +292,8 @@ namespace GestorTFG
                 op.ListaProyectosDespues.Add(proyectoAñadidoAlumno);
                 deshacer.Pila.Push(op);
                 deshacer.VaciarRehacer();
+                rehacerToolStripMenuItem.Enabled = false;
+                ForwardStripButton1.Enabled = false;
                 vista.ActualizarComboBoxModificar(ref comboBox1, listView1);
                 toolStripStatusLabel1.Text = Fichero.ArchivoActual + '*';
             }
@@ -327,6 +333,8 @@ namespace GestorTFG
                 
                 deshacer.Pila.Push(new Operacion(TOperacion.EliminarTFG, antesdeEliminar));
                 deshacer.VaciarRehacer();
+                rehacerToolStripMenuItem.Enabled = false;
+                ForwardStripButton1.Enabled = false;
                 toolStripStatusLabel1.Text = Fichero.ArchivoActual + '*';
             }
         }
@@ -344,11 +352,19 @@ namespace GestorTFG
             if (e.TabPageIndex == 1)
             {
                 vista.ActualizarVistaTabla(ref listView2, 1);
+                comboBox1.Enabled = false;
+                textBox8.Enabled = false;
+                dateTimePicker3.Enabled = false;
+                numericUpDown1.Enabled = false;
             }
             else if (e.TabPageIndex == 2)
             {
                 vista.ActualizarVistaTabla(ref listView3, 2);
-            }
+                comboBox1.Enabled = false;
+                textBox8.Enabled = false;
+                dateTimePicker3.Enabled = false;
+                numericUpDown1.Enabled = false;
+            } 
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -412,6 +428,8 @@ namespace GestorTFG
                 vista.BotonEliminarAlumno(ref listView1, ref button7, ref button8, ref groupBox3);    
                 deshacer.Pila.Push(new Operacion(TOperacion.EliminarAlumno, antesdeEliminarAlumno));
                 deshacer.VaciarRehacer();
+                rehacerToolStripMenuItem.Enabled = false;
+                ForwardStripButton1.Enabled = false;
                 vista.ActualizarComboBoxModificar(ref comboBox1, listView1);
                 toolStripStatusLabel1.Text = Fichero.ArchivoActual + '*';
             }
@@ -641,6 +659,8 @@ namespace GestorTFG
             op.ListaProyectosDespues.Add(despuesdeModificar);
             deshacer.Pila.Push(op);
             deshacer.VaciarRehacer();
+            rehacerToolStripMenuItem.Enabled = false;
+            ForwardStripButton1.Enabled = false;
             toolStripStatusLabel1.Text = Fichero.ArchivoActual + '*';
         }
 
@@ -736,6 +756,8 @@ namespace GestorTFG
             op.ListaProyectosDespues.Add(proyectoFinalizado);
             deshacer.Pila.Push(op);
             deshacer.VaciarRehacer();
+            rehacerToolStripMenuItem.Enabled = false;
+            ForwardStripButton1.Enabled = false;
             vista.ActualizarComboBoxModificar(ref comboBox1, listView1);
             groupBox3.Enabled = false;
             button7.Enabled = false;
@@ -900,6 +922,13 @@ namespace GestorTFG
                 deshacerToolStripMenuItem.Enabled = false;
                 BackToolStripButton1.Enabled = false;
             }
+            if(listView1.SelectedIndices.Count == 0)
+            {
+                comboBox1.Enabled = false;
+                textBox8.Enabled = false;
+                dateTimePicker3.Enabled = false;
+                numericUpDown1.Enabled = false;
+            }
             toolStripStatusLabel1.Text = Fichero.ArchivoActual + '*';
         }
 
@@ -917,6 +946,13 @@ namespace GestorTFG
             {
                 rehacerToolStripMenuItem.Enabled = false;
                 ForwardStripButton1.Enabled = false;
+            }
+            if (listView1.SelectedIndices.Count == 0)
+            {
+                comboBox1.Enabled = false;
+                textBox8.Enabled = false;
+                dateTimePicker3.Enabled = false;
+                numericUpDown1.Enabled = false;
             }
             toolStripStatusLabel1.Text = Fichero.ArchivoActual + '*';
         }
