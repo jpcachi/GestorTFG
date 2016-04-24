@@ -87,5 +87,22 @@ namespace GestorTFG
                 finalizado = true;
             }
         }
+
+        public void Finalizar(MFinalizado mFinalizado)
+        {
+            this.mFinalizado = mFinalizado;
+            if (mFinalizado != null)
+            {
+                MListaProyectos.getMListaProyectos.getMProyectos.getProyectosFinalizados.Add(mProyecto);
+                finalizado = true;
+            }
+        }
+
+        public void QuitarFinalizado()
+        {
+            mFinalizado = null;
+            finalizado = false;
+            MListaProyectos.getMListaProyectos.getMProyectos.getProyectosFinalizados.Remove(mProyecto);
+        }
     }
 }

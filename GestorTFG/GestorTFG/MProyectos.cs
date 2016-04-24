@@ -73,6 +73,31 @@ namespace GestorTFG
             }
         }
 
+        public void AñadirEn(MProyecto mProyecto, int posicion)
+        {
+            mProyectos.Insert(posicion, mProyecto);
+            ReorganizarListaNoAsignados();
+            ReorganizarListaFinalizados();
+        }
+
+        private void ReorganizarListaNoAsignados()
+        {
+            mProyectosNoAsignados.Clear();
+            foreach(MProyecto proyecto in mProyectos)
+            {
+                if (!proyecto.Asignado) mProyectosNoAsignados.Add(proyecto);
+            }
+        }
+
+        private void ReorganizarListaFinalizados()
+        {
+            mProyectosFinalizados.Clear();
+            foreach (MProyecto proyecto in mProyectos)
+            {
+                if (proyecto.getMTFG.Finalizado) mProyectosFinalizados.Add(proyecto);
+            }
+        }
+
         public void Borrar(MProyecto mProyecto)
         {
             mProyectos.Remove(mProyecto);

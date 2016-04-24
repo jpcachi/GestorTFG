@@ -60,6 +60,16 @@ namespace GestorTFG
             }
         }
 
+        public void AsignarAlumno(MAlumno mAlumno)
+        {
+            MListaProyectos.getMListaProyectos.getMProyectos.getProyectosNoAsignados.Remove(this);
+            alumno = mAlumno;
+            if (alumno != null)
+            {
+                asignado = true;
+            }
+        }
+
         public void EliminarAlumno()
         {
             MListaProyectos.getMListaProyectos.getMProyectos.getProyectosNoAsignados.Add(this);
@@ -74,6 +84,23 @@ namespace GestorTFG
                 MListaProyectos.getMListaProyectos.getMProyectos.getProyectosNoAsignados.Remove(this);
             else if (mTFG.Finalizado)
                 MListaProyectos.getMListaProyectos.getMProyectos.getProyectosFinalizados.Remove(this);
+        }
+
+        public MProyecto Copiar()
+        {
+            MProfesor profesor = this.profesor as MProfesor;
+            MAlumno alumno = this.alumno as MAlumno;
+            MProyecto resul = new MProyecto(mTFG.Titulo, mTFG.Descripcion, mTFG.Fecha, profesor.Nombre, profesor.PrimerApellido, profesor.SegundoApellido, profesor.Despacho, profesor.Correo);
+            if (asignado)
+            {
+                resul.AsignarAlumno(alumno.Nombre, alumno.PrimerApellido, alumno.SegundoApellido, alumno.FechaInicio, alumno.Matricula);
+                if(mTFG.Finalizado)
+                {
+                    resul.mTFG.Finalizar(mTFG.getMFinalizado.Defensa, mTFG.getMFinalizado.Convocatoria, mTFG.getMFinalizado.Nota);
+                }
+            }
+
+            return resul;
         }
 
     }

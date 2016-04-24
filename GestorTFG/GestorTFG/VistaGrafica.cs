@@ -27,7 +27,7 @@ namespace GestorTFG
                 return cProyectos.NuevaLista;
             }
         }
-        
+
         public VistaGrafica()
         {
             cAlumno = new CAlumno();
@@ -48,8 +48,9 @@ namespace GestorTFG
             else MessageBox.Show("Rellene todos los campos antes de continuar", "Faltan campos por rellenar", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
-        public void BotonEliminarProyecto(ref ListView listView1, ref ListView listView2, TabControl tabControl3)
+        public bool BotonEliminarProyecto(ref ListView listView1, ref ListView listView2, TabControl tabControl3)
         {
+            bool resul = false;
             string mensaje = "¿Desea eliminar los TFG seleccionados?";
             if ((tabControl3.SelectedIndex == 0 && listView1.SelectedItems.Count == 1) || (tabControl3.SelectedIndex == 1 && listView2.SelectedItems.Count == 1))
                 mensaje = "¿Desea eliminar el TFG seleccionado?";
@@ -75,7 +76,9 @@ namespace GestorTFG
                         //lista.Eliminar(lista.ListaNoAsignados[numelems].Indice);
                     }
                 }
+                resul = true;
             }
+            return resul;
         }
 
         public bool EstanVacios(params TextBox[] datos)
@@ -105,8 +108,8 @@ namespace GestorTFG
                     listViewItem.SubItems.Add(mProyecto.Alumno.Nombre);
                     listViewItem.SubItems.Add(mProyecto.Alumno.PrimerApellido);
                     listViewItem.SubItems.Add(mProyecto.Alumno.SegundoApellido);
-                    listViewItem.SubItems.Add(mProyecto.Alumno.Matricula);
                     listViewItem.SubItems.Add(mProyecto.Alumno.FechaInicio);
+                    listViewItem.SubItems.Add(mProyecto.Alumno.Matricula);
                     if (mProyecto.getMTFG.Finalizado)
                     {
                         listViewItem.SubItems.Add(mProyecto.getMTFG.getMFinalizado.Defensa);
@@ -152,12 +155,12 @@ namespace GestorTFG
             cEventos.OnListView2SelectedIndexChange(listView, buttons);
         }
 
-        public void BotonAñadirAlumno(Form1 ventanaAnterior, ref TabControl tabControl3, ref ListView listView1, ListView listView2, ref Button button7, ref Button button8, ref GroupBox groupBox3)
+        public bool BotonAñadirAlumno(Form1 ventanaAnterior, ref TabControl tabControl3, ref ListView listView1, ListView listView2, ref Button button7, ref Button button8, ref GroupBox groupBox3)
         {
             string[] datosAlumno = new string[5];
             Form2 AsignarAlumno = new Form2(datosAlumno);
             AsignarAlumno.VentanaAnterior = ventanaAnterior;
-            if (AsignarAlumno.ShowDialog() == DialogResult.Cancel) return;
+            if (AsignarAlumno.ShowDialog() == DialogResult.Cancel) return false;
             if (datosAlumno != null)
             {
                 if (tabControl3.SelectedIndex == 0)
@@ -185,6 +188,7 @@ namespace GestorTFG
                 button8.Enabled = false;
                 groupBox3.Enabled = true;
             }
+            return true;
         }
 
         public void BotonEliminarAlumno(ref ListView listView, ref Button eliminarAlumno, ref Button AsignarAlumno, ref GroupBox grupoFinalizar)
@@ -225,6 +229,7 @@ namespace GestorTFG
                 case 9: valor = numericUpDown1.Value.ToString(); break;
                 default: valor = textBox8.Text; break;
             }
+
             cProyectos.ModificarProyecto(comboBox1.SelectedIndex, valor, indice);
             ActualizarVistaTabla(ref listView, 0);
             listView.Items[indice].Selected = true;

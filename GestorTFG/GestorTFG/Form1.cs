@@ -15,12 +15,15 @@ namespace GestorTFG
         private VistaGrafica vista;
         private LeerEscribirArchivo Fichero;
         private Buscador buscador;
+        private Deshacer deshacer;
         //private Splitter splitterLeft;
         //Splitter splitterRight;
         private Splitter splitterDown;
         private Timer SelectedIndexChangedTimer = new Timer();
-        private bool drop;
-        private Form5 Form5;
+
+        private Form5 form5; //barra de herramientas flotante
+
+        
 
         public Form1()
         {
@@ -28,6 +31,7 @@ namespace GestorTFG
             vista = new VistaGrafica();
             buscador = new Buscador();
             Fichero = new LeerEscribirArchivo();
+            deshacer = new Deshacer();
 
             Size = new Size((int)(Screen.PrimaryScreen.Bounds.Size.Width * 0.9f), (int)(Screen.PrimaryScreen.Bounds.Size.Height* 0.9f));
 
@@ -39,7 +43,6 @@ namespace GestorTFG
             toolStripComboBox1.Items.Add("Alumno");
             toolStripComboBox1.Items.Add("Profesor");
             toolStripComboBox1.SelectedIndex = 0;
-            toolStrip1.Renderer = new ToolStripSystemRendererFix();
             toolStrip2.Renderer = new ToolStripSystemRendererFix();
             menuStrip1.Renderer = new ToolStripSystemRendererFix();
             listView1.Items.Add(new ListViewItem());
@@ -60,6 +63,7 @@ namespace GestorTFG
             button7.Enabled = false;
             button8.Enabled = false;
             button9.Enabled = false;
+            comboBox1.SelectedIndex = 0;
             comboBox8.SelectedIndex = 0;
             comboBox9.SelectedIndex = 0;
             comboBox10.SelectedIndex = 0;
@@ -103,8 +107,6 @@ namespace GestorTFG
 
             SelectedIndexChangedTimer.Interval = 1;
             SelectedIndexChangedTimer.Tick += SelectedIndexChangedTimer_Tick;
-            //toolStripContainer1.DragOver += TopToolStripPanel_DragOver;
-            //toolStripContainer1.DragDrop += TopToolStripPanel_DragDrop;
             ToolStripManager.Merge(toolStrip1, toolStrip2);
             toolStrip1.Dispose();
         }
@@ -202,11 +204,24 @@ namespace GestorTFG
             tabControl3.SelectedIndex = 0;
             vista.BotonAñadirProyecto(textBox6, textBox7, dateTimePicker1, textBox1, textBox2, textBox3, textBox4, textBox5, ref listView1, ref listView2);
             vista.ActualizarComboBoxModificar(ref comboBox1, listView1);
+            ProyectoIndice proyectoAñadido = new ProyectoIndice(MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[listView1.SelectedIndices[0]].Copiar(), listView1.SelectedIndices[0]);
+            Operacion operacionAñadir = new Operacion(TOperacion.Crear);
+            operacionAñadir.ListaProyectosDespues.Add(proyectoAñadido);
+            deshacer.Pila.Push(operacionAñadir);
+            deshacerToolStripMenuItem.Enabled = true;
+            BackToolStripButton1.Enabled = true;
             toolStripStatusLabel1.Text = Fichero.ArchivoActual + '*';
             if (MessageBox.Show("El Proyecto se ha añadido correctamente. ¿Desea asignar un nuevo alumno?", "Añadir Proyecto", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
             {
-                vista.BotonAñadirAlumno(this, ref tabControl3, ref listView1, listView2, ref button7, ref button8, ref groupBox3);
-                vista.ActualizarComboBoxModificar(ref comboBox1, listView1);
+                if (vista.BotonAñadirAlumno(this, ref tabControl3, ref listView1, listView2, ref button7, ref button8, ref groupBox3))
+                {
+                    ProyectoIndice despuesAñadirAlumno = new ProyectoIndice(MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[listView1.SelectedIndices[0]].Copiar(), listView1.SelectedIndices[0]);
+                    Operacion operacionAñadirAlumno = new Operacion(TOperacion.AsignarAlumno, proyectoAñadido);
+                    operacionAñadirAlumno.ListaProyectosDespues.Add(despuesAñadirAlumno);
+                    deshacer.Pila.Push(operacionAñadirAlumno);
+                    deshacer.VaciarRehacer();
+                    vista.ActualizarComboBoxModificar(ref comboBox1, listView1);
+                }
             }
             limpiarCamposAñadir();
         }
@@ -266,16 +281,54 @@ namespace GestorTFG
 
         private void button11_Click(object sender, EventArgs e)
         {
-            vista.BotonAñadirAlumno(this, ref tabControl3, ref listView1, listView2, ref button7, ref button8, ref groupBox3);
-            vista.ActualizarComboBoxModificar(ref comboBox1, listView1);
-            toolStripStatusLabel1.Text = Fichero.ArchivoActual + '*';
+            if (vista.BotonAñadirAlumno(this, ref tabControl3, ref listView1, listView2, ref button7, ref button8, ref groupBox3))
+            {
+                Operacion op = new Operacion(TOperacion.AsignarAlumno);
+                ProyectoIndice proyectoAñadidoAlumno = new ProyectoIndice(MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[listView1.SelectedIndices[0]].Copiar(), listView1.SelectedIndices[0]);
+                op.ListaProyectosDespues.Add(proyectoAñadidoAlumno);
+                deshacer.Pila.Push(op);
+                deshacer.VaciarRehacer();
+                vista.ActualizarComboBoxModificar(ref comboBox1, listView1);
+                toolStripStatusLabel1.Text = Fichero.ArchivoActual + '*';
+            }
 
         }
 
         private void button12_Click(object sender, EventArgs e)
         {
-            vista.BotonEliminarProyecto(ref listView1, ref listView2, tabControl3);
-            toolStripStatusLabel1.Text = Fichero.ArchivoActual + '*';
+            
+            //MProyecto[] antesdeEliminar;
+            ProyectoIndice[] antesdeEliminar;
+            if (tabControl3.SelectedIndex == 0)
+            {
+                antesdeEliminar = new ProyectoIndice[listView1.SelectedIndices.Count];
+                for (int i = 0; i < listView1.SelectedIndices.Count; i++)
+                {
+                    antesdeEliminar[i] = new ProyectoIndice(MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[listView1.SelectedIndices[i]].Copiar(), listView1.SelectedIndices[i]);
+                }
+            }
+            else if (tabControl3.SelectedIndex == 1)
+            {
+                antesdeEliminar = new ProyectoIndice[listView2.SelectedIndices.Count];
+                for (int i = 0; i < listView2.SelectedIndices.Count; i++)
+                {
+                    antesdeEliminar[i] = new ProyectoIndice(MListaProyectos.getMListaProyectos.getMProyectos.getProyectosNoAsignados[listView2.SelectedIndices[i]].Copiar(), 
+                        MListaProyectos.getMListaProyectos.getMProyectos.getProyectos.IndexOf(MListaProyectos.getMListaProyectos.getMProyectos.getProyectosNoAsignados[listView2.SelectedIndices[i]]));
+                }
+            }
+            else
+            {
+                
+                antesdeEliminar = new ProyectoIndice[0];
+            }
+
+            if (vista.BotonEliminarProyecto(ref listView1, ref listView2, tabControl3))
+            {
+                
+                deshacer.Pila.Push(new Operacion(TOperacion.EliminarTFG, antesdeEliminar));
+                deshacer.VaciarRehacer();
+                toolStripStatusLabel1.Text = Fichero.ArchivoActual + '*';
+            }
         }
 
         private void listView2_SelectedIndexChanged(object sender, EventArgs e)
@@ -329,8 +382,17 @@ namespace GestorTFG
         private void barraDeHerramientasToolStripMenuItem_CheckedChanged(object sender, EventArgs e)
         {
             if (barraDeHerramientasToolStripMenuItem.Checked == true)
+            {
+                if (form5 != null && !form5.IsDisposed)
+                    form5.Show();
                 toolStrip2.Visible = true;
-            else toolStrip2.Visible = false;
+            }
+            else
+            {
+                toolStrip2.Visible = false;
+                if (form5 != null && !form5.IsDisposed)
+                    form5.Hide();
+            }
         }
 
         private void búsquedaToolStripMenuItem_CheckedChanged(object sender, EventArgs e)
@@ -342,9 +404,17 @@ namespace GestorTFG
 
         private void button7_Click(object sender, EventArgs e)
         {
-            vista.BotonEliminarAlumno(ref listView1, ref button7, ref button8, ref groupBox3);
-            vista.ActualizarComboBoxModificar(ref comboBox1, listView1);
-            toolStripStatusLabel1.Text = Fichero.ArchivoActual + '*';
+            if (MessageBox.Show("¿Desea eliminar el alumno del proyecto seleccionado?", "Advertencia", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation) == DialogResult.OK)
+            {
+                ProyectoIndice[] antesdeEliminarAlumno = new ProyectoIndice[listView1.SelectedIndices.Count];
+                for (int i = 0; i < listView1.SelectedIndices.Count; i++)
+                    antesdeEliminarAlumno[i] = new ProyectoIndice(MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[listView1.SelectedIndices[i]].Copiar(), listView1.SelectedIndices[i]);
+                vista.BotonEliminarAlumno(ref listView1, ref button7, ref button8, ref groupBox3);    
+                deshacer.Pila.Push(new Operacion(TOperacion.EliminarAlumno, antesdeEliminarAlumno));
+                deshacer.VaciarRehacer();
+                vista.ActualizarComboBoxModificar(ref comboBox1, listView1);
+                toolStripStatusLabel1.Text = Fichero.ArchivoActual + '*';
+            }
         }
 
         private void Añadir_TextBoxChanged(object sender, EventArgs e)
@@ -456,6 +526,11 @@ namespace GestorTFG
                     Fichero.CerrarLectura();
                     toolStripStatusLabel1.Text = Fichero.ArchivoActual;
                     vista.GuardarLista();
+                    deshacer.VaciarPilas();
+                    BackToolStripButton1.Enabled = false;
+                    ForwardStripButton1.Enabled = false;
+                    deshacerToolStripMenuItem.Enabled = false;
+                    rehacerToolStripMenuItem.Enabled = false;
                 }
                 catch (Exception ex)
                 {
@@ -486,6 +561,11 @@ namespace GestorTFG
                 vista.GuardarLista();
                 Fichero.EscribirArchivo();
                 Fichero.CerrarEscritura();
+                /*deshacer.VaciarPilas();
+                BackToolStripButton1.Enabled = false;
+                ForwardStripButton1.Enabled = false;
+                deshacerToolStripMenuItem.Enabled = false;
+                rehacerToolStripMenuItem.Enabled = false;*/
             }
             return result;
         }
@@ -502,25 +582,66 @@ namespace GestorTFG
 
         private void button7_EnabledChanged(object sender, EventArgs e)
         {
-            if (button7.Enabled) removeStripButton1.Enabled = true;
-            else removeStripButton1.Enabled = false;
+            if (button7.Enabled)
+            {
+                removeStripButton1.Enabled = true;
+                eliminarAlumnoToolStripMenuItem1.Enabled = true;
+            }
+            else
+            {
+                removeStripButton1.Enabled = false;
+                eliminarAlumnoToolStripMenuItem1.Enabled = false;
+            }
         }
 
         private void button8_EnabledChanged(object sender, EventArgs e)
         {
-            if (button8.Enabled) addStripButton1.Enabled = true;
-            else addStripButton1.Enabled = false;
+            if (button8.Enabled)
+            {
+                addStripButton1.Enabled = true;
+                asignarAlumnoToolStripMenuItem.Enabled = true;
+            }
+            else
+            {
+                addStripButton1.Enabled = false;
+                asignarAlumnoToolStripMenuItem.Enabled = false;      
+            }
         }
 
         private void button9_EnabledChanged(object sender, EventArgs e)
         {
-            if (button9.Enabled) deleteStripButton1.Enabled = true;
-            else deleteStripButton1.Enabled = false;
+            if (button9.Enabled)
+            {
+                deleteStripButton1.Enabled = true;
+                eliminarTFGToolStripMenuItem.Enabled = true;
+            }
+            else
+            {
+                deleteStripButton1.Enabled = false;
+                eliminarTFGToolStripMenuItem.Enabled = false;
+            }
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
+            ProyectoIndice antesdeModificar = new ProyectoIndice(MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[listView1.SelectedIndices[0]].Copiar(), listView1.SelectedIndices[0]);
+            int indiceModificar = comboBox1.SelectedIndex;
             vista.BotonModificar(comboBox1, textBox8, comboBox3, dateTimePicker3, numericUpDown1, ref listView1);
+
+            if (textBox8.Visible)
+                textBox8.Clear();
+            else if (comboBox3.Visible)
+                comboBox3.ResetText();
+            else if (numericUpDown1.Visible)
+                numericUpDown1.Value = 0;
+            else dateTimePicker3.Value = DateTime.Today;
+
+            Operacion op = new Operacion(TOperacion.Modificar, antesdeModificar);
+            ProyectoIndice despuesdeModificar = new ProyectoIndice(MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[listView1.SelectedIndices[0]].Copiar(), listView1.SelectedIndices[0]);
+            op.ListaProyectosDespues.Add(despuesdeModificar);
+            deshacer.Pila.Push(op);
+            deshacer.VaciarRehacer();
+            toolStripStatusLabel1.Text = Fichero.ArchivoActual + '*';
         }
 
         private void textBox8_comboBox3_TextChanged(object sender, EventArgs e)
@@ -609,10 +730,16 @@ namespace GestorTFG
 
         private void button4_Click(object sender, EventArgs e)
         {
+            Operacion op = new Operacion(TOperacion.FinalizarTFG, new ProyectoIndice(MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[listView1.SelectedIndices[0]].Copiar(), listView1.SelectedIndices[0]));
             vista.BotonFinalizar(dateTimePicker2, comboBox2, numericUpDown2, ref listView1);
+            ProyectoIndice proyectoFinalizado = new ProyectoIndice(MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[listView1.SelectedIndices[0]].Copiar(),listView1.SelectedIndices[0]);
+            op.ListaProyectosDespues.Add(proyectoFinalizado);
+            deshacer.Pila.Push(op);
+            deshacer.VaciarRehacer();
             vista.ActualizarComboBoxModificar(ref comboBox1, listView1);
             groupBox3.Enabled = false;
             button7.Enabled = false;
+            toolStripStatusLabel1.Text = Fichero.ArchivoActual + '*';
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -644,14 +771,6 @@ namespace GestorTFG
             dateTimePicker2.Value = DateTime.Today;
         }
 
-        private void listView1_ItemSelectionChanged(object sender, ListViewItemSelectionChangedEventArgs e)
-        {
-            if (e.IsSelected)
-            {
-                //vista.ItemSeleccionadoLista(listView1, ref comboBox1, textBox8, dateTimePicker3, numericUpDown1, groupBox3, richTextBox2, button5, button6, button7, button8, button9);
-            }
-        }
-
         private void comboBox7_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
@@ -660,85 +779,46 @@ namespace GestorTFG
             }
         }
 
-        private void toolStrip2_EndDrag(object sender, EventArgs e)
-        {
-
-        }
-
-        
-        /*
-        private void TopToolStripPanel_DragOver(object sender, DragEventArgs e)
-        {
-            if (e.Data.GetDataPresent(typeof(ToolStrip)))
-                e.Effect = DragDropEffects.Move;
-        }
-
-        private void TopToolStripPanel_DragDrop(object sender, DragEventArgs e)
-        {
-            if (e.Data.GetDataPresent(typeof(ToolStrip)))
-            {
-                toolStripContainer1.TopToolStripPanel.Controls.Add(toolStrip2);
-                Form5.Close();
-                
-            }
-        }*/
-
-
-
-        private void toolStrip2_MouseMove(object sender, MouseEventArgs e)
-        {
-            if (e.Button == MouseButtons.Left)
-            {
-                //ToolStripContainer aux = (ToolStripContainer)Form5.Controls[0];
-                //Form5.DoDragDrop(aux.TopToolStripPanel.Controls[0], DragDropEffects.Move);
-            }
-        }
-
-        private void toolStripContainer1_TopToolStripPanel_ControlAdded(object sender, ControlEventArgs e)
-        {
-
-        }
-
-        private void toolStripContainer1_DragOver(object sender, DragEventArgs e)
-        {
-
-        }
-
         private void toolStrip2_EndDrag_1(object sender, EventArgs e)
         {
             Point puntero = toolStripContainer1.TopToolStripPanel.PointToClient(MousePosition);
-            if (Form5 == null || !Form5.Visible)
+            if (form5 == null || !form5.Visible)
             {
-                if (!(puntero.X >= -50 && puntero.X <= toolStripContainer1.TopToolStripPanel.Width && puntero.Y >= 0 && puntero.Y <= toolStripContainer1.TopToolStripPanel.Height))
+                if (!(puntero.X >= -50 && puntero.X <= toolStripContainer1.TopToolStripPanel.Width && puntero.Y >= -12 && puntero.Y <= toolStripContainer1.TopToolStripPanel.Height))
                 {
-                    Form5 = new Form5(this);
-                    Form5.Size = toolStrip2.Size;
-                    Form5.Height = 65;
-                    Form5.Width = Form5.Width + 18;
-                    Form5.FormBorderStyle = FormBorderStyle.FixedDialog;
-                    ToolStripContainer aux = (ToolStripContainer)Form5.Controls[0];
-                    Form5.Controls[0].Dock = DockStyle.Fill;
+                    form5 = new Form5(this);
+                    form5.Size = toolStrip2.Size;
+                    form5.Width = form5.Width + 5;
+                    ToolStripContainer aux = (ToolStripContainer)form5.Controls[0].Controls[0];
                     aux.TopToolStripPanel.Controls.Add(toolStrip2);
-                    Form5.TopLevel = true;
-                    Form5.Location = MousePosition;
-                    Form5.Show();
+                    form5.TopLevel = true;
+                    form5.Location = MousePosition;
+                    form5.Show();
                     toolStripContainer1.TopToolStripPanel.Controls.Clear();
                 }
             } else
             {
-                
-                if (puntero.X >= -50 && puntero.X <= toolStripContainer1.TopToolStripPanel.Width && puntero.Y >= 0 && puntero.Y <= toolStripContainer1.TopToolStripPanel.Height)
+
+                if (puntero.X >= -50 && puntero.X <= toolStripContainer1.TopToolStripPanel.Width && puntero.Y >= -12 && puntero.Y <= toolStripContainer1.TopToolStripPanel.Height)
                 {
-                    //Point posicionRelativa = toolStrip1.PointToClient(MousePosition);
                     List<ToolStrip> listaToolStrip = new List<ToolStrip>();
-                    ToolStripContainer aux = (ToolStripContainer)Form5.Controls[0];
+                    ToolStripContainer aux = (ToolStripContainer)form5.Controls[0].Controls[0];
                     ToolStrip toolStripAñadido = aux.TopToolStripPanel.Controls[0] as ToolStrip;
-                    toolStripContainer1.TopToolStripPanel.Controls.Clear();
                     toolStripContainer1.TopToolStripPanel.Controls.Add(toolStripAñadido);
+                    foreach(ToolStrip toolStrip in toolStripContainer1.TopToolStripPanel.Controls)
+                    {
+                        if (toolStrip != toolStripAñadido)
+                            toolStripContainer1.TopToolStripPanel.Controls.Remove(toolStrip);
+                    }
                     toolStripAñadido.Location = new Point(puntero.X, toolStripAñadido.Location.Y);
-                    //toolStripContainer1.TopToolStripPanel.Controls.Add(toolStrip1);
-                    Form5.Close();
-                } else toolStripContainer1.TopToolStripPanel.Controls.Clear();
+                    form5.Close();
+                }
+                else
+                {
+                    toolStripContainer1.TopToolStripPanel.Controls.Clear();
+                    form5.Location = MousePosition;
+                    form5.Refresh();
+                }
             }
         }
 
@@ -804,15 +884,83 @@ namespace GestorTFG
                 aprobadosToolStripMenuItem.Checked = false;
             }
         }
+
+        private void deshacerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            rehacerToolStripMenuItem.Enabled = true;
+            ForwardStripButton1.Enabled = true;
+            int[] indices = deshacer.Atras();
+            vista.ActualizarVistaTabla(ref listView1, 0);
+            vista.ActualizarVistaTabla(ref listView2, 1);
+            vista.ActualizarVistaTabla(ref listView3, 2);
+            for(int i = 0; i < indices.Length; i++)
+                listView1.Items[indices[i]].Selected = true;
+            if (deshacer.PilaDeshacerVacia())
+            {
+                deshacerToolStripMenuItem.Enabled = false;
+                BackToolStripButton1.Enabled = false;
+            }
+            toolStripStatusLabel1.Text = Fichero.ArchivoActual + '*';
+        }
+
+        private void rehacerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            deshacerToolStripMenuItem.Enabled = true;
+            BackToolStripButton1.Enabled = true;
+            int[] indices = deshacer.Adelante();
+            vista.ActualizarVistaTabla(ref listView1, 0);
+            vista.ActualizarVistaTabla(ref listView2, 1);
+            vista.ActualizarVistaTabla(ref listView3, 2);
+            for (int i = 0; i < indices.Length; i++)
+                listView1.Items[indices[i]].Selected = true;
+            if(deshacer.PilaRehacerVacia())
+            {
+                rehacerToolStripMenuItem.Enabled = false;
+                ForwardStripButton1.Enabled = false;
+            }
+            toolStripStatusLabel1.Text = Fichero.ArchivoActual + '*';
+        }
+
+        private void temaClásicoToolStripMenuItem_CheckedChanged(object sender, EventArgs e)
+        {
+            if (temaClásicoToolStripMenuItem.Checked)
+            {
+                Application.VisualStyleState = System.Windows.Forms.VisualStyles.VisualStyleState.NonClientAreaEnabled;
+            } else
+            {
+                Application.VisualStyleState = System.Windows.Forms.VisualStyles.VisualStyleState.ClientAndNonClientAreasEnabled;
+            }
+        }
+
+        private void seleccionartodoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            foreach(ListViewItem item in listView1.Items)
+            {
+                item.Selected = true;
+            }
+        }
+
+        private void acercadeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new Form6().Show();
+        }
     }
 
     public class ToolStripSystemRendererFix : ToolStripSystemRenderer //soluciona el bug al cambiar la propiedad de renderizado del toolstrip a system
     {
+        public class ColorearMenu : ProfessionalColorTable
+        {
+            public ColorearMenu()
+            {
+                base.UseSystemColors = false;
+            }
+        }
         protected override void OnRenderToolStripBorder(ToolStripRenderEventArgs e)
         {
-            //aqui no tiene que haber nada
+            if (!(e.ToolStrip.GetType() == typeof(ToolStrip) || e.ToolStrip.GetType() == typeof(MenuStrip)))
+            {
+                base.OnRenderToolStripBorder(e);
+            }
         }
-
     }
-
 }

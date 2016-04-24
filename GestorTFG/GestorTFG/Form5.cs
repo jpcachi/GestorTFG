@@ -75,5 +75,11 @@ namespace GestorTFG
                 SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
             }
         }
+
+        protected override void OnLoad(EventArgs e)
+        {
+            base.OnLoad(e);
+            ClientSize = new Size(ClientSize.Width, 27);
+        }
     }
 }
