@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.IO;
+using ToolStripVisualStyles;
 
 namespace GestorTFG
 {
@@ -44,7 +45,7 @@ namespace GestorTFG
             toolStripComboBox1.Items.Add("Profesor");
             toolStripComboBox1.SelectedIndex = 0;
             toolStrip2.Renderer = new ToolStripSystemRendererFix();
-            menuStrip1.Renderer = new ToolStripSystemRendererFix();
+            menuStrip1.Renderer = new ToolStripAeroRenderer(ToolbarTheme.HelpBar);
             listView1.Items.Add(new ListViewItem());
             listView3.Items.Add(new ListViewItem());
             Shown += Form1_Shown;
@@ -980,10 +981,24 @@ namespace GestorTFG
         {
             new Form6().Show();
         }
+
+        private void pantallaCompletaToolStripMenuItem_CheckedChanged(object sender, EventArgs e)
+        {
+            if (pantallaCompletaToolStripMenuItem.Checked)
+            {
+                FormBorderStyle = FormBorderStyle.None;
+                WindowState = FormWindowState.Maximized;
+            } else
+            {
+                FormBorderStyle = FormBorderStyle.Sizable;
+                WindowState = FormWindowState.Normal;
+            }
+        }
     }
 
-    public class ToolStripSystemRendererFix : ToolStripSystemRenderer //soluciona el bug al cambiar la propiedad de renderizado del toolstrip a system
+    public class ToolStripSystemRendererFix: ToolStripSystemRenderer//: ToolStripAeroRenderer //soluciona el bug al cambiar la propiedad de renderizado del toolstrip a system
     {
+        
         public class ColorearMenu : ProfessionalColorTable
         {
             public ColorearMenu()
@@ -991,6 +1006,7 @@ namespace GestorTFG
                 base.UseSystemColors = false;
             }
         }
+
         protected override void OnRenderToolStripBorder(ToolStripRenderEventArgs e)
         {
             if (!(e.ToolStrip.GetType() == typeof(ToolStrip) || e.ToolStrip.GetType() == typeof(MenuStrip)))

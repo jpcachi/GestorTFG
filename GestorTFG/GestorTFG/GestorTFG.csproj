@@ -113,6 +113,7 @@
     <Compile Include="MProyecto.cs" />
     <Compile Include="MProyectos.cs" />
     <Compile Include="MTFG.cs" />
+    <Compile Include="NativeToolStripRenderer.cs" />
     <Compile Include="NuevoMFinalizado.cs" />
     <Compile Include="NuevoMPersona.cs" />
     <Compile Include="NuevoMProyecto.cs" />
