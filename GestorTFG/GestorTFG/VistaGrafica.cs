@@ -54,7 +54,7 @@ namespace GestorTFG
             string mensaje = "¿Desea eliminar los TFG seleccionados?";
             if ((tabControl3.SelectedIndex == 0 && listView1.SelectedItems.Count == 1) || (tabControl3.SelectedIndex == 1 && listView2.SelectedItems.Count == 1))
                 mensaje = "¿Desea eliminar el TFG seleccionado?";
-            if (MessageBox.Show(mensaje, "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
+            if (MessageBox.Show(mensaje, "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
             {
                 if (tabControl3.SelectedIndex == 0)
                 {
@@ -160,7 +160,7 @@ namespace GestorTFG
             string[] datosAlumno = new string[5];
             Form2 AsignarAlumno = new Form2(datosAlumno);
             AsignarAlumno.VentanaAnterior = ventanaAnterior;
-            if (AsignarAlumno.ShowDialog() == DialogResult.Cancel) return false;
+            if (AsignarAlumno.ShowDialog(ventanaAnterior) == DialogResult.Cancel) return false;
             if (datosAlumno != null)
             {
                 if (tabControl3.SelectedIndex == 0)

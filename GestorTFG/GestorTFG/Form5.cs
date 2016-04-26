@@ -61,6 +61,7 @@ namespace GestorTFG
                 ultimaPosicion = value;
             }
         }
+
         public Form5(Form1 parent)
         {
             InitializeComponent();

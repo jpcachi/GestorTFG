@@ -38,6 +38,9 @@
             this.guardarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.guardarcomoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
+            this.importarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exportarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.imprimirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.vistapreviadeimpresiónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
@@ -63,6 +66,7 @@
             this.personalizarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.temaClásicoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.opcionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pantallaCompletaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contenidoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.índiceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -197,7 +201,6 @@
             this.deleteStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.pantallaCompletaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -254,6 +257,9 @@
             this.guardarToolStripMenuItem,
             this.guardarcomoToolStripMenuItem,
             this.toolStripSeparator7,
+            this.importarToolStripMenuItem,
+            this.exportarToolStripMenuItem,
+            this.toolStripSeparator3,
             this.imprimirToolStripMenuItem,
             this.vistapreviadeimpresiónToolStripMenuItem,
             this.toolStripSeparator8,
@@ -308,6 +314,23 @@
             // 
             this.toolStripSeparator7.Name = "toolStripSeparator7";
             this.toolStripSeparator7.Size = new System.Drawing.Size(203, 6);
+            // 
+            // importarToolStripMenuItem
+            // 
+            this.importarToolStripMenuItem.Name = "importarToolStripMenuItem";
+            this.importarToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
+            this.importarToolStripMenuItem.Text = "&Importar";
+            // 
+            // exportarToolStripMenuItem
+            // 
+            this.exportarToolStripMenuItem.Name = "exportarToolStripMenuItem";
+            this.exportarToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
+            this.exportarToolStripMenuItem.Text = "&Exportar";
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(203, 6);
             // 
             // imprimirToolStripMenuItem
             // 
@@ -528,8 +551,16 @@
             this.opcionesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.pantallaCompletaToolStripMenuItem});
             this.opcionesToolStripMenuItem.Name = "opcionesToolStripMenuItem";
-            this.opcionesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.opcionesToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.opcionesToolStripMenuItem.Text = "&Opciones";
+            // 
+            // pantallaCompletaToolStripMenuItem
+            // 
+            this.pantallaCompletaToolStripMenuItem.CheckOnClick = true;
+            this.pantallaCompletaToolStripMenuItem.Name = "pantallaCompletaToolStripMenuItem";
+            this.pantallaCompletaToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.pantallaCompletaToolStripMenuItem.Text = "&Pantalla completa";
+            this.pantallaCompletaToolStripMenuItem.CheckedChanged += new System.EventHandler(this.pantallaCompletaToolStripMenuItem_CheckedChanged);
             // 
             // ayudaToolStripMenuItem
             // 
@@ -546,30 +577,30 @@
             // contenidoToolStripMenuItem
             // 
             this.contenidoToolStripMenuItem.Name = "contenidoToolStripMenuItem";
-            this.contenidoToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
+            this.contenidoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.contenidoToolStripMenuItem.Text = "&Contenido";
             // 
             // índiceToolStripMenuItem
             // 
             this.índiceToolStripMenuItem.Name = "índiceToolStripMenuItem";
-            this.índiceToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
+            this.índiceToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.índiceToolStripMenuItem.Text = "Índic&e";
             // 
             // buscarToolStripMenuItem
             // 
             this.buscarToolStripMenuItem.Name = "buscarToolStripMenuItem";
-            this.buscarToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
+            this.buscarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.buscarToolStripMenuItem.Text = "&Buscar";
             // 
             // toolStripSeparator14
             // 
             this.toolStripSeparator14.Name = "toolStripSeparator14";
-            this.toolStripSeparator14.Size = new System.Drawing.Size(132, 6);
+            this.toolStripSeparator14.Size = new System.Drawing.Size(149, 6);
             // 
             // acercadeToolStripMenuItem
             // 
             this.acercadeToolStripMenuItem.Name = "acercadeToolStripMenuItem";
-            this.acercadeToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
+            this.acercadeToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.acercadeToolStripMenuItem.Text = "&Acerca de...";
             this.acercadeToolStripMenuItem.Click += new System.EventHandler(this.acercadeToolStripMenuItem_Click);
             // 
@@ -641,7 +672,7 @@
             this.groupBox2.Controls.Add(this.textBox6);
             this.groupBox2.Location = new System.Drawing.Point(7, 183);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(215, 246);
+            this.groupBox2.Size = new System.Drawing.Size(230, 246);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "TFG";
@@ -659,10 +690,10 @@
             // 
             this.textBox7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox7.Location = new System.Drawing.Point(6, 114);
+            this.textBox7.Location = new System.Drawing.Point(9, 114);
             this.textBox7.Multiline = true;
             this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(203, 126);
+            this.textBox7.Size = new System.Drawing.Size(212, 126);
             this.textBox7.TabIndex = 5;
             this.textBox7.TextChanged += new System.EventHandler(this.Añadir_TextBoxChanged);
             // 
@@ -679,7 +710,7 @@
             // 
             this.dateTimePicker1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(113, 69);
+            this.dateTimePicker1.Location = new System.Drawing.Point(125, 69);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(96, 20);
             this.dateTimePicker1.TabIndex = 3;
@@ -698,9 +729,9 @@
             // 
             this.textBox6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox6.Location = new System.Drawing.Point(6, 43);
+            this.textBox6.Location = new System.Drawing.Point(9, 43);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(203, 20);
+            this.textBox6.Size = new System.Drawing.Size(212, 20);
             this.textBox6.TabIndex = 0;
             this.textBox6.TextChanged += new System.EventHandler(this.Añadir_TextBoxChanged);
             this.textBox6.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox6_KeyDown);
@@ -721,7 +752,7 @@
             this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Location = new System.Drawing.Point(6, 6);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(216, 170);
+            this.groupBox1.Size = new System.Drawing.Size(231, 170);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Profesor";
@@ -777,7 +808,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox5.Location = new System.Drawing.Point(74, 134);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(58, 20);
+            this.textBox5.Size = new System.Drawing.Size(73, 20);
             this.textBox5.TabIndex = 4;
             this.textBox5.TextChanged += new System.EventHandler(this.Añadir_TextBoxChanged);
             this.textBox5.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox5_KeyDown);
@@ -788,7 +819,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox4.Location = new System.Drawing.Point(74, 108);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(136, 20);
+            this.textBox4.Size = new System.Drawing.Size(148, 20);
             this.textBox4.TabIndex = 3;
             this.textBox4.TextChanged += new System.EventHandler(this.Añadir_TextBoxChanged);
             this.textBox4.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox4_KeyDown);
@@ -799,7 +830,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox3.Location = new System.Drawing.Point(74, 82);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(136, 20);
+            this.textBox3.Size = new System.Drawing.Size(148, 20);
             this.textBox3.TabIndex = 2;
             this.textBox3.TextChanged += new System.EventHandler(this.Añadir_TextBoxChanged);
             this.textBox3.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox3_KeyDown);
@@ -810,7 +841,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox2.Location = new System.Drawing.Point(74, 56);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(136, 20);
+            this.textBox2.Size = new System.Drawing.Size(148, 20);
             this.textBox2.TabIndex = 1;
             this.textBox2.TextChanged += new System.EventHandler(this.Añadir_TextBoxChanged);
             this.textBox2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox2_KeyDown);
@@ -821,7 +852,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox1.Location = new System.Drawing.Point(74, 30);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(136, 20);
+            this.textBox1.Size = new System.Drawing.Size(148, 20);
             this.textBox1.TabIndex = 0;
             this.textBox1.TextChanged += new System.EventHandler(this.Añadir_TextBoxChanged);
             this.textBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
@@ -843,7 +874,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(243, 557);
+            this.tabPage2.Size = new System.Drawing.Size(243, 559);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Modificar TFG";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -856,9 +887,9 @@
             this.comboBox3.Items.AddRange(new object[] {
             "Junio",
             "Septiembre"});
-            this.comboBox3.Location = new System.Drawing.Point(6, 73);
+            this.comboBox3.Location = new System.Drawing.Point(9, 73);
             this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(216, 21);
+            this.comboBox3.Size = new System.Drawing.Size(224, 21);
             this.comboBox3.TabIndex = 16;
             this.comboBox3.Visible = false;
             this.comboBox3.TextChanged += new System.EventHandler(this.textBox8_comboBox3_TextChanged);
@@ -866,7 +897,7 @@
             // dateTimePicker3
             // 
             this.dateTimePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker3.Location = new System.Drawing.Point(7, 74);
+            this.dateTimePicker3.Location = new System.Drawing.Point(9, 74);
             this.dateTimePicker3.Name = "dateTimePicker3";
             this.dateTimePicker3.Size = new System.Drawing.Size(121, 20);
             this.dateTimePicker3.TabIndex = 15;
@@ -881,16 +912,14 @@
             this.groupBox5.Controls.Add(this.button7);
             this.groupBox5.Location = new System.Drawing.Point(6, 311);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(216, 134);
+            this.groupBox5.Size = new System.Drawing.Size(231, 134);
             this.groupBox5.TabIndex = 14;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Proyecto";
             // 
             // button9
             // 
-            this.button9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.button9.Location = new System.Drawing.Point(29, 88);
+            this.button9.Location = new System.Drawing.Point(39, 88);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(157, 23);
             this.button9.TabIndex = 2;
@@ -901,9 +930,7 @@
             // 
             // button8
             // 
-            this.button8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.button8.Location = new System.Drawing.Point(29, 30);
+            this.button8.Location = new System.Drawing.Point(39, 30);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(157, 23);
             this.button8.TabIndex = 1;
@@ -914,9 +941,7 @@
             // 
             // button7
             // 
-            this.button7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.button7.Location = new System.Drawing.Point(29, 59);
+            this.button7.Location = new System.Drawing.Point(39, 59);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(157, 23);
             this.button7.TabIndex = 0;
@@ -961,7 +986,7 @@
             this.groupBox3.Controls.Add(this.dateTimePicker2);
             this.groupBox3.Location = new System.Drawing.Point(6, 145);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(216, 160);
+            this.groupBox3.Size = new System.Drawing.Size(231, 160);
             this.groupBox3.TabIndex = 8;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Finalizar TFG";
@@ -969,8 +994,9 @@
             // 
             // button4
             // 
+            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button4.Enabled = false;
-            this.button4.Location = new System.Drawing.Point(54, 131);
+            this.button4.Location = new System.Drawing.Point(60, 131);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 23);
             this.button4.TabIndex = 11;
@@ -980,7 +1006,8 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(135, 131);
+            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button3.Location = new System.Drawing.Point(141, 131);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 10;
@@ -1021,13 +1048,15 @@
             // 
             // comboBox2
             // 
+            this.comboBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Items.AddRange(new object[] {
             "Junio",
             "Septiembre"});
             this.comboBox2.Location = new System.Drawing.Point(89, 56);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 21);
+            this.comboBox2.Size = new System.Drawing.Size(127, 21);
             this.comboBox2.TabIndex = 2;
             this.comboBox2.TextChanged += new System.EventHandler(this.comboBox2_TextChanged);
             // 
@@ -1042,15 +1071,17 @@
             // 
             // dateTimePicker2
             // 
+            this.dateTimePicker2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker2.Location = new System.Drawing.Point(89, 30);
             this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(121, 20);
+            this.dateTimePicker2.Size = new System.Drawing.Size(127, 20);
             this.dateTimePicker2.TabIndex = 0;
             // 
             // numericUpDown1
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(6, 74);
+            this.numericUpDown1.Location = new System.Drawing.Point(9, 74);
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(50, 20);
             this.numericUpDown1.TabIndex = 7;
@@ -1060,9 +1091,9 @@
             // 
             this.textBox8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox8.Location = new System.Drawing.Point(6, 73);
+            this.textBox8.Location = new System.Drawing.Point(9, 73);
             this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(216, 20);
+            this.textBox8.Size = new System.Drawing.Size(224, 20);
             this.textBox8.TabIndex = 6;
             this.textBox8.TextChanged += new System.EventHandler(this.textBox8_comboBox3_TextChanged);
             // 
@@ -1101,9 +1132,9 @@
             "Fecha de defensa",
             "Convocatoria",
             "Calificación"});
-            this.comboBox1.Location = new System.Drawing.Point(6, 29);
+            this.comboBox1.Location = new System.Drawing.Point(9, 29);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(216, 21);
+            this.comboBox1.Size = new System.Drawing.Size(224, 21);
             this.comboBox1.TabIndex = 0;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             this.comboBox1.TextChanged += new System.EventHandler(this.textBox8_comboBox3_TextChanged);
@@ -1892,14 +1923,6 @@
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
-            // pantallaCompletaToolStripMenuItem
-            // 
-            this.pantallaCompletaToolStripMenuItem.CheckOnClick = true;
-            this.pantallaCompletaToolStripMenuItem.Name = "pantallaCompletaToolStripMenuItem";
-            this.pantallaCompletaToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
-            this.pantallaCompletaToolStripMenuItem.Text = "&Pantalla completa";
-            this.pantallaCompletaToolStripMenuItem.CheckedChanged += new System.EventHandler(this.pantallaCompletaToolStripMenuItem_CheckedChanged);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2130,6 +2153,9 @@
         private System.Windows.Forms.ToolStripMenuItem suspensosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem temaClásicoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pantallaCompletaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem importarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem exportarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
     }
 }
 

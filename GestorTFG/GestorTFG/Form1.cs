@@ -8,11 +8,16 @@ using System.Text;
 using System.Windows.Forms;
 using System.IO;
 using ToolStripVisualStyles;
+using System.Runtime.InteropServices;
 
 namespace GestorTFG
 {
     public partial class Form1 : Form
     {
+        public const uint MB_TOPMOST = (uint) 0x00040000L;
+        [DllImport("user32.dll")]
+        public static extern int MsgBox(int hWnd, string text, string caption, uint type);
+
         private VistaGrafica vista;
         private LeerEscribirArchivo Fichero;
         private Buscador buscador;
@@ -30,7 +35,7 @@ namespace GestorTFG
         {
             InitializeComponent();
             vista = new VistaGrafica();
-            buscador = new Buscador();
+            buscador = new Buscador(this);
             Fichero = new LeerEscribirArchivo();
             deshacer = new Deshacer();
 
@@ -214,7 +219,7 @@ namespace GestorTFG
             deshacerToolStripMenuItem.Enabled = true;
             BackToolStripButton1.Enabled = true;
             toolStripStatusLabel1.Text = Fichero.ArchivoActual + '*';
-            if (MessageBox.Show("El Proyecto se ha añadido correctamente. ¿Desea asignar un nuevo alumno?", "Añadir Proyecto", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+            if (MessageBox.Show("El Proyecto se ha añadido correctamente. ¿Desea asignar un nuevo alumno?", "Añadir Proyecto", MessageBoxButtons.YesNo, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
             {
                 if (vista.BotonAñadirAlumno(this, ref tabControl3, ref listView1, listView2, ref button7, ref button8, ref groupBox3))
                 {
@@ -421,7 +426,7 @@ namespace GestorTFG
 
         private void button7_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("¿Desea eliminar el alumno del proyecto seleccionado?", "Advertencia", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation) == DialogResult.OK)
+            if (MessageBox.Show("¿Desea eliminar el alumno del proyecto seleccionado?", "Advertencia", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1) == DialogResult.OK)
             {
                 ProyectoIndice[] antesdeEliminarAlumno = new ProyectoIndice[listView1.SelectedIndices.Count];
                 for (int i = 0; i < listView1.SelectedIndices.Count; i++)
@@ -484,7 +489,7 @@ namespace GestorTFG
         {
             if (vista.Cambios)
             {
-                DialogResult result = MessageBox.Show("¿Desea guardar los datos en " + '"' + Fichero.ArchivoActual + '"' + " antes de continuar?", "Advertencia", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Exclamation);
+                DialogResult result = MessageBox.Show("¿Desea guardar los datos en " + '"' + Fichero.ArchivoActual + '"' + " antes de continuar?", "Advertencia", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
                 if (result == DialogResult.Cancel) return;
                 else if (result == DialogResult.Yes)
                 {
@@ -501,7 +506,7 @@ namespace GestorTFG
         {
             if (vista.Cambios)
             {
-                DialogResult result = MessageBox.Show("¿Desea guardar los datos en " + '"' + Fichero.ArchivoActual + '"' + " antes de salir?", "Advertencia", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Exclamation);
+                DialogResult result = MessageBox.Show("¿Desea guardar los datos en " + '"' + Fichero.ArchivoActual + '"' + " antes de salir?", "Advertencia", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
                 if (result == DialogResult.Cancel) e.Cancel = true;
                 else if (result == DialogResult.Yes)
                 {
@@ -521,7 +526,7 @@ namespace GestorTFG
         {
             if (vista.Cambios)
             {
-                DialogResult result = MessageBox.Show("¿Desea guardar los datos en " + '"' + Fichero.ArchivoActual + '"' + " antes de continuar?", "Advertencia", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Exclamation);
+                DialogResult result = MessageBox.Show("¿Desea guardar los datos en " + '"' + Fichero.ArchivoActual + '"' + " antes de continuar?", "Advertencia", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
                 if (result == DialogResult.Cancel) return;
                 else if (result == DialogResult.Yes)
                 {
@@ -553,7 +558,7 @@ namespace GestorTFG
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("El archivo no tiene el formato especificado.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("El archivo no tiene el formato especificado.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
                     Console.WriteLine(ex.Message);
                     Fichero.ArchivoActual = fichero;
                 }
@@ -811,12 +816,11 @@ namespace GestorTFG
                 {
                     form5 = new Form5(this);
                     form5.Size = toolStrip2.Size;
-                    form5.Width = form5.Width + 5;
+                    form5.Width = form5.Width + 7;     
                     ToolStripContainer aux = (ToolStripContainer)form5.Controls[0].Controls[0];
                     aux.TopToolStripPanel.Controls.Add(toolStrip2);
-                    form5.TopLevel = true;
                     form5.Location = MousePosition;
-                    form5.Show();
+                    form5.Show(this);
                     toolStripContainer1.TopToolStripPanel.Controls.Clear();
                 }
             } else
@@ -979,7 +983,8 @@ namespace GestorTFG
 
         private void acercadeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            new Form6().Show();
+            Form6 form6 = new Form6();
+            form6.ShowDialog(this);
         }
 
         private void pantallaCompletaToolStripMenuItem_CheckedChanged(object sender, EventArgs e)

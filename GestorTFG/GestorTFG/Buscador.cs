@@ -18,6 +18,7 @@ namespace GestorTFG
     {
         private Filtros filtro;
         private List<MProyecto> ResultadoBusqueda;
+        private Form1 ventanaPadre;
 
         public Filtros Filtro
         {
@@ -31,10 +32,11 @@ namespace GestorTFG
             }
         }
 
-        public Buscador()
+        public Buscador(Form1 owner)
         {
             filtro = Filtros.ninguno;
             ResultadoBusqueda = new List<MProyecto>();
+            ventanaPadre = owner;
         }
 
         public void BuscarProyecto(string clave, TCampos campo, int index1, int index2, DateTimePicker date, NumericUpDown number)
@@ -42,9 +44,9 @@ namespace GestorTFG
             MListaProyectos.getMListaProyectos.getMProyectos.Buscar(campo, clave);
             FiltrarProyecto(index1, index2, date, number);
             if (MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[3].Count > 0)
-                new Form4(clave).ShowDialog();
+                new Form4(clave).ShowDialog(ventanaPadre);
             else
-                MessageBox.Show("No se han encontrado proyectos que coincidan con los parámetros de búsqueda.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("No se han encontrado proyectos que coincidan con los parámetros de búsqueda.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
         }
 
         private void FiltrarProyecto(int index1, int index2, DateTimePicker date, NumericUpDown number)

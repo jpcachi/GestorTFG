@@ -19,5 +19,13 @@ namespace GestorTFG
             vista.ActualizarVistaTabla(ref listView1, 3);
             toolStripStatusLabel2.Text = busqueda;
         }
+
+        private void listView1_MouseClick(object sender, MouseEventArgs e)
+        {
+            if(e.Button == MouseButtons.Right)
+            {
+
+            }
+        }
     }
 }
