@@ -51,6 +51,40 @@ namespace GestorTFG
             while (leerProyecto() != null) Console.WriteLine(i++);
             //CerrarLectura();
         }
+
+        public string ImportarProyecto()
+        {
+            string dato = br.ReadLine();
+            if (!string.IsNullOrWhiteSpace(dato))
+            {
+                Console.WriteLine(dato);
+                string[] datos;
+                datos = dato.Split(';');
+                Console.WriteLine(datos.Length);
+                MProyecto mProyecto = Instanciar.NuevoProyecto.Crear(datos[0], datos[1], datos[2], datos[3], datos[4], datos[5], datos[6], datos[7]);
+                if (!string.IsNullOrWhiteSpace(datos[8] + datos[9] + datos[10] + datos[11] + datos[12]))
+                {
+                    mProyecto.AsignarAlumno(datos[8], datos[9], datos[10], datos[11], datos[12]);
+                    if (!string.IsNullOrWhiteSpace(datos[13] + datos[14] + datos[15]))
+                    {
+                        float nota;
+                        float.TryParse(datos[15], out nota);
+                        mProyecto.getMTFG.Finalizar(datos[13], datos[14], nota);
+                    }
+                }
+                MListaProyectos.getMListaProyectos.getMProyectos.Añadir(mProyecto);
+                return dato;
+            }
+            return null;
+        }
+
+        public void ImportarListaProyectos()
+        {
+            MListaProyectos.getMListaProyectos.getMProyectos.getProyectos.Clear();
+            int i = 0;
+            while (ImportarProyecto() != null) Console.WriteLine(i++);
+        }
+
         public void CerrarLectura()
         {
             br.Close();

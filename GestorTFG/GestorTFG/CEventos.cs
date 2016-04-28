@@ -72,7 +72,7 @@ namespace GestorTFG
             }
         }
 
-        public void OnListView1SelectedIndexChange(ListView listView, ref ComboBox comboBox1, TextBox textBox8, DateTimePicker dateTimePicker3, NumericUpDown numericUpDown1, GroupBox groupBox3, RichTextBox richTextBox2, params Button[] buttons)
+        public void OnListView1SelectedIndexChange(ListView listView, ref ComboBox comboBox1, TextBox textBox8, DateTimePicker dateTimePicker3, NumericUpDown numericUpDown1, GroupBox groupBox3, RichTextBox richTextBox1, RichTextBox richTextBox2, params Button[] buttons)
         {
             if (listView.SelectedItems.Count > 1)
             {
@@ -114,12 +114,16 @@ namespace GestorTFG
                 buttons[1].Enabled = true;
                 buttons[4].Enabled = true;
                 
-                richTextBox2.Text = "NOMBRE: " + 
-                    MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[listView.SelectedIndices[0]].Profesor.Nombre + " PRIMER APELLIDO: " +
-                    MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[listView.SelectedIndices[0]].Profesor.PrimerApellido + " SEGUNDO APELLIDO: " +
-                    MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[listView.SelectedIndices[0]].Profesor.SegundoApellido + "\nCORREO: " +
-                    MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[listView.SelectedIndices[0]].Profesor.Correo + " DESPACHO: " + 
+                richTextBox2.Text = "Información sobre el Profesor:\r\nNombre: " + 
+                    MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[listView.SelectedIndices[0]].Profesor.Nombre + "\r\nPrimer apellido: " +
+                    MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[listView.SelectedIndices[0]].Profesor.PrimerApellido + "\r\nSegundo apellido: " +
+                    MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[listView.SelectedIndices[0]].Profesor.SegundoApellido + "\r\nCorreo electrónico: " +
+                    MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[listView.SelectedIndices[0]].Profesor.Correo + "\r\nDespacho: " + 
                     MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[listView.SelectedIndices[0]].Profesor.Despacho;
+
+                richTextBox1.Text = "Información sobre el TFG:\r\nTítulo: " + MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[listView.SelectedIndices[0]].getMTFG.Titulo + "\r\nDescripción: " +
+                    MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[listView.SelectedIndices[0]].getMTFG.Descripcion + "\r\nAsignado: " + MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[listView.SelectedIndices[0]].Asignado +
+                    "\r\nFinalizado: " + MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[listView.SelectedIndices[0]].getMTFG.Finalizado;
 
                 if (MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[listView.SelectedIndices[0]].Asignado)
                 {

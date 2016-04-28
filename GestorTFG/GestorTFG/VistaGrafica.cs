@@ -117,7 +117,6 @@ namespace GestorTFG
                         listViewItem.SubItems.Add(mProyecto.getMTFG.getMFinalizado.Nota.ToString());
                     }
                 } 
-
                 listView.Items.Add(listViewItem);
             }
         }
@@ -145,9 +144,9 @@ namespace GestorTFG
             cEventos.OnListViewSelectedIndexChange(ListView, modificar, modificarValue, botones, ref finalizar, 2);
         }*/
 
-        public void ItemSeleccionadoLista(ListView listView, ref ComboBox comboBox1, TextBox textBox8, DateTimePicker dateTimePicker3, NumericUpDown numericUpDown1, GroupBox groupBox3, RichTextBox richTextBox2, params Button[] buttons)
+        public void ItemSeleccionadoLista(ListView listView, ref ComboBox comboBox1, TextBox textBox8, DateTimePicker dateTimePicker3, NumericUpDown numericUpDown1, GroupBox groupBox3, RichTextBox richTextBox1, RichTextBox richTextBox2, params Button[] buttons)
         {
-            cEventos.OnListView1SelectedIndexChange(listView, ref comboBox1, textBox8, dateTimePicker3, numericUpDown1, groupBox3, richTextBox2, buttons);
+            cEventos.OnListView1SelectedIndexChange(listView, ref comboBox1, textBox8, dateTimePicker3, numericUpDown1, groupBox3, richTextBox1, richTextBox2, buttons);
         }
 
         public void ItemSeleccionadoLista2(ListView listView, params Button[] buttons)

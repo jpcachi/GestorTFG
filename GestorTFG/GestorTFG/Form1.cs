@@ -9,6 +9,7 @@ using System.Windows.Forms;
 using System.IO;
 using ToolStripVisualStyles;
 using System.Runtime.InteropServices;
+using System.Windows.Forms.VisualStyles;
 
 namespace GestorTFG
 {
@@ -33,7 +34,7 @@ namespace GestorTFG
 
         public Form1()
         {
-            InitializeComponent();
+            InitializeComponent();  
             vista = new VistaGrafica();
             buscador = new Buscador(this);
             Fichero = new LeerEscribirArchivo();
@@ -119,7 +120,7 @@ namespace GestorTFG
 
         private void SelectedIndexChangedTimer_Tick(object sender, EventArgs e)
         {
-            vista.ItemSeleccionadoLista(listView1, ref comboBox1, textBox8, dateTimePicker3, numericUpDown1, groupBox3, richTextBox2, button5, button6, button7, button8, button9);
+            vista.ItemSeleccionadoLista(listView1, ref comboBox1, textBox8, dateTimePicker3, numericUpDown1, groupBox3, richTextBox1, richTextBox2, button5, button6, button7, button8, button9);
             SelectedIndexChangedTimer.Stop();
         }
 
@@ -194,7 +195,7 @@ namespace GestorTFG
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (listView1.SelectedIndices.Count > 0)
-                vista.ItemSeleccionadoLista(listView1, ref comboBox1, textBox8, dateTimePicker3, numericUpDown1, groupBox3, richTextBox2, button5, button6, button7, button8, button9);
+                vista.ItemSeleccionadoLista(listView1, ref comboBox1, textBox8, dateTimePicker3, numericUpDown1, groupBox3, richTextBox1, richTextBox2, button5, button6, button7, button8, button9);
             {
                 SelectedIndexChangedTimer.Enabled = true;
                 SelectedIndexChangedTimer.Interval = 1;
@@ -920,7 +921,7 @@ namespace GestorTFG
             vista.ActualizarVistaTabla(ref listView1, 0);
             vista.ActualizarVistaTabla(ref listView2, 1);
             vista.ActualizarVistaTabla(ref listView3, 2);
-            for(int i = 0; i < indices.Length; i++)
+            for (int i = 0; i < indices.Length; i++)
                 listView1.Items[indices[i]].Selected = true;
             if (deshacer.PilaDeshacerVacia())
             {
@@ -933,6 +934,27 @@ namespace GestorTFG
                 textBox8.Enabled = false;
                 dateTimePicker3.Enabled = false;
                 numericUpDown1.Enabled = false;
+                button5.Enabled = false;
+                button6.Enabled = false;
+                button7.Enabled = false;
+                button8.Enabled = false;
+                button9.Enabled = false;
+                groupBox3.Enabled = false;
+            }
+
+            else if (listView1.SelectedIndices.Count == 1)
+            {
+                if (MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[listView1.SelectedIndices[0]].Asignado)
+                {
+                    button7.Enabled = true;
+                    button8.Enabled = false;
+                    button9.Enabled = true;
+                    if (MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[listView1.SelectedIndices[0]].getMTFG.Finalizado)
+                    {
+                        groupBox3.Enabled = false;
+                    }
+                    else groupBox3.Enabled = true;
+                }
             }
             toolStripStatusLabel1.Text = Fichero.ArchivoActual + '*';
         }
@@ -958,6 +980,24 @@ namespace GestorTFG
                 textBox8.Enabled = false;
                 dateTimePicker3.Enabled = false;
                 numericUpDown1.Enabled = false;
+                button5.Enabled = false;
+                button6.Enabled = false;
+                button7.Enabled = false;
+                button8.Enabled = false;
+                button9.Enabled = false;
+                groupBox3.Enabled = false;
+            } else if(listView1.SelectedIndices.Count == 1)
+            {
+                if(MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[listView1.SelectedIndices[0]].Asignado)
+                {
+                    button7.Enabled = true;
+                    button8.Enabled = false;
+                    button9.Enabled = true;
+                    if (MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[listView1.SelectedIndices[0]].getMTFG.Finalizado)
+                    {
+                        groupBox3.Enabled = false;
+                    } else groupBox3.Enabled = true;
+                }
             }
             toolStripStatusLabel1.Text = Fichero.ArchivoActual + '*';
         }
@@ -998,6 +1038,135 @@ namespace GestorTFG
                 FormBorderStyle = FormBorderStyle.Sizable;
                 WindowState = FormWindowState.Normal;
             }
+        }
+
+        private void DibujarItemListView(object sender, DrawListViewItemEventArgs e)
+        {
+            if (e.Item.Selected)
+                e.Graphics.FillRectangle(new SolidBrush(SystemColors.MenuHighlight), e.Bounds);
+        }
+
+        private void DibujarSubItemListView(object sender, DrawListViewSubItemEventArgs e)
+        {
+            ListView listView = sender as ListView;
+            e.Graphics.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            if (e.Item.Selected)
+            {
+                TextRenderer.DrawText(e.Graphics, e.SubItem.Text, listView.Font, new Point(e.Bounds.Location.X + 2, e.Bounds.Location.Y + 1), SystemColors.HighlightText);
+            }
+            else
+            {
+                TextRenderer.DrawText(e.Graphics, e.SubItem.Text, listView.Font, new Rectangle(new Point(e.Bounds.Location.X + 2, e.Bounds.Location.Y + 1), new Size(e.Bounds.Width - 2, e.Bounds.Height - 1)), SystemColors.WindowText, TextFormatFlags.ExpandTabs);
+            }
+        }
+        private void listView1_DrawItem(object sender, DrawListViewItemEventArgs e)
+        {
+            DibujarItemListView(sender, e);
+        }
+
+        private void listView1_DrawColumnHeader(object sender, DrawListViewColumnHeaderEventArgs e)
+        {
+            e.DrawDefault = true;
+        }
+
+        private void listView1_DrawSubItem(object sender, DrawListViewSubItemEventArgs e)
+        {
+            DibujarSubItemListView(sender, e);
+        }
+
+        private void listView2_DrawColumnHeader(object sender, DrawListViewColumnHeaderEventArgs e)
+        {
+            e.DrawDefault = true;
+        }
+
+        private void listView2_DrawItem(object sender, DrawListViewItemEventArgs e)
+        {
+            DibujarItemListView(sender, e);
+        }
+
+        private void listView2_DrawSubItem(object sender, DrawListViewSubItemEventArgs e)
+        {
+            DibujarSubItemListView(sender, e);
+        }
+
+        private void listView3_DrawColumnHeader(object sender, DrawListViewColumnHeaderEventArgs e)
+        {
+            e.DrawDefault = true;
+        }
+
+        private void listView3_DrawItem(object sender, DrawListViewItemEventArgs e)
+        {
+            DibujarItemListView(sender, e);
+        }
+
+        private void listView3_DrawSubItem(object sender, DrawListViewSubItemEventArgs e)
+        {
+            DibujarSubItemListView(sender, e);
+        }
+
+        private void importarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (vista.Cambios)
+            {
+                DialogResult result = MessageBox.Show("¿Desea guardar los datos en " + '"' + Fichero.ArchivoActual + '"' + " antes de continuar?", "Advertencia", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
+                if (result == DialogResult.Cancel) return;
+                else if (result == DialogResult.Yes)
+                {
+                    saveToolStripButton1_Click(sender, e);
+                    //return;
+                }
+            }
+            OpenFileDialog cargar = new OpenFileDialog();
+            cargar.Filter = "Archivo de Texto (*.txt)|*.txt|Todos los archivos (*.*)|*.*";
+            cargar.FilterIndex = 1;
+            if (cargar.ShowDialog() == DialogResult.OK)
+            {
+                string fichero = Fichero.ArchivoActual;
+                try
+                {
+                    Fichero.CerrarEscritura();
+                    Fichero.AbrirLectura(cargar.FileName);
+                    Fichero.ImportarArchivo();
+                    vista.ActualizarVistaTabla(ref listView1, 0);
+                    toolStripStatusLabel1.Text = Fichero.ArchivoActual;
+                    Fichero.CerrarLectura();
+                    toolStripStatusLabel1.Text = Fichero.ArchivoActual;
+                    vista.GuardarLista();
+                    deshacer.VaciarPilas();
+                    BackToolStripButton1.Enabled = false;
+                    ForwardStripButton1.Enabled = false;
+                    deshacerToolStripMenuItem.Enabled = false;
+                    rehacerToolStripMenuItem.Enabled = false;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("El archivo no tiene el formato especificado.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+                    Console.WriteLine(ex.Message);
+                    Fichero.ArchivoActual = fichero;
+                }
+            }
+        }
+
+        private void exportarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Exportar();
+        }
+
+        private DialogResult Exportar()
+        {
+            SaveFileDialog guardarComo = new SaveFileDialog();
+            guardarComo.Filter = "Archivo de Texto (*.txt)|*.txt|Todos los archivos (*.*)|*.*";
+            guardarComo.FilterIndex = 1;
+            DialogResult result = guardarComo.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                Fichero.CerrarLectura();
+                Fichero.AbrirEscritura(guardarComo.FileName);
+                vista.GuardarLista();
+                Fichero.ExportarArchivo();
+                Fichero.CerrarEscritura();
+            }
+            return result;
         }
     }
 

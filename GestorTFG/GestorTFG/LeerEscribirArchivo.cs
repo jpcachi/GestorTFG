@@ -77,5 +77,17 @@ namespace GestorTFG
             this.path = path;
             escribirArchivo.AbrirEscritura(this.path);
         }
+
+        public void ImportarArchivo()
+        {
+            leerArchivo.ImportarListaProyectos();
+        }
+
+        public void ExportarArchivo()
+        {
+            escribirArchivo.ExportarListaProyectos();
+        }
+
+
     }
 }

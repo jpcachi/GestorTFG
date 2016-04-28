@@ -44,6 +44,33 @@ namespace GestorTFG
             }
         }
 
+        private void ExportarProyecto(MProyecto proyecto)
+        {
+            string datos = proyecto.getMTFG.Titulo + ";" + proyecto.getMTFG.Descripcion + ";" + proyecto.getMTFG.Fecha + ";" + proyecto.Profesor.Nombre + ";" + proyecto.Profesor.PrimerApellido + ";" +
+                proyecto.Profesor.SegundoApellido + ";" + proyecto.Profesor.Correo + ";" + proyecto.Profesor.Despacho + ";";
+            if (proyecto.Asignado)
+            {
+                datos += proyecto.Alumno.Nombre + ";" + proyecto.Alumno.PrimerApellido + ";" + proyecto.Alumno.SegundoApellido + ";" + proyecto.Alumno.Matricula + ";" + proyecto.Alumno.FechaInicio + ";";
+                if (proyecto.getMTFG.Finalizado)
+                {
+                    datos += proyecto.getMTFG.getMFinalizado.Defensa + ";" + proyecto.getMTFG.getMFinalizado.Convocatoria + ";" + proyecto.getMTFG.getMFinalizado.Nota.ToString();
+                }
+                else datos += ";;";
+            }
+            else datos += ";;;;;;;";
+            bw.Write(datos);
+        }
+
+        public void ExportarListaProyectos()
+        {
+
+            foreach (MProyecto proyecto in MListaProyectos.getMListaProyectos.getMProyectos.getProyectos)
+            {
+                ExportarProyecto(proyecto);
+                bw.Write("\r\n");
+            }
+        }
+
         public void CerrarEscritura()
         {
             bw.Close();
