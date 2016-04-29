@@ -13,7 +13,9 @@ namespace GestorTFG
         private bool finalizado;
         private MFinalizado mFinalizado;
         private MProyecto mProyecto;
-
+        /// <summary>
+        /// Obtiene la información sobre el estado finalizado del TFG. Usar primero la propiedad Finalizado para comprobar el estado del TFG
+        /// </summary>
         public MFinalizado getMFinalizado
         {
             get
@@ -21,7 +23,9 @@ namespace GestorTFG
                 return mFinalizado;
             }
         }
-
+        /// <summary>
+        /// Obtiene el titulo del TFG
+        /// </summary>
         public string Titulo
         {
             get
@@ -34,7 +38,9 @@ namespace GestorTFG
                 titulo = value;
             }
         }
-
+        /// <summary>
+        /// Obtiene la descripción del TFG
+        /// </summary>
         public string Descripcion
         {
             get
@@ -47,7 +53,9 @@ namespace GestorTFG
                 descripcion = value;
             }
         }
-
+        /// <summary>
+        /// Obtiene la fecha en el que el TFG fue propuesto
+        /// </summary>
         public string Fecha
         {
             get
@@ -60,7 +68,9 @@ namespace GestorTFG
                 fecha = value;
             }
         }
-
+        /// <summary>
+        /// Propiedad que indica si el TFG está finalizado o no
+        /// </summary>
         public bool Finalizado
         {
             get
@@ -77,7 +87,12 @@ namespace GestorTFG
             this.fecha = fecha;
             finalizado = false;
         }
-
+        /// <summary>
+        /// Finaliza un TFG con los siguientes datos
+        /// </summary>
+        /// <param name="defensa">Fecha de defensa del TFG</param>
+        /// <param name="convocatoria">Mes de la convocatoria del TFG</param>
+        /// <param name="nota">Calificación final del TFG</param>
         public void Finalizar(string defensa, string convocatoria, float nota)
         {
             mFinalizado = Instanciar.NuevoFinalizado.Crear(defensa, convocatoria, nota);
@@ -87,7 +102,10 @@ namespace GestorTFG
                 finalizado = true;
             }
         }
-
+        /// <summary>
+        /// Finaliza un TFG con los siguientes datos
+        /// </summary>
+        /// <param name="mFinalizado">Datos de finalización del TFG</param>
         public void Finalizar(MFinalizado mFinalizado)
         {
             this.mFinalizado = mFinalizado;
@@ -97,7 +115,9 @@ namespace GestorTFG
                 finalizado = true;
             }
         }
-
+        /// <summary>
+        /// Quita la condición de finalizado a un TFG
+        /// </summary>
         public void QuitarFinalizado()
         {
             mFinalizado = null;

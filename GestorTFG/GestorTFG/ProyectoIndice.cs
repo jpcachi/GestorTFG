@@ -34,7 +34,12 @@ namespace GestorTFG
                 indice = value;
             }
         }
-
+        /// <summary>
+        /// Crea una estructura del tipo ProyectoIndice.
+        /// Dicha estructura encapsula un Proyecto y su índice correspondiente en la lista
+        /// </summary>
+        /// <param name="proyecto"></param>
+        /// <param name="indice"></param>
         public ProyectoIndice(MProyecto proyecto, int indice)
         {
             this.proyecto = proyecto;

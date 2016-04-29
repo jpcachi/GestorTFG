@@ -5,12 +5,11 @@ using System.Text;
 
 namespace GestorTFG
 {
-    enum TCampos
+    enum TipoLista
     {
         Todos,
-        Titulo,
-        Descripcion,
-        Alumno,
-        Profesor
+        Sin_Asignar,
+        Finalizados,
+        Busqueda
     }
 }

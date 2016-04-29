@@ -10,7 +10,9 @@ namespace GestorTFG
         private string defensa;
         private string convocatoria;
         private float nota;
-
+        /// <summary>
+        /// Obtiene o establece la fecha de la defensa de los datos de Finalización de un TFG
+        /// </summary>
         public string Defensa
         {
             get
@@ -23,7 +25,9 @@ namespace GestorTFG
                 defensa = value;
             }
         }
-
+        /// <summary>
+        /// Obtiene o establece la Convocatoria de los datos de Finalización de un TFG
+        /// </summary>
         public string Convocatoria
         {
             get
@@ -36,7 +40,9 @@ namespace GestorTFG
                 convocatoria = value;
             }
         }
-
+        /// <summary>
+        /// Obtiene o establece la Nota de los datos de Finalización de un TFG
+        /// </summary>
         public float Nota
         {
             get

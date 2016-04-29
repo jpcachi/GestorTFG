@@ -15,14 +15,14 @@ namespace GestorTFG
 {
     public partial class Form1 : Form
     {
-        public const uint MB_TOPMOST = (uint) 0x00040000L;
+        
         [DllImport("user32.dll")]
         public static extern int MsgBox(int hWnd, string text, string caption, uint type);
 
         private VistaGrafica vista;
         private LeerEscribirArchivo Fichero;
         private Buscador buscador;
-        private Deshacer deshacer;
+        private DeshacerRehacer deshacer;
         //private Splitter splitterLeft;
         //Splitter splitterRight;
         private Splitter splitterDown;
@@ -38,9 +38,9 @@ namespace GestorTFG
             vista = new VistaGrafica();
             buscador = new Buscador(this);
             Fichero = new LeerEscribirArchivo();
-            deshacer = new Deshacer();
+            deshacer = new DeshacerRehacer();
 
-            Size = new Size((int)(Screen.PrimaryScreen.Bounds.Size.Width * 0.9f), (int)(Screen.PrimaryScreen.Bounds.Size.Height* 0.9f));
+            Size = new Size((int)(Screen.PrimaryScreen.Bounds.Size.Width * Constantes.TAMAÑO_RELATIVO_RESOLUCION), (int)(Screen.PrimaryScreen.Bounds.Size.Height * Constantes.TAMAÑO_RELATIVO_RESOLUCION));
 
             toolStripStatusLabel1.Text = Fichero.ArchivoActual;
             toolStripContainer1.TopToolStripPanel.MaximumSize = new Size(toolStripContainer1.TopToolStripPanel.MaximumSize.Width, toolStripContainer1.TopToolStripPanel.Height);
@@ -112,7 +112,7 @@ namespace GestorTFG
             splitterDown.MinExtra = 150;
             //
 
-            SelectedIndexChangedTimer.Interval = 1;
+            SelectedIndexChangedTimer.Interval = Constantes.TEMPORIZADOR_SELECCION_PROYECTO;
             SelectedIndexChangedTimer.Tick += SelectedIndexChangedTimer_Tick;
             ToolStripManager.Merge(toolStrip1, toolStrip2);
             toolStrip1.Dispose();
@@ -136,7 +136,7 @@ namespace GestorTFG
 
         private void SplitterDown_SplitterMoving(object sender, SplitterEventArgs e)
         {
-            tabControl2.Height = Height - e.SplitY - 113;
+            tabControl2.Height = Height - e.SplitY - Constantes.ANCHURA_MAXIMA_SPLITTER_TABCONTROL2;
             tabControl2.Refresh();
             tabControl3.Refresh();
             toolStripContainer1.ContentPanel.Refresh();
@@ -164,7 +164,7 @@ namespace GestorTFG
 
         private void SplitterRight_SplitterMoving(object sender, SplitterEventArgs e)
         {
-            tabControl1.Width = Width - e.SplitX - 42;
+            tabControl1.Width = Width - e.SplitX - Constantes.ANCHURA_MAXIMA_SPLITTER_TABCONTROL1;
             tabControl1.Refresh();
             tabControl2.Refresh();
             tabControl3.Refresh();
@@ -181,8 +181,8 @@ namespace GestorTFG
 
             //Thread proceso = new Thread(new ThreadStart(Fichero.LeerArchivo));
             Fichero.LeerArchivo();
-            vista.ActualizarVistaTabla(ref listView1, 0);
-            vista.ActualizarVistaTabla(ref listView3, 2);
+            vista.ActualizarVistaTabla(ref listView1, TipoLista.Todos);
+            vista.ActualizarVistaTabla(ref listView3, TipoLista.Finalizados);
         }
 
         private void comboBox7_TextUpdate(object sender, EventArgs e)
@@ -198,7 +198,7 @@ namespace GestorTFG
                 vista.ItemSeleccionadoLista(listView1, ref comboBox1, textBox8, dateTimePicker3, numericUpDown1, groupBox3, richTextBox1, richTextBox2, button5, button6, button7, button8, button9);
             {
                 SelectedIndexChangedTimer.Enabled = true;
-                SelectedIndexChangedTimer.Interval = 1;
+                SelectedIndexChangedTimer.Interval = Constantes.TEMPORIZADOR_SELECCION_PROYECTO;
                 SelectedIndexChangedTimer.Start();
                 SelectedIndexChangedTimer.Tick += SelectedIndexChangedTimer_Tick;
             }
@@ -242,11 +242,6 @@ namespace GestorTFG
             listView1.SelectedIndices.Clear();
         }
 
-        private void listView1_Leave(object sender, EventArgs e)
-        {
-            //listView1.Focus();
-        }
-
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             switch (comboBox1.SelectedIndex)
@@ -280,16 +275,6 @@ namespace GestorTFG
             }
         }
 
-        private void tabControl1_Leave(object sender, EventArgs e)
-        {
-            //tabControl1.Focus();
-        }
-
-        private void groupBox4_Leave(object sender, EventArgs e)
-        {
-            //groupBox4.Focus();
-        }
-
         private void button11_Click(object sender, EventArgs e)
         {
             if (vista.BotonAñadirAlumno(this, ref tabControl3, ref listView1, listView2, ref button7, ref button8, ref groupBox3))
@@ -301,6 +286,8 @@ namespace GestorTFG
                 deshacer.VaciarRehacer();
                 rehacerToolStripMenuItem.Enabled = false;
                 ForwardStripButton1.Enabled = false;
+                deshacerToolStripMenuItem.Enabled = true;
+                BackToolStripButton1.Enabled = true;
                 vista.ActualizarComboBoxModificar(ref comboBox1, listView1);
                 toolStripStatusLabel1.Text = Fichero.ArchivoActual + '*';
             }
@@ -342,6 +329,8 @@ namespace GestorTFG
                 deshacer.VaciarRehacer();
                 rehacerToolStripMenuItem.Enabled = false;
                 ForwardStripButton1.Enabled = false;
+                deshacerToolStripMenuItem.Enabled = true;
+                BackToolStripButton1.Enabled = true;
                 toolStripStatusLabel1.Text = Fichero.ArchivoActual + '*';
             }
         }
@@ -358,7 +347,7 @@ namespace GestorTFG
             button8.Enabled = false;
             if (e.TabPageIndex == 1)
             {
-                vista.ActualizarVistaTabla(ref listView2, 1);
+                vista.ActualizarVistaTabla(ref listView2, TipoLista.Sin_Asignar);
                 comboBox1.Enabled = false;
                 textBox8.Enabled = false;
                 dateTimePicker3.Enabled = false;
@@ -366,7 +355,7 @@ namespace GestorTFG
             }
             else if (e.TabPageIndex == 2)
             {
-                vista.ActualizarVistaTabla(ref listView3, 2);
+                vista.ActualizarVistaTabla(ref listView3, TipoLista.Finalizados);
                 comboBox1.Enabled = false;
                 textBox8.Enabled = false;
                 dateTimePicker3.Enabled = false;
@@ -437,6 +426,8 @@ namespace GestorTFG
                 deshacer.VaciarRehacer();
                 rehacerToolStripMenuItem.Enabled = false;
                 ForwardStripButton1.Enabled = false;
+                deshacerToolStripMenuItem.Enabled = true;
+                BackToolStripButton1.Enabled = true;
                 vista.ActualizarComboBoxModificar(ref comboBox1, listView1);
                 toolStripStatusLabel1.Text = Fichero.ArchivoActual + '*';
             }
@@ -463,7 +454,7 @@ namespace GestorTFG
             {
                 Guardar();
                 timer1.Enabled = true;
-                timer1.Interval = 2000;
+                timer1.Interval = Constantes.TEMPORIZADOR_MENSAJE_GUARDADO;
                 timer1.Start();
                 timer1.Tick += Timer_Tick;
 
@@ -499,7 +490,7 @@ namespace GestorTFG
                 }
             }
             vista.CrearNuevaLista();
-            vista.ActualizarVistaTabla(ref listView1, 0);
+            vista.ActualizarVistaTabla(ref listView1, TipoLista.Todos);
             toolStripStatusLabel1.Text = "Nueva lista de proyectos";
         }
 
@@ -536,7 +527,7 @@ namespace GestorTFG
                 }
             }
             OpenFileDialog cargar = new OpenFileDialog();
-            cargar.Filter = "Lista de Proyectos (*.tfg)|*.tfg|Todos los archivos (*.*)|*.*";
+            cargar.Filter = "Lista de Proyectos (*.tfg)|*.tfg";
             cargar.FilterIndex = 1;
             if (cargar.ShowDialog() == DialogResult.OK)
             {
@@ -546,7 +537,7 @@ namespace GestorTFG
                     Fichero.CerrarEscritura();
                     Fichero.AbrirLectura(cargar.FileName);
                     Fichero.LeerArchivo();
-                    vista.ActualizarVistaTabla(ref listView1, 0);
+                    vista.ActualizarVistaTabla(ref listView1, TipoLista.Todos);
                     toolStripStatusLabel1.Text = Fichero.ArchivoActual;
                     Fichero.CerrarLectura();
                     toolStripStatusLabel1.Text = Fichero.ArchivoActual;
@@ -575,7 +566,7 @@ namespace GestorTFG
         private DialogResult GuardarComo()
         {
             SaveFileDialog guardarComo = new SaveFileDialog();
-            guardarComo.Filter = "Lista de Proyectos (*.tfg)|*.tfg|Todos los archivos (*.*)|*.*";
+            guardarComo.Filter = "Lista de Proyectos (*.tfg)|*.tfg";
             guardarComo.FilterIndex = 1;
             DialogResult result = guardarComo.ShowDialog();
             if (result == DialogResult.OK)
@@ -586,11 +577,6 @@ namespace GestorTFG
                 vista.GuardarLista();
                 Fichero.EscribirArchivo();
                 Fichero.CerrarEscritura();
-                /*deshacer.VaciarPilas();
-                BackToolStripButton1.Enabled = false;
-                ForwardStripButton1.Enabled = false;
-                deshacerToolStripMenuItem.Enabled = false;
-                rehacerToolStripMenuItem.Enabled = false;*/
             }
             return result;
         }
@@ -602,7 +588,7 @@ namespace GestorTFG
 
         private void Form1_Resize(object sender, EventArgs e)
         {
-            toolStrip2.Size = new Size(Width, 25);
+            toolStrip2.Size = new Size(Width, Constantes.ALTURA_TOOLSTRIP);
         }
 
         private void button7_EnabledChanged(object sender, EventArgs e)
@@ -668,6 +654,8 @@ namespace GestorTFG
             deshacer.VaciarRehacer();
             rehacerToolStripMenuItem.Enabled = false;
             ForwardStripButton1.Enabled = false;
+            deshacerToolStripMenuItem.Enabled = true;
+            BackToolStripButton1.Enabled = true;
             toolStripStatusLabel1.Text = Fichero.ArchivoActual + '*';
         }
 
@@ -765,6 +753,8 @@ namespace GestorTFG
             deshacer.VaciarRehacer();
             rehacerToolStripMenuItem.Enabled = false;
             ForwardStripButton1.Enabled = false;
+            deshacerToolStripMenuItem.Enabled = true;
+            BackToolStripButton1.Enabled = true;
             vista.ActualizarComboBoxModificar(ref comboBox1, listView1);
             groupBox3.Enabled = false;
             button7.Enabled = false;
@@ -813,11 +803,11 @@ namespace GestorTFG
             Point puntero = toolStripContainer1.TopToolStripPanel.PointToClient(MousePosition);
             if (form5 == null || !form5.Visible)
             {
-                if (!(puntero.X >= -50 && puntero.X <= toolStripContainer1.TopToolStripPanel.Width && puntero.Y >= -12 && puntero.Y <= toolStripContainer1.TopToolStripPanel.Height))
+                if (!(puntero.X >= Constantes.MARGEN_EXTERIOR_IZQUIERDO_ARRASTRAR && puntero.X <= toolStripContainer1.TopToolStripPanel.Width && puntero.Y >= Constantes.MARGEN_EXTERIOR_BAJO_ARRASTRAR && puntero.Y <= toolStripContainer1.TopToolStripPanel.Height))
                 {
                     form5 = new Form5(this);
                     form5.Size = toolStrip2.Size;
-                    form5.Width = form5.Width + 7;     
+                    form5.Width = form5.Width + Constantes.MARGEN_ANCHURA_TOOLSTRIP_FLOTANTE;     
                     ToolStripContainer aux = (ToolStripContainer)form5.Controls[0].Controls[0];
                     aux.TopToolStripPanel.Controls.Add(toolStrip2);
                     form5.Location = MousePosition;
@@ -827,7 +817,7 @@ namespace GestorTFG
             } else
             {
 
-                if (puntero.X >= -50 && puntero.X <= toolStripContainer1.TopToolStripPanel.Width && puntero.Y >= -12 && puntero.Y <= toolStripContainer1.TopToolStripPanel.Height)
+                if (puntero.X >= Constantes.MARGEN_EXTERIOR_IZQUIERDO_ARRASTRAR && puntero.X <= toolStripContainer1.TopToolStripPanel.Width && puntero.Y >= Constantes.MARGEN_EXTERIOR_BAJO_ARRASTRAR && puntero.Y <= toolStripContainer1.TopToolStripPanel.Height)
                 {
                     List<ToolStrip> listaToolStrip = new List<ToolStrip>();
                     ToolStripContainer aux = (ToolStripContainer)form5.Controls[0].Controls[0];
@@ -858,7 +848,7 @@ namespace GestorTFG
         private void toolStrip2_BeginDrag(object sender, EventArgs e)
         {
             Point puntero = toolStripContainer1.TopToolStripPanel.PointToClient(MousePosition);
-            if (!(puntero.X >= -50 && puntero.X <= toolStripContainer1.TopToolStripPanel.Width && puntero.Y >= 0 && puntero.Y <= toolStripContainer1.TopToolStripPanel.Height))
+            if (!(puntero.X >= Constantes.MARGEN_EXTERIOR_IZQUIERDO_ARRASTRAR && puntero.X <= toolStripContainer1.TopToolStripPanel.Width && puntero.Y >= Constantes.MARGEN_EXTERIOR_BAJO_COMENZAR_ARRASTRAR && puntero.Y <= toolStripContainer1.TopToolStripPanel.Height))
             {
                 ToolStrip aux = new ToolStrip();
                 aux.RenderMode = ToolStripRenderMode.System;
@@ -873,17 +863,17 @@ namespace GestorTFG
         {
             int opcion = 0;
             NumericUpDown aux = new NumericUpDown();
-            aux.DecimalPlaces = 2;
+            aux.DecimalPlaces = Constantes.DECIMALES_DESPUES_DE_COMA;
             aux.Value = 0;
             if (aprobadosToolStripMenuItem.Checked)
             {
                 opcion = 1;
-                aux.Value = (decimal)4.99;
+                aux.Value = Constantes.LIMITE_NOTA_SUSPENSA;
             }
             else if (suspensosToolStripMenuItem.Checked)
             {
                 opcion = 2;
-                aux.Value = 5;
+                aux.Value = Constantes.LIMITE_NOTA_APROBADA;
             }
 
             buscador.BuscarProyecto(toolStripComboBox2.Text.Trim(), (TCampos)toolStripComboBox1.SelectedIndex, 0, opcion, new DateTimePicker(), aux);
@@ -918,9 +908,9 @@ namespace GestorTFG
             rehacerToolStripMenuItem.Enabled = true;
             ForwardStripButton1.Enabled = true;
             int[] indices = deshacer.Atras();
-            vista.ActualizarVistaTabla(ref listView1, 0);
-            vista.ActualizarVistaTabla(ref listView2, 1);
-            vista.ActualizarVistaTabla(ref listView3, 2);
+            vista.ActualizarVistaTabla(ref listView1, TipoLista.Todos);
+            vista.ActualizarVistaTabla(ref listView2, TipoLista.Sin_Asignar);
+            vista.ActualizarVistaTabla(ref listView3, TipoLista.Finalizados);
             for (int i = 0; i < indices.Length; i++)
                 listView1.Items[indices[i]].Selected = true;
             if (deshacer.PilaDeshacerVacia())
@@ -964,9 +954,9 @@ namespace GestorTFG
             deshacerToolStripMenuItem.Enabled = true;
             BackToolStripButton1.Enabled = true;
             int[] indices = deshacer.Adelante();
-            vista.ActualizarVistaTabla(ref listView1, 0);
-            vista.ActualizarVistaTabla(ref listView2, 1);
-            vista.ActualizarVistaTabla(ref listView3, 2);
+            vista.ActualizarVistaTabla(ref listView1, TipoLista.Todos);
+            vista.ActualizarVistaTabla(ref listView2, TipoLista.Sin_Asignar);
+            vista.ActualizarVistaTabla(ref listView3, TipoLista.Finalizados);
             for (int i = 0; i < indices.Length; i++)
                 listView1.Items[indices[i]].Selected = true;
             if(deshacer.PilaRehacerVacia())
@@ -1039,29 +1029,10 @@ namespace GestorTFG
                 WindowState = FormWindowState.Normal;
             }
         }
-
-        private void DibujarItemListView(object sender, DrawListViewItemEventArgs e)
-        {
-            if (e.Item.Selected)
-                e.Graphics.FillRectangle(new SolidBrush(SystemColors.MenuHighlight), e.Bounds);
-        }
-
-        private void DibujarSubItemListView(object sender, DrawListViewSubItemEventArgs e)
-        {
-            ListView listView = sender as ListView;
-            e.Graphics.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            if (e.Item.Selected)
-            {
-                TextRenderer.DrawText(e.Graphics, e.SubItem.Text, listView.Font, new Point(e.Bounds.Location.X + 2, e.Bounds.Location.Y + 1), SystemColors.HighlightText);
-            }
-            else
-            {
-                TextRenderer.DrawText(e.Graphics, e.SubItem.Text, listView.Font, new Rectangle(new Point(e.Bounds.Location.X + 2, e.Bounds.Location.Y + 1), new Size(e.Bounds.Width - 2, e.Bounds.Height - 1)), SystemColors.WindowText, TextFormatFlags.ExpandTabs);
-            }
-        }
+    
         private void listView1_DrawItem(object sender, DrawListViewItemEventArgs e)
         {
-            DibujarItemListView(sender, e);
+            ListViewVisualStyles.DibujarItemListView(sender, e);
         }
 
         private void listView1_DrawColumnHeader(object sender, DrawListViewColumnHeaderEventArgs e)
@@ -1071,7 +1042,7 @@ namespace GestorTFG
 
         private void listView1_DrawSubItem(object sender, DrawListViewSubItemEventArgs e)
         {
-            DibujarSubItemListView(sender, e);
+            ListViewVisualStyles.DibujarSubItemListView(sender, e);
         }
 
         private void listView2_DrawColumnHeader(object sender, DrawListViewColumnHeaderEventArgs e)
@@ -1081,12 +1052,12 @@ namespace GestorTFG
 
         private void listView2_DrawItem(object sender, DrawListViewItemEventArgs e)
         {
-            DibujarItemListView(sender, e);
+            ListViewVisualStyles.DibujarItemListView(sender, e);
         }
 
         private void listView2_DrawSubItem(object sender, DrawListViewSubItemEventArgs e)
         {
-            DibujarSubItemListView(sender, e);
+            ListViewVisualStyles.DibujarSubItemListView(sender, e);
         }
 
         private void listView3_DrawColumnHeader(object sender, DrawListViewColumnHeaderEventArgs e)
@@ -1096,12 +1067,12 @@ namespace GestorTFG
 
         private void listView3_DrawItem(object sender, DrawListViewItemEventArgs e)
         {
-            DibujarItemListView(sender, e);
+            ListViewVisualStyles.DibujarItemListView(sender, e);
         }
 
         private void listView3_DrawSubItem(object sender, DrawListViewSubItemEventArgs e)
         {
-            DibujarSubItemListView(sender, e);
+            ListViewVisualStyles.DibujarSubItemListView(sender, e);
         }
 
         private void importarToolStripMenuItem_Click(object sender, EventArgs e)
@@ -1113,11 +1084,10 @@ namespace GestorTFG
                 else if (result == DialogResult.Yes)
                 {
                     saveToolStripButton1_Click(sender, e);
-                    //return;
                 }
             }
             OpenFileDialog cargar = new OpenFileDialog();
-            cargar.Filter = "Archivo de Texto (*.txt)|*.txt|Todos los archivos (*.*)|*.*";
+            cargar.Filter = "Documentos de texto (*.txt)|*.txt|Todos los archivos (*.*)|*.*";
             cargar.FilterIndex = 1;
             if (cargar.ShowDialog() == DialogResult.OK)
             {
@@ -1127,7 +1097,7 @@ namespace GestorTFG
                     Fichero.CerrarEscritura();
                     Fichero.AbrirLectura(cargar.FileName);
                     Fichero.ImportarArchivo();
-                    vista.ActualizarVistaTabla(ref listView1, 0);
+                    vista.ActualizarVistaTabla(ref listView1, TipoLista.Todos);
                     toolStripStatusLabel1.Text = Fichero.ArchivoActual;
                     Fichero.CerrarLectura();
                     toolStripStatusLabel1.Text = Fichero.ArchivoActual;
@@ -1155,7 +1125,7 @@ namespace GestorTFG
         private DialogResult Exportar()
         {
             SaveFileDialog guardarComo = new SaveFileDialog();
-            guardarComo.Filter = "Archivo de Texto (*.txt)|*.txt|Todos los archivos (*.*)|*.*";
+            guardarComo.Filter = "Documentos de texto (*.txt)|*.txt|Todos los archivos (*.*)|*.*";
             guardarComo.FilterIndex = 1;
             DialogResult result = guardarComo.ShowDialog();
             if (result == DialogResult.OK)
@@ -1170,17 +1140,8 @@ namespace GestorTFG
         }
     }
 
-    public class ToolStripSystemRendererFix: ToolStripSystemRenderer//: ToolStripAeroRenderer //soluciona el bug al cambiar la propiedad de renderizado del toolstrip a system
-    {
-        
-        public class ColorearMenu : ProfessionalColorTable
-        {
-            public ColorearMenu()
-            {
-                base.UseSystemColors = false;
-            }
-        }
-
+    public class ToolStripSystemRendererFix: ToolStripSystemRenderer //soluciona el bug al cambiar la propiedad de renderizado del toolstrip a system
+    {    
         protected override void OnRenderToolStripBorder(ToolStripRenderEventArgs e)
         {
             if (!(e.ToolStrip.GetType() == typeof(ToolStrip) || e.ToolStrip.GetType() == typeof(MenuStrip)))

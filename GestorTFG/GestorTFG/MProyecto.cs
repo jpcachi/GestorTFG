@@ -10,7 +10,9 @@ namespace GestorTFG
         private MTFG mTFG;
         private MPersona profesor, alumno;
         private bool asignado;
-
+        /// <summary>
+        /// Obtiene los datos referentes al TFG
+        /// </summary>
         public MTFG getMTFG
         {
             get
@@ -18,23 +20,29 @@ namespace GestorTFG
                 return mTFG;
             }
         }
-
+        /// <summary>
+        /// Obtiene los datos referentes al Profesor encargado del proyecto
+        /// </summary>
         public MProfesor Profesor
         {
             get
             {
-                return (MProfesor) profesor;
+                return profesor as MProfesor;
             }
         }
-
+        /// <summary>
+        /// Obtiene los datos del alumno asignado
+        /// </summary>
         public MAlumno Alumno
         {
             get
             {
-                return (MAlumno) alumno;
+                return alumno as MAlumno;
             }
         }
-
+        /// <summary>
+        /// Indica si el proyecto tiene un alumno asignado o no
+        /// </summary>
         public bool Asignado
         {
             get
@@ -50,6 +58,9 @@ namespace GestorTFG
             profesor = Instanciar.NuevaPersona.CrearProfesor(nombre, apellido1, apellido2, despacho, correo, this);
         }
 
+        /// <summary>
+        /// Asigna un alumno al proyecto con los siguientes datos
+        /// </summary>
         public void AsignarAlumno(string nombre, string apellido1, string apellido2, string fechaInicio, string matricula)
         {
             MListaProyectos.getMListaProyectos.getMProyectos.getProyectosNoAsignados.Remove(this);
@@ -60,6 +71,10 @@ namespace GestorTFG
             }
         }
 
+        /// <summary>
+        /// Asigna un alumno con los siguientes datos
+        /// </summary>
+        /// <param name="mAlumno">Alumno a asignar</param>
         public void AsignarAlumno(MAlumno mAlumno)
         {
             MListaProyectos.getMListaProyectos.getMProyectos.getProyectosNoAsignados.Remove(this);
@@ -69,14 +84,18 @@ namespace GestorTFG
                 asignado = true;
             }
         }
-
+        /// <summary>
+        /// Elimina al alumno y deja el proyecto sin asignar
+        /// </summary>
         public void EliminarAlumno()
         {
             MListaProyectos.getMListaProyectos.getMProyectos.getProyectosNoAsignados.Add(this);
             asignado = false;
             alumno = null;
         }
-
+        /// <summary>
+        /// Borra el proyecto de las listas de proyectos correspondientes
+        /// </summary>
         public void Borrar()
         {
             MListaProyectos.getMListaProyectos.getMProyectos.getProyectos.Remove(this);
@@ -85,7 +104,10 @@ namespace GestorTFG
             else if (mTFG.Finalizado)
                 MListaProyectos.getMListaProyectos.getMProyectos.getProyectosFinalizados.Remove(this);
         }
-
+        /// <summary>
+        /// Devuelve una copia del proyecto para evitar conflictos de referencia
+        /// </summary>
+        /// <returns>Devuelve un elemento MProyecto de las mismas características que el proyecto actual</returns>
         public MProyecto Copiar()
         {
             MProfesor profesor = this.profesor as MProfesor;

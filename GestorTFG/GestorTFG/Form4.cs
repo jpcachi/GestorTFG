@@ -16,7 +16,7 @@ namespace GestorTFG
         {
             vista = new VistaGrafica();
             InitializeComponent();
-            vista.ActualizarVistaTabla(ref listView1, 3);
+            vista.ActualizarVistaTabla(ref listView1, TipoLista.Busqueda);
             toolStripStatusLabel2.Text = busqueda;
             contextMenuStrip1.Renderer = new ToolStripVisualStyles.ToolStripAeroRenderer(ToolStripVisualStyles.ToolbarTheme.HelpBar);
         }

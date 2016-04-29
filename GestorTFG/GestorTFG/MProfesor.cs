@@ -17,7 +17,9 @@ namespace GestorTFG
             this.correo = correo;
             this.mProyecto = mProyecto;
         }
-
+        /// <summary>
+        /// Obtiene o establece el Despacho de un profesor
+        /// </summary>
         public string Despacho
         {
             get
@@ -30,7 +32,9 @@ namespace GestorTFG
                 despacho = value;
             }
         }
-
+        /// <summary>
+        /// Obtiene o establece el Correo Electrónico de un profesor
+        /// </summary>
         public string Correo
         {
             get

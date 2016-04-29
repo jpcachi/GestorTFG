@@ -5,6 +5,9 @@ using System.Text;
 
 namespace GestorTFG
 {
+    /// <summary>
+    /// Clase encargada de gestionar las operaciones de lista de proyectos desde la interfaz gráfica
+    /// </summary>
     class CProyectos
     {
         private bool cambios;

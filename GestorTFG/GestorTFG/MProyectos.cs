@@ -13,7 +13,9 @@ namespace GestorTFG
         private List<MProyecto> mProyectosBusqueda;
 
         private List<List<MProyecto>> proyectos;
-
+        /// <summary>
+        /// Obtiene un acceso directo a una determinada lista de proyectos
+        /// </summary>
         public List<List<MProyecto>> Proyectos
         {
             get
@@ -21,7 +23,9 @@ namespace GestorTFG
                 return proyectos;
             }
         }
-
+        /// <summary>
+        /// Obtiene la lista de proyectos principal, sobre la cual se debe trabajar
+        /// </summary>
         public List<MProyecto> getProyectos
         {
             get
@@ -29,7 +33,9 @@ namespace GestorTFG
                 return mProyectos;
             }
         }
-
+        /// <summary>
+        /// Obtiene la lista de los proyectos sin un alumno Asignado
+        /// </summary>
         public List<MProyecto> getProyectosNoAsignados
         {
             get
@@ -37,7 +43,9 @@ namespace GestorTFG
                 return mProyectosNoAsignados;
             }
         }
-
+        /// <summary>
+        /// Obtiene la lista de los proyectos finalizados
+        /// </summary>
         public List<MProyecto> getProyectosFinalizados
         {
             get
@@ -59,7 +67,10 @@ namespace GestorTFG
             proyectos.Add(mProyectosFinalizados);
             proyectos.Add(mProyectosBusqueda);
         }
-
+        /// <summary>
+        /// Añade un proyecto a las listas de proyectos correspondientes
+        /// </summary>
+        /// <param name="mProyecto"> Proyecto a añadir </param>
         public void Añadir(MProyecto mProyecto)
         {
             mProyectos.Add(mProyecto);
@@ -73,6 +84,11 @@ namespace GestorTFG
             }
         }
 
+        /// <summary>
+        /// Añade un proyecto a las listas de proyectos correspondientes en la posición indicada
+        /// </summary>
+        /// <param name="mProyecto"> Proyecto a añadir</param>
+        /// <param name="posicion"> Posición donde se insertara el proyecto dentro de la lista de proyectos principal</param>
         public void AñadirEn(MProyecto mProyecto, int posicion)
         {
             mProyectos.Insert(posicion, mProyecto);
@@ -97,7 +113,10 @@ namespace GestorTFG
                 if (proyecto.getMTFG.Finalizado) mProyectosFinalizados.Add(proyecto);
             }
         }
-
+        /// <summary>
+        /// Elimina un proyecto de las listas
+        /// </summary>
+        /// <param name="mProyecto">Proyecto a eliminar</param>
         public void Borrar(MProyecto mProyecto)
         {
             mProyectos.Remove(mProyecto);
@@ -111,6 +130,10 @@ namespace GestorTFG
             }
         }
 
+        /// <summary>
+        /// Elimina un proyecto de las listas
+        /// </summary>
+        /// <param name="index">Índice del proyecto a eliminar</param>
         public void Borrar(int index)
         {
             if (!mProyectos[index].Asignado)
@@ -124,6 +147,11 @@ namespace GestorTFG
             mProyectos.RemoveAt(index);
         }
 
+        /// <summary>
+        /// Realiza una búsqueda en la lista principal y añade a la lista búsqueda los proyectos coincidentes
+        /// </summary>
+        /// <param name="campo">Buscara los elementos que contengan la palabra clave en el campo seleccionado</param>
+        /// <param name="clave">Palabra clave</param>
         public void Buscar(TCampos campo, string clave)
         {
             mProyectosBusqueda.Clear();

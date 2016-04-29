@@ -16,6 +16,11 @@ using System.Windows.Forms.VisualStyles;
 //
 // http://wyday.com/blog/2009/making-the-menus-in-your-net-app-look-professional/
 
+
+/// <summary>
+/// Este conjunto de clases contenidas en ToolStripVisualStyles se encargan únicamente de dar una apriencia MainMenu a un MenuStrip. 
+/// En ningún caso la omisión de esta clase afectará al funcionamiento de la aplicación. Es solo una cuestión estética.
+/// </summary>
 namespace ToolStripVisualStyles {
 	public enum ToolbarTheme {
 		Toolbar,
@@ -25,7 +30,7 @@ namespace ToolStripVisualStyles {
 		HelpBar
 	}
 
-	/// <summary>Renders a toolstrip using the UxTheme API via VisualStyleRenderer and a specific style.</summary>
+	/// <summary>Renderixa un toolstrip usando el API UxTheme via VisualStyleRenderer y un estilo específico.</summary>
 	/// <remarks>Perhaps surprisingly, this does not need to be disposable.</remarks>
 	public class ToolStripAeroRenderer : ToolStripSystemRenderer {
 		VisualStyleRenderer renderer;

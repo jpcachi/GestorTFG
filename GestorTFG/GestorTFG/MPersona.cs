@@ -18,6 +18,9 @@ namespace GestorTFG
             this.apellido1 = apellido1;
             this.apellido2 = apellido2;
         }
+        /// <summary>
+        /// Obtiene o establece el nombre de una persona
+        /// </summary>
         public string Nombre
         {
             get
@@ -30,7 +33,9 @@ namespace GestorTFG
                 nombre = value;
             }
         }
-
+        /// <summary>
+        /// Obtiene o establece el primer apellido de una persona
+        /// </summary>
         public string PrimerApellido
         {
             get
@@ -43,7 +48,9 @@ namespace GestorTFG
                 apellido1 = value;
             }
         }
-
+        /// <summary>
+        /// Obtiene o establece el segundo apellido de una persona
+        /// </summary>
         public string SegundoApellido
         {
             get

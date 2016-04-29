@@ -25,7 +25,9 @@ namespace GestorTFG
             this.matricula = matricula;
             this.mProyecto = mProyecto;
         }
-
+        /// <summary>
+        /// Obtiene o establece la Fecha de Inicio de un TFG por parte de un alumno
+        /// </summary>
         public string FechaInicio
         {
             get
@@ -38,7 +40,9 @@ namespace GestorTFG
                 fechaInicio = value;
             }
         }
-
+        /// <summary>
+        /// Obtiene o establece la Matrícula de un alumno
+        /// </summary>
         public string Matricula
         {
             get

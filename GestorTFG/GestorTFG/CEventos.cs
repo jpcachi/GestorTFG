@@ -6,6 +6,9 @@ using System.Windows.Forms;
 
 namespace GestorTFG
 {
+    /// <summary>
+    /// clase encargada de los eventos de seleccion de item en listview y combobox
+    /// </summary>
     class CEventos
     {
         public void OnListViewSelectedIndexChange(ListView ListView, ComboBox modificar, TextBox modificarValue, Button[] botones, ref GroupBox finalizar, int index)

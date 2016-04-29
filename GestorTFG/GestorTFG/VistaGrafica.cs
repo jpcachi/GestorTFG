@@ -6,6 +6,9 @@ using System.Windows.Forms;
 
 namespace GestorTFG
 {
+    /// <summary>
+    /// Clase encargada de conectar los eventos con su interfaz gráfica
+    /// </summary>
     class VistaGrafica
     {
         private CAlumno cAlumno;
@@ -34,13 +37,13 @@ namespace GestorTFG
             cProyectos = new CProyectos();
             cEventos = new CEventos();
         }
-        public void BotonAñadirProyecto(TextBox Titulo, TextBox Descripcion, DateTimePicker Fecha, TextBox ProfesorNombre, TextBox ProfesorApellido1, TextBox ProfesorApellido2, TextBox ProfesorCorreo, TextBox ProfesorDespacho, ref ListView listView1, ref ListView listView2)
+        public void BotonAñadirProyecto(TextBox Titulo, TextBox Descripcion, DateTimePicker Fecha, TextBox ProfesorNombre, TextBox ProfesorApellido1, TextBox ProfesorApellido2, TextBox ProfesorCorreo, TextBox ProfesorDespacho, ref VistaLista listView1, ref VistaLista listView2)
         {
             if (!(EstanVacios(Titulo, Descripcion, ProfesorNombre, ProfesorApellido1, ProfesorApellido2, ProfesorDespacho, ProfesorCorreo)))
             {
                 cProyectos.AñadirProyecto(Titulo.Text.Trim(), Descripcion.Text.Trim(), Fecha.Text.Trim(), ProfesorNombre.Text.Trim(), ProfesorApellido1.Text.Trim(), ProfesorApellido2.Text.Trim(), ProfesorCorreo.Text.Trim(), ProfesorDespacho.Text.Trim());
                 AñadirProyectoVistaTabla(ref listView1);
-                ActualizarVistaTabla(ref listView2, 1);
+                ActualizarVistaTabla(ref listView2, TipoLista.Sin_Asignar);
                 listView1.SelectedIndices.Clear();
                 if(listView1.Items.Count > 0)
                     listView1.Items[listView1.Items.Count - 1].Selected = true;
@@ -48,7 +51,7 @@ namespace GestorTFG
             else MessageBox.Show("Rellene todos los campos antes de continuar", "Faltan campos por rellenar", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
-        public bool BotonEliminarProyecto(ref ListView listView1, ref ListView listView2, TabControl tabControl3)
+        public bool BotonEliminarProyecto(ref VistaLista listView1, ref VistaLista listView2, TabControl tabControl3)
         {
             bool resul = false;
             string mensaje = "¿Desea eliminar los TFG seleccionados?";
@@ -95,10 +98,10 @@ namespace GestorTFG
             return enc;
         }
 
-        public void ActualizarVistaTabla(ref ListView listView, int index)
+        public void ActualizarVistaTabla(ref VistaLista listView, TipoLista index)
         {
             listView.Items.Clear();
-            foreach(MProyecto mProyecto in MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[index])
+            foreach(MProyecto mProyecto in MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)index])
             {
                 ListViewItem listViewItem = new ListViewItem(mProyecto.getMTFG.Titulo);
                 listViewItem.SubItems.Add(mProyecto.getMTFG.Descripcion);
@@ -121,7 +124,7 @@ namespace GestorTFG
             }
         }
 
-        public void AñadirProyectoVistaTabla(ref ListView listView)
+        public void AñadirProyectoVistaTabla(ref VistaLista listView)
         {
             MProyecto mProyecto = MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[MListaProyectos.getMListaProyectos.getMProyectos.getProyectos.Count - 1];
             ListViewItem listViewItem = new ListViewItem(mProyecto.getMTFG.Titulo);
@@ -130,9 +133,9 @@ namespace GestorTFG
             listView.Items.Add(listViewItem);
         }
 
-        public void TabControlChange(ref ListView listView, int tabindex)
+        public void TabControlChange(ref VistaLista listView, int tabindex)
         {
-            ActualizarVistaTabla(ref listView, tabindex);
+            ActualizarVistaTabla(ref listView, (TipoLista)tabindex);
         }
         /*public void ItemSeleccionadoLista1(ListView ListView, ComboBox modificar, TextBox modificarValue, Button[] botones, ref GroupBox finalizar)
         {
@@ -144,7 +147,7 @@ namespace GestorTFG
             cEventos.OnListViewSelectedIndexChange(ListView, modificar, modificarValue, botones, ref finalizar, 2);
         }*/
 
-        public void ItemSeleccionadoLista(ListView listView, ref ComboBox comboBox1, TextBox textBox8, DateTimePicker dateTimePicker3, NumericUpDown numericUpDown1, GroupBox groupBox3, RichTextBox richTextBox1, RichTextBox richTextBox2, params Button[] buttons)
+        public void ItemSeleccionadoLista(VistaLista listView, ref ComboBox comboBox1, TextBox textBox8, DateTimePicker dateTimePicker3, NumericUpDown numericUpDown1, GroupBox groupBox3, RichTextBox richTextBox1, RichTextBox richTextBox2, params Button[] buttons)
         {
             cEventos.OnListView1SelectedIndexChange(listView, ref comboBox1, textBox8, dateTimePicker3, numericUpDown1, groupBox3, richTextBox1, richTextBox2, buttons);
         }
@@ -154,7 +157,7 @@ namespace GestorTFG
             cEventos.OnListView2SelectedIndexChange(listView, buttons);
         }
 
-        public bool BotonAñadirAlumno(Form1 ventanaAnterior, ref TabControl tabControl3, ref ListView listView1, ListView listView2, ref Button button7, ref Button button8, ref GroupBox groupBox3)
+        public bool BotonAñadirAlumno(Form1 ventanaAnterior, ref TabControl tabControl3, ref VistaLista listView1, VistaLista listView2, ref Button button7, ref Button button8, ref GroupBox groupBox3)
         {
             string[] datosAlumno = new string[5];
             Form2 AsignarAlumno = new Form2(datosAlumno);
@@ -190,7 +193,7 @@ namespace GestorTFG
             return true;
         }
 
-        public void BotonEliminarAlumno(ref ListView listView, ref Button eliminarAlumno, ref Button AsignarAlumno, ref GroupBox grupoFinalizar)
+        public void BotonEliminarAlumno(ref VistaLista listView, ref Button eliminarAlumno, ref Button AsignarAlumno, ref GroupBox grupoFinalizar)
         {
             for (int i = listView.SelectedIndices.Count - 1; i > -1; i--)
             {
@@ -217,7 +220,7 @@ namespace GestorTFG
             cProyectos.GuardarProyectos();
         }
         
-        public void BotonModificar(ComboBox comboBox1, TextBox textBox8, ComboBox comboBox3, DateTimePicker dateTimePicker3, NumericUpDown numericUpDown1, ref ListView listView)
+        public void BotonModificar(ComboBox comboBox1, TextBox textBox8, ComboBox comboBox3, DateTimePicker dateTimePicker3, NumericUpDown numericUpDown1, ref VistaLista listView)
         {
             string valor = "";
             int indice = listView.SelectedIndices[0];
@@ -230,11 +233,11 @@ namespace GestorTFG
             }
 
             cProyectos.ModificarProyecto(comboBox1.SelectedIndex, valor, indice);
-            ActualizarVistaTabla(ref listView, 0);
+            ActualizarVistaTabla(ref listView, TipoLista.Todos);
             listView.Items[indice].Selected = true;
         }
 
-        public void BotonFinalizar(DateTimePicker dateTimePicker2, ComboBox comboBox2, NumericUpDown numericUpDown2, ref ListView listView1)
+        public void BotonFinalizar(DateTimePicker dateTimePicker2, ComboBox comboBox2, NumericUpDown numericUpDown2, ref VistaLista listView1)
         {
             if (string.IsNullOrWhiteSpace(comboBox2.Text))
             {
