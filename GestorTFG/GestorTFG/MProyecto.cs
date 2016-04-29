@@ -61,10 +61,10 @@ namespace GestorTFG
         /// <summary>
         /// Asigna un alumno al proyecto con los siguientes datos
         /// </summary>
-        public void AsignarAlumno(string nombre, string apellido1, string apellido2, string fechaInicio, string matricula)
+        public void AsignarAlumno(string nombre, string apellido1, string apellido2, string matricula, string fechaInicio)
         {
             MListaProyectos.getMListaProyectos.getMProyectos.getProyectosNoAsignados.Remove(this);
-            alumno = Instanciar.NuevaPersona.CrearAlumno(nombre, apellido1, apellido2, fechaInicio, matricula, this);
+            alumno = Instanciar.NuevaPersona.CrearAlumno(nombre, apellido1, apellido2, matricula, fechaInicio, this);
             if(alumno != null)
             {
                 asignado = true;
@@ -115,15 +115,13 @@ namespace GestorTFG
             MProyecto resul = new MProyecto(mTFG.Titulo, mTFG.Descripcion, mTFG.Fecha, profesor.Nombre, profesor.PrimerApellido, profesor.SegundoApellido, profesor.Despacho, profesor.Correo);
             if (asignado)
             {
-                resul.AsignarAlumno(alumno.Nombre, alumno.PrimerApellido, alumno.SegundoApellido, alumno.FechaInicio, alumno.Matricula);
+                resul.AsignarAlumno(alumno.Nombre, alumno.PrimerApellido, alumno.SegundoApellido, alumno.Matricula, alumno.FechaInicio);
                 if(mTFG.Finalizado)
                 {
                     resul.mTFG.Finalizar(mTFG.getMFinalizado.Defensa, mTFG.getMFinalizado.Convocatoria, mTFG.getMFinalizado.Nota);
                 }
             }
-
             return resul;
         }
-
     }
 }

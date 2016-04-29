@@ -27,6 +27,13 @@ namespace GestorTFG
             }
         }
 
+        public bool esArchivoTXT
+        {
+            get
+            {
+                return path.Substring(path.Length - 3).ToUpperInvariant() == "TXT";
+            }
+        }
         public LeerEscribirArchivo()
         {
             //fs = File.Open("lista.tfg", FileMode.OpenOrCreate);

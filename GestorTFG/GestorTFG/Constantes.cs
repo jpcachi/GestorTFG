@@ -1,12 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using System.Runtime.InteropServices;
 
 namespace GestorTFG
 {
     class Constantes
     {
+        [DllImport("user32.dll")]
+        public static extern int MsgBox(int hWnd, string text, string caption, uint type);
+        [DllImport("user32.dll")]
+        public static extern bool SendMessage(IntPtr hwnd, uint msg, IntPtr wParam, IntPtr lParam);
+
+        public const uint LVM_SETTEXTBKCOLOR = 0x1026;
         public const uint MB_TOPMOST = (uint)0x00040000L;
         public const uint NM_CUSTOMDRAW = unchecked((uint)-12);
         public const int WM_REFLECT_NOTIFY = 0x204E;
@@ -27,6 +31,6 @@ namespace GestorTFG
         public const decimal LIMITE_NOTA_SUSPENSA = 4.99m;
         public const decimal LIMITE_NOTA_APROBADA = 5m;
         public const float TAMAÑO_RELATIVO_RESOLUCION = 0.9f;
-        
+        private Constantes() { }
     }
 }

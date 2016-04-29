@@ -38,7 +38,7 @@
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.richTextBox2 = new System.Windows.Forms.RichTextBox();
-            this.listView1 = new VistaLista();
+            this.listView1 = new GestorTFG.VistaLista();
             this.Titulo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Descripcion = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.FechaPropuesta = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -344,7 +344,7 @@
             this.toolStripMenuItem3});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.contextMenuStrip1.Size = new System.Drawing.Size(179, 92);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(179, 70);
             // 
             // toolStripMenuItem1
             // 
@@ -376,6 +376,7 @@
             this.Name = "Form4";
             this.ShowInTaskbar = false;
             this.Text = "Resultados de la búsqueda";
+            this.Load += new System.EventHandler(this.Form4_Load);
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             this.tabControl1.ResumeLayout(false);

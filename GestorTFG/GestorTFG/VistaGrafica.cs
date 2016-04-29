@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
@@ -73,10 +74,9 @@ namespace GestorTFG
                     while (listView2.SelectedIndices.Count > 0)
                     {
                         int numelems = listView2.SelectedIndices.Count - 1;
-                        listView1.Items.RemoveAt(/*lista.ListaNoAsignados[numelems].Indice*/MListaProyectos.getMListaProyectos.getMProyectos.getProyectos.IndexOf(MListaProyectos.getMListaProyectos.getMProyectos.getProyectosNoAsignados[numelems]));
+                        listView1.Items.RemoveAt(MListaProyectos.getMListaProyectos.getMProyectos.getProyectos.IndexOf(MListaProyectos.getMListaProyectos.getMProyectos.getProyectosNoAsignados[numelems]));
                         listView2.Items.RemoveAt(listView2.SelectedIndices[numelems]);
                         MListaProyectos.getMListaProyectos.getMProyectos.Borrar(MListaProyectos.getMListaProyectos.getMProyectos.getProyectosNoAsignados[numelems]);
-                        //lista.Eliminar(lista.ListaNoAsignados[numelems].Indice);
                     }
                 }
                 resul = true;
@@ -111,8 +111,8 @@ namespace GestorTFG
                     listViewItem.SubItems.Add(mProyecto.Alumno.Nombre);
                     listViewItem.SubItems.Add(mProyecto.Alumno.PrimerApellido);
                     listViewItem.SubItems.Add(mProyecto.Alumno.SegundoApellido);
-                    listViewItem.SubItems.Add(mProyecto.Alumno.FechaInicio);
                     listViewItem.SubItems.Add(mProyecto.Alumno.Matricula);
+                    listViewItem.SubItems.Add(mProyecto.Alumno.FechaInicio);
                     if (mProyecto.getMTFG.Finalizado)
                     {
                         listViewItem.SubItems.Add(mProyecto.getMTFG.getMFinalizado.Defensa);
@@ -137,15 +137,6 @@ namespace GestorTFG
         {
             ActualizarVistaTabla(ref listView, (TipoLista)tabindex);
         }
-        /*public void ItemSeleccionadoLista1(ListView ListView, ComboBox modificar, TextBox modificarValue, Button[] botones, ref GroupBox finalizar)
-        {
-            cEventos.OnListViewSelectedIndexChange(ListView, modificar, modificarValue, botones, ref finalizar, 1);
-        }
-
-        public void ItemSeleccionadoLista2(ListView ListView, ComboBox modificar, TextBox modificarValue, Button[] botones, ref GroupBox finalizar)
-        {
-            cEventos.OnListViewSelectedIndexChange(ListView, modificar, modificarValue, botones, ref finalizar, 2);
-        }*/
 
         public void ItemSeleccionadoLista(VistaLista listView, ref ComboBox comboBox1, TextBox textBox8, DateTimePicker dateTimePicker3, NumericUpDown numericUpDown1, GroupBox groupBox3, RichTextBox richTextBox1, RichTextBox richTextBox2, params Button[] buttons)
         {
@@ -166,11 +157,11 @@ namespace GestorTFG
             if (datosAlumno != null)
             {
                 if (tabControl3.SelectedIndex == 0)
-                    MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[listView1.SelectedIndices[0]].AsignarAlumno(datosAlumno[0], datosAlumno[1], datosAlumno[2], datosAlumno[3], datosAlumno[4]);
+                    cAlumno.AsignarAlumno(datosAlumno[0], datosAlumno[1], datosAlumno[2], datosAlumno[3], datosAlumno[4], listView1.SelectedIndices[0]);
                 else if (tabControl3.SelectedIndex == 1)
                 {
-                    int indexAssign = MListaProyectos.getMListaProyectos.getMProyectos.getProyectos.IndexOf(MListaProyectos.getMListaProyectos.getMProyectos.getProyectosNoAsignados[listView2.SelectedIndices[0]]);
-                    MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[indexAssign].AsignarAlumno(datosAlumno[0], datosAlumno[1], datosAlumno[2], datosAlumno[3], datosAlumno[4]);
+                    int indexAssign = MListaProyectos.getMListaProyectos.getMProyectos.getProyectos.IndexOf(MListaProyectos.getMListaProyectos.getMProyectos.getProyectosNoAsignados[listView2.SelectedIndices[0]]);     
+                    cAlumno.AsignarAlumno(datosAlumno[0], datosAlumno[1], datosAlumno[2], datosAlumno[3], datosAlumno[4], indexAssign);
                     tabControl3.SelectedIndex = 0;
                     listView1.Items[indexAssign].Selected = true;
                 }
@@ -180,7 +171,6 @@ namespace GestorTFG
                 datosModelo.Add(MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[listView1.SelectedIndices[0]].Alumno.SegundoApellido);
                 datosModelo.Add(MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[listView1.SelectedIndices[0]].Alumno.Matricula);
                 datosModelo.Add(MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[listView1.SelectedIndices[0]].Alumno.FechaInicio);
-
                 foreach (string dato in datosModelo)
                 {
                     listView1.SelectedItems[0].SubItems.Add(dato);
@@ -195,7 +185,7 @@ namespace GestorTFG
 
         public void BotonEliminarAlumno(ref VistaLista listView, ref Button eliminarAlumno, ref Button AsignarAlumno, ref GroupBox grupoFinalizar)
         {
-            for (int i = listView.SelectedIndices.Count - 1; i > -1; i--)
+            for (int i = 0; i < listView.SelectedIndices.Count; i++)
             {
                 cAlumno.EliminarAlumno(i);
                 listView.Items[i].SubItems.RemoveAt(7);
@@ -254,6 +244,10 @@ namespace GestorTFG
         {
             cEventos.ActualizarComboBoxModificar(ref comboBox1, listView1);
         }
-             
+
+        public void ActualizarDatosRichTextBox(ref RichTextBox richTextBox, ListView listView, TDatos mostrar)
+        {
+            richTextBox.Text = cEventos.ActualizarDatosRichTextBox(listView.SelectedIndices[0], mostrar);
+        }
     }
 }

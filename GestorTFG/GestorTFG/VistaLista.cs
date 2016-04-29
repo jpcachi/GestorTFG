@@ -19,11 +19,6 @@ namespace GestorTFG
             public uint code;
         }
 
-        public VistaLista() :base()
-        {
-            SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
-        }
-
         protected override void WndProc(ref Message m)
         {
             if (m.Msg == Constantes.WM_REFLECT_NOTIFY)
@@ -37,21 +32,6 @@ namespace GestorTFG
             }
 
             base.WndProc(ref m);
-        }
-
-        private void InitializeComponent()
-        {
-            this.SuspendLayout();
-            // 
-            // VistaLista
-            // 
-            this.FullRowSelect = true;
-            this.GridLines = true;
-            this.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
-            this.OwnerDraw = true;
-            this.View = System.Windows.Forms.View.Details;
-            this.ResumeLayout(false);
-
         }
     }
 }

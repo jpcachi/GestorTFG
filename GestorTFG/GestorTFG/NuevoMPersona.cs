@@ -17,9 +17,9 @@ namespace GestorTFG
         /// <param name="matricula"></param>
         /// <param name="mProyecto"></param>
         /// <returns></returns>
-        public MAlumno CrearAlumno(string nombre, string apellido1, string apellido2, string fechaInicio, string matricula, MProyecto mProyecto)
+        public MAlumno CrearAlumno(string nombre, string apellido1, string apellido2, string matricula, string fechaInicio, MProyecto mProyecto)
         {
-            return new MAlumno(nombre, apellido1, apellido2, fechaInicio, matricula, mProyecto);
+            return new MAlumno(nombre, apellido1, apellido2, matricula, fechaInicio, mProyecto);
         }
         /// <summary>
         /// Método encargado de devolver una nueva instancia del tipo Profesor

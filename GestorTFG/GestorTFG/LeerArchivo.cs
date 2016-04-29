@@ -49,7 +49,6 @@ namespace GestorTFG
             MListaProyectos.getMListaProyectos.getMProyectos.getProyectos.Clear();
             int i = 0;
             while (leerProyecto() != null) Console.WriteLine(i++);
-            //CerrarLectura();
         }
 
         public string ImportarProyecto()

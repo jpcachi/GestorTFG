@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
+using System.Windows.Forms.VisualStyles;
 
 namespace GestorTFG
 {
@@ -34,7 +35,9 @@ namespace GestorTFG
             if (e.Item.Selected)
             {
                 e.Graphics.FillRectangle(new SolidBrush(Color.FromArgb(209, 232, 255)), e.Bounds);
+                //Usar:
                 //TextRenderer.DrawText(e.Graphics, e.SubItem.Text, listView.Font, new Rectangle(new Point(e.Bounds.Location.X + 2, e.Bounds.Location.Y + 1), new Size(e.Bounds.Width - 2, e.Bounds.Height - 1)), SystemColors.HighlightText, TextFormatFlags.ExpandTabs);
+                //si el color es muy oscuro y se necesita resaltar el texto en blanco
             }
             else
             {
@@ -50,8 +53,12 @@ namespace GestorTFG
         /// <param name="e"></param>
         public static void DibujarCabeceras(object sender, DrawListViewColumnHeaderEventArgs e)
         {
-            e.Graphics.FillRectangle(SystemBrushes.ControlLight, e.Bounds);
-            TextRenderer.DrawText(e.Graphics, e.Header.Text, (sender as ListView).Font, new Rectangle(new Point(e.Bounds.Location.X + Constantes.MARGEN_IZQUIERDO_CABECERA, e.Bounds.Location.Y + Constantes.MARGEN_ABAJO_CABECERA), new Size(e.Bounds.Width - Constantes.MARGEN_IZQUIERDO_CABECERA, e.Bounds.Height - Constantes.MARGEN_ABAJO_CABECERA)), SystemColors.WindowText, TextFormatFlags.ExpandTabs);
+            if (Application.VisualStyleState == VisualStyleState.NonClientAreaEnabled) e.DrawDefault = true;
+            else
+            {
+                e.Graphics.FillRectangle(SystemBrushes.ControlLight, e.Bounds);
+                TextRenderer.DrawText(e.Graphics, e.Header.Text, (sender as ListView).Font, new Rectangle(new Point(e.Bounds.Location.X + Constantes.MARGEN_IZQUIERDO_CABECERA, e.Bounds.Location.Y + Constantes.MARGEN_ABAJO_CABECERA), new Size(e.Bounds.Width - Constantes.MARGEN_IZQUIERDO_CABECERA, e.Bounds.Height - Constantes.MARGEN_ABAJO_CABECERA)), SystemColors.WindowText, TextFormatFlags.ExpandTabs);
+            }
         }
     }
 }
