@@ -111,7 +111,7 @@ namespace GestorTFG
                 e.Graphics.FillRectangle(new SolidBrush(Color.FromArgb(209, 232, 255)), new Rectangle(posX, e.Bounds.Y, e.Bounds.Width, e.Bounds.Height));
             } else
             {
-                e.Graphics.FillRectangle(new SolidBrush(colorBackgroundItem), new Rectangle(posX, e.Bounds.Y, e.Bounds.Width, e.Bounds.Height));
+                //e.Graphics.FillRectangle(new SolidBrush(colorBackgroundItem), new Rectangle(posX, e.Bounds.Y, e.Bounds.Width, e.Bounds.Height));
             }
             
         }
@@ -161,7 +161,7 @@ namespace GestorTFG
                 vista.BackColor = colorBackgroundItem;
         }
 
-        public static void DibujarSubItemListViewBusqueda(string clave, object sender, DrawListViewSubItemEventArgs e)
+        public static void DibujarSubItemListViewBusqueda(TCampos campo, string clave, object sender, DrawListViewSubItemEventArgs e)
         {
             ListView listView = sender as ListView;
             e.Graphics.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
@@ -180,7 +180,7 @@ namespace GestorTFG
                 }
                 else e.Graphics.FillRectangle(new SolidBrush(colorBackgroundItem), new Rectangle(e.Bounds.X, e.Bounds.Y, e.Bounds.Width, e.Bounds.Height - Constantes.MARGEN_ABAJO));
             }
-            if (e.SubItem.Text.ToUpperInvariant().Contains(clave.ToUpperInvariant()))
+            if ((e.SubItem.Text.ToUpperInvariant().Contains(clave.ToUpperInvariant()) && campo == TCampos.Todos) || (e.SubItem.Text.ToUpperInvariant().Contains(clave.ToUpperInvariant()) && campo == TCampos.Titulo && e.ColumnIndex == 0) || (e.SubItem.Text.ToUpperInvariant().Contains(clave.ToUpperInvariant()) && campo == TCampos.Descripcion && e.ColumnIndex == 1) || (e.SubItem.Text.ToUpperInvariant().Contains(clave.ToUpperInvariant()) && campo == TCampos.Alumno && (e.ColumnIndex == 3 || e.ColumnIndex == 4 || e.ColumnIndex == 5 || e.ColumnIndex == 6)))
             {
                 int indiceClave = e.SubItem.Text.ToUpperInvariant().IndexOf(clave.ToUpperInvariant());
                 string textoClave = e.SubItem.Text.Substring(indiceClave, clave.Length);

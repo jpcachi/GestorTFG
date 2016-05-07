@@ -229,7 +229,7 @@ namespace GestorTFG
                 {
                     ProyectoIndice despuesAñadirAlumno = new ProyectoIndice(MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[listView1.SelectedIndices[0]].Copiar(), listView1.SelectedIndices[0]);
                     Operacion operacionAñadirAlumno = new Operacion(TOperacion.AsignarAlumno, proyectoAñadido);
-                    operacionAñadirAlumno.ListaProyectosDespues.Add(despuesAñadirAlumno);
+                    operacionAñadirAlumno.ListaProyectosDespues.Add(despuesAñadirAlumno);     
                     deshacer.Pila.Push(operacionAñadirAlumno);
                     deshacer.VaciarRehacer();
                     rehacerToolStripMenuItem.Enabled = false;
@@ -334,9 +334,10 @@ namespace GestorTFG
 
         private void button11_Click(object sender, EventArgs e)
         {
+            ProyectoIndice proyectoAntesAñadir = new ProyectoIndice(MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[listView1.SelectedIndices[0]].Copiar(), listView1.SelectedIndices[0]);
             if (vista.BotonAñadirAlumno(this, ref tabControl3, ref listView1, listView2, ref button7, ref button8, ref groupBox3))
             {
-                Operacion op = new Operacion(TOperacion.AsignarAlumno);
+                Operacion op = new Operacion(TOperacion.AsignarAlumno, proyectoAntesAñadir);
                 ProyectoIndice proyectoAñadidoAlumno = new ProyectoIndice(MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[listView1.SelectedIndices[0]].Copiar(), listView1.SelectedIndices[0]);
                 op.ListaProyectosDespues.Add(proyectoAñadidoAlumno);
                 deshacer.Pila.Push(op);
@@ -374,7 +375,6 @@ namespace GestorTFG
             }
             else
             {
-
                 antesdeEliminar = new ProyectoIndice[0];
             }
 
@@ -471,8 +471,11 @@ namespace GestorTFG
                 ProyectoIndice[] antesdeEliminarAlumno = new ProyectoIndice[listView1.SelectedIndices.Count];
                 for (int i = 0; i < listView1.SelectedIndices.Count; i++)
                     antesdeEliminarAlumno[i] = new ProyectoIndice(MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[listView1.SelectedIndices[i]].Copiar(), listView1.SelectedIndices[i]);
+                Operacion op = new Operacion(TOperacion.EliminarAlumno, antesdeEliminarAlumno);
                 vista.BotonEliminarAlumno(ref listView1, ref button7, ref button8, ref groupBox3);
-                deshacer.Pila.Push(new Operacion(TOperacion.EliminarAlumno, antesdeEliminarAlumno));
+                for (int i = 0; i < listView1.SelectedIndices.Count; i++)
+                    op.ListaProyectosDespues.Add(new ProyectoIndice(MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[listView1.SelectedIndices[i]].Copiar(), listView1.SelectedIndices[i]));
+                deshacer.Pila.Push(op);
                 deshacer.VaciarRehacer();
                 rehacerToolStripMenuItem.Enabled = false;
                 ForwardStripButton1.Enabled = false;
@@ -591,6 +594,14 @@ namespace GestorTFG
                     this.fichero.AbrirLectura(cargar.FileName);
                     this.fichero.LeerArchivo();
                     vista.ActualizarVistaTabla(ref listView1, TipoLista.Todos);
+                    vista.ActualizarVistaTabla(ref listView2, TipoLista.Sin_Asignar);
+                    vista.ActualizarVistaTabla(ref listView3, TipoLista.Finalizados);
+                    if (MListaProyectos.getMListaProyectos.getMProyectos.getProyectos.Count > 0)
+                        vista.RefrescarItemsVistaTabla(ref listView1, TipoLista.Todos);
+                    if (MListaProyectos.getMListaProyectos.getMProyectos.getProyectosNoAsignados.Count > 0)
+                        vista.RefrescarItemsVistaTabla(ref listView2, TipoLista.Sin_Asignar);
+                    if (MListaProyectos.getMListaProyectos.getMProyectos.getProyectosFinalizados.Count > 0)
+                        vista.RefrescarItemsVistaTabla(ref listView3, TipoLista.Finalizados);
                     toolStripStatusLabel1.Text = this.fichero.ArchivoActual;
                     this.fichero.CerrarLectura();
                     toolStripStatusLabel1.Text = this.fichero.ArchivoActual;
@@ -984,7 +995,7 @@ namespace GestorTFG
             {
                 listView1.RedrawItems(indices[0], indices[indices.Length - 1], false);
             }
-
+            listView1.SelectedIndices.Clear();
             for (int i = 0; i < indices.Length; i++)
                 listView1.Items[indices[i]].Selected = true;
             if (deshacer.PilaDeshacerVacia())
@@ -992,18 +1003,21 @@ namespace GestorTFG
                 deshacerToolStripMenuItem.Enabled = false;
                 BackToolStripButton1.Enabled = false;
             }
-            if (listView1.SelectedIndices.Count == 0)
+            if (listView1.SelectedIndices.Count != 1)
             {
-                comboBox1.Enabled = false;
-                textBox8.Enabled = false;
-                dateTimePicker3.Enabled = false;
-                numericUpDown1.Enabled = false;
-                button5.Enabled = false;
-                button6.Enabled = false;
-                button7.Enabled = false;
-                button8.Enabled = false;
-                button9.Enabled = false;
-                groupBox3.Enabled = false;
+                if (listView1.SelectedIndices.Count == 0)
+                {
+                    comboBox1.Enabled = false;
+                    textBox8.Enabled = false;
+                    dateTimePicker3.Enabled = false;
+                    numericUpDown1.Enabled = false;
+                    button5.Enabled = false;
+                    button6.Enabled = false;
+                    button7.Enabled = false;
+                    button8.Enabled = false;
+                    button9.Enabled = false;
+                    groupBox3.Enabled = false;
+                }
                 richTextBox2.Clear();
                 richTextBox1.Clear();
             }
@@ -1020,7 +1034,7 @@ namespace GestorTFG
                         groupBox3.Enabled = false;
                     }
                     else groupBox3.Enabled = true;
-                }
+                } else groupBox3.Enabled = false;
             }
             vista.ActualizarDatosRichTextBox(ref richTextBox1, listView1, TipoLista.Todos, TDatos.TFG);
             vista.ActualizarDatosRichTextBox(ref richTextBox2, listView1, TipoLista.Todos, TDatos.Profesor);
@@ -1051,6 +1065,7 @@ namespace GestorTFG
             {
                 listView1.RedrawItems(indices[0], indices[indices.Length - 1], false);
             }
+            listView1.SelectedIndices.Clear();
             for (int i = 0; i < indices.Length; i++)
                 listView1.Items[indices[i]].Selected = true;
             if (deshacer.PilaRehacerVacia())
@@ -1058,21 +1073,25 @@ namespace GestorTFG
                 rehacerToolStripMenuItem.Enabled = false;
                 ForwardStripButton1.Enabled = false;
             }
-            if (listView1.SelectedIndices.Count == 0)
+            if (listView1.SelectedIndices.Count != 1)
             {
-                comboBox1.Enabled = false;
-                textBox8.Enabled = false;
-                dateTimePicker3.Enabled = false;
-                numericUpDown1.Enabled = false;
-                button5.Enabled = false;
-                button6.Enabled = false;
-                button7.Enabled = false;
-                button8.Enabled = false;
-                button9.Enabled = false;
-                groupBox3.Enabled = false;
+                if (listView1.SelectedIndices.Count == 0)
+                {
+                    comboBox1.Enabled = false;
+                    textBox8.Enabled = false;
+                    dateTimePicker3.Enabled = false;
+                    numericUpDown1.Enabled = false;
+                    button5.Enabled = false;
+                    button6.Enabled = false;
+                    button7.Enabled = false;
+                    button8.Enabled = false;
+                    button9.Enabled = false;
+                    groupBox3.Enabled = false;
+                }
                 richTextBox2.Clear();
                 richTextBox1.Clear();
             }
+
             else if (listView1.SelectedIndices.Count == 1)
             {
                 if (MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[listView1.SelectedIndices[0]].Asignado)
@@ -1085,7 +1104,7 @@ namespace GestorTFG
                         groupBox3.Enabled = false;
                     }
                     else groupBox3.Enabled = true;
-                }
+                } else groupBox3.Enabled = true;
             }
             vista.ActualizarDatosRichTextBox(ref richTextBox1, listView1, TipoLista.Todos, TDatos.TFG);
             vista.ActualizarDatosRichTextBox(ref richTextBox2, listView1, TipoLista.Todos, TDatos.Profesor);
@@ -1205,6 +1224,14 @@ namespace GestorTFG
                     this.fichero.AbrirLectura(cargar.FileName);
                     this.fichero.ImportarArchivo();
                     vista.ActualizarVistaTabla(ref listView1, TipoLista.Todos);
+                    vista.ActualizarVistaTabla(ref listView2, TipoLista.Sin_Asignar);
+                    vista.ActualizarVistaTabla(ref listView3, TipoLista.Finalizados);
+                    if(MListaProyectos.getMListaProyectos.getMProyectos.getProyectos.Count > 0)
+                        vista.RefrescarItemsVistaTabla(ref listView1, TipoLista.Todos);
+                    if (MListaProyectos.getMListaProyectos.getMProyectos.getProyectosNoAsignados.Count > 0)
+                        vista.RefrescarItemsVistaTabla(ref listView2, TipoLista.Sin_Asignar);
+                    if (MListaProyectos.getMListaProyectos.getMProyectos.getProyectosFinalizados.Count > 0)
+                        vista.RefrescarItemsVistaTabla(ref listView3, TipoLista.Finalizados);
                     toolStripStatusLabel1.Text = this.fichero.ArchivoActual;
                     this.fichero.CerrarLectura();
                     toolStripStatusLabel1.Text = this.fichero.ArchivoActual;

@@ -63,7 +63,7 @@ namespace Generador_TFG
                 ary.Add(apellido[rand.Next(apellido.Length)]);
 
                 //matricula
-                ary.Add(((char)(rand.Next(26) + 97)) + ((char)(rand.Next(26) + 97)) + rand.Next(10000).ToString());
+                ary.Add(char.ConvertFromUtf32(rand.Next(0x0061, 0x007A)) + char.ConvertFromUtf32(rand.Next(0x0061, 0x007A)) + rand.Next(10000).ToString());
                     
                 //fechadeinicio
                 ary.Add(rand.Next(32) + "/"

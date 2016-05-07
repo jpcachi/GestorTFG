@@ -49,6 +49,31 @@ namespace Generador_TFG
 
                 //despacho
                 ary.Add(rand.Next(1, 10000).ToString());
+
+                // alumno
+                //nombre
+                ary.Add(string.Empty);
+
+                //apellido1
+                ary.Add(string.Empty);
+
+                //apellido2
+                ary.Add(string.Empty);
+
+                //matricula
+                ary.Add(string.Empty);
+
+                //fechadeinicio
+                ary.Add(string.Empty);
+
+                //fechadefensa
+                ary.Add(string.Empty);
+
+                //convocatoria
+                ary.Add(string.Empty);
+
+                //calificacion
+                ary.Add(string.Empty);
                 datos.Add(ary);
             }
         }

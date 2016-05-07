@@ -61,11 +61,20 @@ namespace Generador_TFG
                 ary.Add(apellido[rand.Next(apellido.Length)]);
 
                 //matricula
-                ary.Add(((char)(rand.Next(26) + 97)) + ((char)(rand.Next(26) + 97)) + rand.Next(10000).ToString());
+                ary.Add(char.ConvertFromUtf32(rand.Next(0x0061, 0x007A)) + char.ConvertFromUtf32(rand.Next(0x0061, 0x007A)) + rand.Next(10000).ToString());
 
                 //fechadeinicio
                 ary.Add(rand.Next(32) + "/"
                 + rand.Next(13) + "/2016");
+
+                //fechadefensa
+                ary.Add(string.Empty);
+
+                //convocatoria
+                ary.Add(string.Empty);
+
+                //calificacion
+                ary.Add(string.Empty);
                 datos.Add(ary);
             }
         }

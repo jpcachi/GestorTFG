@@ -7,7 +7,8 @@ namespace GestorTFG
     {
         private VistaGrafica vista;
         private string busqueda;
-        public Form4(string busqueda)
+        private TCampos campo;
+        public Form4(string busqueda, TCampos campo)
         {
             vista = new VistaGrafica();
             InitializeComponent();
@@ -15,6 +16,7 @@ namespace GestorTFG
             toolStripStatusLabel2.Text = busqueda;
             contextMenuStrip1.Renderer = new ToolStripVisualStyles.ToolStripAeroRenderer(ToolStripVisualStyles.ToolbarTheme.HelpBar);
             vista.ActualizarVistaTabla(ref listView1, TipoLista.Busqueda);
+            this.campo = campo;
         }
 
         private void listView1_MouseClick(object sender, MouseEventArgs e)
@@ -52,7 +54,7 @@ namespace GestorTFG
 
         private void listView1_DrawSubItem(object sender, DrawListViewSubItemEventArgs e)
         {
-            ListViewVisualStyles.DibujarSubItemListViewBusqueda(busqueda, sender, e);
+            ListViewVisualStyles.DibujarSubItemListViewBusqueda(campo, busqueda, sender, e);
         }
 
         private void listView1_RetrieveVirtualItem(object sender, RetrieveVirtualItemEventArgs e)

@@ -5,7 +5,7 @@ using System.Text;
 
 namespace GestorTFG
 {
-    enum TDatos
+    public enum TDatos
     {
         TFG,
         Profesor

@@ -175,7 +175,7 @@ namespace GestorTFG
                         break;
                     case TCampos.Alumno:
                         if(proyecto.Asignado)
-                            nombre = proyecto.Alumno.Nombre.ToUpperInvariant() + proyecto.Alumno.PrimerApellido.ToUpperInvariant() + proyecto.Alumno.SegundoApellido.ToUpperInvariant();
+                            nombre = proyecto.Alumno.Nombre.ToUpperInvariant() + proyecto.Alumno.PrimerApellido.ToUpperInvariant() + proyecto.Alumno.SegundoApellido.ToUpperInvariant() + proyecto.Alumno.Matricula.ToUpperInvariant();
                         break;
                     case TCampos.Profesor:
                         nombre = proyecto.Profesor.Nombre.ToUpperInvariant() + proyecto.Profesor.PrimerApellido.ToUpperInvariant() + proyecto.Profesor.SegundoApellido.ToUpperInvariant() 

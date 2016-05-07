@@ -23,10 +23,8 @@ namespace GestorTFG
             {
                 byte[] descodificar = Convert.FromBase64String(dato);
                 string proyecto = Encoding.UTF8.GetString(descodificar);
-                Console.WriteLine(proyecto);
                 string[] datos;
                 datos = proyecto.Split(';');
-                Console.WriteLine(datos.Length);
                 MProyecto mProyecto = Instanciar.NuevoProyecto.Crear(datos[0], datos[1], datos[2], datos[3], datos[4], datos[5], datos[6], datos[7]);
                 if (!string.IsNullOrWhiteSpace(datos[8] + datos[9] + datos[10] + datos[11] + datos[12]))
                 {
@@ -47,8 +45,10 @@ namespace GestorTFG
         public void leerListaProyectos()
         {
             MListaProyectos.getMListaProyectos.getMProyectos.getProyectos.Clear();
-            int i = 0;
-            while (leerProyecto() != null) Console.WriteLine(i++);
+            MListaProyectos.getMListaProyectos.getMProyectos.getBusquedaProyecto.Clear();
+            MListaProyectos.getMListaProyectos.getMProyectos.getProyectosFinalizados.Clear();
+            MListaProyectos.getMListaProyectos.getMProyectos.getProyectosNoAsignados.Clear();
+            while (leerProyecto() != null) ;
         }
 
         public string ImportarProyecto()
@@ -78,7 +78,10 @@ namespace GestorTFG
         public void ImportarListaProyectos()
         {
             MListaProyectos.getMListaProyectos.getMProyectos.getProyectos.Clear();
-            while (ImportarProyecto() != null) ; //Console.WriteLine(i++);
+            MListaProyectos.getMListaProyectos.getMProyectos.getBusquedaProyecto.Clear();
+            MListaProyectos.getMListaProyectos.getMProyectos.getProyectosFinalizados.Clear();
+            MListaProyectos.getMListaProyectos.getMProyectos.getProyectosNoAsignados.Clear();
+            while (ImportarProyecto() != null) ;
         }
 
         public void CerrarLectura()

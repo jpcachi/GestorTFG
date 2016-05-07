@@ -5,7 +5,7 @@ using System.Text;
 
 namespace GestorTFG
 {
-    enum TipoLista
+    public enum TipoLista
     {
         Todos,
         Sin_Asignar,

@@ -136,6 +136,11 @@ namespace GestorTFG
             listView.VirtualListSize = MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)index].Count;
         }
 
+        public void RefrescarItemsVistaTabla(ref VistaLista listView, TipoLista index)
+        {
+            listView.RedrawItems(0, MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)index].Count - 1, false);
+        }
+
         public void AñadirProyectoVistaTabla(ref VistaLista listView)
         {
             MProyecto mProyecto = MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[MListaProyectos.getMListaProyectos.getMProyectos.getProyectos.Count - 1];
@@ -178,6 +183,7 @@ namespace GestorTFG
                 {
                     int indexAssign = MListaProyectos.getMListaProyectos.getMProyectos.getProyectos.IndexOf(MListaProyectos.getMListaProyectos.getMProyectos.getProyectosNoAsignados[listView2.SelectedIndices[0]]);
                     cAlumno.AsignarAlumno(datosAlumno[0], datosAlumno[1], datosAlumno[2], datosAlumno[3], datosAlumno[4], indexAssign);
+                    ActualizarVistaTabla(ref listView2, TipoLista.Sin_Asignar);
                     tabControl3.SelectedIndex = 0;
                     listView1.Items[indexAssign].Selected = true;
                 }
@@ -205,15 +211,16 @@ namespace GestorTFG
         {
             for (int i = 0; i < listView.SelectedIndices.Count; i++)
             {
-                cAlumno.EliminarAlumno(i);
-                
+                cAlumno.EliminarAlumno(listView.SelectedIndices[i]);
+
                 //listView.Items[i].SubItems.RemoveAt(7);
                 //listView.Items[i].SubItems.RemoveAt(6);
                 //listView.Items[i].SubItems.RemoveAt(5);
                 //listView.Items[i].SubItems.RemoveAt(4);
                 //listView.Items[i].SubItems.RemoveAt(3);
+                listView.RedrawItems(listView.SelectedIndices[i], listView.SelectedIndices[i], false);
             }
-            listView.RedrawItems(listView.SelectedIndices[0], listView.SelectedIndices[listView.SelectedIndices.Count - 1], false);
+            
             eliminarAlumno.Enabled = false;
             AsignarAlumno.Enabled = true;
             grupoFinalizar.Enabled = false;
@@ -269,8 +276,9 @@ namespace GestorTFG
 
         public void ActualizarDatosRichTextBox(ref RichTextBox richTextBox, ListView listView, TipoLista indiceLista ,TDatos mostrar)
         {
-            if(listView.SelectedIndices.Count > 0)
+            if (listView.SelectedIndices.Count == 1)
                 richTextBox.Text = cEventos.ActualizarDatosRichTextBox(listView.SelectedIndices[0], indiceLista, mostrar);
+            else richTextBox.Clear();
         }
     }
 }

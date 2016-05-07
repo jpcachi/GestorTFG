@@ -5,7 +5,7 @@ using System.Text;
 
 namespace GestorTFG
 {
-    enum TCampos
+    public enum TCampos
     {
         Todos,
         Titulo,

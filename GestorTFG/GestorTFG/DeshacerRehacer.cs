@@ -100,7 +100,10 @@ namespace GestorTFG
                         }
                         break;
                     case TOperacion.EliminarAlumno:
-                        MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[op.ListaProyectosAntes[0].Indice].EliminarAlumno();
+                        foreach (ProyectoIndice proyecto in op.ListaProyectosAntes)
+                        {
+                            MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[proyecto.Indice].EliminarAlumno();
+                        }
                         break;
                     case TOperacion.EliminarTFG:
                         for(int i = op.ListaProyectosAntes.Count - 1; i > - 1; i--)  
