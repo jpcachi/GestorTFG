@@ -54,6 +54,14 @@ namespace GestorTFG
             }
         }
 
+        public List<MProyecto> getBusquedaProyecto
+        {
+            get
+            {
+                return mProyectosBusqueda;
+            }
+        }
+
         public MProyectos()
         {
             mProyectos = new List<MProyecto>();
@@ -61,7 +69,7 @@ namespace GestorTFG
             mProyectosFinalizados = new List<MProyecto>();
             mProyectosBusqueda = new List<MProyecto>();
 
-            proyectos = new List<List<MProyecto>>(3);
+            proyectos = new List<List<MProyecto>>(4);
             proyectos.Add(mProyectos);
             proyectos.Add(mProyectosNoAsignados);
             proyectos.Add(mProyectosFinalizados);
@@ -105,7 +113,7 @@ namespace GestorTFG
             }
         }
 
-        private void ReorganizarListaFinalizados()
+        public void ReorganizarListaFinalizados()
         {
             mProyectosFinalizados.Clear();
             foreach (MProyecto proyecto in mProyectos)
@@ -173,16 +181,17 @@ namespace GestorTFG
                         nombre = proyecto.Profesor.Nombre.ToUpperInvariant() + proyecto.Profesor.PrimerApellido.ToUpperInvariant() + proyecto.Profesor.SegundoApellido.ToUpperInvariant() 
                             + proyecto.Profesor.Correo.ToUpperInvariant() + proyecto.Profesor.Despacho.ToUpperInvariant();
                         break;
-                    default:
+                    case TCampos.Todos:
                         nombre = proyecto.getMTFG.Titulo.ToUpperInvariant() + proyecto.getMTFG.Descripcion.ToUpperInvariant();
                         if (proyecto.Asignado)
+                        {
                             nombre += proyecto.Alumno.Nombre.ToUpperInvariant() + proyecto.Alumno.PrimerApellido.ToUpperInvariant() + proyecto.Alumno.SegundoApellido.ToUpperInvariant();
+                        }
                         nombre += proyecto.Profesor.Nombre.ToUpperInvariant() + proyecto.Profesor.PrimerApellido.ToUpperInvariant() + proyecto.Profesor.SegundoApellido.ToUpperInvariant()
                             + proyecto.Profesor.Correo.ToUpperInvariant() + proyecto.Profesor.Despacho.ToUpperInvariant();
                         break;
                 }
-
-                if (nombre.Contains(clave.ToUpperInvariant()))
+                if (nombre.Contains(clave.ToUpperInvariant()) || nombre.Replace(" ", string.Empty).Contains(clave.ToUpperInvariant().Replace(" ", string.Empty)))
                 {
                     mProyectosBusqueda.Add(proyecto);
                 }

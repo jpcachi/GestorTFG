@@ -30,7 +30,7 @@ namespace GestorTFG
                 else datos += ";;";
             }
             else datos += ";;;;;;;";
-            byte[] codificar = System.Text.Encoding.UTF8.GetBytes(datos);
+            byte[] codificar = Encoding.UTF8.GetBytes(datos);
             bw.Write(Convert.ToBase64String(codificar));
         }
 

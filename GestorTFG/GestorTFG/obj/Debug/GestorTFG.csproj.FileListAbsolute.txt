@@ -12,3 +12,35 @@ F:\Users\Juan Pedro_2\Documents\Visual Studio 2015\Projects\GestorTFG\GestorTFG\
 F:\Users\Juan Pedro_2\Documents\Visual Studio 2015\Projects\GestorTFG\GestorTFG\obj\Debug\GestorTFG.Form5.resources
 F:\Users\Juan Pedro_2\Documents\Visual Studio 2015\Projects\GestorTFG\GestorTFG\obj\Debug\GestorTFG.Form6.resources
 F:\Users\Juan Pedro_2\Documents\Visual Studio 2015\Projects\GestorTFG\GestorTFG\obj\Debug\GestorTFG.VistaLista.resources
+I:\GestorTFG\GestorTFG\obj\Debug\GestorTFG.exe
+I:\GestorTFG\GestorTFG\obj\Debug\GestorTFG.pdb
+I:\GestorTFG\GestorTFG\bin\Debug\GestorTFG.exe
+I:\GestorTFG\GestorTFG\bin\Debug\GestorTFG.pdb
+I:\GestorTFG\GestorTFG\obj\Debug\GestorTFG.csprojResolveAssemblyReference.cache
+I:\GestorTFG\GestorTFG\obj\Debug\GestorTFG.Form1.resources
+I:\GestorTFG\GestorTFG\obj\Debug\GestorTFG.Form2.resources
+I:\GestorTFG\GestorTFG\obj\Debug\GestorTFG.Form3.resources
+I:\GestorTFG\GestorTFG\obj\Debug\GestorTFG.Form4.resources
+I:\GestorTFG\GestorTFG\obj\Debug\GestorTFG.Form5.resources
+I:\GestorTFG\GestorTFG\obj\Debug\GestorTFG.Form6.resources
+I:\GestorTFG\GestorTFG\obj\Debug\GestorTFG.Properties.Resources.resources
+I:\GestorTFG\GestorTFG\obj\Debug\GestorTFG.VistaLista.resources
+I:\GestorTFG\GestorTFG\obj\Debug\GestorTFG.csproj.GenerateResource.Cache
+F:\GestorTFG\GestorTFG\obj\Debug\GestorTFG.exe
+F:\GestorTFG\GestorTFG\obj\Debug\GestorTFG.pdb
+F:\GestorTFG\GestorTFG\bin\Debug\GestorTFG.exe
+F:\GestorTFG\GestorTFG\bin\Debug\GestorTFG.pdb
+F:\GestorTFG\GestorTFG\obj\Debug\GestorTFG.csprojResolveAssemblyReference.cache
+F:\GestorTFG\GestorTFG\obj\Debug\GestorTFG.Form1.resources
+F:\GestorTFG\GestorTFG\obj\Debug\GestorTFG.Form2.resources
+F:\GestorTFG\GestorTFG\obj\Debug\GestorTFG.Form3.resources
+F:\GestorTFG\GestorTFG\obj\Debug\GestorTFG.Form4.resources
+F:\GestorTFG\GestorTFG\obj\Debug\GestorTFG.Form5.resources
+F:\GestorTFG\GestorTFG\obj\Debug\GestorTFG.Form6.resources
+F:\GestorTFG\GestorTFG\obj\Debug\GestorTFG.Properties.Resources.resources
+F:\GestorTFG\GestorTFG\obj\Debug\GestorTFG.VistaLista.resources
+F:\GestorTFG\GestorTFG\obj\Debug\GestorTFG.csproj.GenerateResource.Cache
+I:\GestorTFG\GestorTFG\obj\Debug\GestorTFG.Preferencias.resources
+F:\GestorTFG\GestorTFG\obj\Debug\GestorTFG.Form7.resources
+F:\GestorTFG\GestorTFG\obj\Debug\GestorTFG.Preferencias.resources
+I:\GestorTFG\GestorTFG\obj\Debug\GestorTFG.Form7.resources

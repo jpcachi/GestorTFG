@@ -96,11 +96,12 @@ namespace GestorTFG
         public void Finalizar(string defensa, string convocatoria, float nota)
         {
             mFinalizado = Instanciar.NuevoFinalizado.Crear(defensa, convocatoria, nota);
-            if(mFinalizado != null)
-            {
-                MListaProyectos.getMListaProyectos.getMProyectos.getProyectosFinalizados.Add(mProyecto);
-                finalizado = true;
-            }
+            //if(mFinalizado != null)
+            //{
+            finalizado = true;
+            MListaProyectos.getMListaProyectos.getMProyectos.ReorganizarListaFinalizados();
+                
+            //}
         }
         /// <summary>
         /// Finaliza un TFG con los siguientes datos

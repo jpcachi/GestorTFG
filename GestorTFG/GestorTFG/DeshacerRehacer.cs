@@ -28,13 +28,14 @@ namespace GestorTFG
         /// Realiza la función undo y devuelve un array con las posiciones que ocupaban los elementos en el caso de haberse realizado una operación de eliminado
         /// </summary>
         /// <returns>Conjunto de índices que ocupaban los elementos antes de la operación</returns>
-        public int[] Atras()
+        public int[] Atras(out TOperacion operacion)
         {
             int[] indices = null;
+            operacion = TOperacion.Crear;
             if (deshacer.Count > 0)
             {
                 Operacion op = deshacer.Pop();
-
+                operacion = op.TOperacion;
                 
                 switch (op.TOperacion)
                 {
@@ -45,13 +46,13 @@ namespace GestorTFG
                         MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[op.ListaProyectosDespues[0].Indice].Borrar();
                         break;
                     case TOperacion.EliminarAlumno:
-                        foreach(ProyectoIndice proyecto in op.ListaProyectosAntes) 
+                        foreach (ProyectoIndice proyecto in op.ListaProyectosAntes) 
                         {
                             MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[proyecto.Indice].AsignarAlumno(proyecto.Proyecto.Alumno);
                         }
                         break;
                     case TOperacion.EliminarTFG:
-                        foreach(ProyectoIndice proyecto in op.ListaProyectosAntes) 
+                        foreach (ProyectoIndice proyecto in op.ListaProyectosAntes) 
                         {
                             MListaProyectos.getMListaProyectos.getMProyectos.AñadirEn(proyecto.Proyecto, proyecto.Indice);
                         }
@@ -76,12 +77,14 @@ namespace GestorTFG
         /// Realiza la función redo y devuelve un array con las posiciones que ocupaban los elementos en el caso de haberse realizado una operación de eliminado
         /// </summary>
         /// <returns>Conjunto de índices que ocupaban los elementos después de la operación</returns>
-        public int[] Adelante()
+        public int[] Adelante(out TOperacion operacion)
         {
             int[] indices = null;
+            operacion = TOperacion.Crear;
             if (rehacer.Count > 0)
             {
                 Operacion op = rehacer.Pop();
+                operacion = op.TOperacion;
                 switch (op.TOperacion)
                 {
                     case TOperacion.AsignarAlumno:
@@ -100,7 +103,8 @@ namespace GestorTFG
                         MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[op.ListaProyectosAntes[0].Indice].EliminarAlumno();
                         break;
                     case TOperacion.EliminarTFG:
-                        MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[op.ListaProyectosAntes[0].Indice].Borrar();
+                        for(int i = op.ListaProyectosAntes.Count - 1; i > - 1; i--)  
+                            MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[op.ListaProyectosAntes[i].Indice].Borrar();
                         break;
                     case TOperacion.Modificar:
                         MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[op.ListaProyectosAntes[0].Indice] = op.ListaProyectosDespues[0].Proyecto;

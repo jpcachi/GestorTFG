@@ -9,7 +9,7 @@ namespace GestorTFG
     /// <summary>
     /// Esta clase optimiza la función del re-draw de un listview estándar
     /// </summary>
-    class VistaLista : ListView
+    public class VistaLista : ListView
     {
         [StructLayout(LayoutKind.Sequential)]
         private struct NMHDR

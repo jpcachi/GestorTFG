@@ -78,6 +78,9 @@ namespace GestorTFG
         public void CrearNuevaLista()
         {
             MListaProyectos.getMListaProyectos.getMProyectos.getProyectos.Clear();
+            MListaProyectos.getMListaProyectos.getMProyectos.getBusquedaProyecto.Clear();
+            MListaProyectos.getMListaProyectos.getMProyectos.getProyectosFinalizados.Clear();
+            MListaProyectos.getMListaProyectos.getMProyectos.getProyectosNoAsignados.Clear();
             nuevaLista = true;
             cambios = false;
         }

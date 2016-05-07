@@ -1,0 +1,5 @@
+F:\Users\Juan Pedro_2\Documents\Visual Studio 2015\Projects\GestorTFG\Generador TFG\bin\Debug\Generador TFG.exe
+F:\Users\Juan Pedro_2\Documents\Visual Studio 2015\Projects\GestorTFG\Generador TFG\bin\Debug\Generador TFG.pdb
+F:\Users\Juan Pedro_2\Documents\Visual Studio 2015\Projects\GestorTFG\Generador TFG\obj\Debug\Generador TFG.csprojResolveAssemblyReference.cache
+F:\Users\Juan Pedro_2\Documents\Visual Studio 2015\Projects\GestorTFG\Generador TFG\obj\Debug\Generador TFG.exe
+F:\Users\Juan Pedro_2\Documents\Visual Studio 2015\Projects\GestorTFG\Generador TFG\obj\Debug\Generador TFG.pdb

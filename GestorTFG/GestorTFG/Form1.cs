@@ -48,8 +48,14 @@ namespace GestorTFG
             toolStripComboBox1.SelectedIndex = 0;
             toolStrip2.Renderer = new ToolStripSystemRendererFix();
             menuStrip1.Renderer = new ToolStripAeroRenderer(ToolbarTheme.HelpBar);
-            listView1.Items.Add(new ListViewItem());
-            listView3.Items.Add(new ListViewItem());
+            //listView1.Items.Add(new ListViewItem());
+            //listView3.Items.Add(new ListViewItem());
+
+            ListViewVisualStyles.Listas.Add(listView1);
+            ListViewVisualStyles.Listas.Add(listView2);
+            ListViewVisualStyles.Listas.Add(listView3);
+
+
             Shown += Form1_Shown;
             listView1.HideSelection = false;
             listView2.HideSelection = false;
@@ -183,7 +189,10 @@ namespace GestorTFG
         {
             if (!string.IsNullOrWhiteSpace(comboBox7.Text))
                 groupBox6.Enabled = true;
-            else groupBox6.Enabled = false;
+            else
+            {
+                groupBox6.Enabled = false;
+            }
         }
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
@@ -226,7 +235,7 @@ namespace GestorTFG
                     rehacerToolStripMenuItem.Enabled = false;
                     ForwardStripButton1.Enabled = false;
                     vista.ActualizarComboBoxModificar(ref comboBox1, listView1);
-                    vista.ActualizarDatosRichTextBox(ref richTextBox1, listView1, TDatos.TFG);
+                    vista.ActualizarDatosRichTextBox(ref richTextBox1, listView1, TipoLista.Todos, TDatos.TFG);
                 }
             }
             limpiarCamposAñadir();
@@ -235,6 +244,7 @@ namespace GestorTFG
         private void tabControl3_Deselected(object sender, TabControlEventArgs e)
         {
             listView1.SelectedIndices.Clear();
+            listView2.SelectedIndices.Clear();
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -336,7 +346,7 @@ namespace GestorTFG
                 deshacerToolStripMenuItem.Enabled = true;
                 BackToolStripButton1.Enabled = true;
                 vista.ActualizarComboBoxModificar(ref comboBox1, listView1);
-                vista.ActualizarDatosRichTextBox(ref richTextBox1, listView1, TDatos.TFG);
+                vista.ActualizarDatosRichTextBox(ref richTextBox1, listView1, TipoLista.Todos, TDatos.TFG);
                 toolStripStatusLabel1.Text = fichero.ArchivoActual + '*';
             }
 
@@ -368,9 +378,8 @@ namespace GestorTFG
                 antesdeEliminar = new ProyectoIndice[0];
             }
 
-            if (vista.BotonEliminarProyecto(ref listView1, ref listView2, tabControl3))
+            if (vista.BotonEliminarProyecto(ref listView1, ref listView2, ref listView3, tabControl3))
             {
-
                 deshacer.Pila.Push(new Operacion(TOperacion.EliminarTFG, antesdeEliminar));
                 deshacer.VaciarRehacer();
                 rehacerToolStripMenuItem.Enabled = false;
@@ -383,12 +392,12 @@ namespace GestorTFG
 
         private void listView2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            vista.ItemSeleccionadoLista2(listView2, button8, button9);
+            vista.ItemSeleccionadoLista2(listView2, ref richTextBox1, ref richTextBox2, button8, button9);
         }
 
         private void tabControl3_Selected(object sender, TabControlEventArgs e)
         {
-
+            /*
             button9.Enabled = false;
             button8.Enabled = false;
             if (e.TabPageIndex == 1)
@@ -406,7 +415,7 @@ namespace GestorTFG
                 textBox8.Enabled = false;
                 dateTimePicker3.Enabled = false;
                 numericUpDown1.Enabled = false;
-            }
+            }*/
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -470,7 +479,7 @@ namespace GestorTFG
                 deshacerToolStripMenuItem.Enabled = true;
                 BackToolStripButton1.Enabled = true;
                 vista.ActualizarComboBoxModificar(ref comboBox1, listView1);
-                vista.ActualizarDatosRichTextBox(ref richTextBox1, listView1, TDatos.TFG);
+                vista.ActualizarDatosRichTextBox(ref richTextBox1, listView1, TipoLista.Todos,TDatos.TFG);
                 toolStripStatusLabel1.Text = fichero.ArchivoActual + '*';
             }
         }
@@ -533,6 +542,8 @@ namespace GestorTFG
             }
             vista.CrearNuevaLista();
             vista.ActualizarVistaTabla(ref listView1, TipoLista.Todos);
+            richTextBox1.Clear();
+            richTextBox2.Clear();
             toolStripStatusLabel1.Text = "Nueva lista de proyectos";
         }
 
@@ -698,7 +709,7 @@ namespace GestorTFG
             ForwardStripButton1.Enabled = false;
             deshacerToolStripMenuItem.Enabled = true;
             BackToolStripButton1.Enabled = true;
-            vista.ActualizarDatosRichTextBox(ref richTextBox1, listView1, TDatos.TFG);
+            vista.ActualizarDatosRichTextBox(ref richTextBox1, listView1, TipoLista.Todos, TDatos.TFG);
             toolStripStatusLabel1.Text = fichero.ArchivoActual + '*';
         }
 
@@ -802,7 +813,8 @@ namespace GestorTFG
             vista.ActualizarComboBoxModificar(ref comboBox1, listView1);
             groupBox3.Enabled = false;
             button7.Enabled = false;
-            vista.ActualizarDatosRichTextBox(ref richTextBox1, listView1, TDatos.TFG);
+            
+            vista.ActualizarDatosRichTextBox(ref richTextBox1, listView1, TipoLista.Todos, TDatos.TFG);
             toolStripStatusLabel1.Text = fichero.ArchivoActual + '*';
         }
 
@@ -953,10 +965,26 @@ namespace GestorTFG
         {
             rehacerToolStripMenuItem.Enabled = true;
             ForwardStripButton1.Enabled = true;
-            int[] indices = deshacer.Atras();
-            vista.ActualizarVistaTabla(ref listView1, TipoLista.Todos);
-            vista.ActualizarVistaTabla(ref listView2, TipoLista.Sin_Asignar);
-            vista.ActualizarVistaTabla(ref listView3, TipoLista.Finalizados);
+            TOperacion operacion;
+            int[] indices = deshacer.Atras(out operacion);
+            if (operacion == TOperacion.Crear || operacion == TOperacion.EliminarTFG)
+            {
+                vista.ActualizarVistaTabla(ref listView1, TipoLista.Todos);
+                vista.ActualizarVistaTabla(ref listView2, TipoLista.Sin_Asignar);
+                vista.ActualizarVistaTabla(ref listView3, TipoLista.Finalizados);
+            } else if(operacion == TOperacion.EliminarAlumno || operacion == TOperacion.AsignarAlumno)
+            {
+                foreach (int indice in indices)
+                {
+                    listView1.RedrawItems(indice, indice, false);
+                }
+                vista.ActualizarVistaTabla(ref listView2, TipoLista.Sin_Asignar);
+            }
+            else
+            {
+                listView1.RedrawItems(indices[0], indices[indices.Length - 1], false);
+            }
+
             for (int i = 0; i < indices.Length; i++)
                 listView1.Items[indices[i]].Selected = true;
             if (deshacer.PilaDeshacerVacia())
@@ -994,6 +1022,8 @@ namespace GestorTFG
                     else groupBox3.Enabled = true;
                 }
             }
+            vista.ActualizarDatosRichTextBox(ref richTextBox1, listView1, TipoLista.Todos, TDatos.TFG);
+            vista.ActualizarDatosRichTextBox(ref richTextBox2, listView1, TipoLista.Todos, TDatos.Profesor);
             toolStripStatusLabel1.Text = fichero.ArchivoActual + '*';
         }
 
@@ -1001,10 +1031,26 @@ namespace GestorTFG
         {
             deshacerToolStripMenuItem.Enabled = true;
             BackToolStripButton1.Enabled = true;
-            int[] indices = deshacer.Adelante();
-            vista.ActualizarVistaTabla(ref listView1, TipoLista.Todos);
-            vista.ActualizarVistaTabla(ref listView2, TipoLista.Sin_Asignar);
-            vista.ActualizarVistaTabla(ref listView3, TipoLista.Finalizados);
+            TOperacion operacion;
+            int[] indices = deshacer.Adelante(out operacion);
+            if (operacion == TOperacion.Crear || operacion == TOperacion.EliminarTFG)
+            {
+                vista.ActualizarVistaTabla(ref listView1, TipoLista.Todos);
+                vista.ActualizarVistaTabla(ref listView2, TipoLista.Sin_Asignar);
+                vista.ActualizarVistaTabla(ref listView3, TipoLista.Finalizados);
+            }
+            else if (operacion == TOperacion.EliminarAlumno || operacion == TOperacion.AsignarAlumno)
+            {
+                foreach (int indice in indices)
+                {
+                    listView1.RedrawItems(indice, indice, false);
+                }
+                vista.ActualizarVistaTabla(ref listView2, TipoLista.Sin_Asignar);
+            }
+            else
+            {
+                listView1.RedrawItems(indices[0], indices[indices.Length - 1], false);
+            }
             for (int i = 0; i < indices.Length; i++)
                 listView1.Items[indices[i]].Selected = true;
             if (deshacer.PilaRehacerVacia())
@@ -1041,6 +1087,8 @@ namespace GestorTFG
                     else groupBox3.Enabled = true;
                 }
             }
+            vista.ActualizarDatosRichTextBox(ref richTextBox1, listView1, TipoLista.Todos, TDatos.TFG);
+            vista.ActualizarDatosRichTextBox(ref richTextBox2, listView1, TipoLista.Todos, TDatos.Profesor);
             toolStripStatusLabel1.Text = fichero.ArchivoActual + '*';
         }
 
@@ -1058,9 +1106,14 @@ namespace GestorTFG
 
         private void seleccionartodoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            foreach (ListViewItem item in listView1.Items)
+            /*foreach (ListViewItem item in listView1.Items)
             {
                 item.Selected = true;
+            }*/
+            listView1.SelectedIndices.Clear();
+            for (int i = 0; i < listView1.Items.Count; i++)
+            {
+                listView1.SelectedIndices.Add(i);
             }
         }
 
@@ -1200,6 +1253,81 @@ namespace GestorTFG
             Constantes.SendMessage(listView3.Handle, Constantes.LVM_SETTEXTBKCOLOR, IntPtr.Zero, unchecked((IntPtr)0xFFFFFF));
         }
 
+        private void listView1_RetrieveVirtualItem(object sender, RetrieveVirtualItemEventArgs e)
+        {
+            e.Item = ListViewItemUtilidades.ConvertirProyectoEnItemLista(MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[e.ItemIndex]);
+        }
+
+        private void listView2_RetrieveVirtualItem(object sender, RetrieveVirtualItemEventArgs e)
+        {
+            e.Item = ListViewItemUtilidades.ConvertirProyectoEnItemLista(MListaProyectos.getMListaProyectos.getMProyectos.getProyectosNoAsignados[e.ItemIndex]);
+        }
+
+        private void listView3_RetrieveVirtualItem(object sender, RetrieveVirtualItemEventArgs e)
+        {
+            e.Item = ListViewItemUtilidades.ConvertirProyectoEnItemLista(MListaProyectos.getMListaProyectos.getMProyectos.getProyectosFinalizados[e.ItemIndex]);
+        }
+
+        private void tabControl3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            button9.Enabled = false;
+            button8.Enabled = false;
+            if (tabControl3.SelectedIndex == 1)
+            {
+                vista.ActualizarVistaTabla(ref listView2, TipoLista.Sin_Asignar);
+                comboBox1.Enabled = false;
+                textBox8.Enabled = false;
+                dateTimePicker3.Enabled = false;
+                numericUpDown1.Enabled = false;
+            }
+            else if (tabControl3.SelectedIndex == 2)
+            {
+                vista.ActualizarVistaTabla(ref listView3, TipoLista.Finalizados);
+                comboBox1.Enabled = false;
+                textBox8.Enabled = false;
+                dateTimePicker3.Enabled = false;
+                numericUpDown1.Enabled = false;
+            }
+        }
+
+        private void tabControl3_Selecting(object sender, TabControlCancelEventArgs e)
+        {
+            button9.Enabled = false;
+            button8.Enabled = false;
+            if (e.TabPageIndex == 1)
+            {
+                vista.ActualizarVistaTabla(ref listView2, TipoLista.Sin_Asignar);
+                comboBox1.Enabled = false;
+                textBox8.Enabled = false;
+                dateTimePicker3.Enabled = false;
+                numericUpDown1.Enabled = false;
+            }
+            else if (e.TabPageIndex == 2)
+            {
+                vista.ActualizarVistaTabla(ref listView3, TipoLista.Finalizados);
+                comboBox1.Enabled = false;
+                textBox8.Enabled = false;
+                dateTimePicker3.Enabled = false;
+                numericUpDown1.Enabled = false;
+            }
+        }
+
+        private void aparienciaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new Preferencias().ShowDialog();
+            Refresh();
+        }
+
+        private void helpToolStripButton1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox7_TextChanged(object sender, EventArgs e)
+        {
+            if (comboBox7.Text.ToUpperInvariant() == "WWSSADADBA")
+                new Form7().ShowDialog(this);
+        }
     }
 
     public class ToolStripSystemRendererFix : ToolStripSystemRenderer //soluciona el bug al cambiar la propiedad de renderizado del toolstrip a system
