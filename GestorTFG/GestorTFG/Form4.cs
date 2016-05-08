@@ -6,19 +6,24 @@ namespace GestorTFG
     public partial class Form4 : Form
     {
         private VistaGrafica vista;
+        private Copiar copiar;
+        private Form1 ventanaPadre;
+
         private string busqueda;
         private TCampos campo;
-        private Form1 ventanaPadre;
         public Form4(Form1 ventanaPadre, string busqueda, TCampos campo)
         {
-            this.ventanaPadre = ventanaPadre;
-            vista = new VistaGrafica();
             InitializeComponent();
+            vista = new VistaGrafica();
+            copiar = new Copiar(copiarPorCampoToolStripMenuItem);
+            this.ventanaPadre = ventanaPadre;
             this.busqueda = busqueda;
+            this.campo = campo;
+
             toolStripStatusLabel2.Text = busqueda;
             contextMenuStrip1.Renderer = new ToolStripVisualStyles.ToolStripAeroRenderer(ToolStripVisualStyles.ToolbarTheme.HelpBar);
             vista.ActualizarVistaTabla(ref listView1, TipoLista.Busqueda);
-            this.campo = campo;
+            
         }
 
         private void listView1_MouseClick(object sender, MouseEventArgs e)
@@ -66,7 +71,7 @@ namespace GestorTFG
 
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            string proyecto = MListaProyectos.getMListaProyectos.getMProyectos.getBusquedaProyecto[listView1.SelectedIndices[0]].getMTFG.Titulo + ";" +
+            /*string proyecto = MListaProyectos.getMListaProyectos.getMProyectos.getBusquedaProyecto[listView1.SelectedIndices[0]].getMTFG.Titulo + ";" +
                 MListaProyectos.getMListaProyectos.getMProyectos.getBusquedaProyecto[listView1.SelectedIndices[0]].getMTFG.Descripcion + ";" +
                 MListaProyectos.getMListaProyectos.getMProyectos.getBusquedaProyecto[listView1.SelectedIndices[0]].getMTFG.Fecha;
             if (MListaProyectos.getMListaProyectos.getMProyectos.getBusquedaProyecto[listView1.SelectedIndices[0]].Asignado)
@@ -78,12 +83,13 @@ namespace GestorTFG
                     proyecto += ";" + MListaProyectos.getMListaProyectos.getMProyectos.getBusquedaProyecto[listView1.SelectedIndices[0]].getMTFG.getMFinalizado.Defensa + ";" + MListaProyectos.getMListaProyectos.getMProyectos.getBusquedaProyecto[listView1.SelectedIndices[0]].getMTFG.getMFinalizado.Convocatoria +
                         ";" + MListaProyectos.getMListaProyectos.getMProyectos.getBusquedaProyecto[listView1.SelectedIndices[0]].getMTFG.getMFinalizado.Nota;
             }
-            Clipboard.SetText(proyecto);
+            Clipboard.SetText(proyecto);*/
+            copiar.toolStripMenuItem1_Click(listView1, TipoLista.Busqueda, sender, e);
         }
 
         private void copiarPorCampoToolStripMenuItem_DropDownOpening(object sender, EventArgs e)
         {
-            if (MListaProyectos.getMListaProyectos.getMProyectos.getBusquedaProyecto[listView1.SelectedIndices[0]].Asignado)
+            /*if (MListaProyectos.getMListaProyectos.getMProyectos.getBusquedaProyecto[listView1.SelectedIndices[0]].Asignado)
             {
                 copiarPorCampoToolStripMenuItem.DropDownItems[3].Visible = true;
                 copiarPorCampoToolStripMenuItem.DropDownItems[4].Visible = true;
@@ -112,7 +118,8 @@ namespace GestorTFG
                 copiarPorCampoToolStripMenuItem.DropDownItems[8].Visible = false;
                 copiarPorCampoToolStripMenuItem.DropDownItems[9].Visible = false;
                 copiarPorCampoToolStripMenuItem.DropDownItems[10].Visible = false;
-            }
+            }*/
+            copiar.copiarPorCampoToolStripMenuItem_DropDownOpening(listView1, TipoLista.Busqueda, sender, e);
         }
 
         private void títuloToolStripMenuItem_Click(object sender, EventArgs e)
@@ -172,14 +179,15 @@ namespace GestorTFG
 
         private void copiarDatosDeProfesorToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Clipboard.SetText(MListaProyectos.getMListaProyectos.getMProyectos.getBusquedaProyecto[listView1.SelectedIndices[0]].Profesor.Nombre +
+            /*Clipboard.SetText(MListaProyectos.getMListaProyectos.getMProyectos.getBusquedaProyecto[listView1.SelectedIndices[0]].Profesor.Nombre +
                 ";" + MListaProyectos.getMListaProyectos.getMProyectos.getBusquedaProyecto[listView1.SelectedIndices[0]].Profesor.PrimerApellido + ";" + MListaProyectos.getMListaProyectos.getMProyectos.getBusquedaProyecto[listView1.SelectedIndices[0]].Profesor.SegundoApellido + ";" +
-                MListaProyectos.getMListaProyectos.getMProyectos.getBusquedaProyecto[listView1.SelectedIndices[0]].Profesor.Despacho + ";" + MListaProyectos.getMListaProyectos.getMProyectos.getBusquedaProyecto[listView1.SelectedIndices[0]].Profesor.Correo);
+                MListaProyectos.getMListaProyectos.getMProyectos.getBusquedaProyecto[listView1.SelectedIndices[0]].Profesor.Despacho + ";" + MListaProyectos.getMListaProyectos.getMProyectos.getBusquedaProyecto[listView1.SelectedIndices[0]].Profesor.Correo);*/
+            copiar.copiarDatosDeProfesorToolStripMenuItem_Click(listView1, TipoLista.Busqueda, sender, e);
         }
 
         private void toolStripMenuItem2_Click(object sender, EventArgs e)
         {
-            string proyecto = "Título: " + MListaProyectos.getMListaProyectos.getMProyectos.getBusquedaProyecto[listView1.SelectedIndices[0]].getMTFG.Titulo + "\r\nDescripción: " +
+            /*string proyecto = "Título: " + MListaProyectos.getMListaProyectos.getMProyectos.getBusquedaProyecto[listView1.SelectedIndices[0]].getMTFG.Titulo + "\r\nDescripción: " +
                 MListaProyectos.getMListaProyectos.getMProyectos.getBusquedaProyecto[listView1.SelectedIndices[0]].getMTFG.Descripcion + "\r\nRegistrado el: " +
                 MListaProyectos.getMListaProyectos.getMProyectos.getBusquedaProyecto[listView1.SelectedIndices[0]].getMTFG.Fecha + "\r\nNombre del profesor: " + MListaProyectos.getMListaProyectos.getMProyectos.getBusquedaProyecto[listView1.SelectedIndices[0]].Profesor.Nombre +
                 " " + MListaProyectos.getMListaProyectos.getMProyectos.getBusquedaProyecto[listView1.SelectedIndices[0]].Profesor.PrimerApellido + " " + MListaProyectos.getMListaProyectos.getMProyectos.getBusquedaProyecto[listView1.SelectedIndices[0]].Profesor.SegundoApellido + "\r\nDespacho: " +
@@ -193,7 +201,8 @@ namespace GestorTFG
                     proyecto += "\r\nFecha de la defensa: " + MListaProyectos.getMListaProyectos.getMProyectos.getBusquedaProyecto[listView1.SelectedIndices[0]].getMTFG.getMFinalizado.Defensa + "\r\nConvocatoria: " + MListaProyectos.getMListaProyectos.getMProyectos.getBusquedaProyecto[listView1.SelectedIndices[0]].getMTFG.getMFinalizado.Convocatoria +
                         "\r\nCalificación: " + MListaProyectos.getMListaProyectos.getMProyectos.getBusquedaProyecto[listView1.SelectedIndices[0]].getMTFG.getMFinalizado.Nota;
             }
-            Clipboard.SetText(proyecto);
+            Clipboard.SetText(proyecto);*/
+            copiar.copiarConFormato_Click(listView1, TipoLista.Busqueda, sender, e);
         }
 
         private void toolStripMenuItem3_Click(object sender, EventArgs e)
