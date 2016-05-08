@@ -89,16 +89,18 @@ namespace GestorTFG
                 copiarPorCampoToolStripMenuItem.DropDownItems[4].Visible = true;
                 copiarPorCampoToolStripMenuItem.DropDownItems[5].Visible = true;
                 copiarPorCampoToolStripMenuItem.DropDownItems[6].Visible = true;
+                copiarPorCampoToolStripMenuItem.DropDownItems[7].Visible = true;
                 if (MListaProyectos.getMListaProyectos.getMProyectos.getBusquedaProyecto[listView1.SelectedIndices[0]].getMTFG.Finalizado)
                 {
-                    copiarPorCampoToolStripMenuItem.DropDownItems[7].Visible = true;
+                    
                     copiarPorCampoToolStripMenuItem.DropDownItems[8].Visible = true;
                     copiarPorCampoToolStripMenuItem.DropDownItems[9].Visible = true;
+                    copiarPorCampoToolStripMenuItem.DropDownItems[10].Visible = true;
                 } else
                 {
-                    copiarPorCampoToolStripMenuItem.DropDownItems[7].Visible = false;
                     copiarPorCampoToolStripMenuItem.DropDownItems[8].Visible = false;
                     copiarPorCampoToolStripMenuItem.DropDownItems[9].Visible = false;
+                    copiarPorCampoToolStripMenuItem.DropDownItems[10].Visible = false;
                 }
             } else
             {
@@ -109,6 +111,7 @@ namespace GestorTFG
                 copiarPorCampoToolStripMenuItem.DropDownItems[7].Visible = false;
                 copiarPorCampoToolStripMenuItem.DropDownItems[8].Visible = false;
                 copiarPorCampoToolStripMenuItem.DropDownItems[9].Visible = false;
+                copiarPorCampoToolStripMenuItem.DropDownItems[10].Visible = false;
             }
         }
 
@@ -140,6 +143,11 @@ namespace GestorTFG
         private void segundoApellidoDelAlumnoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Clipboard.SetText(MListaProyectos.getMListaProyectos.getMProyectos.getBusquedaProyecto[listView1.SelectedIndices[0]].Alumno.SegundoApellido);
+        }
+
+        private void matrículaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Clipboard.SetText(MListaProyectos.getMListaProyectos.getMProyectos.getBusquedaProyecto[listView1.SelectedIndices[0]].Alumno.Matricula);
         }
 
         private void fechaDeInicioToolStripMenuItem_Click(object sender, EventArgs e)

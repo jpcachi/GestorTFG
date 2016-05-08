@@ -75,7 +75,11 @@
             this.convocatoriaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.notaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
+            this.matrículaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -360,10 +364,13 @@
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem1,
             this.toolStripMenuItem2,
-            this.toolStripMenuItem3});
+            this.toolStripSeparator1,
+            this.toolStripMenuItem3,
+            this.toolStripSeparator2,
+            this.toolStripMenuItem4});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.contextMenuStrip1.Size = new System.Drawing.Size(227, 92);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(269, 126);
             // 
             // toolStripMenuItem1
             // 
@@ -372,7 +379,7 @@
             this.copiarDatosDeProfesorToolStripMenuItem,
             this.copiarPorCampoToolStripMenuItem});
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(178, 22);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(268, 22);
             this.toolStripMenuItem1.Text = "Copiar";
             this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
@@ -398,6 +405,7 @@
             this.nombreDelAlumnoToolStripMenuItem,
             this.primerApellidoDelAlumnoToolStripMenuItem,
             this.segundoApellidoDelAlumnoToolStripMenuItem,
+            this.matrículaToolStripMenuItem,
             this.fechaDeInicioToolStripMenuItem,
             this.fechaDeDefensaToolStripMenuItem,
             this.convocatoriaToolStripMenuItem,
@@ -474,22 +482,45 @@
             // 
             this.notaToolStripMenuItem.Name = "notaToolStripMenuItem";
             this.notaToolStripMenuItem.Size = new System.Drawing.Size(229, 22);
-            this.notaToolStripMenuItem.Text = "Nota";
+            this.notaToolStripMenuItem.Text = "Calificación";
             this.notaToolStripMenuItem.Click += new System.EventHandler(this.notaToolStripMenuItem_Click);
             // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(178, 22);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(268, 22);
             this.toolStripMenuItem2.Text = "Copiar con formato";
             this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(265, 6);
             // 
             // toolStripMenuItem3
             // 
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(226, 22);
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(268, 22);
             this.toolStripMenuItem3.Text = "Mostrar en lista de proyectos";
             this.toolStripMenuItem3.Click += new System.EventHandler(this.toolStripMenuItem3_Click);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(265, 6);
+            // 
+            // toolStripMenuItem4
+            // 
+            this.toolStripMenuItem4.Name = "toolStripMenuItem4";
+            this.toolStripMenuItem4.Size = new System.Drawing.Size(268, 22);
+            this.toolStripMenuItem4.Text = "Exportar búsqueda a archivo de texto";
+            // 
+            // matrículaToolStripMenuItem
+            // 
+            this.matrículaToolStripMenuItem.Name = "matrículaToolStripMenuItem";
+            this.matrículaToolStripMenuItem.Size = new System.Drawing.Size(229, 22);
+            this.matrículaToolStripMenuItem.Text = "Matrícula";
+            this.matrículaToolStripMenuItem.Click += new System.EventHandler(this.matrículaToolStripMenuItem_Click);
             // 
             // Form4
             // 
@@ -569,5 +600,9 @@
         private System.Windows.Forms.ToolStripMenuItem fechaDeDefensaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem convocatoriaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem notaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem4;
+        private System.Windows.Forms.ToolStripMenuItem matrículaToolStripMenuItem;
     }
 }

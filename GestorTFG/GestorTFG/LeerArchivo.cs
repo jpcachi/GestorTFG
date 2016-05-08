@@ -25,7 +25,7 @@ namespace GestorTFG
                 string proyecto = Encoding.UTF8.GetString(descodificar);
                 string[] datos;
                 datos = proyecto.Split(';');
-                MProyecto mProyecto = Instanciar.NuevoProyecto.Crear(datos[0], datos[1], datos[2], datos[3], datos[4], datos[5], datos[6], datos[7]);
+                MProyecto mProyecto = Instanciar.NuevoProyecto.Crear(datos[0], datos[1], datos[2], datos[3], datos[4], datos[5], datos[7], datos[6]);
                 if (!string.IsNullOrWhiteSpace(datos[8] + datos[9] + datos[10] + datos[11] + datos[12]))
                 {
                     mProyecto.AsignarAlumno(datos[8], datos[9], datos[10], datos[11], datos[12]);
@@ -58,7 +58,7 @@ namespace GestorTFG
             {
                 string[] datos;
                 datos = dato.Split(';');
-                MProyecto mProyecto = Instanciar.NuevoProyecto.Crear(datos[0], datos[1], datos[2], datos[3], datos[4], datos[5], datos[6], datos[7]);
+                MProyecto mProyecto = Instanciar.NuevoProyecto.Crear(datos[0], datos[1], datos[2], datos[3], datos[4], datos[5], datos[7], datos[6]);
                 if (!string.IsNullOrWhiteSpace(datos[8] + datos[9] + datos[10] + datos[11] + datos[12]))
                 {
                     mProyecto.AsignarAlumno(datos[8], datos[9], datos[10], datos[11], datos[12]);

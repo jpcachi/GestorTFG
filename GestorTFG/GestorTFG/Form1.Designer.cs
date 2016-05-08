@@ -77,11 +77,59 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem6 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem7 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem8 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem9 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem10 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem11 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem12 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem13 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem14 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem15 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem16 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem17 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem18 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
             this.tabControl3 = new System.Windows.Forms.TabControl();
             this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.listView1 = new GestorTFG.VistaLista();
+            this.Titulo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Descripcion = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.FechaPropuesta = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.NombreAlumno = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Apellido1Alumno = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Apellido2Alumno = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Matricula = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.FechaInicio = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.FechaDefensa = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Convocatoria = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Calificación = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.listView2 = new GestorTFG.VistaLista();
+            this.Titulo2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Descripcion2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.listView3 = new GestorTFG.VistaLista();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
@@ -148,17 +196,6 @@
             this.comboBox9 = new System.Windows.Forms.ComboBox();
             this.comboBox7 = new System.Windows.Forms.ComboBox();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripComboBox1 = new System.Windows.Forms.ToolStripComboBox();
-            this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripComboBox2 = new System.Windows.Forms.ToolStripComboBox();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
-            this.aprobadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.suspensosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.helpToolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
             this.newToolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.openToolStripButton1 = new System.Windows.Forms.ToolStripButton();
@@ -175,35 +212,20 @@
             this.removeStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.deleteStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.listView1 = new GestorTFG.VistaLista();
-            this.Titulo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Descripcion = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.FechaPropuesta = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.NombreAlumno = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Apellido1Alumno = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Apellido2Alumno = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Matricula = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.FechaInicio = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.FechaDefensa = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Convocatoria = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Calificación = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.listView2 = new GestorTFG.VistaLista();
-            this.Titulo2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Descripcion2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.listView3 = new GestorTFG.VistaLista();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripComboBox1 = new System.Windows.Forms.ToolStripComboBox();
+            this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripComboBox2 = new System.Windows.Forms.ToolStripComboBox();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.aprobadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.suspensosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.helpToolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
+            this.contextMenuStrip1.SuspendLayout();
             this.toolStripContainer1.ContentPanel.SuspendLayout();
             this.toolStripContainer1.TopToolStripPanel.SuspendLayout();
             this.toolStripContainer1.SuspendLayout();
@@ -228,8 +250,8 @@
             this.groupBox4.SuspendLayout();
             this.groupBox6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
-            this.toolStrip1.SuspendLayout();
             this.toolStrip2.SuspendLayout();
+            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -443,6 +465,7 @@
             // 
             // pegarToolStripMenuItem
             // 
+            this.pegarToolStripMenuItem.Enabled = false;
             this.pegarToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("pegarToolStripMenuItem.Image")));
             this.pegarToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.pegarToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
@@ -560,7 +583,7 @@
             this.temaClásicoToolStripMenuItem,
             this.aparienciaToolStripMenuItem});
             this.personalizarToolStripMenuItem.Name = "personalizarToolStripMenuItem";
-            this.personalizarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.personalizarToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.personalizarToolStripMenuItem.Text = "&Personalizar";
             // 
             // temaClásicoToolStripMenuItem
@@ -583,7 +606,7 @@
             this.opcionesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.pantallaCompletaToolStripMenuItem});
             this.opcionesToolStripMenuItem.Name = "opcionesToolStripMenuItem";
-            this.opcionesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.opcionesToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.opcionesToolStripMenuItem.Text = "&Opciones";
             // 
             // pantallaCompletaToolStripMenuItem
@@ -609,30 +632,30 @@
             // contenidoToolStripMenuItem
             // 
             this.contenidoToolStripMenuItem.Name = "contenidoToolStripMenuItem";
-            this.contenidoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.contenidoToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
             this.contenidoToolStripMenuItem.Text = "&Contenido";
             // 
             // índiceToolStripMenuItem
             // 
             this.índiceToolStripMenuItem.Name = "índiceToolStripMenuItem";
-            this.índiceToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.índiceToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
             this.índiceToolStripMenuItem.Text = "Índic&e";
             // 
             // buscarToolStripMenuItem
             // 
             this.buscarToolStripMenuItem.Name = "buscarToolStripMenuItem";
-            this.buscarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.buscarToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
             this.buscarToolStripMenuItem.Text = "&Buscar";
             // 
             // toolStripSeparator14
             // 
             this.toolStripSeparator14.Name = "toolStripSeparator14";
-            this.toolStripSeparator14.Size = new System.Drawing.Size(149, 6);
+            this.toolStripSeparator14.Size = new System.Drawing.Size(132, 6);
             // 
             // acercadeToolStripMenuItem
             // 
             this.acercadeToolStripMenuItem.Name = "acercadeToolStripMenuItem";
-            this.acercadeToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.acercadeToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
             this.acercadeToolStripMenuItem.Text = "&Acerca de...";
             this.acercadeToolStripMenuItem.Click += new System.EventHandler(this.acercadeToolStripMenuItem_Click);
             // 
@@ -651,6 +674,170 @@
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
             this.toolStripStatusLabel1.Size = new System.Drawing.Size(118, 17);
             this.toolStripStatusLabel1.Text = "toolStripStatusLabel1";
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem1,
+            this.toolStripMenuItem2,
+            this.toolStripSeparator4,
+            this.toolStripMenuItem3,
+            this.toolStripSeparator5,
+            this.toolStripMenuItem4});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
+            this.contextMenuStrip1.Size = new System.Drawing.Size(245, 126);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem5,
+            this.toolStripMenuItem6,
+            this.toolStripMenuItem7});
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(244, 22);
+            this.toolStripMenuItem1.Text = "Copiar";
+            // 
+            // toolStripMenuItem5
+            // 
+            this.toolStripMenuItem5.Name = "toolStripMenuItem5";
+            this.toolStripMenuItem5.Size = new System.Drawing.Size(207, 22);
+            this.toolStripMenuItem5.Text = "Copiar datos de proyecto";
+            this.toolStripMenuItem5.Click += new System.EventHandler(this.toolStripMenuItem5_Click);
+            // 
+            // toolStripMenuItem6
+            // 
+            this.toolStripMenuItem6.Name = "toolStripMenuItem6";
+            this.toolStripMenuItem6.Size = new System.Drawing.Size(207, 22);
+            this.toolStripMenuItem6.Text = "Copiar datos de profesor";
+            this.toolStripMenuItem6.Click += new System.EventHandler(this.toolStripMenuItem6_Click);
+            // 
+            // toolStripMenuItem7
+            // 
+            this.toolStripMenuItem7.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem8,
+            this.toolStripMenuItem9,
+            this.toolStripMenuItem10,
+            this.toolStripMenuItem11,
+            this.toolStripMenuItem12,
+            this.toolStripMenuItem13,
+            this.toolStripMenuItem14,
+            this.toolStripMenuItem15,
+            this.toolStripMenuItem16,
+            this.toolStripMenuItem17,
+            this.toolStripMenuItem18});
+            this.toolStripMenuItem7.Name = "toolStripMenuItem7";
+            this.toolStripMenuItem7.Size = new System.Drawing.Size(207, 22);
+            this.toolStripMenuItem7.Text = "Copiar por campo";
+            this.toolStripMenuItem7.DropDownOpening += new System.EventHandler(this.toolStripMenuItem7_DropDownOpening);
+            // 
+            // toolStripMenuItem8
+            // 
+            this.toolStripMenuItem8.Name = "toolStripMenuItem8";
+            this.toolStripMenuItem8.Size = new System.Drawing.Size(229, 22);
+            this.toolStripMenuItem8.Text = "Título";
+            this.toolStripMenuItem8.Click += new System.EventHandler(this.toolStripMenuItem8_Click);
+            // 
+            // toolStripMenuItem9
+            // 
+            this.toolStripMenuItem9.Name = "toolStripMenuItem9";
+            this.toolStripMenuItem9.Size = new System.Drawing.Size(229, 22);
+            this.toolStripMenuItem9.Text = "Descripción";
+            this.toolStripMenuItem9.Click += new System.EventHandler(this.toolStripMenuItem9_Click);
+            // 
+            // toolStripMenuItem10
+            // 
+            this.toolStripMenuItem10.Name = "toolStripMenuItem10";
+            this.toolStripMenuItem10.Size = new System.Drawing.Size(229, 22);
+            this.toolStripMenuItem10.Text = "Fecha de registro";
+            this.toolStripMenuItem10.Click += new System.EventHandler(this.toolStripMenuItem10_Click);
+            // 
+            // toolStripMenuItem11
+            // 
+            this.toolStripMenuItem11.Name = "toolStripMenuItem11";
+            this.toolStripMenuItem11.Size = new System.Drawing.Size(229, 22);
+            this.toolStripMenuItem11.Text = "Nombre del alumno";
+            this.toolStripMenuItem11.Click += new System.EventHandler(this.toolStripMenuItem11_Click);
+            // 
+            // toolStripMenuItem12
+            // 
+            this.toolStripMenuItem12.Name = "toolStripMenuItem12";
+            this.toolStripMenuItem12.Size = new System.Drawing.Size(229, 22);
+            this.toolStripMenuItem12.Text = "Primer apellido del alumno";
+            this.toolStripMenuItem12.Click += new System.EventHandler(this.toolStripMenuItem12_Click);
+            // 
+            // toolStripMenuItem13
+            // 
+            this.toolStripMenuItem13.Name = "toolStripMenuItem13";
+            this.toolStripMenuItem13.Size = new System.Drawing.Size(229, 22);
+            this.toolStripMenuItem13.Text = "Segundo apellido del alumno";
+            this.toolStripMenuItem13.Click += new System.EventHandler(this.toolStripMenuItem13_Click);
+            // 
+            // toolStripMenuItem14
+            // 
+            this.toolStripMenuItem14.Name = "toolStripMenuItem14";
+            this.toolStripMenuItem14.Size = new System.Drawing.Size(229, 22);
+            this.toolStripMenuItem14.Text = "Matrícula";
+            this.toolStripMenuItem14.Click += new System.EventHandler(this.toolStripMenuItem14_Click);
+            // 
+            // toolStripMenuItem15
+            // 
+            this.toolStripMenuItem15.Name = "toolStripMenuItem15";
+            this.toolStripMenuItem15.Size = new System.Drawing.Size(229, 22);
+            this.toolStripMenuItem15.Text = "Fecha de inicio";
+            this.toolStripMenuItem15.Click += new System.EventHandler(this.toolStripMenuItem15_Click);
+            // 
+            // toolStripMenuItem16
+            // 
+            this.toolStripMenuItem16.Name = "toolStripMenuItem16";
+            this.toolStripMenuItem16.Size = new System.Drawing.Size(229, 22);
+            this.toolStripMenuItem16.Text = "Fecha de la defensa";
+            this.toolStripMenuItem16.Click += new System.EventHandler(this.toolStripMenuItem16_Click);
+            // 
+            // toolStripMenuItem17
+            // 
+            this.toolStripMenuItem17.Name = "toolStripMenuItem17";
+            this.toolStripMenuItem17.Size = new System.Drawing.Size(229, 22);
+            this.toolStripMenuItem17.Text = "Convocatoria";
+            this.toolStripMenuItem17.Click += new System.EventHandler(this.toolStripMenuItem17_Click);
+            // 
+            // toolStripMenuItem18
+            // 
+            this.toolStripMenuItem18.Name = "toolStripMenuItem18";
+            this.toolStripMenuItem18.Size = new System.Drawing.Size(229, 22);
+            this.toolStripMenuItem18.Text = "Calificación";
+            this.toolStripMenuItem18.Click += new System.EventHandler(this.toolStripMenuItem18_Click);
+            // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(244, 22);
+            this.toolStripMenuItem2.Text = "Copiar con formato";
+            this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
+            // 
+            // toolStripSeparator4
+            // 
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(241, 6);
+            // 
+            // toolStripMenuItem3
+            // 
+            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(244, 22);
+            this.toolStripMenuItem3.Text = "Opciones de diseño y apariencia";
+            this.toolStripMenuItem3.Click += new System.EventHandler(this.toolStripMenuItem3_Click);
+            // 
+            // toolStripSeparator5
+            // 
+            this.toolStripSeparator5.Name = "toolStripSeparator5";
+            this.toolStripSeparator5.Size = new System.Drawing.Size(241, 6);
+            // 
+            // toolStripMenuItem4
+            // 
+            this.toolStripMenuItem4.Name = "toolStripMenuItem4";
+            this.toolStripMenuItem4.Size = new System.Drawing.Size(244, 22);
+            this.toolStripMenuItem4.Text = "Mostrar información detallada";
+            this.toolStripMenuItem4.Click += new System.EventHandler(this.toolStripMenuItem4_Click);
             // 
             // toolStripContainer1
             // 
@@ -678,8 +865,8 @@
             // toolStripContainer1.TopToolStripPanel
             // 
             this.toolStripContainer1.TopToolStripPanel.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.toolStripContainer1.TopToolStripPanel.Controls.Add(this.toolStrip2);
             this.toolStripContainer1.TopToolStripPanel.Controls.Add(this.toolStrip1);
+            this.toolStripContainer1.TopToolStripPanel.Controls.Add(this.toolStrip2);
             // 
             // tabControl3
             // 
@@ -695,6 +882,7 @@
             this.tabControl3.Selecting += new System.Windows.Forms.TabControlCancelEventHandler(this.tabControl3_Selecting);
             this.tabControl3.Selected += new System.Windows.Forms.TabControlEventHandler(this.tabControl3_Selected);
             this.tabControl3.Deselected += new System.Windows.Forms.TabControlEventHandler(this.tabControl3_Deselected);
+            this.tabControl3.MouseClick += new System.Windows.Forms.MouseEventHandler(this.listView_MouseClick);
             // 
             // tabPage6
             // 
@@ -707,16 +895,138 @@
             this.tabPage6.Text = "Todos";
             this.tabPage6.UseVisualStyleBackColor = true;
             // 
+            // listView1
+            // 
+            this.listView1.BackColor = System.Drawing.SystemColors.Window;
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.Titulo,
+            this.Descripcion,
+            this.FechaPropuesta,
+            this.NombreAlumno,
+            this.Apellido1Alumno,
+            this.Apellido2Alumno,
+            this.Matricula,
+            this.FechaInicio,
+            this.FechaDefensa,
+            this.Convocatoria,
+            this.Calificación});
+            this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listView1.FullRowSelect = true;
+            this.listView1.GridLines = true;
+            this.listView1.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+            this.listView1.Location = new System.Drawing.Point(3, 3);
+            this.listView1.Name = "listView1";
+            this.listView1.OwnerDraw = true;
+            this.listView1.Size = new System.Drawing.Size(757, 478);
+            this.listView1.TabIndex = 4;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
+            this.listView1.VirtualMode = true;
+            this.listView1.DrawColumnHeader += new System.Windows.Forms.DrawListViewColumnHeaderEventHandler(this.listView1_DrawColumnHeader);
+            this.listView1.DrawItem += new System.Windows.Forms.DrawListViewItemEventHandler(this.listView1_DrawItem);
+            this.listView1.DrawSubItem += new System.Windows.Forms.DrawListViewSubItemEventHandler(this.listView1_DrawSubItem);
+            this.listView1.RetrieveVirtualItem += new System.Windows.Forms.RetrieveVirtualItemEventHandler(this.listView1_RetrieveVirtualItem);
+            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
+            this.listView1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.listView_MouseClick);
+            // 
+            // Titulo
+            // 
+            this.Titulo.Text = "Titulo";
+            this.Titulo.Width = 139;
+            // 
+            // Descripcion
+            // 
+            this.Descripcion.Text = "Descripción";
+            this.Descripcion.Width = 304;
+            // 
+            // FechaPropuesta
+            // 
+            this.FechaPropuesta.Text = "Fecha de registro";
+            this.FechaPropuesta.Width = 97;
+            // 
+            // NombreAlumno
+            // 
+            this.NombreAlumno.Text = "Nombre del Alumno";
+            this.NombreAlumno.Width = 116;
+            // 
+            // Apellido1Alumno
+            // 
+            this.Apellido1Alumno.Text = "Primer Apellido";
+            this.Apellido1Alumno.Width = 121;
+            // 
+            // Apellido2Alumno
+            // 
+            this.Apellido2Alumno.Text = "Segundo Apellido";
+            this.Apellido2Alumno.Width = 112;
+            // 
+            // Matricula
+            // 
+            this.Matricula.Text = "Matrícula";
+            // 
+            // FechaInicio
+            // 
+            this.FechaInicio.Text = "Fecha de inicio";
+            this.FechaInicio.Width = 87;
+            // 
+            // FechaDefensa
+            // 
+            this.FechaDefensa.Text = "Fecha de la defensa";
+            this.FechaDefensa.Width = 111;
+            // 
+            // Convocatoria
+            // 
+            this.Convocatoria.Text = "Convocatoria";
+            this.Convocatoria.Width = 85;
+            // 
+            // Calificación
+            // 
+            this.Calificación.Text = "Calificación";
+            this.Calificación.Width = 86;
+            // 
             // tabPage7
             // 
             this.tabPage7.Controls.Add(this.listView2);
             this.tabPage7.Location = new System.Drawing.Point(4, 22);
             this.tabPage7.Name = "tabPage7";
             this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage7.Size = new System.Drawing.Size(763, 484);
+            this.tabPage7.Size = new System.Drawing.Size(763, 482);
             this.tabPage7.TabIndex = 1;
             this.tabPage7.Text = "Sin Asignar";
             this.tabPage7.UseVisualStyleBackColor = true;
+            // 
+            // listView2
+            // 
+            this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.Titulo2,
+            this.Descripcion2});
+            this.listView2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listView2.FullRowSelect = true;
+            this.listView2.GridLines = true;
+            this.listView2.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+            this.listView2.Location = new System.Drawing.Point(3, 3);
+            this.listView2.Name = "listView2";
+            this.listView2.OwnerDraw = true;
+            this.listView2.Size = new System.Drawing.Size(757, 476);
+            this.listView2.TabIndex = 0;
+            this.listView2.UseCompatibleStateImageBehavior = false;
+            this.listView2.View = System.Windows.Forms.View.Details;
+            this.listView2.VirtualMode = true;
+            this.listView2.DrawColumnHeader += new System.Windows.Forms.DrawListViewColumnHeaderEventHandler(this.listView2_DrawColumnHeader);
+            this.listView2.DrawItem += new System.Windows.Forms.DrawListViewItemEventHandler(this.listView2_DrawItem);
+            this.listView2.DrawSubItem += new System.Windows.Forms.DrawListViewSubItemEventHandler(this.listView2_DrawSubItem);
+            this.listView2.RetrieveVirtualItem += new System.Windows.Forms.RetrieveVirtualItemEventHandler(this.listView2_RetrieveVirtualItem);
+            this.listView2.SelectedIndexChanged += new System.EventHandler(this.listView2_SelectedIndexChanged);
+            this.listView2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.listView_MouseClick);
+            // 
+            // Titulo2
+            // 
+            this.Titulo2.Text = "Título";
+            this.Titulo2.Width = 271;
+            // 
+            // Descripcion2
+            // 
+            this.Descripcion2.Text = "Descripción";
+            this.Descripcion2.Width = 986;
             // 
             // tabPage3
             // 
@@ -724,10 +1034,97 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(763, 484);
+            this.tabPage3.Size = new System.Drawing.Size(763, 482);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Finalizados";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // listView3
+            // 
+            this.listView3.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4,
+            this.columnHeader5,
+            this.columnHeader6,
+            this.columnHeader11,
+            this.columnHeader7,
+            this.columnHeader8,
+            this.columnHeader9,
+            this.columnHeader10});
+            this.listView3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listView3.FullRowSelect = true;
+            this.listView3.GridLines = true;
+            this.listView3.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+            this.listView3.Location = new System.Drawing.Point(3, 3);
+            this.listView3.Name = "listView3";
+            this.listView3.OwnerDraw = true;
+            this.listView3.Size = new System.Drawing.Size(757, 476);
+            this.listView3.TabIndex = 5;
+            this.listView3.UseCompatibleStateImageBehavior = false;
+            this.listView3.View = System.Windows.Forms.View.Details;
+            this.listView3.VirtualMode = true;
+            this.listView3.DrawColumnHeader += new System.Windows.Forms.DrawListViewColumnHeaderEventHandler(this.listView3_DrawColumnHeader);
+            this.listView3.DrawItem += new System.Windows.Forms.DrawListViewItemEventHandler(this.listView3_DrawItem);
+            this.listView3.DrawSubItem += new System.Windows.Forms.DrawListViewSubItemEventHandler(this.listView3_DrawSubItem);
+            this.listView3.RetrieveVirtualItem += new System.Windows.Forms.RetrieveVirtualItemEventHandler(this.listView3_RetrieveVirtualItem);
+            this.listView3.SelectedIndexChanged += new System.EventHandler(this.listView3_SelectedIndexChanged);
+            this.listView3.MouseClick += new System.Windows.Forms.MouseEventHandler(this.listView_MouseClick);
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Titulo";
+            this.columnHeader1.Width = 139;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Descripción";
+            this.columnHeader2.Width = 304;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Fecha de registro";
+            this.columnHeader3.Width = 97;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Nombre del Alumno";
+            this.columnHeader4.Width = 116;
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "Primer Apellido";
+            this.columnHeader5.Width = 121;
+            // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "Segundo Apellido";
+            this.columnHeader6.Width = 112;
+            // 
+            // columnHeader11
+            // 
+            this.columnHeader11.Text = "Matrícula";
+            // 
+            // columnHeader7
+            // 
+            this.columnHeader7.Text = "Fecha de inicio";
+            this.columnHeader7.Width = 87;
+            // 
+            // columnHeader8
+            // 
+            this.columnHeader8.Text = "Fecha de la defensa";
+            this.columnHeader8.Width = 111;
+            // 
+            // columnHeader9
+            // 
+            this.columnHeader9.Text = "Convocatoria";
+            this.columnHeader9.Width = 85;
+            // 
+            // columnHeader10
+            // 
+            this.columnHeader10.Text = "Calificación";
+            this.columnHeader10.Width = 86;
             // 
             // tabControl2
             // 
@@ -875,6 +1272,8 @@
             this.textBox7.Size = new System.Drawing.Size(212, 126);
             this.textBox7.TabIndex = 5;
             this.textBox7.TextChanged += new System.EventHandler(this.Añadir_TextBoxChanged);
+            this.textBox7.Enter += new System.EventHandler(this.CampoEditable_Enter);
+            this.textBox7.Leave += new System.EventHandler(this.CampoEditable_Leave);
             // 
             // label7
             // 
@@ -913,7 +1312,9 @@
             this.textBox6.Size = new System.Drawing.Size(212, 20);
             this.textBox6.TabIndex = 0;
             this.textBox6.TextChanged += new System.EventHandler(this.Añadir_TextBoxChanged);
+            this.textBox6.Enter += new System.EventHandler(this.CampoEditable_Enter);
             this.textBox6.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox6_KeyDown);
+            this.textBox6.Leave += new System.EventHandler(this.CampoEditable_Leave);
             // 
             // groupBox1
             // 
@@ -990,7 +1391,9 @@
             this.textBox5.Size = new System.Drawing.Size(73, 20);
             this.textBox5.TabIndex = 4;
             this.textBox5.TextChanged += new System.EventHandler(this.Añadir_TextBoxChanged);
+            this.textBox5.Enter += new System.EventHandler(this.CampoEditable_Enter);
             this.textBox5.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox5_KeyDown);
+            this.textBox5.Leave += new System.EventHandler(this.CampoEditable_Leave);
             // 
             // textBox4
             // 
@@ -1001,7 +1404,9 @@
             this.textBox4.Size = new System.Drawing.Size(148, 20);
             this.textBox4.TabIndex = 3;
             this.textBox4.TextChanged += new System.EventHandler(this.Añadir_TextBoxChanged);
+            this.textBox4.Enter += new System.EventHandler(this.CampoEditable_Enter);
             this.textBox4.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox4_KeyDown);
+            this.textBox4.Leave += new System.EventHandler(this.CampoEditable_Leave);
             // 
             // textBox3
             // 
@@ -1012,7 +1417,9 @@
             this.textBox3.Size = new System.Drawing.Size(148, 20);
             this.textBox3.TabIndex = 2;
             this.textBox3.TextChanged += new System.EventHandler(this.Añadir_TextBoxChanged);
+            this.textBox3.Enter += new System.EventHandler(this.CampoEditable_Enter);
             this.textBox3.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox3_KeyDown);
+            this.textBox3.Leave += new System.EventHandler(this.CampoEditable_Leave);
             // 
             // textBox2
             // 
@@ -1023,7 +1430,9 @@
             this.textBox2.Size = new System.Drawing.Size(148, 20);
             this.textBox2.TabIndex = 1;
             this.textBox2.TextChanged += new System.EventHandler(this.Añadir_TextBoxChanged);
+            this.textBox2.Enter += new System.EventHandler(this.CampoEditable_Enter);
             this.textBox2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox2_KeyDown);
+            this.textBox2.Leave += new System.EventHandler(this.CampoEditable_Leave);
             // 
             // textBox1
             // 
@@ -1034,7 +1443,9 @@
             this.textBox1.Size = new System.Drawing.Size(148, 20);
             this.textBox1.TabIndex = 0;
             this.textBox1.TextChanged += new System.EventHandler(this.Añadir_TextBoxChanged);
+            this.textBox1.Enter += new System.EventHandler(this.CampoEditable_Enter);
             this.textBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
+            this.textBox1.Leave += new System.EventHandler(this.CampoEditable_Leave);
             // 
             // tabPage2
             // 
@@ -1053,7 +1464,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(243, 584);
+            this.tabPage2.Size = new System.Drawing.Size(243, 582);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Modificar TFG";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -1072,6 +1483,8 @@
             this.comboBox3.TabIndex = 16;
             this.comboBox3.Visible = false;
             this.comboBox3.TextChanged += new System.EventHandler(this.textBox8_comboBox3_TextChanged);
+            this.comboBox3.Enter += new System.EventHandler(this.CampoEditable_Enter);
+            this.comboBox3.Leave += new System.EventHandler(this.CampoEditable_Leave);
             // 
             // dateTimePicker3
             // 
@@ -1238,6 +1651,8 @@
             this.comboBox2.Size = new System.Drawing.Size(127, 21);
             this.comboBox2.TabIndex = 2;
             this.comboBox2.TextChanged += new System.EventHandler(this.comboBox2_TextChanged);
+            this.comboBox2.Enter += new System.EventHandler(this.CampoEditable_Enter);
+            this.comboBox2.Leave += new System.EventHandler(this.CampoEditable_Leave);
             // 
             // label11
             // 
@@ -1276,6 +1691,8 @@
             this.textBox8.Size = new System.Drawing.Size(224, 20);
             this.textBox8.TabIndex = 6;
             this.textBox8.TextChanged += new System.EventHandler(this.textBox8_comboBox3_TextChanged);
+            this.textBox8.Enter += new System.EventHandler(this.CampoEditable_Enter);
+            this.textBox8.Leave += new System.EventHandler(this.CampoEditable_Leave);
             // 
             // label10
             // 
@@ -1504,7 +1921,9 @@
             this.comboBox7.TabIndex = 5;
             this.comboBox7.TextUpdate += new System.EventHandler(this.comboBox7_TextUpdate);
             this.comboBox7.TextChanged += new System.EventHandler(this.comboBox7_TextChanged);
+            this.comboBox7.Enter += new System.EventHandler(this.CampoEditable_Enter);
             this.comboBox7.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox7_KeyDown);
+            this.comboBox7.Leave += new System.EventHandler(this.CampoEditable_Leave);
             // 
             // panel4
             // 
@@ -1513,100 +1932,6 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(22, 610);
             this.panel4.TabIndex = 10;
-            // 
-            // toolStrip1
-            // 
-            this.toolStrip1.BackColor = System.Drawing.SystemColors.Window;
-            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.None;
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripLabel1,
-            this.toolStripComboBox1,
-            this.toolStripLabel2,
-            this.toolStripComboBox2,
-            this.toolStripButton1,
-            this.toolStripDropDownButton1,
-            this.toolStripSeparator2,
-            this.helpToolStripButton1});
-            this.toolStrip1.Location = new System.Drawing.Point(557, 0);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.toolStrip1.Size = new System.Drawing.Size(532, 25);
-            this.toolStrip1.TabIndex = 3;
-            // 
-            // toolStripLabel1
-            // 
-            this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(46, 22);
-            this.toolStripLabel1.Text = "Campo";
-            // 
-            // toolStripComboBox1
-            // 
-            this.toolStripComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.toolStripComboBox1.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.toolStripComboBox1.Name = "toolStripComboBox1";
-            this.toolStripComboBox1.Size = new System.Drawing.Size(121, 25);
-            // 
-            // toolStripLabel2
-            // 
-            this.toolStripLabel2.Name = "toolStripLabel2";
-            this.toolStripLabel2.Size = new System.Drawing.Size(42, 22);
-            this.toolStripLabel2.Text = "Buscar";
-            // 
-            // toolStripComboBox2
-            // 
-            this.toolStripComboBox2.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.toolStripComboBox2.Name = "toolStripComboBox2";
-            this.toolStripComboBox2.Size = new System.Drawing.Size(189, 25);
-            // 
-            // toolStripButton1
-            // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton1.Text = "Buscar";
-            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
-            // 
-            // toolStripDropDownButton1
-            // 
-            this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.aprobadosToolStripMenuItem,
-            this.suspensosToolStripMenuItem});
-            this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
-            this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
-            this.toolStripDropDownButton1.Size = new System.Drawing.Size(66, 22);
-            this.toolStripDropDownButton1.Text = "Filtrar";
-            // 
-            // aprobadosToolStripMenuItem
-            // 
-            this.aprobadosToolStripMenuItem.Name = "aprobadosToolStripMenuItem";
-            this.aprobadosToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
-            this.aprobadosToolStripMenuItem.Text = "Aprobados";
-            this.aprobadosToolStripMenuItem.Click += new System.EventHandler(this.aprobadosToolStripMenuItem_Click_1);
-            // 
-            // suspensosToolStripMenuItem
-            // 
-            this.suspensosToolStripMenuItem.Name = "suspensosToolStripMenuItem";
-            this.suspensosToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
-            this.suspensosToolStripMenuItem.Text = "Suspensos";
-            this.suspensosToolStripMenuItem.Click += new System.EventHandler(this.suspensosToolStripMenuItem_Click_1);
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
-            // 
-            // helpToolStripButton1
-            // 
-            this.helpToolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.helpToolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("helpToolStripButton1.Image")));
-            this.helpToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.helpToolStripButton1.Name = "helpToolStripButton1";
-            this.helpToolStripButton1.Size = new System.Drawing.Size(23, 22);
-            this.helpToolStripButton1.Text = "He&lp";
-            this.helpToolStripButton1.Click += new System.EventHandler(this.helpToolStripButton1_Click);
             // 
             // toolStrip2
             // 
@@ -1726,6 +2051,7 @@
             // pasteToolStripButton1
             // 
             this.pasteToolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.pasteToolStripButton1.Enabled = false;
             this.pasteToolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("pasteToolStripButton1.Image")));
             this.pasteToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.pasteToolStripButton1.Name = "pasteToolStripButton1";
@@ -1773,211 +2099,99 @@
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
-            // listView1
+            // toolStrip1
             // 
-            this.listView1.BackColor = System.Drawing.SystemColors.Window;
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.Titulo,
-            this.Descripcion,
-            this.FechaPropuesta,
-            this.NombreAlumno,
-            this.Apellido1Alumno,
-            this.Apellido2Alumno,
-            this.Matricula,
-            this.FechaInicio,
-            this.FechaDefensa,
-            this.Convocatoria,
-            this.Calificación});
-            this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listView1.FullRowSelect = true;
-            this.listView1.GridLines = true;
-            this.listView1.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
-            this.listView1.Location = new System.Drawing.Point(3, 3);
-            this.listView1.Name = "listView1";
-            this.listView1.OwnerDraw = true;
-            this.listView1.Size = new System.Drawing.Size(757, 478);
-            this.listView1.TabIndex = 4;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
-            this.listView1.VirtualMode = true;
-            this.listView1.DrawColumnHeader += new System.Windows.Forms.DrawListViewColumnHeaderEventHandler(this.listView1_DrawColumnHeader);
-            this.listView1.DrawItem += new System.Windows.Forms.DrawListViewItemEventHandler(this.listView1_DrawItem);
-            this.listView1.DrawSubItem += new System.Windows.Forms.DrawListViewSubItemEventHandler(this.listView1_DrawSubItem);
-            this.listView1.RetrieveVirtualItem += new System.Windows.Forms.RetrieveVirtualItemEventHandler(this.listView1_RetrieveVirtualItem);
-            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
+            this.toolStrip1.BackColor = System.Drawing.SystemColors.Window;
+            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.None;
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripLabel1,
+            this.toolStripComboBox1,
+            this.toolStripLabel2,
+            this.toolStripComboBox2,
+            this.toolStripButton1,
+            this.toolStripDropDownButton1,
+            this.toolStripSeparator2,
+            this.helpToolStripButton1});
+            this.toolStrip1.Location = new System.Drawing.Point(309, 0);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
+            this.toolStrip1.Size = new System.Drawing.Size(532, 25);
+            this.toolStrip1.TabIndex = 3;
             // 
-            // Titulo
+            // toolStripLabel1
             // 
-            this.Titulo.Text = "Titulo";
-            this.Titulo.Width = 139;
+            this.toolStripLabel1.Name = "toolStripLabel1";
+            this.toolStripLabel1.Size = new System.Drawing.Size(46, 22);
+            this.toolStripLabel1.Text = "Campo";
             // 
-            // Descripcion
+            // toolStripComboBox1
             // 
-            this.Descripcion.Text = "Descripción";
-            this.Descripcion.Width = 304;
+            this.toolStripComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.toolStripComboBox1.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.toolStripComboBox1.Name = "toolStripComboBox1";
+            this.toolStripComboBox1.Size = new System.Drawing.Size(121, 25);
             // 
-            // FechaPropuesta
+            // toolStripLabel2
             // 
-            this.FechaPropuesta.Text = "Fecha de registro";
-            this.FechaPropuesta.Width = 97;
+            this.toolStripLabel2.Name = "toolStripLabel2";
+            this.toolStripLabel2.Size = new System.Drawing.Size(42, 22);
+            this.toolStripLabel2.Text = "Buscar";
             // 
-            // NombreAlumno
+            // toolStripComboBox2
             // 
-            this.NombreAlumno.Text = "Nombre del Alumno";
-            this.NombreAlumno.Width = 116;
+            this.toolStripComboBox2.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.toolStripComboBox2.Name = "toolStripComboBox2";
+            this.toolStripComboBox2.Size = new System.Drawing.Size(189, 25);
             // 
-            // Apellido1Alumno
+            // toolStripButton1
             // 
-            this.Apellido1Alumno.Text = "Primer Apellido";
-            this.Apellido1Alumno.Width = 121;
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton1.Text = "Buscar";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
-            // Apellido2Alumno
+            // toolStripDropDownButton1
             // 
-            this.Apellido2Alumno.Text = "Segundo Apellido";
-            this.Apellido2Alumno.Width = 112;
+            this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.aprobadosToolStripMenuItem,
+            this.suspensosToolStripMenuItem});
+            this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
+            this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
+            this.toolStripDropDownButton1.Size = new System.Drawing.Size(66, 22);
+            this.toolStripDropDownButton1.Text = "Filtrar";
             // 
-            // Matricula
+            // aprobadosToolStripMenuItem
             // 
-            this.Matricula.Text = "Matrícula";
+            this.aprobadosToolStripMenuItem.Name = "aprobadosToolStripMenuItem";
+            this.aprobadosToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
+            this.aprobadosToolStripMenuItem.Text = "Aprobados";
+            this.aprobadosToolStripMenuItem.Click += new System.EventHandler(this.aprobadosToolStripMenuItem_Click_1);
             // 
-            // FechaInicio
+            // suspensosToolStripMenuItem
             // 
-            this.FechaInicio.Text = "Fecha de inicio";
-            this.FechaInicio.Width = 87;
+            this.suspensosToolStripMenuItem.Name = "suspensosToolStripMenuItem";
+            this.suspensosToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
+            this.suspensosToolStripMenuItem.Text = "Suspensos";
+            this.suspensosToolStripMenuItem.Click += new System.EventHandler(this.suspensosToolStripMenuItem_Click_1);
             // 
-            // FechaDefensa
+            // toolStripSeparator2
             // 
-            this.FechaDefensa.Text = "Fecha de la defensa";
-            this.FechaDefensa.Width = 111;
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
-            // Convocatoria
+            // helpToolStripButton1
             // 
-            this.Convocatoria.Text = "Convocatoria";
-            this.Convocatoria.Width = 85;
-            // 
-            // Calificación
-            // 
-            this.Calificación.Text = "Calificación";
-            this.Calificación.Width = 86;
-            // 
-            // listView2
-            // 
-            this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.Titulo2,
-            this.Descripcion2});
-            this.listView2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listView2.FullRowSelect = true;
-            this.listView2.GridLines = true;
-            this.listView2.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
-            this.listView2.Location = new System.Drawing.Point(3, 3);
-            this.listView2.Name = "listView2";
-            this.listView2.OwnerDraw = true;
-            this.listView2.Size = new System.Drawing.Size(757, 478);
-            this.listView2.TabIndex = 0;
-            this.listView2.UseCompatibleStateImageBehavior = false;
-            this.listView2.View = System.Windows.Forms.View.Details;
-            this.listView2.VirtualMode = true;
-            this.listView2.DrawColumnHeader += new System.Windows.Forms.DrawListViewColumnHeaderEventHandler(this.listView2_DrawColumnHeader);
-            this.listView2.DrawItem += new System.Windows.Forms.DrawListViewItemEventHandler(this.listView2_DrawItem);
-            this.listView2.DrawSubItem += new System.Windows.Forms.DrawListViewSubItemEventHandler(this.listView2_DrawSubItem);
-            this.listView2.RetrieveVirtualItem += new System.Windows.Forms.RetrieveVirtualItemEventHandler(this.listView2_RetrieveVirtualItem);
-            this.listView2.SelectedIndexChanged += new System.EventHandler(this.listView2_SelectedIndexChanged);
-            // 
-            // Titulo2
-            // 
-            this.Titulo2.Text = "Título";
-            this.Titulo2.Width = 271;
-            // 
-            // Descripcion2
-            // 
-            this.Descripcion2.Text = "Descripción";
-            this.Descripcion2.Width = 986;
-            // 
-            // listView3
-            // 
-            this.listView3.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3,
-            this.columnHeader4,
-            this.columnHeader5,
-            this.columnHeader6,
-            this.columnHeader11,
-            this.columnHeader7,
-            this.columnHeader8,
-            this.columnHeader9,
-            this.columnHeader10});
-            this.listView3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listView3.FullRowSelect = true;
-            this.listView3.GridLines = true;
-            this.listView3.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
-            this.listView3.Location = new System.Drawing.Point(3, 3);
-            this.listView3.Name = "listView3";
-            this.listView3.OwnerDraw = true;
-            this.listView3.Size = new System.Drawing.Size(757, 478);
-            this.listView3.TabIndex = 5;
-            this.listView3.UseCompatibleStateImageBehavior = false;
-            this.listView3.View = System.Windows.Forms.View.Details;
-            this.listView3.VirtualMode = true;
-            this.listView3.DrawColumnHeader += new System.Windows.Forms.DrawListViewColumnHeaderEventHandler(this.listView3_DrawColumnHeader);
-            this.listView3.DrawItem += new System.Windows.Forms.DrawListViewItemEventHandler(this.listView3_DrawItem);
-            this.listView3.DrawSubItem += new System.Windows.Forms.DrawListViewSubItemEventHandler(this.listView3_DrawSubItem);
-            this.listView3.RetrieveVirtualItem += new System.Windows.Forms.RetrieveVirtualItemEventHandler(this.listView3_RetrieveVirtualItem);
-            this.listView3.SelectedIndexChanged += new System.EventHandler(this.listView3_SelectedIndexChanged);
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "Titulo";
-            this.columnHeader1.Width = 139;
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Descripción";
-            this.columnHeader2.Width = 304;
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "Fecha de registro";
-            this.columnHeader3.Width = 97;
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "Nombre del Alumno";
-            this.columnHeader4.Width = 116;
-            // 
-            // columnHeader5
-            // 
-            this.columnHeader5.Text = "Primer Apellido";
-            this.columnHeader5.Width = 121;
-            // 
-            // columnHeader6
-            // 
-            this.columnHeader6.Text = "Segundo Apellido";
-            this.columnHeader6.Width = 112;
-            // 
-            // columnHeader11
-            // 
-            this.columnHeader11.Text = "Matrícula";
-            // 
-            // columnHeader7
-            // 
-            this.columnHeader7.Text = "Fecha de inicio";
-            this.columnHeader7.Width = 87;
-            // 
-            // columnHeader8
-            // 
-            this.columnHeader8.Text = "Fecha de la defensa";
-            this.columnHeader8.Width = 111;
-            // 
-            // columnHeader9
-            // 
-            this.columnHeader9.Text = "Convocatoria";
-            this.columnHeader9.Width = 85;
-            // 
-            // columnHeader10
-            // 
-            this.columnHeader10.Text = "Calificación";
-            this.columnHeader10.Width = 86;
+            this.helpToolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.helpToolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("helpToolStripButton1.Image")));
+            this.helpToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.helpToolStripButton1.Name = "helpToolStripButton1";
+            this.helpToolStripButton1.Size = new System.Drawing.Size(23, 22);
+            this.helpToolStripButton1.Text = "He&lp";
+            this.helpToolStripButton1.Click += new System.EventHandler(this.helpToolStripButton1_Click);
             // 
             // Form1
             // 
@@ -1999,6 +2213,7 @@
             this.menuStrip1.PerformLayout();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.toolStripContainer1.ContentPanel.ResumeLayout(false);
             this.toolStripContainer1.TopToolStripPanel.ResumeLayout(false);
             this.toolStripContainer1.TopToolStripPanel.PerformLayout();
@@ -2031,10 +2246,10 @@
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
-            this.toolStrip1.ResumeLayout(false);
-            this.toolStrip1.PerformLayout();
             this.toolStrip2.ResumeLayout(false);
             this.toolStrip2.PerformLayout();
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2214,6 +2429,27 @@
         private VistaLista listView2;
         private VistaLista listView3;
         private System.Windows.Forms.ToolStripMenuItem aparienciaToolStripMenuItem;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem4;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem5;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem6;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem7;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem8;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem9;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem10;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem11;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem12;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem13;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem14;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem15;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem16;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem17;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem18;
     }
 }
 

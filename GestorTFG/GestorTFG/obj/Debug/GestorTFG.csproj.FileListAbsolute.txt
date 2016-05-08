@@ -46,3 +46,4 @@ F:\GestorTFG\GestorTFG\obj\Debug\GestorTFG.Preferencias.resources
 I:\GestorTFG\GestorTFG\obj\Debug\GestorTFG.Form7.resources
 F:\Users\Juan Pedro_2\Documents\Visual Studio 2015\Projects\GestorTFG\GestorTFG\obj\Debug\GestorTFG.Form7.resources
 F:\Users\Juan Pedro_2\Documents\Visual Studio 2015\Projects\GestorTFG\GestorTFG\obj\Debug\GestorTFG.Preferencias.resources
+F:\Users\Juan Pedro_2\Documents\Visual Studio 2015\Projects\GestorTFG\GestorTFG\obj\Debug\GestorTFG.Form8.resources
