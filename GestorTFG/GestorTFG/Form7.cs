@@ -11,19 +11,34 @@ namespace GestorTFG
 {
     public partial class Form7 : Form
     {
+        private bool clicked;
         public Form7()
         {
+            clicked = false;
             InitializeComponent();
             Cursor.Hide();
         }
 
         private void Form7_KeyDown(object sender, KeyEventArgs e)
         {
-            Cursor.Show();
-            Close();
+            if (!clicked)
+            {
+                pictureBoxInterpolated1.Visible = true;
+                clicked = true;
+            }
+            else if (clicked)
+            {
+                Cursor.Show();
+                Close();
+            }
         }
 
         private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
+        {
+            pictureBoxInterpolated1.Visible = true;
+        }
+
+        private void pictureBoxInterpolated1_MouseDown(object sender, MouseEventArgs e)
         {
             Cursor.Show();
             Close();

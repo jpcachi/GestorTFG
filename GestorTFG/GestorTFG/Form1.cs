@@ -198,7 +198,12 @@ namespace GestorTFG
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (listView1.SelectedIndices.Count > 0)
+            {
                 vista.ItemSeleccionadoLista(listView1, ref comboBox1, textBox8, dateTimePicker3, numericUpDown1, groupBox3, richTextBox1, richTextBox2, button5, button6, button7, button8, button9);
+                if (listView1.SelectedIndices.Count == 1)
+                    copyToolStripButton1.Enabled = true;
+                else copyToolStripButton1.Enabled = false;
+            } else copyToolStripButton1.Enabled = false;
             {
                 SelectedIndexChangedTimer.Enabled = true;
                 SelectedIndexChangedTimer.Interval = Constantes.TEMPORIZADOR_SELECCION_PROYECTO;
@@ -244,6 +249,7 @@ namespace GestorTFG
         private void tabControl3_Deselected(object sender, TabControlEventArgs e)
         {
             listView1.SelectedIndices.Clear();
+            listView2.SelectedIndices.Clear();
             listView2.SelectedIndices.Clear();
         }
 
@@ -393,6 +399,12 @@ namespace GestorTFG
         private void listView2_SelectedIndexChanged(object sender, EventArgs e)
         {
             vista.ItemSeleccionadoLista2(listView2, ref richTextBox1, ref richTextBox2, button8, button9);
+            if(listView2.SelectedIndices.Count > 0)
+            {
+                if (listView2.SelectedIndices.Count == 1)
+                    copyToolStripButton1.Enabled = true;
+                else copyToolStripButton1.Enabled = false;
+            } else copyToolStripButton1.Enabled = false;
         }
 
         private void tabControl3_Selected(object sender, TabControlEventArgs e)
@@ -1354,6 +1366,87 @@ namespace GestorTFG
         {
             if (comboBox7.Text.ToUpperInvariant() == "WWSSADADBA")
                 new Form7().ShowDialog(this);
+        }
+
+        public void SeleccionarItemLista(int indice)
+        {
+            tabControl3.SelectedIndex = 0;
+            listView1.SelectedIndices.Clear();
+            listView1.SelectedIndices.Add(indice);
+            listView1.EnsureVisible(indice);
+        }
+
+        private void listView3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listView3.SelectedIndices.Count > 0)
+            {
+                if (listView3.SelectedIndices.Count == 1)
+                    copyToolStripButton1.Enabled = true;
+                else copyToolStripButton1.Enabled = false;
+            }
+            else copyToolStripButton1.Enabled = false;
+        }
+
+        private void copyToolStripButton1_Click(object sender, EventArgs e)
+        {
+            string textoCopiar = "";
+            if (tabControl3.SelectedIndex == 0)
+            {
+                textoCopiar += MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[listView1.SelectedIndices[0]].getMTFG.Titulo + ";" + MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[listView1.SelectedIndices[0]].getMTFG.Descripcion
+                    + ";" + MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[listView1.SelectedIndices[0]].getMTFG.Fecha;
+                if (MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[listView1.SelectedIndices[0]].Asignado)
+                {
+                    textoCopiar += ";" + MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[listView1.SelectedIndices[0]].Alumno.Nombre
+                    + ";" + MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[listView1.SelectedIndices[0]].Alumno.PrimerApellido + ";" + MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[listView1.SelectedIndices[0]].Alumno.SegundoApellido
+                    + ";" + MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[listView1.SelectedIndices[0]].Alumno.Matricula + ";" + MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[listView1.SelectedIndices[0]].Alumno.FechaInicio;
+                    if (MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[listView1.SelectedIndices[0]].getMTFG.Finalizado)
+                    {
+                        textoCopiar += ";" + MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[listView1.SelectedIndices[0]].getMTFG.getMFinalizado.Defensa + ";" + MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[listView1.SelectedIndices[0]].getMTFG.getMFinalizado.Convocatoria
+                            + ";" + MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[listView1.SelectedIndices[0]].getMTFG.getMFinalizado.Nota;
+                    }
+                }
+            }
+            else if (tabControl3.SelectedIndex == 1)
+            {
+                textoCopiar += MListaProyectos.getMListaProyectos.getMProyectos.getProyectosNoAsignados[listView2.SelectedIndices[0]].getMTFG.Titulo + ";" + MListaProyectos.getMListaProyectos.getMProyectos.getProyectosNoAsignados[listView2.SelectedIndices[0]].getMTFG.Descripcion;
+            }
+            else if (tabControl3.SelectedIndex == 2)
+            {
+                textoCopiar += MListaProyectos.getMListaProyectos.getMProyectos.getProyectosFinalizados[listView3.SelectedIndices[0]].getMTFG.Titulo + ";" + MListaProyectos.getMListaProyectos.getMProyectos.getProyectosFinalizados[listView3.SelectedIndices[0]].getMTFG.Descripcion
+                    + ";" + MListaProyectos.getMListaProyectos.getMProyectos.getProyectosFinalizados[listView3.SelectedIndices[0]].getMTFG.Fecha + ";" + MListaProyectos.getMListaProyectos.getMProyectos.getProyectosFinalizados[listView3.SelectedIndices[0]].Alumno.Nombre
+                    + ";" + MListaProyectos.getMListaProyectos.getMProyectos.getProyectosFinalizados[listView3.SelectedIndices[0]].Alumno.PrimerApellido + ";" + MListaProyectos.getMListaProyectos.getMProyectos.getProyectosFinalizados[listView3.SelectedIndices[0]].Alumno.SegundoApellido
+                    + ";" + MListaProyectos.getMListaProyectos.getMProyectos.getProyectosFinalizados[listView3.SelectedIndices[0]].Alumno.Matricula + ";" + MListaProyectos.getMListaProyectos.getMProyectos.getProyectosFinalizados[listView3.SelectedIndices[0]].Alumno.FechaInicio
+                    + ";" + MListaProyectos.getMListaProyectos.getMProyectos.getProyectosFinalizados[listView3.SelectedIndices[0]].getMTFG.getMFinalizado.Defensa + ";" + MListaProyectos.getMListaProyectos.getMProyectos.getProyectosFinalizados[listView3.SelectedIndices[0]].getMTFG.getMFinalizado.Convocatoria
+                    + ";" + MListaProyectos.getMListaProyectos.getMProyectos.getProyectosFinalizados[listView3.SelectedIndices[0]].getMTFG.getMFinalizado.Nota;
+            }
+
+            Clipboard.SetText(textoCopiar);
+        }
+
+        private void pasteToolStripButton1_Click_1(object sender, EventArgs e)
+        {
+            if (comboBox7.Focused)
+                comboBox7.SelectedText = Clipboard.GetText();
+            else if (textBox1.Focused)
+                textBox1.SelectedText = Clipboard.GetText();
+            else if (textBox2.Focused)
+                textBox2.SelectedText = Clipboard.GetText();
+            else if (textBox3.Focused)
+                textBox3.SelectedText = Clipboard.GetText();
+            else if (textBox4.Focused)
+                textBox4.SelectedText = Clipboard.GetText();
+            else if (textBox5.Focused)
+                textBox5.SelectedText = Clipboard.GetText();
+            else if (textBox6.Focused)
+                textBox6.SelectedText = Clipboard.GetText();
+            else if (textBox7.Focused)
+                textBox7.SelectedText = Clipboard.GetText();
+            else if (textBox8.Focused)
+                textBox8.SelectedText = Clipboard.GetText();
+            else if (comboBox2.Focused)
+                comboBox2.SelectedText = Clipboard.GetText();
+            else if (comboBox3.Focused)
+                comboBox3.SelectedText = Clipboard.GetText();
         }
     }
 

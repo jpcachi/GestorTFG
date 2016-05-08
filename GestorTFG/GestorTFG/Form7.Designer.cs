@@ -29,9 +29,26 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form7));
+            this.pictureBoxInterpolated1 = new GestorTFG.PictureBoxInterpolated();
             this.pictureBox1 = new GestorTFG.PictureBoxInterpolated();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInterpolated1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // pictureBoxInterpolated1
+            // 
+            this.pictureBoxInterpolated1.BackColor = System.Drawing.Color.Navy;
+            this.pictureBoxInterpolated1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBoxInterpolated1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxInterpolated1.Image")));
+            this.pictureBoxInterpolated1.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.Bicubic;
+            this.pictureBoxInterpolated1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBoxInterpolated1.Name = "pictureBoxInterpolated1";
+            this.pictureBoxInterpolated1.Size = new System.Drawing.Size(720, 400);
+            this.pictureBoxInterpolated1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxInterpolated1.TabIndex = 2;
+            this.pictureBoxInterpolated1.TabStop = false;
+            this.pictureBoxInterpolated1.Visible = false;
+            this.pictureBoxInterpolated1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBoxInterpolated1_MouseDown);
             // 
             // pictureBox1
             // 
@@ -53,6 +70,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Navy;
             this.ClientSize = new System.Drawing.Size(720, 400);
+            this.Controls.Add(this.pictureBoxInterpolated1);
             this.Controls.Add(this.pictureBox1);
             this.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -61,6 +79,7 @@
             this.Text = "Form7";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form7_KeyDown);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInterpolated1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -68,5 +87,6 @@
 
         #endregion
         private PictureBoxInterpolated pictureBox1;
+        private PictureBoxInterpolated pictureBoxInterpolated1;
     }
 }
