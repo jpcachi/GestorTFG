@@ -100,7 +100,7 @@
             this.groupBox1.Location = new System.Drawing.Point(458, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(216, 158);
-            this.groupBox1.TabIndex = 1;
+            this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Profesor";
             // 
@@ -112,6 +112,7 @@
             this.profesor_despacho.ReadOnly = true;
             this.profesor_despacho.Size = new System.Drawing.Size(78, 20);
             this.profesor_despacho.TabIndex = 9;
+            this.profesor_despacho.TabStop = false;
             // 
             // profesor_correo
             // 
@@ -121,6 +122,7 @@
             this.profesor_correo.ReadOnly = true;
             this.profesor_correo.Size = new System.Drawing.Size(124, 20);
             this.profesor_correo.TabIndex = 8;
+            this.profesor_correo.TabStop = false;
             // 
             // profesor_apellido_2
             // 
@@ -130,6 +132,7 @@
             this.profesor_apellido_2.ReadOnly = true;
             this.profesor_apellido_2.Size = new System.Drawing.Size(124, 20);
             this.profesor_apellido_2.TabIndex = 7;
+            this.profesor_apellido_2.TabStop = false;
             // 
             // profesor_apellido_1
             // 
@@ -139,6 +142,7 @@
             this.profesor_apellido_1.ReadOnly = true;
             this.profesor_apellido_1.Size = new System.Drawing.Size(124, 20);
             this.profesor_apellido_1.TabIndex = 6;
+            this.profesor_apellido_1.TabStop = false;
             // 
             // profesor_nombre
             // 
@@ -148,6 +152,7 @@
             this.profesor_nombre.ReadOnly = true;
             this.profesor_nombre.Size = new System.Drawing.Size(124, 20);
             this.profesor_nombre.TabIndex = 5;
+            this.profesor_nombre.TabStop = false;
             // 
             // label6
             // 
@@ -201,7 +206,8 @@
             this.titulo.Name = "titulo";
             this.titulo.ReadOnly = true;
             this.titulo.Size = new System.Drawing.Size(222, 20);
-            this.titulo.TabIndex = 2;
+            this.titulo.TabIndex = 6;
+            this.titulo.TabStop = false;
             // 
             // registro
             // 
@@ -211,6 +217,7 @@
             this.registro.ReadOnly = true;
             this.registro.Size = new System.Drawing.Size(78, 20);
             this.registro.TabIndex = 4;
+            this.registro.TabStop = false;
             // 
             // descripcion
             // 
@@ -221,6 +228,7 @@
             this.descripcion.ReadOnly = true;
             this.descripcion.Size = new System.Drawing.Size(358, 98);
             this.descripcion.TabIndex = 5;
+            this.descripcion.TabStop = false;
             // 
             // label7
             // 
@@ -228,7 +236,7 @@
             this.label7.Location = new System.Drawing.Point(6, 52);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(63, 13);
-            this.label7.TabIndex = 6;
+            this.label7.TabIndex = 2;
             this.label7.Text = "Descripción";
             // 
             // label8
@@ -267,6 +275,7 @@
             this.alumno_inicio.ReadOnly = true;
             this.alumno_inicio.Size = new System.Drawing.Size(78, 20);
             this.alumno_inicio.TabIndex = 9;
+            this.alumno_inicio.TabStop = false;
             // 
             // alumno_matricula
             // 
@@ -276,6 +285,7 @@
             this.alumno_matricula.ReadOnly = true;
             this.alumno_matricula.Size = new System.Drawing.Size(78, 20);
             this.alumno_matricula.TabIndex = 8;
+            this.alumno_matricula.TabStop = false;
             // 
             // alumno_apellido_2
             // 
@@ -285,6 +295,7 @@
             this.alumno_apellido_2.ReadOnly = true;
             this.alumno_apellido_2.Size = new System.Drawing.Size(122, 20);
             this.alumno_apellido_2.TabIndex = 7;
+            this.alumno_apellido_2.TabStop = false;
             // 
             // alumno_apellido_1
             // 
@@ -294,6 +305,7 @@
             this.alumno_apellido_1.ReadOnly = true;
             this.alumno_apellido_1.Size = new System.Drawing.Size(122, 20);
             this.alumno_apellido_1.TabIndex = 6;
+            this.alumno_apellido_1.TabStop = false;
             // 
             // alumno_nombre
             // 
@@ -303,6 +315,7 @@
             this.alumno_nombre.ReadOnly = true;
             this.alumno_nombre.Size = new System.Drawing.Size(122, 20);
             this.alumno_nombre.TabIndex = 5;
+            this.alumno_nombre.TabStop = false;
             // 
             // label9
             // 
@@ -360,7 +373,7 @@
             this.groupBox3.Location = new System.Drawing.Point(12, 12);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(440, 158);
-            this.groupBox3.TabIndex = 9;
+            this.groupBox3.TabIndex = 1;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "TFG";
             // 
@@ -428,6 +441,7 @@
             this.finalizar_calificacion.ReadOnly = true;
             this.finalizar_calificacion.Size = new System.Drawing.Size(78, 20);
             this.finalizar_calificacion.TabIndex = 14;
+            this.finalizar_calificacion.TabStop = false;
             // 
             // label15
             // 
@@ -446,6 +460,7 @@
             this.finalizar_convocatoria.ReadOnly = true;
             this.finalizar_convocatoria.Size = new System.Drawing.Size(134, 20);
             this.finalizar_convocatoria.TabIndex = 12;
+            this.finalizar_convocatoria.TabStop = false;
             // 
             // label14
             // 
@@ -464,6 +479,7 @@
             this.finalizar_defensa.ReadOnly = true;
             this.finalizar_defensa.Size = new System.Drawing.Size(78, 20);
             this.finalizar_defensa.TabIndex = 10;
+            this.finalizar_defensa.TabStop = false;
             // 
             // aceptar
             // 

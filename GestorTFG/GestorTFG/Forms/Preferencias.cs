@@ -16,7 +16,7 @@ namespace GestorTFG
         public Preferencias()
         {
             InitializeComponent();
-
+            Size = new Size(527, 412);
             cabecera = ListViewVisualStyles.ColorCabecera;
             textoCabecera = ListViewVisualStyles.ColorTextoCabecera;
             fondoItem = ListViewVisualStyles.ColorBackgroundItem;
@@ -25,9 +25,17 @@ namespace GestorTFG
             fuenteItem = ListViewVisualStyles.FuenteItem;
 
             button1.BackColor = ListViewVisualStyles.ColorCabecera;
+            button1.FlatAppearance.MouseDownBackColor = ListViewVisualStyles.ColorCabecera;
+            button1.FlatAppearance.MouseOverBackColor = ListViewVisualStyles.ColorCabecera;
             button2.BackColor = ListViewVisualStyles.ColorTextoCabecera;
+            button2.FlatAppearance.MouseDownBackColor = ListViewVisualStyles.ColorTextoCabecera;
+            button2.FlatAppearance.MouseOverBackColor = ListViewVisualStyles.ColorTextoCabecera;
             button3.BackColor = ListViewVisualStyles.ColorTextoItem;
+            button3.FlatAppearance.MouseDownBackColor = ListViewVisualStyles.ColorTextoItem;
+            button3.FlatAppearance.MouseOverBackColor = ListViewVisualStyles.ColorTextoItem;
             button4.BackColor = ListViewVisualStyles.ColorBackgroundItem;
+            button4.FlatAppearance.MouseDownBackColor = ListViewVisualStyles.ColorBackgroundItem;
+            button4.FlatAppearance.MouseOverBackColor = ListViewVisualStyles.ColorBackgroundItem;
             label10.Text = ObtenerNombreFuente(ListViewVisualStyles.FuenteCabecera);
             label10.Font = ListViewVisualStyles.FuenteCabecera;
             label11.Text = ObtenerNombreFuente(ListViewVisualStyles.FuenteItem);
@@ -55,6 +63,8 @@ namespace GestorTFG
             if (result == DialogResult.OK)
             {
                 boton.BackColor = colorDialog1.Color;
+                boton.FlatAppearance.MouseDownBackColor = colorDialog1.Color;
+                boton.FlatAppearance.MouseOverBackColor = colorDialog1.Color;
                 return colorDialog1.Color;
             }
             return actual;

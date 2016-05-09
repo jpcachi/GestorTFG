@@ -70,6 +70,7 @@
             this.nombreDelAlumnoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.primerApellidoDelAlumnoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.segundoApellidoDelAlumnoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.matrículaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fechaDeInicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fechaDeDefensaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.convocatoriaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -79,7 +80,6 @@
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
-            this.matrículaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -226,56 +226,57 @@
             // Titulo
             // 
             this.Titulo.Text = "Titulo";
-            this.Titulo.Width = 158;
+            this.Titulo.Width = 300;
             // 
             // Descripcion
             // 
             this.Descripcion.Text = "Descripción";
-            this.Descripcion.Width = 304;
+            this.Descripcion.Width = 400;
             // 
             // FechaPropuesta
             // 
             this.FechaPropuesta.Text = "Fecha de registro";
-            this.FechaPropuesta.Width = 97;
+            this.FechaPropuesta.Width = 110;
             // 
             // NombreAlumno
             // 
             this.NombreAlumno.Text = "Nombre del Alumno";
-            this.NombreAlumno.Width = 116;
+            this.NombreAlumno.Width = 120;
             // 
             // Apellido1Alumno
             // 
             this.Apellido1Alumno.Text = "Primer Apellido";
-            this.Apellido1Alumno.Width = 121;
+            this.Apellido1Alumno.Width = 120;
             // 
             // Apellido2Alumno
             // 
             this.Apellido2Alumno.Text = "Segundo Apellido";
-            this.Apellido2Alumno.Width = 112;
+            this.Apellido2Alumno.Width = 120;
             // 
             // Matricula
             // 
             this.Matricula.Text = "Matrícula";
+            this.Matricula.Width = 85;
             // 
             // FechaInicio
             // 
             this.FechaInicio.Text = "Fecha de inicio";
-            this.FechaInicio.Width = 87;
+            this.FechaInicio.Width = 110;
             // 
             // FechaDefensa
             // 
             this.FechaDefensa.Text = "Fecha de la defensa";
-            this.FechaDefensa.Width = 111;
+            this.FechaDefensa.Width = 110;
             // 
             // Convocatoria
             // 
             this.Convocatoria.Text = "Convocatoria";
-            this.Convocatoria.Width = 85;
+            this.Convocatoria.Width = 100;
             // 
             // Calificación
             // 
             this.Calificación.Text = "Calificación";
-            this.Calificación.Width = 86;
+            this.Calificación.Width = 85;
             // 
             // toolStrip1
             // 
@@ -370,7 +371,7 @@
             this.toolStripMenuItem4});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.contextMenuStrip1.Size = new System.Drawing.Size(269, 126);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(269, 104);
             // 
             // toolStripMenuItem1
             // 
@@ -457,6 +458,13 @@
             this.segundoApellidoDelAlumnoToolStripMenuItem.Text = "Segundo apellido del alumno";
             this.segundoApellidoDelAlumnoToolStripMenuItem.Click += new System.EventHandler(this.segundoApellidoDelAlumnoToolStripMenuItem_Click);
             // 
+            // matrículaToolStripMenuItem
+            // 
+            this.matrículaToolStripMenuItem.Name = "matrículaToolStripMenuItem";
+            this.matrículaToolStripMenuItem.Size = new System.Drawing.Size(229, 22);
+            this.matrículaToolStripMenuItem.Text = "Matrícula";
+            this.matrículaToolStripMenuItem.Click += new System.EventHandler(this.matrículaToolStripMenuItem_Click);
+            // 
             // fechaDeInicioToolStripMenuItem
             // 
             this.fechaDeInicioToolStripMenuItem.Name = "fechaDeInicioToolStripMenuItem";
@@ -514,13 +522,6 @@
             this.toolStripMenuItem4.Name = "toolStripMenuItem4";
             this.toolStripMenuItem4.Size = new System.Drawing.Size(268, 22);
             this.toolStripMenuItem4.Text = "Exportar búsqueda a archivo de texto";
-            // 
-            // matrículaToolStripMenuItem
-            // 
-            this.matrículaToolStripMenuItem.Name = "matrículaToolStripMenuItem";
-            this.matrículaToolStripMenuItem.Size = new System.Drawing.Size(229, 22);
-            this.matrículaToolStripMenuItem.Text = "Matrícula";
-            this.matrículaToolStripMenuItem.Click += new System.EventHandler(this.matrículaToolStripMenuItem_Click);
             // 
             // Form4
             // 

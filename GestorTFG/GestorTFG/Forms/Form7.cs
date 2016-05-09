@@ -9,6 +9,8 @@ using System.Windows.Forms;
 
 namespace GestorTFG
 {
+    [ReadOnly(true)]
+    [Browsable(false)]
     public partial class Form7 : Form
     {
         private bool clicked;

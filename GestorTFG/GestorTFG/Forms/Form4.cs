@@ -11,7 +11,7 @@ namespace GestorTFG
 
         private string busqueda;
         private TCampos campo;
-        public Form4(Form1 ventanaPadre, string busqueda, TCampos campo)
+        public Form4(Form1 ventanaPadre, string busqueda, TCampos campo, int index1, int index2, DateTime date, decimal nota, bool filtro)
         {
             InitializeComponent();
             vista = new VistaGrafica();
@@ -21,9 +21,43 @@ namespace GestorTFG
             this.campo = campo;
 
             toolStripStatusLabel2.Text = busqueda;
+            if(index1 + index2 > 0 && filtro)
+            {
+                string item = "Filtro:";
+                if(index1 * index2 != 0)
+                {
+                    item = "Filtros:";
+                }
+                switch (index1)
+                {
+                    case 1:
+                        item += " fecha posterior a " + date.Day + "/" + date.Month + "/" + date.Year;
+                        break;
+                    case 2:
+                        item += " fecha anterior a " + date.Day + "/" + date.Month + "/" + date.Year;
+                        break;
+                    case 3:
+                        item += " fecha igual a " + date.Day + "/" + date.Month + "/" + date.Year;
+                        break;
+                }
+                switch (index2)
+                {
+                    case 1:
+                        item += " nota superior a " + nota;
+                        break;
+                    case 2:
+                        item += " nota inferior a " + nota;
+                        break;
+                    case 3:
+                        item += " nota igual a " + nota;
+                        break;
+                }
+                statusStrip1.Items.Add(new ToolStripSeparator());
+                statusStrip1.Items.Add(item);
+            }
+
             contextMenuStrip1.Renderer = new ToolStripVisualStyles.ToolStripAeroRenderer(ToolStripVisualStyles.ToolbarTheme.HelpBar);
-            vista.ActualizarVistaTabla(ref listView1, TipoLista.Busqueda);
-            
+            vista.ActualizarVistaTabla(ref listView1, TipoLista.Busqueda);         
         }
 
         private void listView1_MouseClick(object sender, MouseEventArgs e)

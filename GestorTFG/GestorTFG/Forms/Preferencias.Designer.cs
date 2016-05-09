@@ -32,6 +32,9 @@
             System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Colores y fuentes");
             System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Temas y estilos visuales");
             this.Colores = new System.Windows.Forms.Panel();
+            this.button12 = new System.Windows.Forms.Button();
+            this.button11 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
@@ -64,9 +67,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
             this.Colores.SuspendLayout();
             this.Titulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -98,10 +98,41 @@
             this.Colores.Controls.Add(this.label3);
             this.Colores.Controls.Add(this.label2);
             this.Colores.Controls.Add(this.Titulo);
-            this.Colores.Location = new System.Drawing.Point(186, 0);
+            this.Colores.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Colores.Location = new System.Drawing.Point(0, 0);
             this.Colores.Name = "Colores";
-            this.Colores.Size = new System.Drawing.Size(511, 373);
+            this.Colores.Size = new System.Drawing.Size(697, 373);
             this.Colores.TabIndex = 1;
+            // 
+            // button12
+            // 
+            this.button12.Location = new System.Drawing.Point(424, 338);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(75, 23);
+            this.button12.TabIndex = 21;
+            this.button12.Text = "&Cancelar";
+            this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
+            // 
+            // button11
+            // 
+            this.button11.Location = new System.Drawing.Point(343, 338);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(75, 23);
+            this.button11.TabIndex = 20;
+            this.button11.Text = "&Aceptar";
+            this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
+            // 
+            // button10
+            // 
+            this.button10.Location = new System.Drawing.Point(13, 338);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(130, 23);
+            this.button10.TabIndex = 19;
+            this.button10.Text = "Restablecer por defecto";
+            this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // label12
             // 
@@ -183,7 +214,7 @@
             // 
             // button4
             // 
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Location = new System.Drawing.Point(95, 220);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(30, 20);
@@ -233,7 +264,7 @@
             // 
             this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Location = new System.Drawing.Point(95, 110);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(30, 20);
@@ -270,19 +301,20 @@
             // 
             // Titulo
             // 
+            this.Titulo.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.Titulo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Titulo.Controls.Add(this.pictureBox1);
             this.Titulo.Controls.Add(this.label1);
-            this.Titulo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Titulo.Location = new System.Drawing.Point(0, 0);
+            this.Titulo.Location = new System.Drawing.Point(-1, -9);
             this.Titulo.Name = "Titulo";
-            this.Titulo.Size = new System.Drawing.Size(511, 69);
+            this.Titulo.Size = new System.Drawing.Size(710, 78);
             this.Titulo.TabIndex = 1;
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(6, 4);
+            this.pictureBox1.Location = new System.Drawing.Point(17, 13);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(64, 64);
             this.pictureBox1.TabIndex = 1;
@@ -290,9 +322,10 @@
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(84, 19);
+            this.label1.Location = new System.Drawing.Point(95, 28);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(231, 31);
             this.label1.TabIndex = 0;
@@ -313,6 +346,7 @@
             treeNode4});
             this.treeView1.Size = new System.Drawing.Size(186, 373);
             this.treeView1.TabIndex = 0;
+            this.treeView1.Visible = false;
             this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
             // 
             // Temas
@@ -409,44 +443,14 @@
             this.label13.TabIndex = 0;
             this.label13.Text = "Temas y efectos visuales";
             // 
-            // button10
-            // 
-            this.button10.Location = new System.Drawing.Point(13, 338);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(130, 23);
-            this.button10.TabIndex = 19;
-            this.button10.Text = "Restablecer por defecto";
-            this.button10.UseVisualStyleBackColor = true;
-            this.button10.Click += new System.EventHandler(this.button10_Click);
-            // 
-            // button11
-            // 
-            this.button11.Location = new System.Drawing.Point(343, 338);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(75, 23);
-            this.button11.TabIndex = 20;
-            this.button11.Text = "&Aceptar";
-            this.button11.UseVisualStyleBackColor = true;
-            this.button11.Click += new System.EventHandler(this.button11_Click);
-            // 
-            // button12
-            // 
-            this.button12.Location = new System.Drawing.Point(424, 338);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(75, 23);
-            this.button12.TabIndex = 21;
-            this.button12.Text = "&Cancelar";
-            this.button12.UseVisualStyleBackColor = true;
-            this.button12.Click += new System.EventHandler(this.button12_Click);
-            // 
             // Preferencias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(697, 373);
-            this.Controls.Add(this.treeView1);
             this.Controls.Add(this.Colores);
             this.Controls.Add(this.Temas);
+            this.Controls.Add(this.treeView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Preferencias";
             this.Text = "Apariencia";

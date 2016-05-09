@@ -686,7 +686,7 @@
             this.toolStripMenuItem4});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.contextMenuStrip1.Size = new System.Drawing.Size(245, 126);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(245, 104);
             // 
             // toolStripMenuItem1
             // 
@@ -928,60 +928,62 @@
             this.listView1.RetrieveVirtualItem += new System.Windows.Forms.RetrieveVirtualItemEventHandler(this.listView1_RetrieveVirtualItem);
             this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             this.listView1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.listView_MouseClick);
+            this.listView1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.listView_MouseDoubleClick);
             // 
             // Titulo
             // 
             this.Titulo.Text = "Titulo";
-            this.Titulo.Width = 139;
+            this.Titulo.Width = 300;
             // 
             // Descripcion
             // 
             this.Descripcion.Text = "Descripción";
-            this.Descripcion.Width = 304;
+            this.Descripcion.Width = 400;
             // 
             // FechaPropuesta
             // 
             this.FechaPropuesta.Text = "Fecha de registro";
-            this.FechaPropuesta.Width = 97;
+            this.FechaPropuesta.Width = 110;
             // 
             // NombreAlumno
             // 
             this.NombreAlumno.Text = "Nombre del Alumno";
-            this.NombreAlumno.Width = 116;
+            this.NombreAlumno.Width = 120;
             // 
             // Apellido1Alumno
             // 
             this.Apellido1Alumno.Text = "Primer Apellido";
-            this.Apellido1Alumno.Width = 121;
+            this.Apellido1Alumno.Width = 120;
             // 
             // Apellido2Alumno
             // 
             this.Apellido2Alumno.Text = "Segundo Apellido";
-            this.Apellido2Alumno.Width = 112;
+            this.Apellido2Alumno.Width = 120;
             // 
             // Matricula
             // 
             this.Matricula.Text = "Matrícula";
+            this.Matricula.Width = 100;
             // 
             // FechaInicio
             // 
             this.FechaInicio.Text = "Fecha de inicio";
-            this.FechaInicio.Width = 87;
+            this.FechaInicio.Width = 110;
             // 
             // FechaDefensa
             // 
             this.FechaDefensa.Text = "Fecha de la defensa";
-            this.FechaDefensa.Width = 111;
+            this.FechaDefensa.Width = 110;
             // 
             // Convocatoria
             // 
             this.Convocatoria.Text = "Convocatoria";
-            this.Convocatoria.Width = 85;
+            this.Convocatoria.Width = 120;
             // 
             // Calificación
             // 
             this.Calificación.Text = "Calificación";
-            this.Calificación.Width = 86;
+            this.Calificación.Width = 85;
             // 
             // tabPage7
             // 
@@ -989,7 +991,7 @@
             this.tabPage7.Location = new System.Drawing.Point(4, 22);
             this.tabPage7.Name = "tabPage7";
             this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage7.Size = new System.Drawing.Size(763, 482);
+            this.tabPage7.Size = new System.Drawing.Size(763, 484);
             this.tabPage7.TabIndex = 1;
             this.tabPage7.Text = "Sin Asignar";
             this.tabPage7.UseVisualStyleBackColor = true;
@@ -1006,7 +1008,7 @@
             this.listView2.Location = new System.Drawing.Point(3, 3);
             this.listView2.Name = "listView2";
             this.listView2.OwnerDraw = true;
-            this.listView2.Size = new System.Drawing.Size(757, 476);
+            this.listView2.Size = new System.Drawing.Size(757, 478);
             this.listView2.TabIndex = 0;
             this.listView2.UseCompatibleStateImageBehavior = false;
             this.listView2.View = System.Windows.Forms.View.Details;
@@ -1017,16 +1019,17 @@
             this.listView2.RetrieveVirtualItem += new System.Windows.Forms.RetrieveVirtualItemEventHandler(this.listView2_RetrieveVirtualItem);
             this.listView2.SelectedIndexChanged += new System.EventHandler(this.listView2_SelectedIndexChanged);
             this.listView2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.listView_MouseClick);
+            this.listView2.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.listView_MouseDoubleClick);
             // 
             // Titulo2
             // 
             this.Titulo2.Text = "Título";
-            this.Titulo2.Width = 271;
+            this.Titulo2.Width = 400;
             // 
             // Descripcion2
             // 
             this.Descripcion2.Text = "Descripción";
-            this.Descripcion2.Width = 986;
+            this.Descripcion2.Width = 1100;
             // 
             // tabPage3
             // 
@@ -1034,7 +1037,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(763, 482);
+            this.tabPage3.Size = new System.Drawing.Size(763, 484);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Finalizados";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -1060,7 +1063,7 @@
             this.listView3.Location = new System.Drawing.Point(3, 3);
             this.listView3.Name = "listView3";
             this.listView3.OwnerDraw = true;
-            this.listView3.Size = new System.Drawing.Size(757, 476);
+            this.listView3.Size = new System.Drawing.Size(757, 478);
             this.listView3.TabIndex = 5;
             this.listView3.UseCompatibleStateImageBehavior = false;
             this.listView3.View = System.Windows.Forms.View.Details;
@@ -1071,60 +1074,62 @@
             this.listView3.RetrieveVirtualItem += new System.Windows.Forms.RetrieveVirtualItemEventHandler(this.listView3_RetrieveVirtualItem);
             this.listView3.SelectedIndexChanged += new System.EventHandler(this.listView3_SelectedIndexChanged);
             this.listView3.MouseClick += new System.Windows.Forms.MouseEventHandler(this.listView_MouseClick);
+            this.listView3.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.listView_MouseDoubleClick);
             // 
             // columnHeader1
             // 
             this.columnHeader1.Text = "Titulo";
-            this.columnHeader1.Width = 139;
+            this.columnHeader1.Width = 300;
             // 
             // columnHeader2
             // 
             this.columnHeader2.Text = "Descripción";
-            this.columnHeader2.Width = 304;
+            this.columnHeader2.Width = 400;
             // 
             // columnHeader3
             // 
             this.columnHeader3.Text = "Fecha de registro";
-            this.columnHeader3.Width = 97;
+            this.columnHeader3.Width = 110;
             // 
             // columnHeader4
             // 
             this.columnHeader4.Text = "Nombre del Alumno";
-            this.columnHeader4.Width = 116;
+            this.columnHeader4.Width = 120;
             // 
             // columnHeader5
             // 
             this.columnHeader5.Text = "Primer Apellido";
-            this.columnHeader5.Width = 121;
+            this.columnHeader5.Width = 120;
             // 
             // columnHeader6
             // 
             this.columnHeader6.Text = "Segundo Apellido";
-            this.columnHeader6.Width = 112;
+            this.columnHeader6.Width = 120;
             // 
             // columnHeader11
             // 
             this.columnHeader11.Text = "Matrícula";
+            this.columnHeader11.Width = 85;
             // 
             // columnHeader7
             // 
             this.columnHeader7.Text = "Fecha de inicio";
-            this.columnHeader7.Width = 87;
+            this.columnHeader7.Width = 110;
             // 
             // columnHeader8
             // 
             this.columnHeader8.Text = "Fecha de la defensa";
-            this.columnHeader8.Width = 111;
+            this.columnHeader8.Width = 110;
             // 
             // columnHeader9
             // 
             this.columnHeader9.Text = "Convocatoria";
-            this.columnHeader9.Width = 85;
+            this.columnHeader9.Width = 120;
             // 
             // columnHeader10
             // 
             this.columnHeader10.Text = "Calificación";
-            this.columnHeader10.Width = 86;
+            this.columnHeader10.Width = 85;
             // 
             // tabControl2
             // 
@@ -1464,7 +1469,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(243, 582);
+            this.tabPage2.Size = new System.Drawing.Size(243, 584);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Modificar TFG";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -2208,6 +2213,7 @@
             this.Text = "Gestor TFG";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.ResizeEnd += new System.EventHandler(this.Form1_ResizeEnd);
             this.Resize += new System.EventHandler(this.Form1_Resize);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

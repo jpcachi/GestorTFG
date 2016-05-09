@@ -67,11 +67,11 @@ namespace Generador_TFG
                     
                 //fechadeinicio
                 ary.Add(rand.Next(32) + "/"
-                + rand.Next(13) + "/2016");
+                + rand.Next(1, 13) + "/2016");
 
                 //fechadefensa
                 ary.Add(rand.Next(32) + "/"
-                + rand.Next(13) + "/2016");
+                + rand.Next(1, 13) + "/2016");
 
                 //convocatoria
                 ary.Add(convocatoria[rand.Next(convocatoria.Length)]);

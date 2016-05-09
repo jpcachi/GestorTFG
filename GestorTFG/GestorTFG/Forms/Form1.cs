@@ -50,8 +50,6 @@ namespace GestorTFG
             toolStrip2.Renderer = new ToolStripSystemRendererFix();
             menuStrip1.Renderer = new ToolStripAeroRenderer(ToolbarTheme.HelpBar);
             contextMenuStrip1.Renderer = new ToolStripAeroRenderer(ToolbarTheme.HelpBar);
-            //listView1.Items.Add(new ListViewItem());
-            //listView3.Items.Add(new ListViewItem());
 
             ListViewVisualStyles.Listas.Add(listView1);
             ListViewVisualStyles.Listas.Add(listView2);
@@ -1143,14 +1141,15 @@ namespace GestorTFG
 
         private void seleccionartodoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            /*foreach (ListViewItem item in listView1.Items)
+            if (tabControl3.SelectedIndex == 0)
             {
-                item.Selected = true;
-            }*/
-            listView1.SelectedIndices.Clear();
-            for (int i = 0; i < listView1.Items.Count; i++)
+                NativeMethods.SelectAllItems(listView1);
+            } else if (tabControl3.SelectedIndex == 1)
             {
-                listView1.SelectedIndices.Add(i);
+                NativeMethods.SelectAllItems(listView2);
+            } else if (tabControl3.SelectedIndex == 2)
+            {
+                NativeMethods.SelectAllItems(listView3);
             }
         }
 
@@ -1475,20 +1474,24 @@ namespace GestorTFG
         {
             if (e.Button == MouseButtons.Right)
             {
-                copiar = new Copiar(toolStripMenuItem7);
-                if((sender as VistaLista).SelectedIndices.Count > 1)
+                if (sender.GetType() == typeof(VistaLista))
                 {
-                    toolStripMenuItem1.Enabled = false;
-                    toolStripMenuItem2.Enabled = false;
-                    toolStripMenuItem4.Enabled = false;
-                } else if ((sender as VistaLista).SelectedIndices.Count == 1)
-                {
-                    toolStripMenuItem1.Enabled = true;
-                    toolStripMenuItem2.Enabled = true;
-                    toolStripMenuItem4.Enabled = true;
+                    copiar = new Copiar(toolStripMenuItem7);
+                    if ((sender as VistaLista).SelectedIndices.Count > 1)
+                    {
+                        toolStripMenuItem1.Enabled = false;
+                        toolStripMenuItem2.Enabled = false;
+                        toolStripMenuItem4.Enabled = false;
+                    }
+                    else if ((sender as VistaLista).SelectedIndices.Count == 1)
+                    {
+                        toolStripMenuItem1.Enabled = true;
+                        toolStripMenuItem2.Enabled = true;
+                        toolStripMenuItem4.Enabled = true;
+                    }
+                    contextMenuStrip1.Show();
+                    contextMenuStrip1.Location = MousePosition;
                 }
-                contextMenuStrip1.Show();
-                contextMenuStrip1.Location = MousePosition;
             }
         }
         #region COPIAR
@@ -1649,11 +1652,6 @@ namespace GestorTFG
             Refresh();
         }
 
-        private void listView1_MouseClick(object sender, MouseEventArgs e)
-        {
-
-        }
-
         private void toolStripMenuItem4_Click(object sender, EventArgs e)
         {
             VistaLista lista = listView1;
@@ -1671,6 +1669,36 @@ namespace GestorTFG
             }
 
             new Form8(lista, tipoLista).ShowDialog();
+        }
+
+        private void listView_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                if (sender.GetType() == typeof(VistaLista))
+                {
+                    VistaLista lista = listView1;
+                    TipoLista tipoLista = TipoLista.Todos;
+
+                    if (tabControl3.SelectedIndex == 1)
+                    {
+                        tipoLista = TipoLista.Sin_Asignar;
+                        lista = listView2;
+                    }
+                    else if (tabControl3.SelectedIndex == 2)
+                    {
+                        tipoLista = TipoLista.Finalizados;
+                        lista = listView3;
+                    }
+
+                    new Form8(lista, tipoLista).ShowDialog();
+                }
+            }
+        }
+
+        private void Form1_ResizeEnd(object sender, EventArgs e)
+        {
+            
         }
     }
 
