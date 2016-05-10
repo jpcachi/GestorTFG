@@ -197,6 +197,7 @@ namespace GestorTFG
                 comboBox1.Items.Add("Nombre del Alumno");
                 comboBox1.Items.Add("Primer Apellido");
                 comboBox1.Items.Add("Segundo Apellido");
+                comboBox1.Items.Add("Matrícula");
                 comboBox1.Items.Add("Fecha de inicio");
                 if (MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[listView.SelectedIndices[0]].getMTFG.Finalizado)
                 {

@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Generador.cs" />
+    <Compile Include="GeneradorFechas.cs" />
     <Compile Include="GeneradorTFGFinalizados.cs" />
     <Compile Include="GeneradorTFGSinAsignar.cs" />
     <Compile Include="GeneradorTFGSinFinalizar.cs" />

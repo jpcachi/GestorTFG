@@ -60,10 +60,11 @@ namespace GestorTFG
                 case 3: MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[index].Alumno.Nombre = valor; break;
                 case 4: MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[index].Alumno.PrimerApellido = valor; break;
                 case 5: MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[index].Alumno.SegundoApellido = valor; break;
-                case 6: MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[index].Alumno.FechaInicio = valor; break;
-                case 7: MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[index].getMTFG.getMFinalizado.Defensa = valor; break;
-                case 8: MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[index].getMTFG.getMFinalizado.Convocatoria = valor; break;
-                case 9: MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[index].getMTFG.getMFinalizado.Nota = float.Parse(valor); break;
+                case 6: MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[index].Alumno.Matricula = valor; break;
+                case 7: MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[index].Alumno.FechaInicio = valor; break;
+                case 8: MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[index].getMTFG.getMFinalizado.Defensa = valor; break;
+                case 9: MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[index].getMTFG.getMFinalizado.Convocatoria = valor; break;
+                case 10: MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[index].getMTFG.getMFinalizado.Nota = float.Parse(valor); break;
                 default: break;
             }
             cambios = true;

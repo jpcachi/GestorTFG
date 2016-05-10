@@ -243,9 +243,9 @@ namespace GestorTFG
             int indice = listView.SelectedIndices[0];
             switch (comboBox1.SelectedIndex)
             {
-                case 2: case 6: case 7: valor = dateTimePicker3.Text; break;
-                case 8: valor = comboBox3.Text; break;
-                case 9: valor = numericUpDown1.Value.ToString(); break;
+                case 2: case 7: case 8: valor = dateTimePicker3.Text; break;
+                case 9: valor = comboBox3.Text; break;
+                case 10: valor = numericUpDown1.Value.ToString(); break;
                 default: valor = textBox8.Text; break;
             }
 

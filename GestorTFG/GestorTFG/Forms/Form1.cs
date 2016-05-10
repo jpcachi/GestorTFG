@@ -46,8 +46,9 @@ namespace GestorTFG
             toolStripComboBox1.Items.Add("Descripción");
             toolStripComboBox1.Items.Add("Alumno");
             toolStripComboBox1.Items.Add("Profesor");
+            toolStripComboBox2.Items.Add("- Borrar búsquedas recientes -");
             toolStripComboBox1.SelectedIndex = 0;
-            toolStrip2.Renderer = new ToolStripSystemRendererFix();
+            toolStrip2.Renderer = new ToolStripAeroRenderer(ToolbarTheme.HelpBar); //ToolStripSystemRendererFix();
             menuStrip1.Renderer = new ToolStripAeroRenderer(ToolbarTheme.HelpBar);
             contextMenuStrip1.Renderer = new ToolStripAeroRenderer(ToolbarTheme.HelpBar);
 
@@ -72,6 +73,8 @@ namespace GestorTFG
             button7.Enabled = false;
             button8.Enabled = false;
             button9.Enabled = false;
+            comboBox4.SelectedIndex = 0;
+            comboBox5.SelectedIndex = 0;
             comboBox8.SelectedIndex = 0;
             comboBox9.SelectedIndex = 0;
             comboBox10.SelectedIndex = 0;
@@ -302,27 +305,34 @@ namespace GestorTFG
                         comboBox3.Visible = false;
                         break;
                     case 6:
-                        textBox8.Visible = false;
+                        textBox8.Visible = true;
+                        textBox8.Text = MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[listView1.SelectedIndices[0]].Alumno.Matricula;
                         numericUpDown1.Visible = false;
-                        dateTimePicker3.Visible = true;
-                        dateTimePicker3.Value = DateTime.Parse(MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[listView1.SelectedIndices[0]].Alumno.FechaInicio);
+                        dateTimePicker3.Visible = false;
                         comboBox3.Visible = false;
                         break;
                     case 7:
                         textBox8.Visible = false;
                         numericUpDown1.Visible = false;
                         dateTimePicker3.Visible = true;
-                        dateTimePicker3.Value = DateTime.Parse(MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[listView1.SelectedIndices[0]].getMTFG.getMFinalizado.Defensa);
+                        dateTimePicker3.Value = DateTime.Parse(MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[listView1.SelectedIndices[0]].Alumno.FechaInicio);
                         comboBox3.Visible = false;
                         break;
                     case 8:
+                        textBox8.Visible = false;
+                        numericUpDown1.Visible = false;
+                        dateTimePicker3.Visible = true;
+                        dateTimePicker3.Value = DateTime.Parse(MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[listView1.SelectedIndices[0]].getMTFG.getMFinalizado.Defensa);
+                        comboBox3.Visible = false;
+                        break;
+                    case 9:
                         textBox8.Visible = false;
                         numericUpDown1.Visible = false;
                         dateTimePicker3.Visible = false;
                         comboBox3.Visible = true;
                         comboBox3.Text = MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[listView1.SelectedIndices[0]].getMTFG.getMFinalizado.Convocatoria;
                         break;
-                    case 9:
+                    case 10:
                         textBox8.Visible = false;
                         numericUpDown1.Visible = true;
                         numericUpDown1.Value = (decimal)MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[listView1.SelectedIndices[0]].getMTFG.getMFinalizado.Nota;
@@ -808,7 +818,7 @@ namespace GestorTFG
 
         private void button10_Click(object sender, EventArgs e)
         {
-            buscador.BuscarProyecto(comboBox7.Text.Trim(), (TCampos)comboBox10.SelectedIndex, comboBox9.SelectedIndex, comboBox8.SelectedIndex, dateTimePicker4, numericUpDown4);
+            buscador.BuscarProyecto(comboBox7.Text.Trim(), (TCampos)comboBox10.SelectedIndex, comboBox9.SelectedIndex, comboBox4.SelectedIndex, comboBox5.SelectedIndex, comboBox8.SelectedIndex, dateTimePicker4, dateTimePicker5, dateTimePicker6, numericUpDown4);
             if (!comboBox7.Items.Contains(comboBox7.Text.Trim()))
                 comboBox7.Items.Add(comboBox7.Text.Trim());
         }
@@ -816,13 +826,41 @@ namespace GestorTFG
         private void comboBox9_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (comboBox9.SelectedIndex > 0) dateTimePicker4.Enabled = true;
-            else dateTimePicker4.Enabled = false;
+            else
+            {
+                dateTimePicker4.Value = DateTime.Today;
+                dateTimePicker4.Enabled = false;
+            }
+        }
+
+        private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBox4.SelectedIndex > 0) dateTimePicker5.Enabled = true;
+            else
+            {
+                dateTimePicker5.Value = DateTime.Today;
+                dateTimePicker5.Enabled = false;
+            }
+        }
+
+        private void comboBox5_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBox5.SelectedIndex > 0) dateTimePicker6.Enabled = true;
+            else
+            {
+                dateTimePicker6.Value = DateTime.Today;
+                dateTimePicker6.Enabled = false;
+            }
         }
 
         private void comboBox8_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (comboBox8.SelectedIndex > 0) numericUpDown4.Enabled = true;
-            else numericUpDown4.Enabled = false;
+            else
+            {
+                numericUpDown4.Value = 0.00m;
+                numericUpDown4.Enabled = false;
+            }
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -952,16 +990,16 @@ namespace GestorTFG
             aux.Value = 0;
             if (aprobadosToolStripMenuItem.Checked)
             {
-                opcion = 1;
-                aux.Value = Constantes.LIMITE_NOTA_SUSPENSA;
-            }
-            else if (suspensosToolStripMenuItem.Checked)
-            {
                 opcion = 2;
                 aux.Value = Constantes.LIMITE_NOTA_APROBADA;
             }
+            else if (suspensosToolStripMenuItem.Checked)
+            {
+                opcion = 3;
+                aux.Value = Constantes.LIMITE_NOTA_APROBADA;
+            }
 
-            buscador.BuscarProyecto(toolStripComboBox2.Text.Trim(), (TCampos)toolStripComboBox1.SelectedIndex, 0, opcion, new DateTimePicker(), aux);
+            buscador.BuscarProyecto(toolStripComboBox2.Text.Trim(), (TCampos)toolStripComboBox1.SelectedIndex, 0, 0, 0, opcion, new DateTimePicker(), new DateTimePicker(), new DateTimePicker(), aux);
             if (!toolStripComboBox2.Items.Contains(toolStripComboBox2.Text.Trim()))
                 toolStripComboBox2.Items.Add(toolStripComboBox2.Text.Trim());
         }
@@ -1699,6 +1737,39 @@ namespace GestorTFG
         private void Form1_ResizeEnd(object sender, EventArgs e)
         {
             
+        }
+
+        private void comboBox7_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(comboBox7.SelectedIndex == 0)
+            {
+                comboBox7.Items.Clear();
+                comboBox7.Items.Add("- Borrar búsquedas recientes -");
+            }
+        }
+
+        private void toolStripComboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (toolStripComboBox2.SelectedIndex == 0)
+            {
+                toolStripComboBox2.Items.Clear();
+                toolStripComboBox2.Items.Add("- Borrar búsquedas recientes -");
+            }
+        }
+
+        private void vistapreviadeimpresiónToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form form = printPreviewDialog1 as Form;
+            form.WindowState = FormWindowState.Maximized;
+
+            printPreviewDialog1.PrintPreviewControl.Zoom = 1.0;
+            printPreviewDialog1.ShowDialog(this);
+
+        }
+
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            //imprimir
         }
     }
 

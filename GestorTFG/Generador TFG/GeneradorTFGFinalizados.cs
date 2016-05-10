@@ -30,8 +30,7 @@ namespace Generador_TFG
                 ary.Add(descripcion[rand.Next(descripcion.Length)]);
 
                 //fecharegistro
-                ary.Add(rand.Next(1, 32) + "/"
-                + rand.Next(1, 13) + "/2016");
+                ary.Add(GeneradorFechas.GenerarFecha());
 
                 // profesor
                 //nombre
@@ -66,12 +65,10 @@ namespace Generador_TFG
                 ary.Add(char.ConvertFromUtf32(rand.Next(0x0061, 0x007A)) + char.ConvertFromUtf32(rand.Next(0x0061, 0x007A)) + rand.Next(10000).ToString());
                     
                 //fechadeinicio
-                ary.Add(rand.Next(32) + "/"
-                + rand.Next(1, 13) + "/2016");
+                ary.Add(GeneradorFechas.GenerarFecha());
 
                 //fechadefensa
-                ary.Add(rand.Next(32) + "/"
-                + rand.Next(1, 13) + "/2016");
+                ary.Add(GeneradorFechas.GenerarFecha());
 
                 //convocatoria
                 ary.Add(convocatoria[rand.Next(convocatoria.Length)]);

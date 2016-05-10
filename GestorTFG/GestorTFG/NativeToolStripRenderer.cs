@@ -209,7 +209,7 @@ namespace ToolStripVisualStyles {
 		// Gives parented ToolStrips a transparent background.
 		protected override void Initialize(ToolStrip toolStrip) {
 			if (toolStrip.Parent is ToolStripPanel)
-				toolStrip.BackColor = Color.Transparent;
+				//toolStrip.BackColor = Color.Transparent;
 
 			base.Initialize(toolStrip);
 		}
@@ -300,7 +300,7 @@ namespace ToolStripVisualStyles {
 		}
 
 		// Render the background of an actual menu bar, dropdown menu or toolbar.
-		protected override void OnRenderToolStripBackground(System.Windows.Forms.ToolStripRenderEventArgs e) {
+		protected override void OnRenderToolStripBackground(ToolStripRenderEventArgs e) {
 			if (EnsureRenderer()) {
 				if (e.ToolStrip.IsDropDown) {
 					renderer.SetParameters(MenuClass, (int)MenuParts.PopupBackground, 0);
@@ -333,7 +333,7 @@ namespace ToolStripVisualStyles {
 			}
 		}
 
-		// The only purpose of this override is to change the arrow colour.
+		// The only purpose of this override is to change the arrow color.
 		// It's OK to just draw over the default arrow since we also pass down arrow drawing to the system renderer.
 		protected override void OnRenderSplitButtonBackground(ToolStripItemRenderEventArgs e) {
 			if (EnsureRenderer()) {
