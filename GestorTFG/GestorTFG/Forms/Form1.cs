@@ -23,10 +23,9 @@ namespace GestorTFG
         //private Splitter splitterLeft;
         //Splitter splitterRight;
         private Splitter splitterDown;
-        private Timer SelectedIndexChangedTimer = new Timer();
+        private Timer SelectedIndexChangedTimer;
 
         private Form5 form5; //barra de herramientas flotante
-
 
 
         public Form1()
@@ -36,6 +35,7 @@ namespace GestorTFG
             buscador = new Buscador(this);
             fichero = new LeerEscribirArchivo();
             deshacer = new DeshacerRehacer();
+            SelectedIndexChangedTimer = new Timer();
 
             Size = new Size((int)(Screen.PrimaryScreen.Bounds.Size.Width * Constantes.TAMAÑO_RELATIVO_RESOLUCION), (int)(Screen.PrimaryScreen.Bounds.Size.Height * Constantes.TAMAÑO_RELATIVO_RESOLUCION));
 
@@ -48,7 +48,7 @@ namespace GestorTFG
             toolStripComboBox1.Items.Add("Profesor");
             toolStripComboBox2.Items.Add("- Borrar búsquedas recientes -");
             toolStripComboBox1.SelectedIndex = 0;
-            toolStrip2.Renderer = new ToolStripAeroRenderer(ToolbarTheme.HelpBar); //ToolStripSystemRendererFix();
+            toolStrip2.Renderer = new ToolStripAeroRenderer(ToolbarTheme.HelpBar);
             menuStrip1.Renderer = new ToolStripAeroRenderer(ToolbarTheme.HelpBar);
             contextMenuStrip1.Renderer = new ToolStripAeroRenderer(ToolbarTheme.HelpBar);
 
@@ -1406,7 +1406,7 @@ namespace GestorTFG
 
         private void helpToolStripButton1_Click(object sender, EventArgs e)
         {
-
+            new Form9(0).ShowDialog(this);
         }
 
         private void comboBox7_TextChanged(object sender, EventArgs e)
@@ -1770,6 +1770,16 @@ namespace GestorTFG
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
             //imprimir
+        }
+
+        private void contenidoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new Form9(1).ShowDialog(this);
+        }
+
+        private void índiceToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new Form9(0).ShowDialog(this);
         }
     }
 
