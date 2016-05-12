@@ -38,12 +38,11 @@
             // pictureBoxInterpolated1
             // 
             this.pictureBoxInterpolated1.BackColor = System.Drawing.Color.Navy;
-            this.pictureBoxInterpolated1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBoxInterpolated1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxInterpolated1.Image")));
             this.pictureBoxInterpolated1.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.Bicubic;
             this.pictureBoxInterpolated1.Location = new System.Drawing.Point(0, 0);
             this.pictureBoxInterpolated1.Name = "pictureBoxInterpolated1";
-            this.pictureBoxInterpolated1.Size = new System.Drawing.Size(720, 400);
+            this.pictureBoxInterpolated1.Size = new System.Drawing.Size(0, 0);
             this.pictureBoxInterpolated1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxInterpolated1.TabIndex = 2;
             this.pictureBoxInterpolated1.TabStop = false;
@@ -53,22 +52,22 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Navy;
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.Bicubic;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(720, 400);
+            this.pictureBox1.Size = new System.Drawing.Size(0, 0);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Visible = false;
             this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
             // 
             // Form7
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Navy;
+            this.BackColor = System.Drawing.Color.DarkGray;
             this.ClientSize = new System.Drawing.Size(720, 400);
             this.Controls.Add(this.pictureBoxInterpolated1);
             this.Controls.Add(this.pictureBox1);
@@ -86,7 +85,7 @@
         }
 
         #endregion
-        private PictureBoxInterpolated pictureBox1;
         private PictureBoxInterpolated pictureBoxInterpolated1;
+        private PictureBoxInterpolated pictureBox1;
     }
 }

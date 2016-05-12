@@ -243,10 +243,17 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <None Include="Resources\print_16.png" />
+    <None Include="Resources\inicio.png" />
+    <None Include="Resources\Print-icon.png" />
+    <None Include="Resources\Zoom-In-icon.png" />
+    <None Include="Resources\Zoom-Out-icon.png" />
     <Content Include="x64\pdfium.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="x86\pdfium.dll" />
+    <Content Include="x86\pdfium.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
