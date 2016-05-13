@@ -21,6 +21,9 @@ namespace GestorTFG
             get
             {
                 return proyectos;
+            } set
+            {
+                proyectos = value;
             }
         }
         /// <summary>
@@ -32,6 +35,10 @@ namespace GestorTFG
             {
                 return mProyectos;
             }
+            set
+            {
+                mProyectos = value;
+            }
         }
         /// <summary>
         /// Obtiene la lista de los proyectos sin un alumno Asignado
@@ -41,6 +48,10 @@ namespace GestorTFG
             get
             {
                 return mProyectosNoAsignados;
+            }
+            set
+            {
+                mProyectosNoAsignados = value;
             }
         }
         /// <summary>
@@ -52,6 +63,10 @@ namespace GestorTFG
             {
                 return mProyectosFinalizados;
             }
+            set
+            {
+                mProyectosFinalizados = value;
+            }
         }
 
         public List<MProyecto> getBusquedaProyecto
@@ -59,6 +74,10 @@ namespace GestorTFG
             get
             {
                 return mProyectosBusqueda;
+            }
+            set
+            {
+                mProyectosBusqueda = value;
             }
         }
 
@@ -74,6 +93,42 @@ namespace GestorTFG
             proyectos.Add(mProyectosNoAsignados);
             proyectos.Add(mProyectosFinalizados);
             proyectos.Add(mProyectosBusqueda);
+        }
+
+        public void CopiarListas(out List<List<MProyecto>> lista)
+        {
+            List<MProyecto> aux = new List<MProyecto>();
+            List<List<MProyecto>> resul = new List<List<MProyecto>>();
+            foreach (List<MProyecto> listaProyecto in proyectos)
+            {
+                foreach(MProyecto proyecto in listaProyecto)
+                {
+                    aux.Add(proyecto);
+                }
+                resul.Add(aux);
+                aux.Clear();
+            }
+            lista = resul;
+        }
+
+        public void AñadirListas(List<List<MProyecto>> lista)
+        {
+            List<MProyecto> aux = new List<MProyecto>();
+            List<List<MProyecto>> resul = new List<List<MProyecto>>();
+            foreach (List<MProyecto> listaProyecto in lista)
+            {
+                foreach (MProyecto proyecto in listaProyecto)
+                {
+                    aux.Add(proyecto);
+                }
+                resul.Add(aux);
+                aux.Clear();
+            }
+            proyectos = lista;
+            mProyectos = lista[0];
+            mProyectosNoAsignados = lista[1];
+            mProyectosFinalizados = lista[2];
+            mProyectosBusqueda = lista[3];
         }
         /// <summary>
         /// Añade un proyecto a las listas de proyectos correspondientes
@@ -175,20 +230,20 @@ namespace GestorTFG
                         break;
                     case TCampos.Alumno:
                         if(proyecto.Asignado)
-                            nombre = proyecto.Alumno.Nombre.ToUpperInvariant() + proyecto.Alumno.PrimerApellido.ToUpperInvariant() + proyecto.Alumno.SegundoApellido.ToUpperInvariant() + proyecto.Alumno.Matricula.ToUpperInvariant();
+                            nombre = proyecto.Alumno.Nombre.ToUpperInvariant() + "|" + proyecto.Alumno.PrimerApellido.ToUpperInvariant() + "|" + proyecto.Alumno.SegundoApellido.ToUpperInvariant() + "|" + proyecto.Alumno.Matricula.ToUpperInvariant();
                         break;
                     case TCampos.Profesor:
-                        nombre = proyecto.Profesor.Nombre.ToUpperInvariant() + proyecto.Profesor.PrimerApellido.ToUpperInvariant() + proyecto.Profesor.SegundoApellido.ToUpperInvariant() 
-                            + proyecto.Profesor.Correo.ToUpperInvariant() + proyecto.Profesor.Despacho.ToUpperInvariant();
+                        nombre = proyecto.Profesor.Nombre.ToUpperInvariant() + "|" + proyecto.Profesor.PrimerApellido.ToUpperInvariant() + "|" + proyecto.Profesor.SegundoApellido.ToUpperInvariant()
+                            + "|" + proyecto.Profesor.Correo.ToUpperInvariant() + "|" + proyecto.Profesor.Despacho.ToUpperInvariant();
                         break;
                     case TCampos.Todos:
-                        nombre = proyecto.getMTFG.Titulo.ToUpperInvariant() + proyecto.getMTFG.Descripcion.ToUpperInvariant();
+                        nombre = proyecto.getMTFG.Titulo.ToUpperInvariant() + "|" + proyecto.getMTFG.Descripcion.ToUpperInvariant();
                         if (proyecto.Asignado)
                         {
-                            nombre += proyecto.Alumno.Nombre.ToUpperInvariant() + proyecto.Alumno.PrimerApellido.ToUpperInvariant() + proyecto.Alumno.SegundoApellido.ToUpperInvariant();
+                            nombre += "|" + proyecto.Alumno.Nombre.ToUpperInvariant() + "|" + proyecto.Alumno.PrimerApellido.ToUpperInvariant() + "|" + proyecto.Alumno.SegundoApellido.ToUpperInvariant();
                         }
-                        nombre += proyecto.Profesor.Nombre.ToUpperInvariant() + proyecto.Profesor.PrimerApellido.ToUpperInvariant() + proyecto.Profesor.SegundoApellido.ToUpperInvariant()
-                            + proyecto.Profesor.Correo.ToUpperInvariant() + proyecto.Profesor.Despacho.ToUpperInvariant();
+                        nombre += "|" + proyecto.Profesor.Nombre.ToUpperInvariant() + "|" + proyecto.Profesor.PrimerApellido.ToUpperInvariant() + "|" + proyecto.Profesor.SegundoApellido.ToUpperInvariant()
+                            + "|" + proyecto.Profesor.Correo.ToUpperInvariant() + "|" + proyecto.Profesor.Despacho.ToUpperInvariant();
                         break;
                 }
                 if (nombre.Contains(clave.ToUpperInvariant()) || nombre.Replace(" ", string.Empty).Contains(clave.ToUpperInvariant().Replace(" ", string.Empty)))

@@ -79,7 +79,9 @@ namespace GestorTFG
         {
             if (listView.SelectedIndices.Count > 1)
             {
+                comboBox1.SelectedItem = null;
                 comboBox1.Enabled = false;
+                textBox8.Clear();
                 textBox8.Enabled = false;
                 dateTimePicker3.Enabled = false;
                 numericUpDown1.Enabled = false;

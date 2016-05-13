@@ -42,6 +42,11 @@ namespace GestorTFG
             leerArchivo = new LeerArchivo(fs);
             escribirArchivo = new EscribirArchivo(fs);
         }
+        public LeerEscribirArchivo(bool busqueda)
+        {
+            leerArchivo = new LeerArchivo(fs);
+            escribirArchivo = new EscribirArchivo(fs);
+        }
         /// <summary>
         /// Carga los datos cifrados de un archivo .tfg a la base de datos del programa
         /// </summary>
@@ -120,6 +125,10 @@ namespace GestorTFG
             escribirArchivo.ExportarListaProyectos();
         }
 
+        public void ExportarArchivo(TipoLista lista)
+        {
+            escribirArchivo.ExportarListaProyectos(lista);
+        }
 
     }
 }

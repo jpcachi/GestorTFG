@@ -11,6 +11,6 @@ namespace GestorTFG
         Titulo,
         Descripcion,
         Alumno,
-        Profesor
+        Profesor,
     }
 }

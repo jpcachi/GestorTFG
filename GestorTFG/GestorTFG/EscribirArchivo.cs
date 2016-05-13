@@ -71,6 +71,16 @@ namespace GestorTFG
             }
         }
 
+        public void ExportarListaProyectos(TipoLista lista)
+        {
+
+            foreach (MProyecto proyecto in MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int) lista])
+            {
+                ExportarProyecto(proyecto);
+                bw.Write("\r\n");
+            }
+        }
+
         public void CerrarEscritura()
         {
             bw.Close();

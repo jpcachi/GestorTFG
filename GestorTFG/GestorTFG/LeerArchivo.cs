@@ -10,10 +10,12 @@ namespace GestorTFG
     {
         private StreamReader br;
         private FileStream fs;
+        private List<List<MProyecto>> respaldo;
         public LeerArchivo(FileStream fs)
         {
             this.fs = fs;
             br = new StreamReader(this.fs);
+            respaldo = new List<List<MProyecto>>();
         }
 
         public string leerProyecto()
@@ -44,11 +46,19 @@ namespace GestorTFG
 
         public void leerListaProyectos()
         {
+            MListaProyectos.getMListaProyectos.getMProyectos.CopiarListas(out respaldo);
             MListaProyectos.getMListaProyectos.getMProyectos.getProyectos.Clear();
             MListaProyectos.getMListaProyectos.getMProyectos.getBusquedaProyecto.Clear();
             MListaProyectos.getMListaProyectos.getMProyectos.getProyectosFinalizados.Clear();
             MListaProyectos.getMListaProyectos.getMProyectos.getProyectosNoAsignados.Clear();
-            while (leerProyecto() != null) ;
+            try
+            {
+                while (leerProyecto() != null) ;
+            } catch(Exception e)
+            {
+                Console.WriteLine(e.Message);
+                MListaProyectos.getMListaProyectos.getMProyectos.AñadirListas(respaldo);
+            }
         }
 
         public string ImportarProyecto()

@@ -108,7 +108,13 @@ namespace GestorTFG
             int posX = e.Item.SubItems[e.Item.SubItems.Count - 1].Bounds.X + e.Item.SubItems[e.Item.SubItems.Count - 1].Bounds.Width;
             if (e.Item.Selected)
             {
-                e.Graphics.FillRectangle(new SolidBrush(Color.FromArgb(209, 232, 255)), new Rectangle(posX, e.Bounds.Y, e.Bounds.Width, e.Bounds.Height));
+                try
+                {
+                    e.Graphics.FillRectangle(new SolidBrush(Color.FromArgb(209, 232, 255)), new Rectangle(posX, e.Bounds.Y, e.Bounds.Width, e.Bounds.Height));
+                } catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
             } else
             {
                 //e.Graphics.FillRectangle(new SolidBrush(colorBackgroundItem), new Rectangle(posX, e.Bounds.Y, e.Bounds.Width, e.Bounds.Height));
@@ -180,7 +186,7 @@ namespace GestorTFG
                 }
                 else e.Graphics.FillRectangle(new SolidBrush(colorBackgroundItem), new Rectangle(e.Bounds.X, e.Bounds.Y, e.Bounds.Width, e.Bounds.Height - Constantes.MARGEN_ABAJO));
             }
-            if ((e.SubItem.Text.ToUpperInvariant().Contains(clave.ToUpperInvariant()) && campo == TCampos.Todos) || (e.SubItem.Text.ToUpperInvariant().Contains(clave.ToUpperInvariant()) && campo == TCampos.Titulo && e.ColumnIndex == 0) || (e.SubItem.Text.ToUpperInvariant().Contains(clave.ToUpperInvariant()) && campo == TCampos.Descripcion && e.ColumnIndex == 1) || (e.SubItem.Text.ToUpperInvariant().Contains(clave.ToUpperInvariant()) && campo == TCampos.Alumno && (e.ColumnIndex == 3 || e.ColumnIndex == 4 || e.ColumnIndex == 5 || e.ColumnIndex == 6)))
+            if ((e.SubItem.Text.ToUpperInvariant().Contains(clave.ToUpperInvariant()) && campo == TCampos.Todos && e.ColumnIndex != Constantes.COLUMNA_CONVOCATORIA && e.ColumnIndex != Constantes.COLUMNA_FECHA_REGISTRO && e.ColumnIndex != Constantes.COLUMNA_ALUMNO_FECHA_INICIO && e.ColumnIndex != Constantes.COLUMNA_FECHA_DEFENSA) || (e.SubItem.Text.ToUpperInvariant().Contains(clave.ToUpperInvariant()) && campo == TCampos.Titulo && e.ColumnIndex == 0) || (e.SubItem.Text.ToUpperInvariant().Contains(clave.ToUpperInvariant()) && campo == TCampos.Descripcion && e.ColumnIndex == 1) || (e.SubItem.Text.ToUpperInvariant().Contains(clave.ToUpperInvariant()) && campo == TCampos.Alumno && (e.ColumnIndex == 3 || e.ColumnIndex == 4 || e.ColumnIndex == 5 || e.ColumnIndex == 6)))
             {
                 int indiceClave = e.SubItem.Text.ToUpperInvariant().IndexOf(clave.ToUpperInvariant());
                 string textoClave = e.SubItem.Text.Substring(indiceClave, clave.Length);

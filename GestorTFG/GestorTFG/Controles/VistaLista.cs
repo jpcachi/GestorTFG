@@ -19,7 +19,7 @@ namespace GestorTFG
             public uint code;
         }
 
-        protected override void WndProc(ref Message m)
+       protected override void WndProc(ref Message m)
         {
             if (m.Msg == Constantes.WM_REFLECT_NOTIFY)
             {

@@ -522,6 +522,7 @@
             this.toolStripMenuItem4.Name = "toolStripMenuItem4";
             this.toolStripMenuItem4.Size = new System.Drawing.Size(268, 22);
             this.toolStripMenuItem4.Text = "Exportar búsqueda a archivo de texto";
+            this.toolStripMenuItem4.Click += new System.EventHandler(this.toolStripMenuItem4_Click);
             // 
             // Form4
             // 
@@ -535,6 +536,7 @@
             this.Name = "Form4";
             this.ShowInTaskbar = false;
             this.Text = "Resultados de la búsqueda";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form4_FormClosing);
             this.Load += new System.EventHandler(this.Form4_Load);
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();

@@ -53,3 +53,5 @@ F:\Users\Juan Pedro_2\Documents\Visual Studio 2015\Projects\GestorTFG\GestorTFG\
 F:\Users\Juan Pedro_2\Documents\Visual Studio 2015\Projects\GestorTFG\GestorTFG\bin\Debug\nl\PdfiumViewer.resources.dll
 F:\Users\Juan Pedro_2\Documents\Visual Studio 2015\Projects\GestorTFG\GestorTFG\bin\Debug\Resources\GuíaGestorTFG.pdf
 F:\Users\Juan Pedro_2\Documents\Visual Studio 2015\Projects\GestorTFG\GestorTFG\bin\Debug\x64\pdfium.dll
+F:\Users\Juan Pedro_2\Documents\Visual Studio 2015\Projects\GestorTFG\GestorTFG\bin\Debug\x86\pdfium.dll
+F:\Users\Juan Pedro_2\Documents\Visual Studio 2015\Projects\GestorTFG\GestorTFG\obj\Debug\GestorTFG.Form10.resources

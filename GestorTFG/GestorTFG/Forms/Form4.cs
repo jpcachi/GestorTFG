@@ -8,12 +8,14 @@ namespace GestorTFG
         private VistaGrafica vista;
         private Copiar copiar;
         private Form1 ventanaPadre;
+        private LeerEscribirArchivo fichero;
 
         private string busqueda;
         private TCampos campo;
         public Form4(Form1 ventanaPadre, string busqueda, TCampos campo, int index1, int index2, DateTime date, decimal nota, bool filtro)
         {
             InitializeComponent();
+            fichero = new LeerEscribirArchivo();
             vista = new VistaGrafica();
             copiar = new Copiar(copiarPorCampoToolStripMenuItem);
             this.ventanaPadre = ventanaPadre;
@@ -243,6 +245,27 @@ namespace GestorTFG
         {
             ventanaPadre.SeleccionarItemLista(MListaProyectos.getMListaProyectos.getMProyectos.getProyectos.IndexOf(MListaProyectos.getMListaProyectos.getMProyectos.getBusquedaProyecto[listView1.SelectedIndices[0]]));
             Close();
+        }
+
+        private void toolStripMenuItem4_Click(object sender, EventArgs e)
+        {  
+            SaveFileDialog guardarComo = new SaveFileDialog();
+            guardarComo.Filter = "Documentos de texto (*.txt)|*.txt|Todos los archivos (*.*)|*.*";
+            guardarComo.FilterIndex = 1;
+            DialogResult result = guardarComo.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                fichero.CerrarLectura();
+                fichero.AbrirEscritura(guardarComo.FileName);
+                vista.GuardarLista();
+                fichero.ExportarArchivo(TipoLista.Busqueda);
+                fichero.CerrarEscritura();
+            }           
+        }
+
+        private void Form4_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            fichero.CerrarFichero();
         }
     }
 }

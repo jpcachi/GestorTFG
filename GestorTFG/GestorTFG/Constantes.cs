@@ -37,5 +37,16 @@ namespace GestorTFG
         public const decimal LIMITE_NOTA_SUSPENSA = 4.99m;
         public const decimal LIMITE_NOTA_APROBADA = 5m;
         public const float TAMAÑO_RELATIVO_RESOLUCION = 0.9f;
+        public const int COLUMNA_TITULO = 0;
+        public const int COLUMNA_DESCRIPCION = 1;
+        public const int COLUMNA_FECHA_REGISTRO = 2;
+        public const int COLUMNA_ALUMNO_NOMBRE = 3;
+        public const int COLUMNA_ALUMNO_PRIMER_APELLIDO = 4;
+        public const int COLUMNA_ALUMNO_SEGUNDO_APELLIDO = 5;
+        public const int COLUMNA_ALUMNO_MATRICULA = 6;
+        public const int COLUMNA_ALUMNO_FECHA_INICIO = 7;
+        public const int COLUMNA_FECHA_DEFENSA = 8;
+        public const int COLUMNA_CONVOCATORIA = 9;
+        public const int COLUMNA_CALIFICACION = 10;
     }
 }

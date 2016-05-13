@@ -58,7 +58,6 @@ namespace GestorTFG
 
         private void Form9_FormClosed(object sender, FormClosedEventArgs e)
         {
-            //axAcroPDF1.Dispose();
         }
 
         public void LoadPdf(byte[] pdfBytes)
@@ -70,7 +69,6 @@ namespace GestorTFG
         public void LoadPdf(Stream stream)
         {
             var pdfDocument = PdfDocument.Load(stream);
-            //pdfRenderer1.Load(pdfDocument);
             pdfViewer1.Renderer.Load(pdfDocument);
             pdfViewer1.Document = pdfDocument;
         }

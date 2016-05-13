@@ -226,6 +226,26 @@ namespace GestorTFG
             grupoFinalizar.Enabled = false;
 
         }
+
+        public bool BotonModificarProfesor(Form1 ventanaAnterior, ref TabControl tabControl3, ref VistaLista listView1, VistaLista listView2)
+        {
+            string[] datosProfesor = new string[5];
+            int indice = 0;
+            if(tabControl3.SelectedIndex == 0)
+            {
+                indice = listView1.SelectedIndices[0];
+            } else if(tabControl3.SelectedIndex == 1)
+            {
+                indice = MListaProyectos.getMListaProyectos.getMProyectos.getProyectos.IndexOf(MListaProyectos.getMListaProyectos.getMProyectos.getProyectosNoAsignados[listView2.SelectedIndices[0]]);
+            }
+            datosProfesor[0] = MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[indice].Profesor.Nombre;
+            datosProfesor[1] = MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[indice].Profesor.PrimerApellido;
+            datosProfesor[2] = MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[indice].Profesor.SegundoApellido;
+            datosProfesor[3] = MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[indice].Profesor.Correo;
+            datosProfesor[4] = MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[indice].Profesor.Despacho;
+
+            return new Form10(datosProfesor, indice).ShowDialog(ventanaAnterior) == DialogResult.OK;
+        }
         
         public void CrearNuevaLista()
         {
