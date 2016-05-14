@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
 
 namespace GestorTFG
 {
@@ -28,21 +24,21 @@ namespace GestorTFG
                 }
                 else
                 {
-                    item.SubItems.Add("");
-                    item.SubItems.Add("");
-                    item.SubItems.Add("");
+                    item.SubItems.Add(string.Empty);
+                    item.SubItems.Add(string.Empty);
+                    item.SubItems.Add(string.Empty);
                 }
             }
             else
             {
-                item.SubItems.Add("");
-                item.SubItems.Add("");
-                item.SubItems.Add("");
-                item.SubItems.Add("");
-                item.SubItems.Add("");
-                item.SubItems.Add("");
-                item.SubItems.Add("");
-                item.SubItems.Add("");
+                item.SubItems.Add(string.Empty);
+                item.SubItems.Add(string.Empty);
+                item.SubItems.Add(string.Empty);
+                item.SubItems.Add(string.Empty);
+                item.SubItems.Add(string.Empty);
+                item.SubItems.Add(string.Empty);
+                item.SubItems.Add(string.Empty);
+                item.SubItems.Add(string.Empty);
             }
             return item;
         }

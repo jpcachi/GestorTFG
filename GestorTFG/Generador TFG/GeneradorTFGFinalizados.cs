@@ -74,7 +74,8 @@ namespace Generador_TFG
                 ary.Add(convocatoria[rand.Next(convocatoria.Length)]);
 
                 //calificacion
-                ary.Add(rand.Next(11) + "," + rand.Next(0, 10) + rand.Next(0, 10));
+                int notaSinDecimales = rand.Next(11);
+                ary.Add( notaSinDecimales + "," + rand.Next(0, (notaSinDecimales == 10)? 0 : 10) + rand.Next(0, (notaSinDecimales == 10) ? 0 : 10));
                 datos.Add(ary);
             }
         }

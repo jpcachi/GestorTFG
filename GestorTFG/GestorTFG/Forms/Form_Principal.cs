@@ -1,14 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 using System.IO;
 using ToolStripVisualStyles;
-using System.Runtime.InteropServices;
 using System.Windows.Forms.VisualStyles;
 
 namespace GestorTFG
@@ -572,7 +567,7 @@ namespace GestorTFG
 
         private void Guardar()
         {
-            //fichero.CerrarLectura();
+            fichero.CerrarLectura();
             fichero.AbrirEscritura(fichero.ArchivoActual);
             //fichero.EscribirArchivo();
 
@@ -593,12 +588,12 @@ namespace GestorTFG
         {
             if (vista.Cambios)
             {
-                DialogResult result = MessageBox.Show("¿Desea guardar los datos en " + '"' + fichero.ArchivoActual + '"' + " antes de continuar?", "Advertencia", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
+                DialogResult result = MessageBox.Show("¿Desea guardar los datos en " + '"' + Path.GetFileName(fichero.ArchivoActual) + '"' + " antes de continuar?", "Advertencia", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
                 if (result == DialogResult.Cancel) return;
                 else if (result == DialogResult.Yes)
                 {
                     saveToolStripButton1_Click(sender, e);
-                    return;
+                    //return;
                 }
             }
             tabControl3.SelectedIndex = 0;
@@ -631,9 +626,10 @@ namespace GestorTFG
 
         private void openToolStripButton1_Click(object sender, EventArgs e)
         {
+            string nombreFichero = fichero.ArchivoActual;
             if (vista.Cambios)
             {
-                DialogResult result = MessageBox.Show("¿Desea guardar los datos en " + '"' + fichero.ArchivoActual + '"' + " antes de continuar?", "Advertencia", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
+                DialogResult result = MessageBox.Show("¿Desea guardar los datos en " + '"' + Path.GetFileName(nombreFichero) + '"' + " antes de continuar?", "Advertencia", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
                 if (result == DialogResult.Cancel) return;
                 else if (result == DialogResult.Yes)
                 {
@@ -647,14 +643,14 @@ namespace GestorTFG
             cargar.FilterIndex = 1;
             if (cargar.ShowDialog() == DialogResult.OK)
             {
-                string fichero = this.fichero.ArchivoActual;
+                
                 try
                 {
-                    //this.fichero.CerrarEscritura();
-                    this.fichero.AbrirLectura(cargar.FileName);
+                    fichero.CerrarEscritura();
+                    fichero.AbrirLectura(cargar.FileName);
 
                     //this.fichero.LeerArchivo();
-                    this.fichero.ImportarArchivo();
+                    fichero.ImportarArchivo();
                     listView1.SelectedIndices.Clear();
                     listView2.SelectedIndices.Clear();
                     listView3.SelectedIndices.Clear();
@@ -667,9 +663,9 @@ namespace GestorTFG
                         vista.RefrescarItemsVistaTabla(ref listView2, TipoLista.Sin_Asignar);
                     if (MListaProyectos.getMListaProyectos.getMProyectos.getProyectosFinalizados.Count > 0)
                         vista.RefrescarItemsVistaTabla(ref listView3, TipoLista.Finalizados);
-                    toolStripStatusLabel1.Text = this.fichero.ArchivoActual;
+                    toolStripStatusLabel1.Text = fichero.ArchivoActual;
                     //this.fichero.CerrarLectura();
-                    toolStripStatusLabel1.Text = this.fichero.ArchivoActual;
+                    toolStripStatusLabel1.Text = fichero.ArchivoActual;
                     vista.GuardarLista();
                     deshacer.VaciarPilas();
                     BackToolStripButton1.Enabled = false;
@@ -679,9 +675,8 @@ namespace GestorTFG
                 }
                 catch (Exception ex)
                 {
-                    this.fichero.ArchivoActual = fichero;
-                    this.fichero.AbrirLectura(fichero);
-                    this.fichero.ImportarArchivo();
+                    fichero.ArchivoActual = nombreFichero;
+                    fichero.DeshacerLectura();
                     vista.ActualizarVistaTabla(ref listView1, TipoLista.Todos);
                     vista.ActualizarVistaTabla(ref listView2, TipoLista.Sin_Asignar);
                     vista.ActualizarVistaTabla(ref listView3, TipoLista.Finalizados);
@@ -868,7 +863,7 @@ namespace GestorTFG
 
         private void button10_Click(object sender, EventArgs e)
         {
-            buscador.BuscarProyecto(comboBox7.Text.Trim(), (TCampos)comboBox10.SelectedIndex, comboBox9.SelectedIndex, comboBox4.SelectedIndex, comboBox5.SelectedIndex, comboBox8.SelectedIndex, dateTimePicker4, dateTimePicker5, dateTimePicker6, numericUpDown4);
+            buscador.BuscarProyecto(comboBox7.Text.Trim(), (TCampos)comboBox10.SelectedIndex, comboBox9.SelectedIndex, comboBox4.SelectedIndex, comboBox5.SelectedIndex, comboBox8.SelectedIndex, dateTimePicker4, dateTimePicker5, dateTimePicker6, numericUpDown4, fichero);
             if (!comboBox7.Items.Contains(comboBox7.Text.Trim()))
                 comboBox7.Items.Add(comboBox7.Text.Trim());
         }
@@ -1049,7 +1044,7 @@ namespace GestorTFG
                 aux.Value = Constantes.LIMITE_NOTA_APROBADA;
             }
 
-            buscador.BuscarProyecto(toolStripComboBox2.Text.Trim(), (TCampos)toolStripComboBox1.SelectedIndex, 0, 0, 0, opcion, new DateTimePicker(), new DateTimePicker(), new DateTimePicker(), aux);
+            buscador.BuscarProyecto(toolStripComboBox2.Text.Trim(), (TCampos)toolStripComboBox1.SelectedIndex, 0, 0, 0, opcion, new DateTimePicker(), new DateTimePicker(), new DateTimePicker(), aux, fichero);
             if (!toolStripComboBox2.Items.Contains(toolStripComboBox2.Text.Trim()))
                 toolStripComboBox2.Items.Add(toolStripComboBox2.Text.Trim());
         }
@@ -1233,13 +1228,13 @@ namespace GestorTFG
         {
             if (tabControl3.SelectedIndex == 0)
             {
-                NativeMethods.SelectAllItems(listView1);
+                listView1.SelectAllItems();
             } else if (tabControl3.SelectedIndex == 1)
             {
-                NativeMethods.SelectAllItems(listView2);
+                listView2.SelectAllItems();
             } else if (tabControl3.SelectedIndex == 2)
             {
-                NativeMethods.SelectAllItems(listView3);
+                listView3.SelectAllItems();
             }
         }
 
@@ -1814,6 +1809,7 @@ namespace GestorTFG
             {
                 comboBox7.Items.Clear();
                 comboBox7.Items.Add("- Borrar búsquedas recientes -");
+                button10.Enabled = false;
             }
         }
 
@@ -1823,14 +1819,12 @@ namespace GestorTFG
             {
                 toolStripComboBox2.Items.Clear();
                 toolStripComboBox2.Items.Add("- Borrar búsquedas recientes -");
+                toolStripButton1.Enabled = false;
             }
         }
 
         private void vistapreviadeimpresiónToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //Form form = printPreviewDialog1 as Form;
-            //form.WindowState = FormWindowState.Maximized;
-
             printPreviewDialog1.PrintPreviewControl.Zoom = 1.0;
             printPreviewDialog1.ShowDialog(this);
             indiceActual = 0;
@@ -1898,7 +1892,8 @@ namespace GestorTFG
 
         private void imprimirToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            printDocument1.Print();
+            if(printDialog1.ShowDialog() == DialogResult.OK)
+                printDocument1.Print();
         }
 
         private void button11_Click_1(object sender, EventArgs e)
@@ -1933,6 +1928,20 @@ namespace GestorTFG
                     vista.ActualizarDatosRichTextBox(ref richTextBox2, listView2, TipoLista.Sin_Asignar, TDatos.Profesor);
                 }
                 toolStripStatusLabel1.Text = fichero.ArchivoActual + '*';
+            }
+        }
+
+        private void toolStripComboBox2_TextUpdate(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrWhiteSpace(toolStripComboBox2.Text))
+            {
+                toolStripButton1.Enabled = true;
+                toolStripDropDownButton1.Enabled = true;
+            }
+            else
+            {
+                toolStripButton1.Enabled = false;
+                toolStripDropDownButton1.Enabled = false;
             }
         }
     }

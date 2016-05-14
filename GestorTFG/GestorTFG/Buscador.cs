@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 
 namespace GestorTFG
@@ -39,14 +37,14 @@ namespace GestorTFG
             ventanaPadre = owner;
         }
 
-        public void BuscarProyecto(string clave, TCampos campo, int index1, int index2, int index3, int index4, DateTimePicker date1, DateTimePicker date2, DateTimePicker date3, NumericUpDown number)
+        public void BuscarProyecto(string clave, TCampos campo, int index1, int index2, int index3, int index4, DateTimePicker date1, DateTimePicker date2, DateTimePicker date3, NumericUpDown number, LeerEscribirArchivo fichero)
         {
             MListaProyectos.getMListaProyectos.getMProyectos.Buscar(campo, clave);
             bool filtro = FiltrarProyecto(index1, index2, index3, index4, date1, date2, date3, number);
 
 
             if (MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[3].Count > 0)
-                new Form4(ventanaPadre, clave, campo, index1, index2, date1.Value, number.Value, filtro).ShowDialog(ventanaPadre);
+                new Form4(ventanaPadre, clave, campo, index1, index2, date1.Value, number.Value, filtro, fichero).ShowDialog(ventanaPadre);
             else
                 MessageBox.Show("No se han encontrado proyectos que coincidan con los parámetros de búsqueda.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
         }

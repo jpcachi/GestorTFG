@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
+﻿using System.ComponentModel;
 using System.Windows.Forms;
 
 namespace GestorTFG
@@ -24,9 +18,6 @@ namespace GestorTFG
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInterpolated2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBoxInterpolated2
-            // 
             this.pictureBoxInterpolated2.BackColor = System.Drawing.Color.Navy;
             this.pictureBoxInterpolated2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBoxInterpolated2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxInterpolated1.Image")));
@@ -39,9 +30,6 @@ namespace GestorTFG
             this.pictureBoxInterpolated2.TabStop = false;
             this.pictureBoxInterpolated2.Visible = false;
             this.pictureBoxInterpolated2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBoxInterpolated1_MouseDown);
-            // 
-            // pictureBox2
-            // 
             this.pictureBox2.BackColor = System.Drawing.Color.Navy;
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
@@ -53,8 +41,6 @@ namespace GestorTFG
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
             this.pictureBox2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
-
-
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Navy;
@@ -71,7 +57,6 @@ namespace GestorTFG
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInterpolated2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
-            //InitializeComponent();
             Cursor.Hide();
             clicked = false;
         }

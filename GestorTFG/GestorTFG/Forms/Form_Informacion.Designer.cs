@@ -69,11 +69,13 @@
             this.finalizar_defensa = new System.Windows.Forms.TextBox();
             this.aceptar = new System.Windows.Forms.Button();
             this.boton_copiar = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -483,7 +485,7 @@
             // 
             // aceptar
             // 
-            this.aceptar.Location = new System.Drawing.Point(599, 346);
+            this.aceptar.Location = new System.Drawing.Point(599, 6);
             this.aceptar.Name = "aceptar";
             this.aceptar.Size = new System.Drawing.Size(75, 23);
             this.aceptar.TabIndex = 11;
@@ -493,7 +495,7 @@
             // 
             // boton_copiar
             // 
-            this.boton_copiar.Location = new System.Drawing.Point(12, 346);
+            this.boton_copiar.Location = new System.Drawing.Point(12, 6);
             this.boton_copiar.Name = "boton_copiar";
             this.boton_copiar.Size = new System.Drawing.Size(135, 23);
             this.boton_copiar.TabIndex = 12;
@@ -501,14 +503,23 @@
             this.boton_copiar.UseVisualStyleBackColor = true;
             this.boton_copiar.Click += new System.EventHandler(this.boton_copiar_Click);
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.boton_copiar);
+            this.panel2.Controls.Add(this.aceptar);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 340);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(686, 41);
+            this.panel2.TabIndex = 11;
+            // 
             // Form8
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(686, 381);
-            this.Controls.Add(this.boton_copiar);
-            this.Controls.Add(this.aceptar);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
@@ -527,6 +538,7 @@
             this.groupBox4.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -574,5 +586,6 @@
         private System.Windows.Forms.TextBox finalizar_defensa;
         private System.Windows.Forms.Button aceptar;
         private System.Windows.Forms.Button boton_copiar;
+        private System.Windows.Forms.Panel panel2;
     }
 }

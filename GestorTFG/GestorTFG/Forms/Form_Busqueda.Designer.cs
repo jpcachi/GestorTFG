@@ -40,7 +40,7 @@
             this.richTextBox2 = new System.Windows.Forms.RichTextBox();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.listView1 = new GestorTFG.VistaLista();
-            this.Titulo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Título = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Descripcion = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.FechaPropuesta = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.NombreAlumno = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -52,9 +52,7 @@
             this.Convocatoria = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Calificación = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.abrirToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.guardarToolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.imprimirToolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.cortarToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.copiarToolStripButton1 = new System.Windows.Forms.ToolStripButton();
@@ -77,6 +75,7 @@
             this.notaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.mostrarInformaciónDetalladaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
@@ -192,7 +191,7 @@
             // 
             this.listView1.BackColor = System.Drawing.SystemColors.Window;
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.Titulo,
+            this.Título,
             this.Descripcion,
             this.FechaPropuesta,
             this.NombreAlumno,
@@ -207,11 +206,11 @@
             this.listView1.FullRowSelect = true;
             this.listView1.GridLines = true;
             this.listView1.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
-            this.listView1.Location = new System.Drawing.Point(0, 0);
+            this.listView1.Location = new System.Drawing.Point(0, 25);
             this.listView1.MultiSelect = false;
             this.listView1.Name = "listView1";
             this.listView1.OwnerDraw = true;
-            this.listView1.Size = new System.Drawing.Size(754, 374);
+            this.listView1.Size = new System.Drawing.Size(754, 349);
             this.listView1.TabIndex = 5;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -222,11 +221,12 @@
             this.listView1.RetrieveVirtualItem += new System.Windows.Forms.RetrieveVirtualItemEventHandler(this.listView1_RetrieveVirtualItem);
             this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             this.listView1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.listView1_MouseClick);
+            this.listView1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.listView1_MouseDoubleClick);
             // 
-            // Titulo
+            // Título
             // 
-            this.Titulo.Text = "Titulo";
-            this.Titulo.Width = 300;
+            this.Título.Text = "Título";
+            this.Título.Width = 300;
             // 
             // Descripcion
             // 
@@ -282,9 +282,7 @@
             // 
             this.toolStrip1.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.abrirToolStripButton,
             this.guardarToolStripButton1,
-            this.imprimirToolStripButton1,
             this.toolStripSeparator,
             this.cortarToolStripButton,
             this.copiarToolStripButton1,
@@ -295,17 +293,6 @@
             this.toolStrip1.Size = new System.Drawing.Size(754, 25);
             this.toolStrip1.TabIndex = 6;
             this.toolStrip1.Text = "toolStrip1";
-            this.toolStrip1.Visible = false;
-            // 
-            // abrirToolStripButton
-            // 
-            this.abrirToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.abrirToolStripButton.Enabled = false;
-            this.abrirToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("abrirToolStripButton.Image")));
-            this.abrirToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.abrirToolStripButton.Name = "abrirToolStripButton";
-            this.abrirToolStripButton.Size = new System.Drawing.Size(23, 22);
-            this.abrirToolStripButton.Text = "&Abrir";
             // 
             // guardarToolStripButton1
             // 
@@ -315,15 +302,7 @@
             this.guardarToolStripButton1.Name = "guardarToolStripButton1";
             this.guardarToolStripButton1.Size = new System.Drawing.Size(23, 22);
             this.guardarToolStripButton1.Text = "&Guardar";
-            // 
-            // imprimirToolStripButton1
-            // 
-            this.imprimirToolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.imprimirToolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("imprimirToolStripButton1.Image")));
-            this.imprimirToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.imprimirToolStripButton1.Name = "imprimirToolStripButton1";
-            this.imprimirToolStripButton1.Size = new System.Drawing.Size(23, 22);
-            this.imprimirToolStripButton1.Text = "&Imprimir";
+            this.guardarToolStripButton1.Click += new System.EventHandler(this.guardarToolStripButton1_Click);
             // 
             // toolStripSeparator
             // 
@@ -349,6 +328,7 @@
             this.copiarToolStripButton1.Name = "copiarToolStripButton1";
             this.copiarToolStripButton1.Size = new System.Drawing.Size(23, 22);
             this.copiarToolStripButton1.Text = "&Copiar";
+            this.copiarToolStripButton1.Click += new System.EventHandler(this.copiarToolStripButton1_Click);
             // 
             // pegarToolStripButton
             // 
@@ -366,12 +346,13 @@
             this.toolStripMenuItem1,
             this.toolStripMenuItem2,
             this.toolStripSeparator1,
+            this.mostrarInformaciónDetalladaToolStripMenuItem,
             this.toolStripMenuItem3,
             this.toolStripSeparator2,
             this.toolStripMenuItem4});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.contextMenuStrip1.Size = new System.Drawing.Size(269, 104);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(269, 126);
             // 
             // toolStripMenuItem1
             // 
@@ -505,11 +486,18 @@
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(265, 6);
             // 
+            // mostrarInformaciónDetalladaToolStripMenuItem
+            // 
+            this.mostrarInformaciónDetalladaToolStripMenuItem.Name = "mostrarInformaciónDetalladaToolStripMenuItem";
+            this.mostrarInformaciónDetalladaToolStripMenuItem.Size = new System.Drawing.Size(268, 22);
+            this.mostrarInformaciónDetalladaToolStripMenuItem.Text = "Mostrar información detallada";
+            this.mostrarInformaciónDetalladaToolStripMenuItem.Click += new System.EventHandler(this.mostrarInformaciónDetalladaToolStripMenuItem_Click);
+            // 
             // toolStripMenuItem3
             // 
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
             this.toolStripMenuItem3.Size = new System.Drawing.Size(268, 22);
-            this.toolStripMenuItem3.Text = "Mostrar en lista de proyectos";
+            this.toolStripMenuItem3.Text = "Mostrar en lista principal";
             this.toolStripMenuItem3.Click += new System.EventHandler(this.toolStripMenuItem3_Click);
             // 
             // toolStripSeparator2
@@ -566,7 +554,7 @@
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.RichTextBox richTextBox2;
         private GestorTFG.VistaLista listView1;
-        private System.Windows.Forms.ColumnHeader Titulo;
+        private System.Windows.Forms.ColumnHeader Título;
         private System.Windows.Forms.ColumnHeader Descripcion;
         private System.Windows.Forms.ColumnHeader FechaPropuesta;
         private System.Windows.Forms.ColumnHeader NombreAlumno;
@@ -579,9 +567,7 @@
         private System.Windows.Forms.ColumnHeader Calificación;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripButton abrirToolStripButton;
         private System.Windows.Forms.ToolStripButton guardarToolStripButton1;
-        private System.Windows.Forms.ToolStripButton imprimirToolStripButton1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator;
         private System.Windows.Forms.ToolStripButton cortarToolStripButton;
         private System.Windows.Forms.ToolStripButton copiarToolStripButton1;
@@ -607,5 +593,6 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem4;
         private System.Windows.Forms.ToolStripMenuItem matrículaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mostrarInformaciónDetalladaToolStripMenuItem;
     }
 }

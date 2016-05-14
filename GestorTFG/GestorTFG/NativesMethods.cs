@@ -1,12 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.InteropServices;
-using System.Text;
 
 namespace GestorTFG
 {
-    class NativeMethods
+    static class NativeMethods
     {
         private const int LVM_FIRST = 0x1000;
         private const int LVM_SETITEMSTATE = LVM_FIRST + 43;
@@ -37,7 +34,7 @@ namespace GestorTFG
         /// Seleccciona todas las filas de la lista
         /// </summary>
         /// <param name="list">La lista cuyas filas van a ser seleccionadas</param>
-        public static void SelectAllItems(VistaLista list)
+        public static void SelectAllItems(this VistaLista list)
         {
             SetItemState(list, -1, 2, 2);
         }
@@ -46,7 +43,7 @@ namespace GestorTFG
         /// Deselecciona todas las filas de la lista
         /// </summary>
         /// <param name="list">The listview whose items are to be deselected</param>
-        public static void DeselectAllItems(VistaLista list)
+        public static void DeselectAllItems(this VistaLista list)
         {
             SetItemState(list, -1, 2, 0);
         }

@@ -73,65 +73,65 @@
     <Compile Include="DeshacerRehacer.cs" />
     <Compile Include="EscribirArchivo.cs" />
     <Compile Include="FiltroFecha.cs" />
-    <Compile Include="Forms\Form10.cs">
+    <Compile Include="Forms\Form_Profesor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Form10.Designer.cs">
-      <DependentUpon>Form10.cs</DependentUpon>
+    <Compile Include="Forms\Form_Profesor.Designer.cs">
+      <DependentUpon>Form_Profesor.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Form9.cs">
+    <Compile Include="Forms\Form_Ayuda.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Form9.Designer.cs">
-      <DependentUpon>Form9.cs</DependentUpon>
+    <Compile Include="Forms\Form_Ayuda.Designer.cs">
+      <DependentUpon>Form_Ayuda.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Form1.cs">
+    <Compile Include="Forms\Form_Principal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Forms\Form_Principal.Designer.cs">
+      <DependentUpon>Form_Principal.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Form2.cs">
+    <Compile Include="Forms\Form_Alumno.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Form2.Designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <Compile Include="Forms\Form_Alumno.Designer.cs">
+      <DependentUpon>Form_Alumno.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Form3.cs">
+    <Compile Include="Forms\Form_Splash1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Form3.Designer.cs">
-      <DependentUpon>Form3.cs</DependentUpon>
+    <Compile Include="Forms\Form_Splash1.Designer.cs">
+      <DependentUpon>Form_Splash1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Form4.cs">
+    <Compile Include="Forms\Form_Busqueda.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Form4.Designer.cs">
-      <DependentUpon>Form4.cs</DependentUpon>
+    <Compile Include="Forms\Form_Busqueda.Designer.cs">
+      <DependentUpon>Form_Busqueda.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Form5.cs">
+    <Compile Include="Forms\Form_ToolStrip.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Form5.Designer.cs">
-      <DependentUpon>Form5.cs</DependentUpon>
+    <Compile Include="Forms\Form_ToolStrip.Designer.cs">
+      <DependentUpon>Form_ToolStrip.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Form6.cs">
+    <Compile Include="Forms\Form_Acerca.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Form6.Designer.cs">
-      <DependentUpon>Form6.cs</DependentUpon>
+    <Compile Include="Forms\Form_Acerca.Designer.cs">
+      <DependentUpon>Form_Acerca.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Form7.cs">
+    <Compile Include="Forms\Form_Splash2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Form7.Designer.cs">
-      <DependentUpon>Form7.cs</DependentUpon>
+    <Compile Include="Forms\Form_Splash2.Designer.cs">
+      <DependentUpon>Form_Splash2.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Form8.cs">
+    <Compile Include="Forms\Form_Informacion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Form8.Designer.cs">
-      <DependentUpon>Form8.cs</DependentUpon>
+    <Compile Include="Forms\Form_Informacion.Designer.cs">
+      <DependentUpon>Form_Informacion.cs</DependentUpon>
     </Compile>
     <Compile Include="NativesMethods.cs" />
     <Compile Include="Instanciar.cs" />
@@ -156,15 +156,16 @@
     <Compile Include="Controles\PictureBoxInterpolated.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Forms\Preferencias.cs">
+    <Compile Include="Forms\Form_Preferencias.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Preferencias.Designer.cs">
-      <DependentUpon>Preferencias.cs</DependentUpon>
+    <Compile Include="Forms\Form_Preferencias.Designer.cs">
+      <DependentUpon>Form_Preferencias.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ProyectoIndice.cs" />
+    <Compile Include="StringExtension.cs" />
     <Compile Include="TCampos.cs" />
     <Compile Include="TDatos.cs" />
     <Compile Include="TipoLista.cs" />
@@ -173,38 +174,38 @@
     <Compile Include="Controles\VistaLista.cs">
       <SubType>Component</SubType>
     </Compile>
-    <EmbeddedResource Include="Forms\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Form_Principal.resx">
+      <DependentUpon>Form_Principal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Form10.resx">
-      <DependentUpon>Form10.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Form_Profesor.resx">
+      <DependentUpon>Form_Profesor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Form2.resx">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Form_Alumno.resx">
+      <DependentUpon>Form_Alumno.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Form3.resx">
-      <DependentUpon>Form3.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Form_Splash1.resx">
+      <DependentUpon>Form_Splash1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Form4.resx">
-      <DependentUpon>Form4.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Form_Busqueda.resx">
+      <DependentUpon>Form_Busqueda.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Form5.resx">
-      <DependentUpon>Form5.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Form_ToolStrip.resx">
+      <DependentUpon>Form_ToolStrip.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Form6.resx">
-      <DependentUpon>Form6.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Form_Acerca.resx">
+      <DependentUpon>Form_Acerca.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Form7.resx">
-      <DependentUpon>Form7.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Form_Splash2.resx">
+      <DependentUpon>Form_Splash2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Form8.resx">
-      <DependentUpon>Form8.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Form_Informacion.resx">
+      <DependentUpon>Form_Informacion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Form9.resx">
-      <DependentUpon>Form9.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Form_Ayuda.resx">
+      <DependentUpon>Form_Ayuda.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Preferencias.resx">
-      <DependentUpon>Preferencias.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Form_Preferencias.resx">
+      <DependentUpon>Form_Preferencias.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

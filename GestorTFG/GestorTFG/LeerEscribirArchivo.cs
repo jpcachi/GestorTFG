@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.IO;
+﻿using System.IO;
 
 namespace GestorTFG
 {
-    class LeerEscribirArchivo
+    public class LeerEscribirArchivo
     {
         private FileStream fs;
         private string path;
@@ -128,6 +124,11 @@ namespace GestorTFG
         public void ExportarArchivo(TipoLista lista)
         {
             escribirArchivo.ExportarListaProyectos(lista);
+        }
+
+        public void DeshacerLectura()
+        {
+            MListaProyectos.getMListaProyectos.getMProyectos.AñadirListas(leerArchivo.Respaldo);
         }
 
     }

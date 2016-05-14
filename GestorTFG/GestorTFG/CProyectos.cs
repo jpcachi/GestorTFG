@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace GestorTFG
+﻿namespace GestorTFG
 {
     /// <summary>
     /// Clase encargada de gestionar las operaciones de lista de proyectos desde la interfaz gráfica

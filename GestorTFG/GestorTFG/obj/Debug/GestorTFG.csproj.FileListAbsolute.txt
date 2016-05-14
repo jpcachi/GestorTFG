@@ -55,3 +55,28 @@ F:\Users\Juan Pedro_2\Documents\Visual Studio 2015\Projects\GestorTFG\GestorTFG\
 F:\Users\Juan Pedro_2\Documents\Visual Studio 2015\Projects\GestorTFG\GestorTFG\bin\Debug\x64\pdfium.dll
 F:\Users\Juan Pedro_2\Documents\Visual Studio 2015\Projects\GestorTFG\GestorTFG\bin\Debug\x86\pdfium.dll
 F:\Users\Juan Pedro_2\Documents\Visual Studio 2015\Projects\GestorTFG\GestorTFG\obj\Debug\GestorTFG.Form10.resources
+C:\Users\Toshiba\Desktop\FIS\GestorTFG-master (1)\GestorTFG-master\GestorTFG\GestorTFG\obj\Debug\GestorTFG.exe
+C:\Users\Toshiba\Desktop\FIS\GestorTFG-master (1)\GestorTFG-master\GestorTFG\GestorTFG\obj\Debug\GestorTFG.pdb
+C:\Users\Toshiba\Desktop\FIS\GestorTFG-master (1)\GestorTFG-master\GestorTFG\GestorTFG\bin\Debug\x64\pdfium.dll
+C:\Users\Toshiba\Desktop\FIS\GestorTFG-master (1)\GestorTFG-master\GestorTFG\GestorTFG\bin\Debug\x86\pdfium.dll
+C:\Users\Toshiba\Desktop\FIS\GestorTFG-master (1)\GestorTFG-master\GestorTFG\GestorTFG\bin\Debug\Resources\GuíaGestorTFG.pdf
+C:\Users\Toshiba\Desktop\FIS\GestorTFG-master (1)\GestorTFG-master\GestorTFG\GestorTFG\bin\Debug\GestorTFG.exe
+C:\Users\Toshiba\Desktop\FIS\GestorTFG-master (1)\GestorTFG-master\GestorTFG\GestorTFG\bin\Debug\GestorTFG.pdb
+C:\Users\Toshiba\Desktop\FIS\GestorTFG-master (1)\GestorTFG-master\GestorTFG\GestorTFG\bin\Debug\PdfiumViewer.dll
+C:\Users\Toshiba\Desktop\FIS\GestorTFG-master (1)\GestorTFG-master\GestorTFG\GestorTFG\bin\Debug\PdfiumViewer.xml
+C:\Users\Toshiba\Desktop\FIS\GestorTFG-master (1)\GestorTFG-master\GestorTFG\GestorTFG\bin\Debug\nl\PdfiumViewer.resources.dll
+C:\Users\Toshiba\Desktop\FIS\GestorTFG-master (1)\GestorTFG-master\GestorTFG\GestorTFG\obj\Debug\GestorTFG.csprojResolveAssemblyReference.cache
+C:\Users\Toshiba\Desktop\FIS\GestorTFG-master (1)\GestorTFG-master\GestorTFG\GestorTFG\obj\Debug\GestorTFG.Form1.resources
+C:\Users\Toshiba\Desktop\FIS\GestorTFG-master (1)\GestorTFG-master\GestorTFG\GestorTFG\obj\Debug\GestorTFG.Form10.resources
+C:\Users\Toshiba\Desktop\FIS\GestorTFG-master (1)\GestorTFG-master\GestorTFG\GestorTFG\obj\Debug\GestorTFG.Form2.resources
+C:\Users\Toshiba\Desktop\FIS\GestorTFG-master (1)\GestorTFG-master\GestorTFG\GestorTFG\obj\Debug\GestorTFG.Form3.resources
+C:\Users\Toshiba\Desktop\FIS\GestorTFG-master (1)\GestorTFG-master\GestorTFG\GestorTFG\obj\Debug\GestorTFG.Form4.resources
+C:\Users\Toshiba\Desktop\FIS\GestorTFG-master (1)\GestorTFG-master\GestorTFG\GestorTFG\obj\Debug\GestorTFG.Form5.resources
+C:\Users\Toshiba\Desktop\FIS\GestorTFG-master (1)\GestorTFG-master\GestorTFG\GestorTFG\obj\Debug\GestorTFG.Form6.resources
+C:\Users\Toshiba\Desktop\FIS\GestorTFG-master (1)\GestorTFG-master\GestorTFG\GestorTFG\obj\Debug\GestorTFG.Form7.resources
+C:\Users\Toshiba\Desktop\FIS\GestorTFG-master (1)\GestorTFG-master\GestorTFG\GestorTFG\obj\Debug\GestorTFG.Form8.resources
+C:\Users\Toshiba\Desktop\FIS\GestorTFG-master (1)\GestorTFG-master\GestorTFG\GestorTFG\obj\Debug\GestorTFG.Form9.resources
+C:\Users\Toshiba\Desktop\FIS\GestorTFG-master (1)\GestorTFG-master\GestorTFG\GestorTFG\obj\Debug\GestorTFG.Preferencias.resources
+C:\Users\Toshiba\Desktop\FIS\GestorTFG-master (1)\GestorTFG-master\GestorTFG\GestorTFG\obj\Debug\GestorTFG.Properties.Resources.resources
+C:\Users\Toshiba\Desktop\FIS\GestorTFG-master (1)\GestorTFG-master\GestorTFG\GestorTFG\obj\Debug\GestorTFG.VistaLista.resources
+C:\Users\Toshiba\Desktop\FIS\GestorTFG-master (1)\GestorTFG-master\GestorTFG\GestorTFG\obj\Debug\GestorTFG.csproj.GenerateResource.Cache

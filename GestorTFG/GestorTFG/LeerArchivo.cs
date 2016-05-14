@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 using System.IO;
 
@@ -10,12 +9,19 @@ namespace GestorTFG
     {
         private StreamReader br;
         private FileStream fs;
-        private List<List<MProyecto>> respaldo;
+        private List<MProyecto> respaldo;
+        public List<MProyecto> Respaldo
+        {
+            get
+            {
+                return respaldo;
+            }
+        }
         public LeerArchivo(FileStream fs)
         {
             this.fs = fs;
             br = new StreamReader(this.fs);
-            respaldo = new List<List<MProyecto>>();
+            respaldo = new List<MProyecto>();
         }
 
         public string leerProyecto()
@@ -46,7 +52,7 @@ namespace GestorTFG
 
         public void leerListaProyectos()
         {
-            MListaProyectos.getMListaProyectos.getMProyectos.CopiarListas(out respaldo);
+            //MListaProyectos.getMListaProyectos.getMProyectos.CopiarListas(out respaldo);
             MListaProyectos.getMListaProyectos.getMProyectos.getProyectos.Clear();
             MListaProyectos.getMListaProyectos.getMProyectos.getBusquedaProyecto.Clear();
             MListaProyectos.getMListaProyectos.getMProyectos.getProyectosFinalizados.Clear();
@@ -57,7 +63,7 @@ namespace GestorTFG
             } catch(Exception e)
             {
                 Console.WriteLine(e.Message);
-                MListaProyectos.getMListaProyectos.getMProyectos.AñadirListas(respaldo);
+                //MListaProyectos.getMListaProyectos.getMProyectos.AñadirListas(respaldo);
             }
         }
 
@@ -68,6 +74,7 @@ namespace GestorTFG
             {
                 string[] datos;
                 datos = dato.Split(';');
+                if (datos.Length < 7) throw new IOException();
                 MProyecto mProyecto = Instanciar.NuevoProyecto.Crear(datos[0], datos[1], datos[2], datos[3], datos[4], datos[5], datos[7], datos[6]);
                 if (!string.IsNullOrWhiteSpace(datos[8] + datos[9] + datos[10] + datos[11] + datos[12]))
                 {
@@ -87,6 +94,7 @@ namespace GestorTFG
 
         public void ImportarListaProyectos()
         {
+            MListaProyectos.getMListaProyectos.getMProyectos.CopiarListas(ref respaldo);
             MListaProyectos.getMListaProyectos.getMProyectos.getProyectos.Clear();
             MListaProyectos.getMListaProyectos.getMProyectos.getBusquedaProyecto.Clear();
             MListaProyectos.getMListaProyectos.getMProyectos.getProyectosFinalizados.Clear();

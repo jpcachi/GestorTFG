@@ -12,10 +12,10 @@ namespace GestorTFG
 
         private string busqueda;
         private TCampos campo;
-        public Form4(Form1 ventanaPadre, string busqueda, TCampos campo, int index1, int index2, DateTime date, decimal nota, bool filtro)
+        public Form4(Form1 ventanaPadre, string busqueda, TCampos campo, int index1, int index2, DateTime date, decimal nota, bool filtro, LeerEscribirArchivo fichero)
         {
             InitializeComponent();
-            fichero = new LeerEscribirArchivo();
+            this.fichero = fichero;
             vista = new VistaGrafica();
             copiar = new Copiar(copiarPorCampoToolStripMenuItem);
             this.ventanaPadre = ventanaPadre;
@@ -74,9 +74,15 @@ namespace GestorTFG
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (listView1.SelectedIndices.Count > 0)
-            {   
+            {
+                copiarToolStripButton1.Enabled = true;
                 vista.ActualizarDatosRichTextBox(ref richTextBox1, listView1, TipoLista.Busqueda, TDatos.TFG);
                 vista.ActualizarDatosRichTextBox(ref richTextBox2, listView1, TipoLista.Busqueda, TDatos.Profesor);
+            } else
+            {
+                copiarToolStripButton1.Enabled = false;
+                richTextBox1.ResetText();
+                richTextBox2.ResetText();
             }
         }
 
@@ -266,6 +272,29 @@ namespace GestorTFG
         private void Form4_FormClosing(object sender, FormClosingEventArgs e)
         {
             fichero.CerrarFichero();
+        }
+
+        private void guardarToolStripButton1_Click(object sender, EventArgs e)
+        {
+            toolStripMenuItem4_Click(sender, e);
+        }
+
+        private void copiarToolStripButton1_Click(object sender, EventArgs e)
+        {
+            copiar.toolStripMenuItem1_Click(listView1, TipoLista.Busqueda, sender, e);
+        }
+
+        private void mostrarInformaciónDetalladaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new Form8(listView1, TipoLista.Busqueda).ShowDialog(this);
+        }
+
+        private void listView1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            if(e.Button == MouseButtons.Left)
+            {
+                new Form8(listView1, TipoLista.Busqueda).ShowDialog(this);
+            }
         }
     }
 }
