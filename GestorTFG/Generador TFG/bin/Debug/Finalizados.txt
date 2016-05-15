@@ -1,250 +1,250 @@
-Evasión regularizada de clases presenciales;Pa'cerme el chulo;08/06/2006;Alvaro;Haro;de la Hoz;AlvaroHarode la Hoz@upm.es;658;Guillermo;Narvaez;Garcia;yb8416;18/07/2015;15/11/2008;Septiembre;0,81
-Ordenador cuantico;trfvhyuok,;01/11/2009;Luis;Montalvo;Haro;LuisMontalvoHaro@upm.es;6;Jose;Narvaez;Urkerl;kx932;10/05/2008;13/05/2008;Junio;8,98
-Investigación de la Maltodetrina;This is Sparta;22/10/2006;Pedro;Urkerl;Valenzuela;PedroUrkerlValenzuela@upm.es;8977;Luis;Schwarzenegger;Narvaez;nh9878;08/02/2014;21/02/2008;Junio;1,12
-Ordenador cuantico;Datos de prueba;13/05/2006;Pedro;Ubeda;Valenzuela;PedroUbedaValenzuela@upm.es;5274;Luis;de la Hoz;Montalvo;yt5474;27/08/2008;18/10/2015;Junio;3,77
-Ordenador cuantico;trfvhyuok,;04/05/2005;Daniel;Schwarzenegger;Martinez;DanielSchwarzeneggerMartinez@upm.es;3035;Luis;Ubeda;Narvaez;xq7155;22/03/2013;10/03/2008;Septiembre;2,93
-Investigación de la Maltodetrina;Llevadme ante vuestro lider;13/10/2006;Nuria;Haro;Newton;NuriaHaroNewton@upm.es;7307;Lucia;Rodriguez;Schwarzenegger;iw8809;02/07/2011;24/04/2012;Junio;8,27
-Evasión regularizada de clases presenciales;This is Sparta;12/04/2011;Arnold;Rodriguez;Montalvo;ArnoldRodriguezMontalvo@upm.es;8407;Daniel;de la Hoz;Rodriguez;de9175;15/07/2016;16/03/2015;Septiembre;6,23
-Ordenador cuantico;Esto es una pruebita;09/01/2006;Luis;Newton;Newton;LuisNewtonNewton@upm.es;4699;Pedro;Schwarzenegger;Schwarzenegger;ry3911;18/05/2006;01/03/2013;Junio;4,03
-Robot asesino;Pa'cerme el chulo;21/04/2008;Nuria;Ubeda;Schwarzenegger;NuriaUbedaSchwarzenegger@upm.es;1831;Daniela;Newton;Ubeda;xl3158;26/06/2005;10/03/2016;Septiembre;0,97
-Ordenador cuantico;This is Sparta;26/07/2008;Nuria;Montalvo;Newton;NuriaMontalvoNewton@upm.es;8108;Luis;Schwarzenegger;Ubeda;pl9376;12/08/2008;18/05/2005;Septiembre;1,53
-Ordenador cuantico;Pa'cerme el chulo;27/01/2007;Juan;de la Hoz;Montalvo;Juande la HozMontalvo@upm.es;1183;Alvaro;Rodriguez;Rodriguez;ve4903;01/10/2012;08/03/2007;Septiembre;0,73
-Evasión regularizada de clases presenciales;trfvhyuok,;14/11/2005;Pedro;Rodriguez;Garcia;PedroRodriguezGarcia@upm.es;3994;Nuria;de la Hoz;Montalvo;my6815;11/09/2015;29/04/2005;Septiembre;7,51
-Investigación de la Maltodetrina;Datos de prueba;24/06/2006;Luis;Martinez;Rodriguez;LuisMartinezRodriguez@upm.es;9963;Alberto;de la Hoz;Urkerl;bw6018;12/01/2011;19/06/2007;Septiembre;8,31
-Evasión regularizada de clases presenciales;Datos de prueba;12/09/2013;Pepe;Montalvo;Martinez;PepeMontalvoMartinez@upm.es;6928;Ana;Montalvo;de la Hoz;gh1798;01/02/2016;08/07/2005;Junio;3,10
-Investigación de la Maltodetrina;Datos de prueba;16/08/2007;Alberto;Valenzuela;Martinez;AlbertoValenzuelaMartinez@upm.es;202;Daniel;Rodriguez;Franco;ki4997;10/10/2012;08/11/2012;Septiembre;2,38
-Ordenador cuantico;Llevadme ante vuestro lider;24/06/2015;Angeles;Garcia;Garcia;AngelesGarciaGarcia@upm.es;8942;Pedro;Martinez;Haro;ps5786;10/04/2010;27/11/2009;Septiembre;9,71
-Evasión regularizada de clases presenciales;Llevadme ante vuestro lider;31/08/2014;Luis;Garcia;Martinez;LuisGarciaMartinez@upm.es;4748;David;Valenzuela;Montalvo;jn3376;11/06/2010;14/06/2010;Junio;3,17
-Evasión regularizada de clases presenciales;Esto es una pruebita;27/01/2015;Alvaro;Schwarzenegger;Garcia;AlvaroSchwarzeneggerGarcia@upm.es;5376;Daniel;Newton;Martinez;jp1274;08/10/2010;21/10/2006;Junio;9,02
-Robot asesino;Datos de prueba;21/05/2010;Maria;Montalvo;de la Hoz;MariaMontalvode la Hoz@upm.es;7472;Alberto;Montalvo;Schwarzenegger;ww1926;04/10/2010;03/04/2006;Junio;0,39
-Investigación de la Maltodetrina;Datos de prueba;15/03/2014;Antonia;Ubeda;Valenzuela;AntoniaUbedaValenzuela@upm.es;4027;Antonia;Newton;Schwarzenegger;xv3286;04/06/2005;28/03/2006;Septiembre;3,67
-Investigación de la Maltodetrina;Esto es una pruebita;07/08/2007;Carmen;Ubeda;Martinez;CarmenUbedaMartinez@upm.es;4593;Angeles;Ubeda;Newton;jb6647;11/03/2006;26/09/2015;Septiembre;3,06
-Ordenador cuantico;This is Sparta;20/05/2009;Daniela;Haro;Haro;DanielaHaroHaro@upm.es;8983;Pedro;Haro;Garcia;ej299;14/04/2011;16/11/2012;Septiembre;8,80
-Investigación de la Maltodetrina;Datos de prueba;24/04/2007;Lucia;de la Hoz;Schwarzenegger;Luciade la HozSchwarzenegger@upm.es;1347;Juan;Narvaez;Haro;kt4864;05/05/2015;09/07/2008;Junio;10,00
-Evasión regularizada de clases presenciales;trfvhyuok,;17/09/2016;Luis;Ubeda;Montalvo;LuisUbedaMontalvo@upm.es;3598;Daniel;Schwarzenegger;Narvaez;lp5932;19/04/2013;06/10/2009;Junio;8,36
-Robot asesino;Datos de prueba;07/04/2010;Pedro;Urkerl;Newton;PedroUrkerlNewton@upm.es;804;Pedro;Valenzuela;Urkerl;qy8589;03/07/2008;27/09/2007;Junio;9,86
-Investigación de la Maltodetrina;Esto es una pruebita;28/04/2010;Juan;Martinez;Urkerl;JuanMartinezUrkerl@upm.es;6152;Pedro;de la Hoz;Garcia;nx8740;19/05/2005;28/10/2012;Septiembre;6,95
-Ordenador cuantico;trfvhyuok,;10/04/2006;Lucia;Haro;Garcia;LuciaHaroGarcia@upm.es;2255;Antonia;Rodriguez;Rodriguez;ir249;21/10/2005;30/10/2005;Junio;7,21
-Robot asesino;Pa'cerme el chulo;05/07/2008;Juan;Martinez;Garcia;JuanMartinezGarcia@upm.es;5801;Pepe;de la Hoz;Martinez;kw8603;12/02/2016;18/02/2008;Junio;5,48
-Robot asesino;Esto es una pruebita;23/11/2008;Angeles;de la Hoz;de la Hoz;Angelesde la Hozde la Hoz@upm.es;5816;Alberto;Ubeda;Martinez;jw1376;20/08/2013;09/10/2007;Septiembre;3,59
-Investigación de la Maltodetrina;Llevadme ante vuestro lider;13/11/2009;Luis;Urkerl;Newton;LuisUrkerlNewton@upm.es;1879;Arnold;Urkerl;Narvaez;xo1483;11/02/2016;17/04/2013;Junio;8,63
-Evasión regularizada de clases presenciales;Pa'cerme el chulo;14/05/2015;Luis;de la Hoz;Valenzuela;Luisde la HozValenzuela@upm.es;3487;Jose;de la Hoz;Valenzuela;yy1814;23/03/2011;04/11/2006;Septiembre;0,04
-Evasión regularizada de clases presenciales;Pa'cerme el chulo;06/05/2013;Antonia;Schwarzenegger;Ubeda;AntoniaSchwarzeneggerUbeda@upm.es;8868;David;Urkerl;Newton;fw9826;07/09/2011;30/04/2016;Septiembre;10,00
-Robot asesino;This is Sparta;22/05/2006;Juan;Narvaez;Narvaez;JuanNarvaezNarvaez@upm.es;5883;Alberto;Valenzuela;Urkerl;hp4276;03/10/2013;28/08/2009;Junio;8,80
-Evasión regularizada de clases presenciales;trfvhyuok,;15/04/2011;Luis;Schwarzenegger;Franco;LuisSchwarzeneggerFranco@upm.es;3038;Juan;Narvaez;Schwarzenegger;tm6619;27/03/2014;25/05/2015;Junio;2,99
-Ordenador cuantico;Pa'cerme el chulo;21/09/2007;David;Franco;Rodriguez;DavidFrancoRodriguez@upm.es;9919;Guillermo;Haro;Valenzuela;ru8541;22/07/2005;11/06/2010;Junio;0,36
-Investigación de la Maltodetrina;Pa'cerme el chulo;07/10/2006;Alberto;Rodriguez;Montalvo;AlbertoRodriguezMontalvo@upm.es;5280;Nuria;Newton;Newton;dr2392;27/01/2007;29/07/2009;Junio;4,42
-Investigación de la Maltodetrina;This is Sparta;18/03/2015;Pedro;Ubeda;Schwarzenegger;PedroUbedaSchwarzenegger@upm.es;7604;Jose;Valenzuela;Rodriguez;al4489;17/03/2009;20/07/2015;Junio;3,73
-Investigación de la Maltodetrina;Pa'cerme el chulo;07/11/2012;Luis;Garcia;Ubeda;LuisGarciaUbeda@upm.es;1936;Luis;Garcia;Franco;ar6627;13/08/2008;17/09/2010;Junio;1,24
-Ordenador cuantico;This is Sparta;24/02/2008;Maria;Garcia;Martinez;MariaGarciaMartinez@upm.es;973;Luis;Garcia;Montalvo;ea6398;10/02/2016;28/03/2013;Junio;4,90
-Investigación de la Maltodetrina;Esto es una pruebita;10/04/2013;Ana;Ubeda;Franco;AnaUbedaFranco@upm.es;8913;Alberto;Franco;Schwarzenegger;sc3111;20/05/2012;06/11/2016;Junio;6,66
-Evasión regularizada de clases presenciales;Pa'cerme el chulo;17/10/2007;Jose;de la Hoz;Rodriguez;Josede la HozRodriguez@upm.es;2053;Antonia;Schwarzenegger;Garcia;qw9851;28/02/2006;16/10/2005;Junio;7,57
-Ordenador cuantico;This is Sparta;06/09/2006;Pedro;de la Hoz;Schwarzenegger;Pedrode la HozSchwarzenegger@upm.es;60;Pedro;Schwarzenegger;Newton;kf9768;08/09/2014;15/01/2008;Septiembre;10,00
-Robot asesino;Esto es una pruebita;01/10/2005;Ana;Narvaez;Ubeda;AnaNarvaezUbeda@upm.es;9944;Luis;Franco;Martinez;lp4450;29/08/2007;08/02/2012;Septiembre;1,96
-Ordenador cuantico;Esto es una pruebita;19/01/2009;Jose;Newton;Haro;JoseNewtonHaro@upm.es;6577;Luis;Rodriguez;Montalvo;vm3747;22/05/2011;28/03/2007;Septiembre;7,35
-Ordenador cuantico;Llevadme ante vuestro lider;27/02/2005;Guillermo;Rodriguez;Rodriguez;GuillermoRodriguezRodriguez@upm.es;4670;Daniel;Franco;Haro;ef9037;10/11/2015;16/07/2014;Junio;9,33
-Investigación de la Maltodetrina;This is Sparta;17/10/2013;Angeles;Garcia;Rodriguez;AngelesGarciaRodriguez@upm.es;863;Nuria;de la Hoz;Franco;ak3226;10/05/2005;03/10/2007;Junio;10,00
-Ordenador cuantico;Datos de prueba;07/11/2006;Luis;Franco;Martinez;LuisFrancoMartinez@upm.es;1517;Nuria;Martinez;Valenzuela;cd655;01/06/2012;27/08/2013;Junio;4,47
-Robot asesino;trfvhyuok,;13/07/2016;Lucia;Newton;Valenzuela;LuciaNewtonValenzuela@upm.es;7715;Ana;Narvaez;de la Hoz;lr8002;18/07/2011;29/03/2009;Junio;2,63
-Ordenador cuantico;Datos de prueba;30/03/2011;Ana;Haro;Garcia;AnaHaroGarcia@upm.es;2147;Antonia;Haro;Martinez;ar6616;03/05/2013;09/11/2010;Septiembre;8,47
-Robot asesino;This is Sparta;20/04/2013;Ana;Haro;Narvaez;AnaHaroNarvaez@upm.es;7646;Juan;Schwarzenegger;Haro;ge2377;17/05/2008;08/01/2012;Junio;0,66
-Robot asesino;Llevadme ante vuestro lider;20/05/2013;Alberto;Haro;Garcia;AlbertoHaroGarcia@upm.es;1219;Pepe;Haro;Garcia;pr8690;07/02/2016;30/10/2010;Junio;1,11
-Evasión regularizada de clases presenciales;Pa'cerme el chulo;08/02/2006;Juan;Newton;Schwarzenegger;JuanNewtonSchwarzenegger@upm.es;3031;Pedro;Haro;de la Hoz;la3192;04/08/2016;20/08/2009;Junio;4,86
-Investigación de la Maltodetrina;Datos de prueba;17/06/2006;Pepe;Franco;Martinez;PepeFrancoMartinez@upm.es;1798;Juan;Urkerl;Urkerl;ns4068;17/02/2006;13/11/2013;Junio;3,21
-Ordenador cuantico;Datos de prueba;06/07/2007;Jose;Urkerl;Valenzuela;JoseUrkerlValenzuela@upm.es;2945;Pedro;Ubeda;Newton;uj852;17/10/2015;26/08/2008;Junio;9,22
-Evasión regularizada de clases presenciales;Datos de prueba;04/07/2008;Maria;Narvaez;de la Hoz;MariaNarvaezde la Hoz@upm.es;9809;David;Rodriguez;Martinez;rw8446;17/03/2013;24/04/2006;Septiembre;10,00
-Ordenador cuantico;Pa'cerme el chulo;20/09/2005;Juan;Narvaez;Franco;JuanNarvaezFranco@upm.es;3119;Ana;Narvaez;Montalvo;xr9004;23/10/2011;18/06/2015;Septiembre;1,36
-Investigación de la Maltodetrina;This is Sparta;08/07/2013;Daniela;Narvaez;Rodriguez;DanielaNarvaezRodriguez@upm.es;1904;Juan;Ubeda;Garcia;kt1491;05/03/2005;09/03/2014;Junio;5,64
-Robot asesino;Llevadme ante vuestro lider;09/03/2014;Nuria;Ubeda;Montalvo;NuriaUbedaMontalvo@upm.es;2308;Alberto;Newton;Ubeda;mj239;31/08/2013;03/02/2008;Junio;6,96
-Investigación de la Maltodetrina;trfvhyuok,;08/05/2011;Maria;Narvaez;Schwarzenegger;MariaNarvaezSchwarzenegger@upm.es;1138;Ana;Narvaez;Martinez;ym6944;25/11/2005;08/09/2014;Septiembre;7,62
-Investigación de la Maltodetrina;trfvhyuok,;24/08/2014;Jose;Narvaez;Haro;JoseNarvaezHaro@upm.es;2006;Alvaro;Narvaez;Newton;ev2773;13/11/2010;05/07/2016;Septiembre;1,89
-Investigación de la Maltodetrina;Datos de prueba;12/03/2011;Nuria;Ubeda;Valenzuela;NuriaUbedaValenzuela@upm.es;5602;Juan;Garcia;Valenzuela;ul6771;29/11/2016;04/04/2008;Septiembre;4,95
-Evasión regularizada de clases presenciales;Datos de prueba;02/03/2011;Carmen;Narvaez;Schwarzenegger;CarmenNarvaezSchwarzenegger@upm.es;9315;David;Franco;Ubeda;nq1284;24/03/2013;04/04/2012;Junio;6,25
-Ordenador cuantico;Esto es una pruebita;18/08/2008;Luis;Newton;Rodriguez;LuisNewtonRodriguez@upm.es;4090;Luis;Martinez;Narvaez;rd4011;15/03/2010;18/01/2015;Septiembre;3,20
-Investigación de la Maltodetrina;trfvhyuok,;08/04/2011;Guillermo;Montalvo;Newton;GuillermoMontalvoNewton@upm.es;8175;Daniela;Urkerl;Montalvo;sa3662;03/09/2015;29/08/2014;Septiembre;0,23
-Robot asesino;Pa'cerme el chulo;15/07/2013;Maria;Haro;Franco;MariaHaroFranco@upm.es;4800;Carmen;Urkerl;Valenzuela;xb6148;19/09/2008;15/04/2013;Septiembre;0,38
-Ordenador cuantico;This is Sparta;13/02/2007;Nuria;de la Hoz;Ubeda;Nuriade la HozUbeda@upm.es;5698;Pepe;Haro;Rodriguez;ts844;19/09/2016;27/07/2008;Junio;10,00
-Investigación de la Maltodetrina;Llevadme ante vuestro lider;27/02/2011;Angeles;Rodriguez;Martinez;AngelesRodriguezMartinez@upm.es;389;Nuria;Rodriguez;Montalvo;wt5102;28/01/2015;01/09/2009;Septiembre;0,76
-Investigación de la Maltodetrina;Datos de prueba;15/08/2015;Pepe;Haro;Ubeda;PepeHaroUbeda@upm.es;3617;Juan;Narvaez;Martinez;hk3664;17/10/2016;24/11/2015;Septiembre;6,09
-Ordenador cuantico;Datos de prueba;31/01/2012;Juan;Narvaez;Haro;JuanNarvaezHaro@upm.es;5455;Alberto;Ubeda;Martinez;bh2518;30/09/2016;30/08/2016;Septiembre;6,57
-Ordenador cuantico;Datos de prueba;16/06/2006;Carmen;Ubeda;Rodriguez;CarmenUbedaRodriguez@upm.es;5654;Angeles;Narvaez;Garcia;sb4618;05/06/2012;18/04/2007;Septiembre;5,00
-Evasión regularizada de clases presenciales;Pa'cerme el chulo;16/10/2016;David;Martinez;Valenzuela;DavidMartinezValenzuela@upm.es;7049;Guillermo;Rodriguez;Narvaez;xn1133;30/11/2012;19/09/2012;Junio;10,00
-Evasión regularizada de clases presenciales;Llevadme ante vuestro lider;08/03/2016;Luis;Montalvo;Valenzuela;LuisMontalvoValenzuela@upm.es;8596;Alberto;Urkerl;Haro;dk4948;25/02/2015;19/08/2014;Junio;7,52
-Ordenador cuantico;trfvhyuok,;12/07/2015;David;Valenzuela;Ubeda;DavidValenzuelaUbeda@upm.es;8148;Lucia;Schwarzenegger;Martinez;we9018;13/11/2016;08/03/2016;Junio;7,96
-Investigación de la Maltodetrina;Pa'cerme el chulo;05/03/2011;Daniela;de la Hoz;Ubeda;Danielade la HozUbeda@upm.es;4449;Pepe;de la Hoz;Rodriguez;wk7065;18/08/2008;03/10/2016;Junio;10,00
-Investigación de la Maltodetrina;trfvhyuok,;03/01/2008;Alberto;Rodriguez;Urkerl;AlbertoRodriguezUrkerl@upm.es;3938;Lucia;de la Hoz;Martinez;yx9946;31/05/2005;12/11/2009;Septiembre;1,46
-Ordenador cuantico;Llevadme ante vuestro lider;13/03/2013;Alvaro;Urkerl;de la Hoz;AlvaroUrkerlde la Hoz@upm.es;6635;Alvaro;Garcia;Franco;lb2856;26/09/2012;21/04/2011;Junio;2,07
-Robot asesino;Llevadme ante vuestro lider;29/01/2007;Maria;Montalvo;Garcia;MariaMontalvoGarcia@upm.es;1645;Alberto;Franco;Narvaez;re2445;22/08/2005;17/01/2013;Septiembre;1,26
-Investigación de la Maltodetrina;Llevadme ante vuestro lider;17/08/2010;Maria;Newton;Valenzuela;MariaNewtonValenzuela@upm.es;8194;David;Montalvo;Schwarzenegger;nr548;08/11/2013;19/06/2014;Junio;7,55
-Evasión regularizada de clases presenciales;Datos de prueba;08/10/2011;David;de la Hoz;Garcia;Davidde la HozGarcia@upm.es;8141;Alvaro;Narvaez;Martinez;xn2491;29/07/2009;31/03/2005;Junio;8,09
-Ordenador cuantico;Esto es una pruebita;15/10/2015;Nuria;Montalvo;Montalvo;NuriaMontalvoMontalvo@upm.es;6379;Nuria;Martinez;Haro;wj427;12/09/2008;27/09/2015;Junio;0,73
-Ordenador cuantico;This is Sparta;12/03/2006;Pedro;Schwarzenegger;Martinez;PedroSchwarzeneggerMartinez@upm.es;3392;Alvaro;Garcia;Martinez;nr9525;09/03/2009;10/11/2010;Junio;2,15
-Investigación de la Maltodetrina;Llevadme ante vuestro lider;11/01/2015;Nuria;Valenzuela;Rodriguez;NuriaValenzuelaRodriguez@upm.es;9376;Lucia;Haro;Haro;rp6826;09/10/2006;14/01/2007;Junio;0,56
-Ordenador cuantico;Datos de prueba;15/10/2010;Alberto;Valenzuela;Newton;AlbertoValenzuelaNewton@upm.es;6669;Luis;Valenzuela;Newton;gw1412;14/01/2005;07/10/2013;Septiembre;10,00
-Evasión regularizada de clases presenciales;Llevadme ante vuestro lider;26/02/2005;Maria;Rodriguez;Ubeda;MariaRodriguezUbeda@upm.es;8527;Antonia;Ubeda;Montalvo;cd9775;05/09/2006;09/08/2009;Septiembre;3,17
-Evasión regularizada de clases presenciales;Datos de prueba;18/02/2007;Angeles;Franco;Franco;AngelesFrancoFranco@upm.es;2566;Juan;Rodriguez;Newton;am5010;19/11/2016;07/02/2012;Junio;8,33
-Investigación de la Maltodetrina;This is Sparta;02/08/2012;Lucia;Montalvo;Newton;LuciaMontalvoNewton@upm.es;7403;Daniel;Schwarzenegger;Garcia;wf2836;22/01/2007;29/05/2016;Septiembre;3,10
-Ordenador cuantico;Datos de prueba;07/02/2010;Pepe;Valenzuela;Ubeda;PepeValenzuelaUbeda@upm.es;2927;Arnold;Urkerl;Montalvo;sj1756;13/08/2016;24/05/2005;Junio;0,19
-Evasión regularizada de clases presenciales;Llevadme ante vuestro lider;07/08/2009;Carmen;Ubeda;Newton;CarmenUbedaNewton@upm.es;4943;Luis;Haro;Urkerl;ko2284;06/09/2007;29/11/2005;Junio;9,20
-Evasión regularizada de clases presenciales;Esto es una pruebita;28/06/2014;Guillermo;Valenzuela;Montalvo;GuillermoValenzuelaMontalvo@upm.es;4047;Pepe;de la Hoz;Garcia;ka6979;27/05/2015;05/02/2007;Junio;3,94
-Robot asesino;trfvhyuok,;04/10/2007;Daniel;Martinez;Montalvo;DanielMartinezMontalvo@upm.es;9969;Antonia;Montalvo;Valenzuela;wk7483;11/03/2007;16/11/2007;Septiembre;8,47
-Investigación de la Maltodetrina;trfvhyuok,;14/04/2005;Pedro;Valenzuela;Martinez;PedroValenzuelaMartinez@upm.es;2639;Luis;Newton;Montalvo;ro9982;17/10/2007;14/02/2015;Junio;6,91
-Investigación de la Maltodetrina;Datos de prueba;29/05/2005;Daniel;Martinez;Newton;DanielMartinezNewton@upm.es;5242;David;Valenzuela;Rodriguez;sa7266;02/02/2015;28/02/2013;Septiembre;4,28
-Evasión regularizada de clases presenciales;trfvhyuok,;23/07/2016;Jose;Narvaez;Narvaez;JoseNarvaezNarvaez@upm.es;827;Angeles;Newton;de la Hoz;cc9248;17/09/2009;16/10/2007;Junio;6,12
-Evasión regularizada de clases presenciales;trfvhyuok,;16/03/2012;Luis;Montalvo;Haro;LuisMontalvoHaro@upm.es;7248;Guillermo;de la Hoz;Valenzuela;lb9725;26/11/2015;22/11/2012;Junio;6,42
-Investigación de la Maltodetrina;Llevadme ante vuestro lider;19/07/2010;Alvaro;Haro;Schwarzenegger;AlvaroHaroSchwarzenegger@upm.es;8801;Pepe;Schwarzenegger;Haro;bs3033;08/11/2009;21/03/2009;Junio;5,41
-Robot asesino;Llevadme ante vuestro lider;22/04/2008;Angeles;Martinez;Franco;AngelesMartinezFranco@upm.es;6078;Maria;Haro;Valenzuela;gd5376;03/06/2005;12/03/2009;Junio;8,24
-Robot asesino;Pa'cerme el chulo;17/08/2014;Daniel;Montalvo;Garcia;DanielMontalvoGarcia@upm.es;9086;Lucia;Franco;Franco;xi1902;02/01/2015;31/03/2005;Septiembre;0,53
-Ordenador cuantico;Pa'cerme el chulo;14/02/2016;Guillermo;Urkerl;Rodriguez;GuillermoUrkerlRodriguez@upm.es;6943;Pepe;Rodriguez;Ubeda;tj975;07/03/2005;17/03/2009;Septiembre;6,34
-Evasión regularizada de clases presenciales;trfvhyuok,;20/07/2009;Antonia;Garcia;Narvaez;AntoniaGarciaNarvaez@upm.es;8194;Antonia;Montalvo;Rodriguez;po1392;18/01/2010;16/11/2015;Junio;4,27
-Robot asesino;Llevadme ante vuestro lider;22/07/2014;Daniel;Franco;Newton;DanielFrancoNewton@upm.es;7338;Antonia;de la Hoz;Martinez;qk7938;21/06/2010;09/10/2010;Septiembre;8,35
-Robot asesino;Pa'cerme el chulo;18/07/2006;Pedro;Montalvo;Newton;PedroMontalvoNewton@upm.es;9696;Luis;Ubeda;Haro;rq1962;23/05/2011;02/05/2008;Junio;0,58
-Robot asesino;This is Sparta;05/03/2007;Pedro;Valenzuela;Franco;PedroValenzuelaFranco@upm.es;2189;Alberto;Franco;Martinez;qv3834;08/08/2011;22/01/2011;Junio;8,10
-Investigación de la Maltodetrina;Datos de prueba;21/04/2013;Maria;Schwarzenegger;Narvaez;MariaSchwarzeneggerNarvaez@upm.es;5797;Pedro;Martinez;Urkerl;hv7207;03/01/2016;20/03/2011;Junio;4,87
-Ordenador cuantico;This is Sparta;21/06/2008;Jose;de la Hoz;Newton;Josede la HozNewton@upm.es;4611;David;Newton;Rodriguez;gx8063;11/07/2014;21/03/2016;Junio;10,00
-Robot asesino;This is Sparta;07/10/2016;Lucia;Franco;Urkerl;LuciaFrancoUrkerl@upm.es;2058;Ana;de la Hoz;Ubeda;ok7993;19/03/2015;24/08/2011;Junio;3,03
-Evasión regularizada de clases presenciales;Datos de prueba;28/04/2009;Luis;Rodriguez;Garcia;LuisRodriguezGarcia@upm.es;1800;Maria;Rodriguez;Garcia;do7606;15/11/2010;16/09/2005;Septiembre;5,65
-Investigación de la Maltodetrina;Esto es una pruebita;17/02/2012;Juan;Newton;Newton;JuanNewtonNewton@upm.es;7896;Jose;Valenzuela;Rodriguez;hs8693;05/01/2010;27/11/2006;Junio;7,04
-Ordenador cuantico;This is Sparta;19/04/2009;Alvaro;de la Hoz;Montalvo;Alvarode la HozMontalvo@upm.es;9988;Nuria;Schwarzenegger;Franco;dm3280;15/07/2014;06/07/2011;Septiembre;0,36
-Evasión regularizada de clases presenciales;Pa'cerme el chulo;05/10/2010;Pedro;de la Hoz;Ubeda;Pedrode la HozUbeda@upm.es;5825;Nuria;de la Hoz;Valenzuela;la2827;10/06/2005;27/02/2008;Junio;7,79
-Ordenador cuantico;Datos de prueba;19/09/2013;Daniel;Narvaez;Urkerl;DanielNarvaezUrkerl@upm.es;6446;Arnold;Urkerl;Urkerl;ti3107;25/09/2007;02/04/2014;Junio;10,00
-Evasión regularizada de clases presenciales;Datos de prueba;25/06/2005;Lucia;Ubeda;Schwarzenegger;LuciaUbedaSchwarzenegger@upm.es;838;Luis;Montalvo;Martinez;bc1673;07/09/2005;10/02/2013;Septiembre;6,94
-Investigación de la Maltodetrina;This is Sparta;22/07/2006;Jose;Urkerl;Urkerl;JoseUrkerlUrkerl@upm.es;3375;Juan;Haro;Valenzuela;uk3992;12/10/2010;28/06/2008;Junio;6,69
-Ordenador cuantico;trfvhyuok,;21/06/2009;Pedro;Schwarzenegger;Martinez;PedroSchwarzeneggerMartinez@upm.es;5867;Antonia;Narvaez;Rodriguez;vf4580;29/03/2008;06/04/2007;Septiembre;8,59
-Evasión regularizada de clases presenciales;Pa'cerme el chulo;16/02/2008;Lucia;Martinez;Martinez;LuciaMartinezMartinez@upm.es;7148;Juan;Garcia;Valenzuela;pg4933;09/11/2014;03/06/2010;Septiembre;9,42
-Investigación de la Maltodetrina;Datos de prueba;02/05/2009;Arnold;Montalvo;Haro;ArnoldMontalvoHaro@upm.es;5681;Daniela;Rodriguez;de la Hoz;eq6665;11/05/2015;15/02/2016;Junio;7,71
-Investigación de la Maltodetrina;This is Sparta;28/04/2008;Maria;Haro;Montalvo;MariaHaroMontalvo@upm.es;9467;Luis;Urkerl;Franco;sl1464;10/10/2008;24/05/2016;Junio;1,39
-Investigación de la Maltodetrina;Datos de prueba;09/09/2009;Alberto;Newton;Rodriguez;AlbertoNewtonRodriguez@upm.es;8387;Daniela;Haro;Schwarzenegger;dt5131;15/10/2015;31/05/2005;Junio;5,51
-Evasión regularizada de clases presenciales;Datos de prueba;19/04/2014;Juan;Franco;Schwarzenegger;JuanFrancoSchwarzenegger@upm.es;1427;Maria;Newton;Valenzuela;lo5382;13/11/2009;03/11/2008;Junio;5,48
-Evasión regularizada de clases presenciales;Llevadme ante vuestro lider;06/06/2015;Jose;Narvaez;Montalvo;JoseNarvaezMontalvo@upm.es;3554;Luis;Urkerl;Valenzuela;hy5057;01/04/2009;02/11/2009;Junio;8,45
-Ordenador cuantico;trfvhyuok,;10/01/2008;Luis;Ubeda;de la Hoz;LuisUbedade la Hoz@upm.es;2176;Daniela;Haro;Urkerl;qo3803;18/10/2008;22/01/2011;Junio;1,18
-Robot asesino;Pa'cerme el chulo;19/06/2014;Carmen;Schwarzenegger;Schwarzenegger;CarmenSchwarzeneggerSchwarzenegger@upm.es;4494;Maria;Urkerl;Rodriguez;qh401;29/10/2011;23/02/2009;Junio;0,20
-Evasión regularizada de clases presenciales;Datos de prueba;10/10/2016;Pedro;Rodriguez;Ubeda;PedroRodriguezUbeda@upm.es;2712;Lucia;Garcia;Narvaez;xo9471;28/11/2010;29/01/2007;Septiembre;10,00
-Ordenador cuantico;Datos de prueba;16/01/2012;Nuria;Ubeda;Narvaez;NuriaUbedaNarvaez@upm.es;1448;Jose;Martinez;Martinez;tj2621;28/06/2008;13/09/2010;Septiembre;6,13
-Investigación de la Maltodetrina;Esto es una pruebita;15/06/2013;Guillermo;Ubeda;Rodriguez;GuillermoUbedaRodriguez@upm.es;3638;Antonia;Schwarzenegger;Narvaez;cg3688;29/10/2005;15/06/2013;Septiembre;6,79
-Investigación de la Maltodetrina;This is Sparta;20/04/2010;Lucia;Narvaez;Ubeda;LuciaNarvaezUbeda@upm.es;293;Alvaro;Rodriguez;Rodriguez;nc3990;05/11/2007;03/06/2007;Septiembre;7,64
-Evasión regularizada de clases presenciales;trfvhyuok,;02/09/2013;Maria;Haro;Urkerl;MariaHaroUrkerl@upm.es;308;Lucia;Martinez;Urkerl;le9646;26/01/2009;01/11/2012;Septiembre;9,90
-Ordenador cuantico;Esto es una pruebita;29/06/2007;Ana;Schwarzenegger;Montalvo;AnaSchwarzeneggerMontalvo@upm.es;1015;Juan;Schwarzenegger;Urkerl;nj2419;02/02/2013;20/08/2011;Junio;2,43
-Investigación de la Maltodetrina;Llevadme ante vuestro lider;30/10/2008;Maria;Montalvo;Franco;MariaMontalvoFranco@upm.es;4003;Guillermo;Newton;Garcia;fm7457;15/09/2009;23/09/2010;Septiembre;0,99
-Robot asesino;Datos de prueba;02/04/2008;Luis;Newton;Rodriguez;LuisNewtonRodriguez@upm.es;3176;Ana;Martinez;Narvaez;du9704;03/01/2008;01/08/2015;Septiembre;7,43
-Evasión regularizada de clases presenciales;Llevadme ante vuestro lider;15/04/2009;Maria;Franco;Schwarzenegger;MariaFrancoSchwarzenegger@upm.es;2589;Arnold;Montalvo;Franco;ks4605;31/05/2013;29/06/2015;Septiembre;4,54
-Robot asesino;Esto es una pruebita;05/09/2011;Antonia;Ubeda;Valenzuela;AntoniaUbedaValenzuela@upm.es;703;Maria;Franco;de la Hoz;uq9439;09/08/2012;19/10/2011;Septiembre;4,79
-Robot asesino;trfvhyuok,;30/04/2006;Angeles;Narvaez;Urkerl;AngelesNarvaezUrkerl@upm.es;8171;Antonia;Schwarzenegger;Narvaez;ph4168;09/11/2011;17/04/2005;Septiembre;3,15
-Robot asesino;Esto es una pruebita;15/10/2016;Pedro;Ubeda;Franco;PedroUbedaFranco@upm.es;2668;Guillermo;Valenzuela;Haro;kd4858;15/10/2015;11/02/2005;Septiembre;0,16
-Robot asesino;Pa'cerme el chulo;15/07/2006;Angeles;Newton;Montalvo;AngelesNewtonMontalvo@upm.es;5231;Lucia;Rodriguez;Rodriguez;fe3030;10/06/2016;31/10/2011;Septiembre;1,56
-Robot asesino;Datos de prueba;20/08/2012;Pedro;Ubeda;Narvaez;PedroUbedaNarvaez@upm.es;5880;Ana;Newton;Rodriguez;vt776;05/09/2014;11/08/2010;Septiembre;1,70
-Investigación de la Maltodetrina;This is Sparta;12/09/2005;Angeles;Martinez;Garcia;AngelesMartinezGarcia@upm.es;6923;Lucia;Narvaez;Urkerl;nj8703;02/07/2007;18/11/2010;Junio;0,10
-Evasión regularizada de clases presenciales;This is Sparta;28/08/2010;Angeles;Garcia;Martinez;AngelesGarciaMartinez@upm.es;9422;Daniela;Narvaez;Narvaez;hp8163;18/07/2013;09/05/2015;Septiembre;9,16
-Investigación de la Maltodetrina;Datos de prueba;25/02/2006;Ana;Franco;Schwarzenegger;AnaFrancoSchwarzenegger@upm.es;8129;Alvaro;Narvaez;Ubeda;gr4910;02/01/2013;22/05/2008;Junio;10,00
-Robot asesino;Llevadme ante vuestro lider;03/03/2016;Juan;Franco;Schwarzenegger;JuanFrancoSchwarzenegger@upm.es;2210;Pedro;Garcia;de la Hoz;sr3134;05/05/2008;11/11/2006;Junio;0,36
-Investigación de la Maltodetrina;Llevadme ante vuestro lider;30/11/2016;Guillermo;de la Hoz;Haro;Guillermode la HozHaro@upm.es;235;Carmen;Narvaez;Urkerl;sj4270;18/07/2009;07/01/2013;Junio;1,80
-Evasión regularizada de clases presenciales;Pa'cerme el chulo;04/11/2006;Pepe;Narvaez;Montalvo;PepeNarvaezMontalvo@upm.es;270;Luis;Haro;Rodriguez;ge6181;13/10/2005;18/04/2015;Junio;7,90
-Evasión regularizada de clases presenciales;Datos de prueba;26/05/2010;Alberto;Urkerl;Urkerl;AlbertoUrkerlUrkerl@upm.es;3991;David;Montalvo;de la Hoz;co6415;07/11/2008;22/06/2009;Septiembre;9,38
-Evasión regularizada de clases presenciales;This is Sparta;08/02/2011;Guillermo;Ubeda;de la Hoz;GuillermoUbedade la Hoz@upm.es;3003;Arnold;Newton;Newton;dc194;19/07/2014;15/11/2007;Septiembre;1,98
-Evasión regularizada de clases presenciales;trfvhyuok,;18/09/2008;Daniel;Franco;Franco;DanielFrancoFranco@upm.es;3094;Maria;Garcia;Newton;kb5472;28/11/2008;15/03/2015;Junio;7,39
-Evasión regularizada de clases presenciales;Esto es una pruebita;11/10/2011;Carmen;Urkerl;Schwarzenegger;CarmenUrkerlSchwarzenegger@upm.es;7414;Pepe;Montalvo;Franco;rc3728;01/05/2013;19/07/2011;Junio;4,88
-Ordenador cuantico;Llevadme ante vuestro lider;31/08/2011;Nuria;Garcia;Newton;NuriaGarciaNewton@upm.es;1750;Carmen;Garcia;Narvaez;ut5278;02/01/2014;29/03/2014;Junio;4,97
-Evasión regularizada de clases presenciales;trfvhyuok,;13/04/2016;Alberto;Urkerl;Newton;AlbertoUrkerlNewton@upm.es;4279;Daniel;Narvaez;Ubeda;va4004;30/10/2011;20/07/2016;Junio;2,29
-Robot asesino;trfvhyuok,;12/02/2016;Guillermo;Martinez;Rodriguez;GuillermoMartinezRodriguez@upm.es;8203;Maria;Martinez;Montalvo;cm4999;23/06/2015;21/09/2013;Septiembre;6,37
-Robot asesino;Esto es una pruebita;22/10/2009;Antonia;Franco;Schwarzenegger;AntoniaFrancoSchwarzenegger@upm.es;3018;David;Martinez;Ubeda;tk5182;29/03/2008;08/08/2016;Junio;3,48
-Robot asesino;Llevadme ante vuestro lider;22/06/2011;Lucia;Narvaez;Narvaez;LuciaNarvaezNarvaez@upm.es;2340;Arnold;de la Hoz;Montalvo;iw3203;23/06/2011;27/10/2016;Septiembre;0,05
-Investigación de la Maltodetrina;trfvhyuok,;31/01/2005;Daniela;Valenzuela;Garcia;DanielaValenzuelaGarcia@upm.es;1638;Daniela;Schwarzenegger;Martinez;qm67;26/09/2009;15/07/2009;Junio;0,52
-Robot asesino;This is Sparta;06/08/2007;Lucia;Ubeda;Montalvo;LuciaUbedaMontalvo@upm.es;3871;Carmen;Urkerl;Newton;ql224;07/01/2007;12/05/2009;Junio;1,82
-Robot asesino;Pa'cerme el chulo;05/08/2007;Alvaro;Valenzuela;Montalvo;AlvaroValenzuelaMontalvo@upm.es;5579;Jose;Newton;Franco;og3634;05/06/2010;04/05/2013;Septiembre;10,00
-Robot asesino;This is Sparta;21/05/2016;Daniela;Haro;Narvaez;DanielaHaroNarvaez@upm.es;9164;Nuria;Franco;Garcia;dl9262;19/10/2012;23/08/2015;Septiembre;6,96
-Evasión regularizada de clases presenciales;trfvhyuok,;02/11/2013;Luis;Garcia;de la Hoz;LuisGarciade la Hoz@upm.es;7412;Antonia;Franco;Newton;na1094;19/10/2015;02/09/2010;Junio;3,74
-Ordenador cuantico;Pa'cerme el chulo;14/04/2005;Luis;Rodriguez;Urkerl;LuisRodriguezUrkerl@upm.es;5384;Pepe;Rodriguez;de la Hoz;xg5184;02/02/2011;07/09/2009;Junio;3,75
-Robot asesino;This is Sparta;17/07/2013;Daniel;Urkerl;Montalvo;DanielUrkerlMontalvo@upm.es;9940;Antonia;de la Hoz;de la Hoz;mv5352;12/08/2014;04/06/2013;Septiembre;8,92
-Investigación de la Maltodetrina;Datos de prueba;24/06/2014;Ana;Rodriguez;Schwarzenegger;AnaRodriguezSchwarzenegger@upm.es;1147;Pepe;Schwarzenegger;Franco;mo299;11/04/2012;14/08/2010;Junio;1,00
-Evasión regularizada de clases presenciales;Esto es una pruebita;26/05/2008;David;Garcia;Rodriguez;DavidGarciaRodriguez@upm.es;2681;Ana;Franco;Haro;hu9741;23/01/2011;04/07/2006;Septiembre;6,82
-Ordenador cuantico;Pa'cerme el chulo;09/05/2012;Pepe;Franco;Urkerl;PepeFrancoUrkerl@upm.es;8644;Jose;Garcia;Newton;ei1380;05/03/2012;04/03/2009;Junio;6,48
-Investigación de la Maltodetrina;Llevadme ante vuestro lider;10/10/2007;Carmen;Newton;Schwarzenegger;CarmenNewtonSchwarzenegger@upm.es;3995;David;Franco;Ubeda;ro132;11/02/2013;08/08/2010;Junio;1,65
-Robot asesino;Esto es una pruebita;30/06/2008;Alvaro;Urkerl;de la Hoz;AlvaroUrkerlde la Hoz@upm.es;9238;Antonia;de la Hoz;Haro;wc6387;15/01/2006;11/01/2012;Septiembre;7,66
-Evasión regularizada de clases presenciales;Pa'cerme el chulo;15/02/2009;Daniel;de la Hoz;Valenzuela;Danielde la HozValenzuela@upm.es;4812;Lucia;Garcia;Urkerl;yw8299;03/08/2014;03/02/2007;Junio;2,22
-Robot asesino;Pa'cerme el chulo;09/03/2015;Daniel;Franco;Garcia;DanielFrancoGarcia@upm.es;9813;Lucia;Garcia;Ubeda;sd4257;03/03/2012;25/04/2007;Junio;8,25
-Evasión regularizada de clases presenciales;Pa'cerme el chulo;10/07/2006;Juan;Schwarzenegger;Martinez;JuanSchwarzeneggerMartinez@upm.es;6836;Antonia;Franco;Newton;ky9877;13/01/2010;06/10/2010;Junio;8,70
-Robot asesino;Pa'cerme el chulo;11/07/2006;Alberto;Narvaez;Franco;AlbertoNarvaezFranco@upm.es;5979;Alberto;Rodriguez;Narvaez;wt1856;06/11/2014;02/11/2014;Junio;5,37
-Evasión regularizada de clases presenciales;Esto es una pruebita;06/05/2012;Ana;Schwarzenegger;Narvaez;AnaSchwarzeneggerNarvaez@upm.es;8773;Maria;Valenzuela;Ubeda;jq1652;30/06/2007;14/07/2008;Septiembre;10,00
-Ordenador cuantico;Datos de prueba;07/07/2016;Angeles;Urkerl;Martinez;AngelesUrkerlMartinez@upm.es;1470;Guillermo;Newton;Valenzuela;ji7878;25/10/2015;15/06/2012;Septiembre;4,79
-Ordenador cuantico;trfvhyuok,;04/11/2005;Jose;Montalvo;Valenzuela;JoseMontalvoValenzuela@upm.es;3854;Alberto;Martinez;Haro;fv7520;26/04/2006;16/02/2015;Septiembre;10,00
-Investigación de la Maltodetrina;Esto es una pruebita;08/01/2013;Juan;Haro;Martinez;JuanHaroMartinez@upm.es;8457;Arnold;Montalvo;de la Hoz;ll6266;09/10/2006;29/07/2005;Septiembre;8,97
-Robot asesino;Llevadme ante vuestro lider;05/11/2012;Alberto;Martinez;Martinez;AlbertoMartinezMartinez@upm.es;8461;Daniel;Montalvo;Narvaez;ae5287;12/02/2008;07/06/2016;Junio;7,49
-Robot asesino;trfvhyuok,;22/03/2016;Guillermo;Garcia;Haro;GuillermoGarciaHaro@upm.es;5442;Jose;Haro;Schwarzenegger;os4675;13/02/2011;30/09/2013;Septiembre;4,24
-Ordenador cuantico;Datos de prueba;01/06/2016;Juan;Ubeda;Rodriguez;JuanUbedaRodriguez@upm.es;1454;Guillermo;Urkerl;Valenzuela;nf6756;11/04/2009;19/07/2010;Septiembre;4,32
-Evasión regularizada de clases presenciales;Esto es una pruebita;25/10/2007;Alberto;Haro;Schwarzenegger;AlbertoHaroSchwarzenegger@upm.es;4232;Maria;Narvaez;Urkerl;uj1111;08/10/2016;19/01/2015;Junio;0,65
-Evasión regularizada de clases presenciales;Llevadme ante vuestro lider;26/08/2009;Luis;Haro;Urkerl;LuisHaroUrkerl@upm.es;2504;Pepe;Newton;Valenzuela;wr7199;24/02/2013;28/11/2012;Junio;6,58
-Investigación de la Maltodetrina;Esto es una pruebita;25/02/2015;Daniel;Newton;Schwarzenegger;DanielNewtonSchwarzenegger@upm.es;9662;Pepe;Rodriguez;Urkerl;cs222;03/05/2014;05/01/2008;Septiembre;3,48
-Evasión regularizada de clases presenciales;This is Sparta;18/04/2015;Nuria;de la Hoz;Franco;Nuriade la HozFranco@upm.es;1000;Ana;Martinez;Schwarzenegger;rk4844;17/10/2014;20/09/2014;Septiembre;8,78
-Ordenador cuantico;This is Sparta;11/01/2010;Nuria;Montalvo;Garcia;NuriaMontalvoGarcia@upm.es;2554;Jose;Rodriguez;Garcia;lr3708;05/08/2010;02/04/2015;Septiembre;1,65
-Investigación de la Maltodetrina;Pa'cerme el chulo;11/03/2006;Nuria;Montalvo;Montalvo;NuriaMontalvoMontalvo@upm.es;6525;Carmen;Ubeda;Montalvo;sb6305;11/08/2007;14/07/2010;Septiembre;7,07
-Investigación de la Maltodetrina;Pa'cerme el chulo;14/05/2013;Ana;Haro;Newton;AnaHaroNewton@upm.es;8037;Luis;Garcia;Newton;bj6753;25/08/2013;22/11/2005;Junio;4,22
-Ordenador cuantico;Pa'cerme el chulo;26/06/2016;Alvaro;Valenzuela;de la Hoz;AlvaroValenzuelade la Hoz@upm.es;923;Jose;Garcia;Rodriguez;ry8015;13/10/2008;30/03/2007;Junio;6,29
-Investigación de la Maltodetrina;Pa'cerme el chulo;14/05/2011;Arnold;Montalvo;Haro;ArnoldMontalvoHaro@upm.es;3641;Pepe;Montalvo;Garcia;hf6040;02/11/2013;23/02/2005;Junio;0,72
-Robot asesino;Llevadme ante vuestro lider;19/08/2014;Maria;Martinez;Garcia;MariaMartinezGarcia@upm.es;1882;Angeles;Haro;Montalvo;fl7477;08/04/2007;10/02/2006;Septiembre;5,38
-Evasión regularizada de clases presenciales;Esto es una pruebita;11/09/2007;Luis;Newton;Newton;LuisNewtonNewton@upm.es;5515;Arnold;Martinez;Martinez;jh6468;23/05/2011;26/10/2010;Septiembre;6,27
-Evasión regularizada de clases presenciales;Llevadme ante vuestro lider;13/10/2007;Luis;Newton;Narvaez;LuisNewtonNarvaez@upm.es;5763;Pedro;Ubeda;Ubeda;rb572;16/11/2016;07/10/2009;Septiembre;4,70
-Evasión regularizada de clases presenciales;Esto es una pruebita;16/11/2016;Ana;Rodriguez;Rodriguez;AnaRodriguezRodriguez@upm.es;3338;Ana;de la Hoz;Rodriguez;uy2098;16/08/2009;09/03/2016;Septiembre;1,40
-Evasión regularizada de clases presenciales;Llevadme ante vuestro lider;06/09/2006;Ana;Franco;Ubeda;AnaFrancoUbeda@upm.es;9807;Angeles;Ubeda;Franco;bf7329;24/03/2011;14/01/2005;Septiembre;10,00
-Robot asesino;trfvhyuok,;01/01/2012;Angeles;Urkerl;Rodriguez;AngelesUrkerlRodriguez@upm.es;4454;Arnold;Garcia;Valenzuela;hp2525;01/04/2013;08/09/2007;Septiembre;1,30
-Investigación de la Maltodetrina;Datos de prueba;23/10/2009;Pepe;Ubeda;Garcia;PepeUbedaGarcia@upm.es;6725;Lucia;Valenzuela;Montalvo;os7150;15/10/2005;04/02/2005;Junio;0,48
-Evasión regularizada de clases presenciales;This is Sparta;03/10/2015;Antonia;Montalvo;Newton;AntoniaMontalvoNewton@upm.es;9582;Juan;Urkerl;Martinez;ff8993;04/07/2015;05/04/2010;Junio;5,69
-Robot asesino;trfvhyuok,;22/07/2012;David;Newton;Rodriguez;DavidNewtonRodriguez@upm.es;6673;Angeles;Valenzuela;Schwarzenegger;vu2492;31/10/2012;27/09/2006;Septiembre;2,48
-Evasión regularizada de clases presenciales;Llevadme ante vuestro lider;22/03/2007;Luis;de la Hoz;Urkerl;Luisde la HozUrkerl@upm.es;6684;Daniela;Schwarzenegger;Valenzuela;pk3416;24/02/2010;13/07/2007;Junio;10,00
-Evasión regularizada de clases presenciales;Llevadme ante vuestro lider;28/01/2011;Arnold;Valenzuela;Montalvo;ArnoldValenzuelaMontalvo@upm.es;174;Alvaro;Schwarzenegger;Valenzuela;ri5412;03/06/2013;06/03/2012;Junio;10,00
-Robot asesino;Esto es una pruebita;13/09/2009;Alberto;Garcia;Ubeda;AlbertoGarciaUbeda@upm.es;6420;Daniel;Narvaez;Urkerl;do2171;30/04/2015;06/07/2015;Junio;4,43
-Investigación de la Maltodetrina;This is Sparta;29/09/2011;Luis;de la Hoz;Haro;Luisde la HozHaro@upm.es;5921;Juan;Rodriguez;Martinez;xd8109;01/11/2014;27/10/2012;Junio;1,19
-Evasión regularizada de clases presenciales;Pa'cerme el chulo;21/04/2010;Antonia;Narvaez;de la Hoz;AntoniaNarvaezde la Hoz@upm.es;9936;Lucia;Haro;Haro;xj4986;01/07/2007;09/10/2013;Junio;8,04
-Ordenador cuantico;Datos de prueba;04/11/2007;Jose;Urkerl;Montalvo;JoseUrkerlMontalvo@upm.es;8076;Jose;Franco;Ubeda;gu2697;22/01/2012;03/09/2014;Septiembre;7,74
-Evasión regularizada de clases presenciales;Llevadme ante vuestro lider;30/03/2010;Guillermo;Schwarzenegger;Rodriguez;GuillermoSchwarzeneggerRodriguez@upm.es;4211;Guillermo;Haro;Martinez;as3199;17/07/2013;25/08/2013;Junio;7,39
-Evasión regularizada de clases presenciales;Llevadme ante vuestro lider;02/09/2010;Antonia;Haro;Valenzuela;AntoniaHaroValenzuela@upm.es;6599;Luis;Narvaez;Montalvo;mv6676;20/01/2015;27/03/2007;Junio;7,75
-Ordenador cuantico;Pa'cerme el chulo;04/02/2010;Maria;Martinez;Newton;MariaMartinezNewton@upm.es;6816;Antonia;Rodriguez;Montalvo;yt6336;14/03/2009;20/08/2013;Junio;10,00
-Evasión regularizada de clases presenciales;Pa'cerme el chulo;22/11/2005;Pedro;Rodriguez;Franco;PedroRodriguezFranco@upm.es;4689;Maria;Haro;Newton;js3294;08/11/2008;18/02/2016;Septiembre;7,10
-Ordenador cuantico;Datos de prueba;23/09/2015;Pepe;Haro;Ubeda;PepeHaroUbeda@upm.es;6577;Maria;Ubeda;Franco;tp8947;29/07/2006;03/04/2007;Septiembre;7,97
-Robot asesino;Esto es una pruebita;28/05/2007;Ana;Schwarzenegger;Haro;AnaSchwarzeneggerHaro@upm.es;141;Daniel;Martinez;Newton;gi304;27/05/2010;20/04/2015;Septiembre;2,29
-Evasión regularizada de clases presenciales;Llevadme ante vuestro lider;03/01/2016;David;Valenzuela;Rodriguez;DavidValenzuelaRodriguez@upm.es;6785;Pedro;Ubeda;Haro;dq2931;29/11/2011;23/07/2015;Septiembre;7,47
-Investigación de la Maltodetrina;Datos de prueba;24/02/2006;Angeles;Ubeda;Valenzuela;AngelesUbedaValenzuela@upm.es;7673;Angeles;Ubeda;Montalvo;ju9194;28/11/2014;14/04/2016;Junio;5,28
-Robot asesino;Llevadme ante vuestro lider;17/04/2006;Alvaro;Franco;Ubeda;AlvaroFrancoUbeda@upm.es;309;Lucia;Valenzuela;Narvaez;oa1611;26/02/2007;08/06/2009;Junio;2,87
-Evasión regularizada de clases presenciales;This is Sparta;18/07/2014;Antonia;de la Hoz;Urkerl;Antoniade la HozUrkerl@upm.es;220;Alvaro;Franco;Narvaez;ff4181;21/05/2015;03/11/2012;Septiembre;4,87
-Evasión regularizada de clases presenciales;Llevadme ante vuestro lider;23/05/2011;Carmen;Ubeda;Montalvo;CarmenUbedaMontalvo@upm.es;3259;Maria;Newton;Franco;ve3262;30/03/2014;04/02/2007;Septiembre;6,85
-Robot asesino;Datos de prueba;15/05/2007;Pepe;Martinez;de la Hoz;PepeMartinezde la Hoz@upm.es;3148;Guillermo;Garcia;Montalvo;xc9844;03/06/2016;30/09/2009;Septiembre;5,06
-Robot asesino;trfvhyuok,;28/09/2006;Luis;Garcia;Newton;LuisGarciaNewton@upm.es;7013;Juan;Urkerl;Narvaez;ev6370;15/02/2007;02/02/2013;Septiembre;7,34
-Investigación de la Maltodetrina;Llevadme ante vuestro lider;23/03/2006;Lucia;Rodriguez;Haro;LuciaRodriguezHaro@upm.es;1474;Nuria;Garcia;Newton;em6876;29/03/2007;30/05/2015;Junio;6,66
-Evasión regularizada de clases presenciales;This is Sparta;02/04/2013;Antonia;Urkerl;Haro;AntoniaUrkerlHaro@upm.es;2232;Alvaro;Rodriguez;Valenzuela;pr7434;01/11/2012;03/02/2014;Junio;8,79
-Robot asesino;Llevadme ante vuestro lider;02/09/2014;Maria;Franco;Garcia;MariaFrancoGarcia@upm.es;1872;Luis;Garcia;Schwarzenegger;sf2673;20/06/2010;07/06/2012;Junio;5,25
-Robot asesino;trfvhyuok,;08/05/2007;Ana;Haro;Narvaez;AnaHaroNarvaez@upm.es;8607;Pepe;Ubeda;Montalvo;cy6651;05/02/2007;28/01/2015;Junio;1,06
-Investigación de la Maltodetrina;This is Sparta;06/01/2009;Pepe;Urkerl;de la Hoz;PepeUrkerlde la Hoz@upm.es;5121;Alvaro;Montalvo;Haro;bd5672;02/02/2011;15/08/2006;Junio;8,63
-Investigación de la Maltodetrina;trfvhyuok,;24/06/2016;Juan;Ubeda;de la Hoz;JuanUbedade la Hoz@upm.es;4571;Nuria;Martinez;Garcia;jk4920;01/05/2015;10/10/2009;Junio;7,02
-Robot asesino;This is Sparta;25/08/2016;Angeles;Montalvo;Schwarzenegger;AngelesMontalvoSchwarzenegger@upm.es;7348;Maria;Narvaez;Ubeda;dy74;22/06/2005;03/08/2013;Septiembre;6,18
-Investigación de la Maltodetrina;This is Sparta;06/06/2013;Luis;Haro;de la Hoz;LuisHarode la Hoz@upm.es;8776;Carmen;Narvaez;Montalvo;kx5947;29/09/2015;03/05/2006;Junio;5,46
-Evasión regularizada de clases presenciales;Pa'cerme el chulo;23/03/2016;Lucia;Urkerl;de la Hoz;LuciaUrkerlde la Hoz@upm.es;12;Alvaro;Montalvo;Montalvo;cy7968;24/04/2005;02/08/2007;Junio;9,90
-Ordenador cuantico;This is Sparta;01/04/2010;Alvaro;Montalvo;Schwarzenegger;AlvaroMontalvoSchwarzenegger@upm.es;8196;Luis;Martinez;Rodriguez;ty9522;07/10/2007;12/10/2015;Septiembre;10,00
-Robot asesino;trfvhyuok,;16/04/2006;Alvaro;Valenzuela;Montalvo;AlvaroValenzuelaMontalvo@upm.es;6969;Lucia;Urkerl;Urkerl;qp8662;13/10/2010;07/05/2016;Septiembre;10,00
-Investigación de la Maltodetrina;Pa'cerme el chulo;23/01/2008;Guillermo;Garcia;Urkerl;GuillermoGarciaUrkerl@upm.es;7828;Luis;Franco;Garcia;eq2300;30/09/2014;20/06/2016;Junio;0,87
-Ordenador cuantico;trfvhyuok,;10/11/2012;Alberto;Ubeda;Rodriguez;AlbertoUbedaRodriguez@upm.es;1247;Guillermo;Urkerl;Garcia;od6999;27/10/2005;13/03/2013;Junio;4,89
-Ordenador cuantico;trfvhyuok,;20/06/2005;Daniel;Valenzuela;Garcia;DanielValenzuelaGarcia@upm.es;3840;Juan;de la Hoz;Narvaez;wg4440;27/01/2016;03/01/2012;Junio;7,44
-Evasión regularizada de clases presenciales;Pa'cerme el chulo;13/06/2011;Angeles;Garcia;Rodriguez;AngelesGarciaRodriguez@upm.es;3742;Lucia;Haro;Urkerl;vy9384;29/01/2008;20/11/2011;Septiembre;6,91
-Investigación de la Maltodetrina;Llevadme ante vuestro lider;17/08/2008;Alvaro;Valenzuela;Garcia;AlvaroValenzuelaGarcia@upm.es;65;Juan;Martinez;Franco;ed9517;12/03/2005;28/03/2011;Septiembre;10,00
-Ordenador cuantico;Llevadme ante vuestro lider;13/02/2005;Lucia;Haro;Montalvo;LuciaHaroMontalvo@upm.es;3079;Alberto;Valenzuela;Haro;fi6781;19/09/2012;28/11/2005;Junio;2,24
-Evasión regularizada de clases presenciales;Datos de prueba;30/04/2011;Pepe;Haro;Montalvo;PepeHaroMontalvo@upm.es;5716;Nuria;Rodriguez;Martinez;yl6749;23/03/2015;30/05/2015;Junio;10,00
-Investigación de la Maltodetrina;Datos de prueba;29/04/2007;Ana;de la Hoz;Montalvo;Anade la HozMontalvo@upm.es;6631;Daniel;de la Hoz;Montalvo;dp3389;30/05/2009;19/05/2007;Septiembre;5,38
-Evasión regularizada de clases presenciales;Llevadme ante vuestro lider;08/01/2015;Alvaro;Rodriguez;Rodriguez;AlvaroRodriguezRodriguez@upm.es;1606;Jose;Garcia;Rodriguez;dn6810;26/05/2008;28/06/2016;Septiembre;4,62
-Evasión regularizada de clases presenciales;Llevadme ante vuestro lider;23/10/2012;Luis;Schwarzenegger;Newton;LuisSchwarzeneggerNewton@upm.es;2871;Angeles;Haro;Garcia;dp5175;04/04/2014;19/01/2016;Septiembre;5,12
-Robot asesino;This is Sparta;13/05/2012;Angeles;Garcia;de la Hoz;AngelesGarciade la Hoz@upm.es;6676;Angeles;Haro;Rodriguez;fe5577;25/02/2014;29/04/2009;Junio;8,12
-Robot asesino;Esto es una pruebita;22/08/2016;Maria;de la Hoz;Ubeda;Mariade la HozUbeda@upm.es;9700;David;Garcia;de la Hoz;se6551;12/06/2010;25/02/2005;Septiembre;8,62
-Ordenador cuantico;trfvhyuok,;27/04/2013;Alvaro;Haro;Garcia;AlvaroHaroGarcia@upm.es;640;Luis;Franco;Narvaez;ao2167;21/11/2007;15/03/2014;Junio;2,17
-Ordenador cuantico;Esto es una pruebita;30/06/2007;Arnold;Montalvo;de la Hoz;ArnoldMontalvode la Hoz@upm.es;1784;Alvaro;Martinez;Franco;eo2364;13/05/2014;29/06/2009;Junio;1,70
-Robot asesino;Pa'cerme el chulo;28/01/2007;Maria;Rodriguez;Rodriguez;MariaRodriguezRodriguez@upm.es;8276;Daniela;Urkerl;Narvaez;kx1953;04/10/2009;27/11/2015;Junio;2,47
-Robot asesino;Esto es una pruebita;14/03/2007;Antonia;Ubeda;Rodriguez;AntoniaUbedaRodriguez@upm.es;9854;Luis;Valenzuela;Haro;he4392;04/09/2009;22/04/2007;Junio;0,69
-Investigación de la Maltodetrina;This is Sparta;16/06/2013;Antonia;Ubeda;Montalvo;AntoniaUbedaMontalvo@upm.es;3604;Alvaro;Ubeda;Montalvo;mo5474;29/01/2013;27/03/2009;Junio;9,39
-Robot asesino;Pa'cerme el chulo;08/02/2016;Daniela;Franco;Urkerl;DanielaFrancoUrkerl@upm.es;5260;Luis;Montalvo;Montalvo;rn4735;26/02/2008;04/10/2010;Septiembre;2,00
-Evasión regularizada de clases presenciales;Datos de prueba;13/04/2016;Nuria;Rodriguez;Montalvo;NuriaRodriguezMontalvo@upm.es;2885;Alberto;Ubeda;Schwarzenegger;km2792;28/04/2013;01/07/2014;Junio;8,54
-Ordenador cuantico;trfvhyuok,;23/10/2005;Angeles;Montalvo;Newton;AngelesMontalvoNewton@upm.es;4969;David;Rodriguez;Haro;xo9742;03/07/2015;02/07/2013;Septiembre;5,54
-Investigación de la Maltodetrina;This is Sparta;02/05/2009;Carmen;Haro;de la Hoz;CarmenHarode la Hoz@upm.es;4611;Luis;Newton;Martinez;ls562;20/11/2016;27/10/2008;Junio;10,00
-Ordenador cuantico;Datos de prueba;03/11/2012;David;Newton;Urkerl;DavidNewtonUrkerl@upm.es;3911;Antonia;Schwarzenegger;Garcia;co6765;28/10/2011;30/03/2005;Septiembre;1,38
-Evasión regularizada de clases presenciales;Datos de prueba;06/11/2008;Ana;Valenzuela;Narvaez;AnaValenzuelaNarvaez@upm.es;3491;Daniel;Garcia;de la Hoz;jv9316;13/11/2012;10/04/2015;Septiembre;4,72
-Robot asesino;Llevadme ante vuestro lider;17/02/2006;Nuria;Martinez;Narvaez;NuriaMartinezNarvaez@upm.es;1266;Arnold;Franco;de la Hoz;kq8467;15/07/2006;14/01/2015;Septiembre;6,66
-Ordenador cuantico;Pa'cerme el chulo;12/01/2006;Juan;de la Hoz;Ubeda;Juande la HozUbeda@upm.es;3506;Nuria;Martinez;Garcia;wl1020;13/06/2014;18/02/2005;Septiembre;7,52
-Investigación de la Maltodetrina;trfvhyuok,;30/06/2016;Lucia;Narvaez;Haro;LuciaNarvaezHaro@upm.es;6220;Angeles;Martinez;Franco;rx5958;10/10/2015;20/05/2006;Septiembre;7,63
-Robot asesino;trfvhyuok,;16/09/2015;Nuria;Valenzuela;Ubeda;NuriaValenzuelaUbeda@upm.es;8249;Alberto;Schwarzenegger;Rodriguez;de1562;20/01/2012;23/02/2009;Septiembre;9,52
-Evasión regularizada de clases presenciales;Esto es una pruebita;12/06/2008;Daniel;Garcia;Montalvo;DanielGarciaMontalvo@upm.es;6664;Guillermo;Newton;Franco;kv4703;27/07/2012;07/11/2010;Junio;3,09
-Ordenador cuantico;Datos de prueba;16/06/2012;Guillermo;Haro;Rodriguez;GuillermoHaroRodriguez@upm.es;7175;Alvaro;Urkerl;Ubeda;of1122;24/07/2014;25/11/2014;Junio;6,02
+Ordenador cuantico;Llevadme ante vuestro lider;05/02/2012;Alvaro;Montalvo;Montalvo;AlvaroMontalvoMontalvo@upm.es;3661;Daniela;Newton;de la Hoz;io8550;26/05/2012;26/11/2010;Junio;2,80
+Robot asesino;Llevadme ante vuestro lider;25/03/2005;Luis;Urkerl;Valenzuela;LuisUrkerlValenzuela@upm.es;7830;Luis;Montalvo;Valenzuela;cf2271;09/02/2007;16/09/2012;Septiembre;2,02
+Robot asesino;Esto es una pruebita;19/11/2005;Pedro;Newton;Newton;PedroNewtonNewton@upm.es;8871;Antonia;Garcia;Urkerl;nv5296;05/09/2011;20/11/2005;Junio;5,12
+Robot asesino;trfvhyuok,;28/04/2010;Nuria;de la Hoz;Schwarzenegger;Nuriade la HozSchwarzenegger@upm.es;1956;Carmen;Newton;Newton;ks5728;24/10/2006;19/09/2009;Junio;4,66
+Investigación de la Maltodetrina;Esto es una pruebita;01/09/2007;Pepe;de la Hoz;Valenzuela;Pepede la HozValenzuela@upm.es;4444;Antonia;Montalvo;Franco;rx3336;14/06/2006;10/02/2006;Septiembre;8,44
+Evasión regularizada de clases presenciales;Datos de prueba;03/07/2005;Daniel;Urkerl;Schwarzenegger;DanielUrkerlSchwarzenegger@upm.es;298;Nuria;Garcia;Montalvo;yx358;16/06/2012;09/05/2008;Junio;0,41
+Evasión regularizada de clases presenciales;trfvhyuok,;13/01/2013;Juan;Rodriguez;Schwarzenegger;JuanRodriguezSchwarzenegger@upm.es;2483;Luis;Haro;Montalvo;fv6509;15/07/2005;19/01/2007;Junio;3,47
+Evasión regularizada de clases presenciales;trfvhyuok,;11/11/2016;Daniela;Franco;Valenzuela;DanielaFrancoValenzuela@upm.es;1668;Luis;Schwarzenegger;Urkerl;og9428;10/10/2005;01/05/2012;Junio;6,41
+Investigación de la Maltodetrina;Llevadme ante vuestro lider;14/10/2010;David;Martinez;Garcia;DavidMartinezGarcia@upm.es;6140;Alberto;Montalvo;Martinez;gv1397;19/05/2007;11/11/2014;Junio;2,23
+Investigación de la Maltodetrina;trfvhyuok,;26/09/2011;Alberto;Rodriguez;Newton;AlbertoRodriguezNewton@upm.es;3292;Jose;Martinez;Valenzuela;vh7707;15/10/2009;23/08/2010;Septiembre;4,70
+Robot asesino;Llevadme ante vuestro lider;04/03/2007;Guillermo;Newton;Valenzuela;GuillermoNewtonValenzuela@upm.es;7496;Pepe;Schwarzenegger;Ubeda;yk6287;16/11/2011;07/03/2015;Junio;1,13
+Investigación de la Maltodetrina;Pa'cerme el chulo;22/01/2016;David;Haro;Urkerl;DavidHaroUrkerl@upm.es;6617;Carmen;de la Hoz;Garcia;sv6769;04/11/2014;16/09/2010;Junio;3,73
+Robot asesino;Llevadme ante vuestro lider;22/06/2015;Guillermo;Newton;Rodriguez;GuillermoNewtonRodriguez@upm.es;8567;Guillermo;Martinez;Franco;rp4205;21/03/2014;07/07/2006;Septiembre;6,46
+Evasión regularizada de clases presenciales;Pa'cerme el chulo;03/06/2014;Daniel;Narvaez;Valenzuela;DanielNarvaezValenzuela@upm.es;5114;Maria;Narvaez;de la Hoz;lu1735;08/07/2015;06/05/2011;Septiembre;5,08
+Investigación de la Maltodetrina;Datos de prueba;28/11/2015;Pepe;Urkerl;Martinez;PepeUrkerlMartinez@upm.es;6622;Daniel;Newton;Garcia;rd8327;06/04/2016;29/09/2009;Junio;3,00
+Investigación de la Maltodetrina;trfvhyuok,;26/09/2013;Lucia;Schwarzenegger;Rodriguez;LuciaSchwarzeneggerRodriguez@upm.es;6825;Guillermo;de la Hoz;Haro;il3793;03/11/2013;04/07/2016;Junio;2,86
+Robot asesino;Llevadme ante vuestro lider;31/05/2005;Pepe;Rodriguez;Urkerl;PepeRodriguezUrkerl@upm.es;8984;Lucia;Franco;Newton;al1949;11/06/2010;21/01/2008;Junio;7,06
+Investigación de la Maltodetrina;Llevadme ante vuestro lider;12/02/2006;Nuria;Martinez;Garcia;NuriaMartinezGarcia@upm.es;6782;Alvaro;Garcia;Montalvo;dg4306;16/03/2010;28/07/2016;Junio;1,43
+Evasión regularizada de clases presenciales;This is Sparta;07/11/2012;Juan;Haro;Franco;JuanHaroFranco@upm.es;1888;Maria;Newton;Haro;uw8087;12/06/2011;25/05/2013;Junio;2,65
+Investigación de la Maltodetrina;Llevadme ante vuestro lider;19/01/2009;Arnold;Haro;Schwarzenegger;ArnoldHaroSchwarzenegger@upm.es;1325;Alberto;de la Hoz;Montalvo;oe3314;29/11/2005;02/06/2006;Septiembre;5,83
+Robot asesino;Datos de prueba;15/05/2007;Pedro;Rodriguez;Urkerl;PedroRodriguezUrkerl@upm.es;7342;Maria;Ubeda;Haro;kl7250;08/07/2011;23/03/2011;Septiembre;2,34
+Investigación de la Maltodetrina;Llevadme ante vuestro lider;19/03/2011;Pepe;Newton;Ubeda;PepeNewtonUbeda@upm.es;1679;Arnold;Martinez;Newton;fp5744;11/09/2008;22/04/2007;Junio;2,87
+Evasión regularizada de clases presenciales;This is Sparta;28/06/2015;Juan;Franco;Valenzuela;JuanFrancoValenzuela@upm.es;8046;Arnold;Garcia;Haro;sy9602;01/09/2012;01/11/2011;Septiembre;3,24
+Ordenador cuantico;Llevadme ante vuestro lider;05/02/2005;Ana;Valenzuela;Schwarzenegger;AnaValenzuelaSchwarzenegger@upm.es;4690;Pepe;Urkerl;Ubeda;oj3037;20/04/2010;05/09/2010;Junio;10,00
+Robot asesino;Llevadme ante vuestro lider;09/01/2010;Ana;Ubeda;Narvaez;AnaUbedaNarvaez@upm.es;2531;Maria;Martinez;Martinez;ne4319;08/11/2016;06/02/2013;Junio;10,00
+Ordenador cuantico;Datos de prueba;10/01/2007;Pedro;Haro;Newton;PedroHaroNewton@upm.es;9320;Guillermo;Newton;Newton;rx3080;19/09/2008;01/03/2007;Junio;7,42
+Robot asesino;Pa'cerme el chulo;20/07/2006;Pedro;de la Hoz;Garcia;Pedrode la HozGarcia@upm.es;342;Guillermo;de la Hoz;Ubeda;dc8065;22/11/2010;03/06/2007;Junio;7,21
+Robot asesino;trfvhyuok,;28/01/2011;Luis;de la Hoz;Garcia;Luisde la HozGarcia@upm.es;9230;Daniela;Montalvo;Schwarzenegger;is3552;01/10/2016;09/09/2007;Junio;2,20
+Ordenador cuantico;Pa'cerme el chulo;18/11/2010;Lucia;Ubeda;Montalvo;LuciaUbedaMontalvo@upm.es;1331;Maria;de la Hoz;Martinez;jc2505;20/10/2013;27/05/2014;Septiembre;6,17
+Investigación de la Maltodetrina;Llevadme ante vuestro lider;11/09/2013;Ana;Franco;Newton;AnaFrancoNewton@upm.es;4769;Daniela;Garcia;Schwarzenegger;qp2234;05/03/2011;05/04/2012;Junio;0,69
+Evasión regularizada de clases presenciales;Datos de prueba;02/11/2011;Carmen;Schwarzenegger;Rodriguez;CarmenSchwarzeneggerRodriguez@upm.es;572;Daniel;Schwarzenegger;Martinez;hf2249;14/09/2011;03/02/2006;Septiembre;4,87
+Ordenador cuantico;Pa'cerme el chulo;06/03/2008;Lucia;Garcia;Newton;LuciaGarciaNewton@upm.es;1212;Daniela;Montalvo;Haro;hw9897;01/01/2008;08/09/2008;Septiembre;3,67
+Robot asesino;Datos de prueba;22/05/2010;Guillermo;Rodriguez;Valenzuela;GuillermoRodriguezValenzuela@upm.es;8184;Lucia;Schwarzenegger;Haro;kk1182;19/07/2005;22/06/2015;Junio;4,79
+Evasión regularizada de clases presenciales;Pa'cerme el chulo;26/01/2013;Alberto;Schwarzenegger;Franco;AlbertoSchwarzeneggerFranco@upm.es;1079;Daniel;Martinez;Schwarzenegger;bc5085;18/04/2013;25/08/2015;Junio;5,84
+Robot asesino;Esto es una pruebita;06/10/2007;Daniel;Montalvo;Narvaez;DanielMontalvoNarvaez@upm.es;597;Nuria;Schwarzenegger;Franco;oh264;24/06/2006;05/06/2011;Septiembre;6,38
+Robot asesino;Pa'cerme el chulo;22/05/2013;Juan;Montalvo;Haro;JuanMontalvoHaro@upm.es;3688;Antonia;Montalvo;Montalvo;pl8341;13/03/2008;27/03/2015;Septiembre;4,27
+Robot asesino;Pa'cerme el chulo;13/06/2010;Daniel;Rodriguez;de la Hoz;DanielRodriguezde la Hoz@upm.es;1130;Lucia;Martinez;de la Hoz;sf5386;10/08/2010;04/05/2013;Septiembre;5,08
+Robot asesino;trfvhyuok,;30/07/2008;Arnold;Ubeda;Schwarzenegger;ArnoldUbedaSchwarzenegger@upm.es;1956;Juan;Haro;Valenzuela;va3761;13/05/2012;27/02/2007;Septiembre;0,66
+Investigación de la Maltodetrina;This is Sparta;27/04/2006;David;Martinez;Narvaez;DavidMartinezNarvaez@upm.es;5647;Nuria;Newton;Narvaez;lq5081;03/06/2016;01/02/2010;Junio;0,81
+Robot asesino;This is Sparta;25/05/2005;Pepe;Newton;Newton;PepeNewtonNewton@upm.es;500;Guillermo;Schwarzenegger;Rodriguez;gx766;03/10/2009;05/05/2013;Junio;5,19
+Ordenador cuantico;This is Sparta;05/09/2009;Juan;Haro;Narvaez;JuanHaroNarvaez@upm.es;3285;Angeles;Franco;Newton;oc9000;05/05/2015;29/04/2013;Septiembre;7,07
+Ordenador cuantico;Pa'cerme el chulo;01/02/2007;Angeles;de la Hoz;Valenzuela;Angelesde la HozValenzuela@upm.es;2175;Luis;Haro;Ubeda;cw7746;04/01/2008;27/09/2010;Septiembre;8,35
+Investigación de la Maltodetrina;Llevadme ante vuestro lider;02/06/2016;Guillermo;Garcia;Valenzuela;GuillermoGarciaValenzuela@upm.es;5539;Pepe;Haro;Valenzuela;ay8434;17/01/2008;31/08/2008;Septiembre;5,81
+Ordenador cuantico;trfvhyuok,;22/10/2008;Alvaro;Haro;Martinez;AlvaroHaroMartinez@upm.es;1516;Alberto;Valenzuela;Haro;wb9037;31/10/2015;12/10/2008;Junio;10,00
+Investigación de la Maltodetrina;This is Sparta;30/03/2014;Antonia;Rodriguez;Haro;AntoniaRodriguezHaro@upm.es;4804;Nuria;Urkerl;Martinez;nc8668;06/03/2014;02/04/2006;Junio;4,36
+Investigación de la Maltodetrina;Llevadme ante vuestro lider;12/08/2016;Antonia;Newton;Rodriguez;AntoniaNewtonRodriguez@upm.es;849;Angeles;Ubeda;Garcia;mi13;02/11/2013;28/09/2007;Junio;2,89
+Robot asesino;Esto es una pruebita;24/01/2006;Antonia;Schwarzenegger;Valenzuela;AntoniaSchwarzeneggerValenzuela@upm.es;9980;Lucia;Martinez;Schwarzenegger;mn2396;21/07/2012;14/05/2006;Junio;2,68
+Robot asesino;Esto es una pruebita;07/04/2007;Antonia;Martinez;Newton;AntoniaMartinezNewton@upm.es;768;Nuria;Ubeda;Rodriguez;kf7667;07/01/2005;18/08/2013;Junio;9,04
+Robot asesino;trfvhyuok,;09/03/2016;Pedro;Valenzuela;Rodriguez;PedroValenzuelaRodriguez@upm.es;106;Ana;Haro;Rodriguez;wc2692;23/03/2015;30/04/2010;Septiembre;5,13
+Evasión regularizada de clases presenciales;This is Sparta;28/07/2012;David;Franco;Montalvo;DavidFrancoMontalvo@upm.es;782;Daniel;Newton;Urkerl;km4746;05/08/2012;23/02/2005;Septiembre;1,54
+Investigación de la Maltodetrina;Datos de prueba;18/02/2012;Maria;Valenzuela;Valenzuela;MariaValenzuelaValenzuela@upm.es;7513;Alvaro;Urkerl;Garcia;ix4832;27/07/2008;31/10/2014;Septiembre;6,63
+Investigación de la Maltodetrina;Llevadme ante vuestro lider;21/11/2014;Lucia;Montalvo;Newton;LuciaMontalvoNewton@upm.es;9414;Ana;Montalvo;Montalvo;xk4169;09/11/2006;16/04/2010;Septiembre;3,56
+Investigación de la Maltodetrina;Llevadme ante vuestro lider;27/03/2012;Ana;Urkerl;de la Hoz;AnaUrkerlde la Hoz@upm.es;2327;Maria;Franco;Urkerl;xm2737;09/02/2005;24/06/2013;Junio;0,48
+Evasión regularizada de clases presenciales;trfvhyuok,;20/07/2011;Pepe;de la Hoz;Ubeda;Pepede la HozUbeda@upm.es;9425;Alvaro;Urkerl;Haro;we9320;27/11/2006;14/02/2009;Junio;6,02
+Evasión regularizada de clases presenciales;trfvhyuok,;19/08/2016;Pepe;Haro;Rodriguez;PepeHaroRodriguez@upm.es;1455;Pedro;Franco;Haro;uc4651;09/02/2009;11/08/2013;Junio;6,46
+Investigación de la Maltodetrina;This is Sparta;19/06/2008;Antonia;Schwarzenegger;Ubeda;AntoniaSchwarzeneggerUbeda@upm.es;5449;David;Newton;Montalvo;gf711;11/02/2012;30/05/2012;Junio;6,79
+Evasión regularizada de clases presenciales;trfvhyuok,;02/07/2016;David;Valenzuela;Valenzuela;DavidValenzuelaValenzuela@upm.es;1941;Alberto;Montalvo;Rodriguez;bq3817;03/07/2009;10/03/2005;Septiembre;6,06
+Investigación de la Maltodetrina;This is Sparta;29/09/2009;Daniel;Martinez;de la Hoz;DanielMartinezde la Hoz@upm.es;6935;Pepe;Haro;Rodriguez;sq5426;26/09/2014;19/06/2014;Septiembre;3,06
+Ordenador cuantico;trfvhyuok,;03/03/2016;Maria;Haro;Franco;MariaHaroFranco@upm.es;6144;Angeles;Haro;Urkerl;xm1029;15/04/2011;02/05/2016;Septiembre;0,50
+Ordenador cuantico;This is Sparta;13/11/2007;Daniela;Urkerl;Franco;DanielaUrkerlFranco@upm.es;137;Arnold;Ubeda;Franco;db1357;18/06/2008;17/06/2016;Septiembre;5,75
+Ordenador cuantico;Pa'cerme el chulo;03/07/2010;Pedro;Montalvo;Narvaez;PedroMontalvoNarvaez@upm.es;8443;Maria;Rodriguez;Rodriguez;fg137;28/04/2011;28/04/2005;Junio;0,47
+Ordenador cuantico;This is Sparta;23/06/2009;Pedro;Newton;Montalvo;PedroNewtonMontalvo@upm.es;5743;Maria;Narvaez;Ubeda;id103;19/09/2014;05/08/2014;Septiembre;6,79
+Ordenador cuantico;Pa'cerme el chulo;08/05/2015;Alberto;Valenzuela;Martinez;AlbertoValenzuelaMartinez@upm.es;9181;Alvaro;Schwarzenegger;de la Hoz;uq9026;07/05/2011;09/11/2005;Septiembre;10,00
+Robot asesino;trfvhyuok,;08/02/2015;Arnold;de la Hoz;Ubeda;Arnoldde la HozUbeda@upm.es;3294;Lucia;Newton;Newton;gk7057;09/10/2009;29/04/2008;Septiembre;6,21
+Robot asesino;trfvhyuok,;30/05/2011;Ana;Haro;Valenzuela;AnaHaroValenzuela@upm.es;5464;Alvaro;Haro;Garcia;al7920;31/07/2007;26/06/2011;Septiembre;7,32
+Investigación de la Maltodetrina;Datos de prueba;04/05/2008;Pedro;Haro;Montalvo;PedroHaroMontalvo@upm.es;7396;Ana;Valenzuela;Narvaez;ql4702;24/06/2014;03/02/2010;Septiembre;3,64
+Robot asesino;Esto es una pruebita;06/10/2008;Guillermo;Newton;Franco;GuillermoNewtonFranco@upm.es;7734;Pepe;Franco;Haro;qk1256;13/06/2015;07/02/2012;Septiembre;1,57
+Evasión regularizada de clases presenciales;Datos de prueba;21/01/2012;Guillermo;Montalvo;Haro;GuillermoMontalvoHaro@upm.es;9480;Daniel;Rodriguez;Urkerl;wf2555;15/05/2010;10/03/2013;Junio;6,72
+Investigación de la Maltodetrina;Datos de prueba;26/08/2007;Juan;Newton;Haro;JuanNewtonHaro@upm.es;8868;Pepe;Urkerl;Valenzuela;ea9909;26/11/2008;16/08/2009;Junio;7,08
+Ordenador cuantico;This is Sparta;20/01/2006;Daniel;Schwarzenegger;Valenzuela;DanielSchwarzeneggerValenzuela@upm.es;190;Juan;Montalvo;de la Hoz;pw2583;23/11/2010;14/01/2007;Septiembre;9,07
+Evasión regularizada de clases presenciales;trfvhyuok,;28/07/2013;Carmen;Rodriguez;de la Hoz;CarmenRodriguezde la Hoz@upm.es;1205;Daniel;Franco;de la Hoz;wr608;14/07/2011;17/10/2013;Septiembre;5,48
+Evasión regularizada de clases presenciales;Esto es una pruebita;30/10/2007;Pepe;Newton;Narvaez;PepeNewtonNarvaez@upm.es;3985;Luis;Schwarzenegger;Valenzuela;nl6516;07/02/2012;14/03/2010;Septiembre;9,90
+Ordenador cuantico;trfvhyuok,;29/01/2007;Alberto;Franco;de la Hoz;AlbertoFrancode la Hoz@upm.es;1688;Lucia;Narvaez;Franco;kj259;25/06/2008;02/06/2015;Junio;1,74
+Ordenador cuantico;Datos de prueba;02/03/2012;Guillermo;Ubeda;Rodriguez;GuillermoUbedaRodriguez@upm.es;5962;Daniela;Urkerl;Valenzuela;iy3979;13/04/2015;19/11/2005;Septiembre;9,01
+Evasión regularizada de clases presenciales;Llevadme ante vuestro lider;03/08/2010;Lucia;Garcia;Newton;LuciaGarciaNewton@upm.es;3401;Lucia;Martinez;Newton;ch6185;03/06/2009;25/02/2008;Junio;3,07
+Evasión regularizada de clases presenciales;Datos de prueba;29/06/2011;Daniel;de la Hoz;Urkerl;Danielde la HozUrkerl@upm.es;7975;Jose;Urkerl;Montalvo;of5979;23/11/2009;01/11/2008;Junio;6,32
+Investigación de la Maltodetrina;trfvhyuok,;04/05/2011;Pepe;Montalvo;Ubeda;PepeMontalvoUbeda@upm.es;1192;Arnold;Rodriguez;Franco;qt6609;03/08/2005;21/02/2009;Junio;0,46
+Investigación de la Maltodetrina;trfvhyuok,;16/04/2011;Antonia;Montalvo;Schwarzenegger;AntoniaMontalvoSchwarzenegger@upm.es;1273;Antonia;Franco;Newton;jy8756;06/08/2011;17/01/2012;Junio;3,58
+Evasión regularizada de clases presenciales;Datos de prueba;15/10/2009;Luis;Rodriguez;Ubeda;LuisRodriguezUbeda@upm.es;4062;Antonia;Martinez;Narvaez;rv8424;12/01/2015;30/04/2015;Junio;6,25
+Ordenador cuantico;This is Sparta;07/03/2006;Luis;Narvaez;de la Hoz;LuisNarvaezde la Hoz@upm.es;6695;Nuria;Ubeda;Montalvo;af7853;11/07/2008;16/06/2010;Junio;1,67
+Ordenador cuantico;Pa'cerme el chulo;01/04/2011;Nuria;Ubeda;Rodriguez;NuriaUbedaRodriguez@upm.es;7032;David;Valenzuela;Garcia;wq6940;14/01/2016;27/10/2009;Junio;8,08
+Ordenador cuantico;Esto es una pruebita;27/01/2009;Angeles;Urkerl;Narvaez;AngelesUrkerlNarvaez@upm.es;5018;Lucia;Franco;Ubeda;bd1489;28/09/2014;04/11/2007;Junio;8,59
+Evasión regularizada de clases presenciales;Datos de prueba;13/08/2011;Carmen;Franco;Martinez;CarmenFrancoMartinez@upm.es;343;Ana;Newton;Franco;kk685;09/02/2014;27/04/2006;Junio;2,98
+Evasión regularizada de clases presenciales;Esto es una pruebita;23/03/2011;Daniela;Martinez;Schwarzenegger;DanielaMartinezSchwarzenegger@upm.es;1549;Angeles;Montalvo;Narvaez;tb7054;04/02/2007;21/02/2012;Septiembre;3,77
+Investigación de la Maltodetrina;Llevadme ante vuestro lider;25/04/2011;Carmen;Haro;Franco;CarmenHaroFranco@upm.es;9995;Pepe;Franco;Garcia;kk5753;06/06/2005;09/07/2010;Junio;9,09
+Ordenador cuantico;trfvhyuok,;15/04/2006;Jose;Rodriguez;Ubeda;JoseRodriguezUbeda@upm.es;7871;Maria;Rodriguez;Haro;bb9285;19/01/2008;27/10/2007;Septiembre;1,88
+Robot asesino;This is Sparta;06/09/2006;Carmen;Haro;Urkerl;CarmenHaroUrkerl@upm.es;6934;Angeles;Valenzuela;Haro;ne9244;23/10/2013;20/10/2011;Septiembre;2,51
+Robot asesino;Datos de prueba;27/02/2006;Maria;Ubeda;Franco;MariaUbedaFranco@upm.es;9204;Antonia;Garcia;Ubeda;vy327;19/02/2013;20/08/2007;Septiembre;2,14
+Robot asesino;This is Sparta;06/06/2008;Nuria;Urkerl;Franco;NuriaUrkerlFranco@upm.es;8157;Daniel;Newton;Garcia;hm6120;19/03/2007;30/11/2005;Septiembre;7,00
+Investigación de la Maltodetrina;Pa'cerme el chulo;04/03/2009;Jose;de la Hoz;Garcia;Josede la HozGarcia@upm.es;6125;Carmen;Rodriguez;de la Hoz;ec6210;07/11/2006;11/06/2008;Septiembre;7,90
+Investigación de la Maltodetrina;Llevadme ante vuestro lider;15/10/2011;Pedro;Franco;Schwarzenegger;PedroFrancoSchwarzenegger@upm.es;822;Alberto;Valenzuela;Garcia;cq7665;20/06/2005;12/04/2011;Junio;0,95
+Evasión regularizada de clases presenciales;Pa'cerme el chulo;05/05/2008;Maria;Narvaez;de la Hoz;MariaNarvaezde la Hoz@upm.es;1683;Lucia;de la Hoz;Valenzuela;am9447;12/02/2014;12/11/2016;Septiembre;9,78
+Investigación de la Maltodetrina;Esto es una pruebita;16/10/2013;Juan;Valenzuela;Haro;JuanValenzuelaHaro@upm.es;9711;Carmen;Newton;Rodriguez;jk4227;28/08/2012;18/02/2013;Septiembre;10,00
+Ordenador cuantico;This is Sparta;08/01/2010;Nuria;Rodriguez;Ubeda;NuriaRodriguezUbeda@upm.es;9170;Alberto;Haro;Rodriguez;kf3316;19/06/2013;26/08/2008;Septiembre;1,16
+Investigación de la Maltodetrina;Llevadme ante vuestro lider;01/03/2006;David;de la Hoz;Rodriguez;Davidde la HozRodriguez@upm.es;559;Jose;Rodriguez;Haro;ch5928;29/08/2011;19/08/2007;Septiembre;5,09
+Robot asesino;This is Sparta;04/07/2015;Angeles;Franco;Narvaez;AngelesFrancoNarvaez@upm.es;9253;Daniela;Newton;Schwarzenegger;wd8786;02/02/2013;21/07/2014;Septiembre;3,86
+Ordenador cuantico;Llevadme ante vuestro lider;06/11/2015;Alvaro;Franco;Urkerl;AlvaroFrancoUrkerl@upm.es;4547;Pepe;Franco;Schwarzenegger;bo732;11/04/2011;09/01/2005;Septiembre;5,52
+Investigación de la Maltodetrina;trfvhyuok,;29/07/2006;Carmen;Franco;Newton;CarmenFrancoNewton@upm.es;140;Antonia;Urkerl;Ubeda;ap9386;14/06/2011;21/10/2011;Septiembre;3,08
+Investigación de la Maltodetrina;This is Sparta;06/02/2009;Guillermo;Narvaez;Urkerl;GuillermoNarvaezUrkerl@upm.es;8769;David;Ubeda;Newton;ou9722;30/05/2011;18/10/2008;Junio;6,78
+Investigación de la Maltodetrina;Pa'cerme el chulo;29/09/2011;David;Urkerl;Montalvo;DavidUrkerlMontalvo@upm.es;7290;Jose;Ubeda;Franco;ox5082;28/10/2007;23/05/2016;Septiembre;2,29
+Ordenador cuantico;Llevadme ante vuestro lider;29/07/2012;Angeles;de la Hoz;Franco;Angelesde la HozFranco@upm.es;4791;Angeles;Urkerl;Rodriguez;nr8254;18/06/2013;04/01/2012;Junio;7,15
+Ordenador cuantico;Llevadme ante vuestro lider;03/04/2013;Maria;Narvaez;Valenzuela;MariaNarvaezValenzuela@upm.es;5812;Jose;Garcia;Newton;ew9134;08/02/2013;14/05/2009;Septiembre;10,00
+Investigación de la Maltodetrina;Llevadme ante vuestro lider;17/04/2010;Arnold;Montalvo;Rodriguez;ArnoldMontalvoRodriguez@upm.es;8352;Carmen;de la Hoz;Narvaez;xp1209;13/04/2007;09/06/2014;Junio;4,94
+Investigación de la Maltodetrina;Esto es una pruebita;21/11/2008;Luis;Franco;Montalvo;LuisFrancoMontalvo@upm.es;1440;Alberto;Newton;Newton;fm9479;03/06/2005;08/11/2013;Septiembre;9,69
+Ordenador cuantico;This is Sparta;21/08/2013;David;Newton;Montalvo;DavidNewtonMontalvo@upm.es;4283;Angeles;Schwarzenegger;Narvaez;pa9447;09/11/2012;17/07/2015;Septiembre;1,50
+Ordenador cuantico;Esto es una pruebita;21/10/2010;David;Garcia;Montalvo;DavidGarciaMontalvo@upm.es;2344;Maria;Ubeda;Martinez;nf5989;15/10/2013;05/06/2010;Junio;8,31
+Investigación de la Maltodetrina;Llevadme ante vuestro lider;09/05/2007;Lucia;Urkerl;de la Hoz;LuciaUrkerlde la Hoz@upm.es;5871;Angeles;Narvaez;Garcia;wa443;01/10/2010;04/04/2008;Junio;1,43
+Robot asesino;Esto es una pruebita;27/08/2010;Angeles;Ubeda;Newton;AngelesUbedaNewton@upm.es;492;Luis;de la Hoz;de la Hoz;fr1523;07/11/2005;24/07/2005;Junio;2,02
+Investigación de la Maltodetrina;Llevadme ante vuestro lider;12/10/2014;Antonia;Haro;Ubeda;AntoniaHaroUbeda@upm.es;166;Pepe;Garcia;Montalvo;ky7206;22/05/2008;20/04/2015;Junio;5,05
+Ordenador cuantico;Pa'cerme el chulo;04/08/2012;Lucia;Valenzuela;Narvaez;LuciaValenzuelaNarvaez@upm.es;1879;Angeles;Haro;Newton;xo6950;31/07/2007;15/06/2016;Septiembre;6,83
+Evasión regularizada de clases presenciales;Llevadme ante vuestro lider;26/03/2016;Angeles;Schwarzenegger;Garcia;AngelesSchwarzeneggerGarcia@upm.es;2313;Pepe;Montalvo;Schwarzenegger;dm9962;19/04/2012;30/05/2006;Junio;6,74
+Ordenador cuantico;Datos de prueba;28/05/2013;Alberto;Schwarzenegger;Haro;AlbertoSchwarzeneggerHaro@upm.es;1651;Luis;Narvaez;Narvaez;iu2571;07/08/2010;22/08/2013;Junio;4,70
+Robot asesino;This is Sparta;02/10/2014;Nuria;Urkerl;Martinez;NuriaUrkerlMartinez@upm.es;7447;Alvaro;Rodriguez;Martinez;ho8685;18/07/2012;21/08/2009;Septiembre;8,28
+Ordenador cuantico;Datos de prueba;03/03/2016;Maria;Rodriguez;Garcia;MariaRodriguezGarcia@upm.es;5155;Pepe;Martinez;Newton;rh2115;13/02/2015;12/01/2013;Junio;9,28
+Investigación de la Maltodetrina;This is Sparta;16/02/2016;Guillermo;Urkerl;Martinez;GuillermoUrkerlMartinez@upm.es;3024;Carmen;Newton;Franco;go9634;28/02/2014;28/03/2013;Septiembre;4,42
+Ordenador cuantico;Pa'cerme el chulo;01/03/2014;Alberto;Schwarzenegger;Valenzuela;AlbertoSchwarzeneggerValenzuela@upm.es;9234;David;Franco;Urkerl;ea174;28/06/2016;19/02/2008;Junio;8,48
+Ordenador cuantico;Llevadme ante vuestro lider;21/05/2010;David;Franco;Schwarzenegger;DavidFrancoSchwarzenegger@upm.es;7503;Juan;Valenzuela;Newton;dq2789;19/04/2008;07/02/2016;Septiembre;1,10
+Investigación de la Maltodetrina;Datos de prueba;12/10/2015;Alberto;Newton;Rodriguez;AlbertoNewtonRodriguez@upm.es;8734;Arnold;Urkerl;Narvaez;ia5380;19/08/2010;17/09/2015;Junio;7,92
+Evasión regularizada de clases presenciales;Llevadme ante vuestro lider;24/01/2006;Nuria;Valenzuela;de la Hoz;NuriaValenzuelade la Hoz@upm.es;2558;Nuria;Schwarzenegger;Rodriguez;fx7629;12/10/2005;15/07/2013;Junio;1,12
+Ordenador cuantico;Pa'cerme el chulo;21/01/2012;Carmen;Schwarzenegger;Martinez;CarmenSchwarzeneggerMartinez@upm.es;9546;Alberto;Ubeda;Martinez;xc542;30/07/2007;21/04/2014;Septiembre;6,56
+Ordenador cuantico;Esto es una pruebita;27/08/2013;David;Haro;Haro;DavidHaroHaro@upm.es;2308;Alvaro;Narvaez;Ubeda;sq5794;30/09/2015;12/10/2014;Septiembre;2,28
+Ordenador cuantico;Llevadme ante vuestro lider;15/04/2011;Daniel;Haro;de la Hoz;DanielHarode la Hoz@upm.es;6210;Antonia;Valenzuela;Montalvo;qd640;24/01/2010;04/02/2009;Junio;8,61
+Robot asesino;trfvhyuok,;16/04/2015;Antonia;Valenzuela;Martinez;AntoniaValenzuelaMartinez@upm.es;8930;Arnold;Rodriguez;de la Hoz;qd9723;23/07/2008;03/04/2006;Junio;5,25
+Robot asesino;trfvhyuok,;08/08/2011;Nuria;Narvaez;Franco;NuriaNarvaezFranco@upm.es;2892;Daniela;Urkerl;Rodriguez;no6356;13/08/2009;03/02/2015;Junio;10,00
+Ordenador cuantico;Esto es una pruebita;07/03/2013;Lucia;Montalvo;Garcia;LuciaMontalvoGarcia@upm.es;3971;Pepe;Haro;Martinez;qi3138;30/04/2014;06/02/2005;Junio;6,61
+Investigación de la Maltodetrina;This is Sparta;01/03/2005;Guillermo;de la Hoz;de la Hoz;Guillermode la Hozde la Hoz@upm.es;5785;Alvaro;Schwarzenegger;Garcia;bc2151;14/09/2016;29/11/2014;Junio;3,79
+Evasión regularizada de clases presenciales;Llevadme ante vuestro lider;03/05/2007;Nuria;Rodriguez;Urkerl;NuriaRodriguezUrkerl@upm.es;6091;Lucia;Haro;Franco;ni4849;16/09/2006;05/03/2015;Septiembre;4,01
+Evasión regularizada de clases presenciales;Esto es una pruebita;20/02/2006;Jose;Urkerl;Garcia;JoseUrkerlGarcia@upm.es;9409;David;Garcia;Newton;pc5319;29/06/2005;28/08/2012;Junio;9,03
+Evasión regularizada de clases presenciales;Esto es una pruebita;02/01/2016;Daniel;Martinez;Martinez;DanielMartinezMartinez@upm.es;8048;Antonia;Rodriguez;Montalvo;dv3899;13/03/2011;03/02/2011;Junio;6,42
+Ordenador cuantico;Pa'cerme el chulo;29/07/2005;Luis;Valenzuela;Franco;LuisValenzuelaFranco@upm.es;2596;Guillermo;Valenzuela;Haro;hi9367;23/07/2014;22/08/2010;Septiembre;4,91
+Robot asesino;Pa'cerme el chulo;15/07/2005;Maria;Garcia;Valenzuela;MariaGarciaValenzuela@upm.es;3053;Guillermo;Franco;Rodriguez;mt4226;04/10/2013;02/10/2015;Junio;0,29
+Ordenador cuantico;Pa'cerme el chulo;21/11/2011;Daniel;Newton;Montalvo;DanielNewtonMontalvo@upm.es;1263;Jose;Montalvo;Narvaez;qm4543;04/04/2005;26/10/2011;Junio;7,22
+Ordenador cuantico;This is Sparta;06/08/2016;Ana;Haro;de la Hoz;AnaHarode la Hoz@upm.es;8645;Pedro;Martinez;Urkerl;db6198;20/07/2013;19/10/2010;Junio;10,00
+Ordenador cuantico;Esto es una pruebita;16/04/2007;Angeles;Montalvo;Valenzuela;AngelesMontalvoValenzuela@upm.es;5405;Maria;Newton;Martinez;wn1937;26/07/2016;03/07/2008;Septiembre;10,00
+Ordenador cuantico;Esto es una pruebita;06/03/2009;Jose;Newton;Haro;JoseNewtonHaro@upm.es;129;Lucia;Schwarzenegger;Urkerl;uw4688;13/08/2016;07/01/2009;Junio;6,10
+Evasión regularizada de clases presenciales;trfvhyuok,;11/01/2009;David;Narvaez;de la Hoz;DavidNarvaezde la Hoz@upm.es;6167;Guillermo;Montalvo;Franco;kn767;22/03/2014;02/06/2015;Junio;1,85
+Investigación de la Maltodetrina;Pa'cerme el chulo;01/04/2010;Guillermo;de la Hoz;Martinez;Guillermode la HozMartinez@upm.es;3182;Arnold;Narvaez;Urkerl;kc702;03/03/2015;17/07/2011;Septiembre;1,31
+Robot asesino;This is Sparta;10/06/2011;Luis;Urkerl;Urkerl;LuisUrkerlUrkerl@upm.es;6373;Juan;Montalvo;Narvaez;ni8348;20/09/2015;19/02/2005;Junio;9,03
+Evasión regularizada de clases presenciales;trfvhyuok,;01/11/2012;Arnold;Franco;Haro;ArnoldFrancoHaro@upm.es;2062;Luis;Garcia;Schwarzenegger;km5275;17/04/2014;26/01/2010;Septiembre;3,09
+Ordenador cuantico;Esto es una pruebita;04/05/2007;Pedro;Rodriguez;Valenzuela;PedroRodriguezValenzuela@upm.es;3634;Alvaro;Valenzuela;Rodriguez;tw2016;03/01/2015;10/09/2014;Septiembre;1,56
+Investigación de la Maltodetrina;Llevadme ante vuestro lider;01/07/2006;Pepe;Schwarzenegger;Franco;PepeSchwarzeneggerFranco@upm.es;2871;Nuria;Urkerl;Ubeda;re957;02/05/2006;15/10/2015;Junio;7,17
+Robot asesino;Esto es una pruebita;07/06/2015;Ana;Narvaez;Urkerl;AnaNarvaezUrkerl@upm.es;1782;Daniel;Garcia;Haro;dh4675;02/09/2013;17/03/2005;Junio;0,62
+Evasión regularizada de clases presenciales;Pa'cerme el chulo;31/08/2005;Pepe;Martinez;Ubeda;PepeMartinezUbeda@upm.es;6969;Nuria;Martinez;Garcia;vp1575;06/05/2010;06/03/2008;Junio;10,00
+Robot asesino;trfvhyuok,;15/08/2010;Daniela;Montalvo;Schwarzenegger;DanielaMontalvoSchwarzenegger@upm.es;4969;Juan;Haro;Haro;pa9936;02/02/2007;19/11/2008;Septiembre;4,21
+Ordenador cuantico;Pa'cerme el chulo;18/07/2012;Jose;Haro;Urkerl;JoseHaroUrkerl@upm.es;3572;Daniel;Rodriguez;Urkerl;bm6454;16/11/2016;18/06/2005;Septiembre;3,33
+Investigación de la Maltodetrina;Datos de prueba;21/06/2012;Ana;Franco;Newton;AnaFrancoNewton@upm.es;9900;Lucia;Newton;Montalvo;vm5945;24/09/2005;02/09/2011;Septiembre;9,71
+Robot asesino;Esto es una pruebita;05/08/2008;Alberto;Ubeda;Martinez;AlbertoUbedaMartinez@upm.es;4684;Daniela;Haro;Montalvo;ud2448;06/10/2015;05/05/2015;Junio;5,69
+Ordenador cuantico;Llevadme ante vuestro lider;13/08/2016;Antonia;Valenzuela;Garcia;AntoniaValenzuelaGarcia@upm.es;1122;Carmen;Franco;Narvaez;uo6495;26/05/2006;23/05/2009;Septiembre;10,00
+Investigación de la Maltodetrina;Esto es una pruebita;24/01/2016;Alvaro;Narvaez;Haro;AlvaroNarvaezHaro@upm.es;1464;Antonia;Valenzuela;Urkerl;mk5787;28/04/2010;23/08/2012;Septiembre;7,31
+Ordenador cuantico;This is Sparta;27/04/2010;Pedro;de la Hoz;Haro;Pedrode la HozHaro@upm.es;8873;Maria;Urkerl;Rodriguez;xe9086;12/08/2013;09/11/2016;Septiembre;10,00
+Robot asesino;This is Sparta;22/09/2010;Lucia;Montalvo;Urkerl;LuciaMontalvoUrkerl@upm.es;5977;Daniela;Franco;Franco;ri868;17/01/2009;26/01/2009;Septiembre;1,23
+Investigación de la Maltodetrina;Esto es una pruebita;06/05/2007;David;Haro;Garcia;DavidHaroGarcia@upm.es;2246;Luis;Newton;Rodriguez;mh3296;14/08/2015;21/07/2005;Septiembre;7,05
+Ordenador cuantico;Llevadme ante vuestro lider;10/10/2008;Lucia;Haro;Martinez;LuciaHaroMartinez@upm.es;7035;Daniela;Garcia;Valenzuela;hu5998;06/03/2007;03/05/2010;Septiembre;5,86
+Robot asesino;Llevadme ante vuestro lider;01/04/2008;David;Newton;Urkerl;DavidNewtonUrkerl@upm.es;1481;Juan;Newton;Haro;mw57;11/02/2005;18/11/2011;Junio;3,14
+Robot asesino;Pa'cerme el chulo;01/07/2016;Alvaro;de la Hoz;Ubeda;Alvarode la HozUbeda@upm.es;233;Antonia;Martinez;Rodriguez;uj2822;09/01/2007;07/05/2005;Junio;7,93
+Robot asesino;This is Sparta;22/07/2011;Daniela;Franco;Ubeda;DanielaFrancoUbeda@upm.es;5786;Arnold;de la Hoz;Urkerl;ly2486;04/07/2010;05/08/2013;Septiembre;7,26
+Ordenador cuantico;Esto es una pruebita;17/03/2016;Arnold;Montalvo;Newton;ArnoldMontalvoNewton@upm.es;8738;David;Montalvo;Ubeda;rq6990;20/11/2011;22/02/2010;Septiembre;9,05
+Robot asesino;This is Sparta;08/02/2014;Pedro;Montalvo;Montalvo;PedroMontalvoMontalvo@upm.es;9975;Juan;Narvaez;Valenzuela;ck7332;23/04/2014;30/01/2015;Junio;4,91
+Robot asesino;Llevadme ante vuestro lider;24/01/2012;Pepe;de la Hoz;Martinez;Pepede la HozMartinez@upm.es;2119;Nuria;Rodriguez;Ubeda;aw5251;24/02/2005;23/11/2016;Septiembre;3,16
+Investigación de la Maltodetrina;Esto es una pruebita;22/10/2009;Daniela;Haro;Haro;DanielaHaroHaro@upm.es;6262;Lucia;Ubeda;Ubeda;wu3567;15/04/2016;21/07/2007;Junio;7,58
+Evasión regularizada de clases presenciales;This is Sparta;22/05/2005;Juan;Narvaez;Martinez;JuanNarvaezMartinez@upm.es;761;Nuria;Newton;Montalvo;nm6478;30/09/2009;08/04/2010;Junio;7,15
+Evasión regularizada de clases presenciales;Llevadme ante vuestro lider;10/09/2016;Luis;Martinez;Martinez;LuisMartinezMartinez@upm.es;6704;Nuria;Valenzuela;Rodriguez;yt8608;17/07/2016;20/01/2006;Junio;5,34
+Investigación de la Maltodetrina;Datos de prueba;03/11/2009;Angeles;Schwarzenegger;Franco;AngelesSchwarzeneggerFranco@upm.es;1250;Nuria;Schwarzenegger;Urkerl;go7367;01/07/2013;10/01/2015;Junio;3,05
+Robot asesino;trfvhyuok,;26/10/2006;Guillermo;Montalvo;Newton;GuillermoMontalvoNewton@upm.es;8951;Pepe;Franco;Montalvo;gf7949;23/06/2014;19/09/2005;Junio;10,00
+Ordenador cuantico;Datos de prueba;08/04/2008;Jose;Narvaez;Valenzuela;JoseNarvaezValenzuela@upm.es;7995;David;Rodriguez;Valenzuela;xe4478;27/06/2014;05/01/2011;Junio;1,75
+Evasión regularizada de clases presenciales;trfvhyuok,;07/05/2010;Pepe;Franco;Franco;PepeFrancoFranco@upm.es;7027;Alberto;Urkerl;de la Hoz;qq8760;08/09/2006;19/10/2015;Septiembre;0,05
+Investigación de la Maltodetrina;Esto es una pruebita;26/04/2011;Maria;Franco;Narvaez;MariaFrancoNarvaez@upm.es;698;Antonia;Valenzuela;Rodriguez;os4494;24/05/2013;13/05/2013;Septiembre;7,05
+Investigación de la Maltodetrina;Llevadme ante vuestro lider;07/02/2010;Lucia;Franco;Valenzuela;LuciaFrancoValenzuela@upm.es;8733;Alberto;Urkerl;de la Hoz;rb2767;26/10/2012;25/10/2016;Junio;6,88
+Evasión regularizada de clases presenciales;Llevadme ante vuestro lider;13/07/2009;Juan;Montalvo;Garcia;JuanMontalvoGarcia@upm.es;6312;David;Rodriguez;Garcia;fi5272;16/02/2007;19/06/2015;Septiembre;6,82
+Robot asesino;Datos de prueba;03/11/2005;Guillermo;Haro;Ubeda;GuillermoHaroUbeda@upm.es;9358;Daniela;Newton;Schwarzenegger;af3769;20/11/2012;13/06/2006;Junio;3,72
+Robot asesino;Pa'cerme el chulo;26/07/2014;Maria;Narvaez;Urkerl;MariaNarvaezUrkerl@upm.es;3209;Alvaro;Rodriguez;Haro;cm6122;05/02/2010;25/02/2010;Septiembre;5,53
+Evasión regularizada de clases presenciales;Llevadme ante vuestro lider;18/10/2016;Daniela;Narvaez;Ubeda;DanielaNarvaezUbeda@upm.es;6549;Daniela;de la Hoz;Narvaez;ti5622;28/03/2009;10/06/2010;Junio;0,82
+Investigación de la Maltodetrina;Datos de prueba;08/04/2007;Nuria;Narvaez;Franco;NuriaNarvaezFranco@upm.es;7755;Angeles;Schwarzenegger;Franco;na960;31/10/2008;14/07/2006;Junio;0,88
+Investigación de la Maltodetrina;Pa'cerme el chulo;08/10/2008;Daniel;Ubeda;Martinez;DanielUbedaMartinez@upm.es;7632;Alvaro;Narvaez;Haro;na7054;12/06/2011;09/02/2009;Septiembre;4,41
+Investigación de la Maltodetrina;trfvhyuok,;14/10/2016;Juan;Newton;Montalvo;JuanNewtonMontalvo@upm.es;4822;Jose;Franco;Narvaez;ix6239;29/09/2008;19/11/2012;Septiembre;6,59
+Evasión regularizada de clases presenciales;This is Sparta;24/08/2005;Alberto;Urkerl;Garcia;AlbertoUrkerlGarcia@upm.es;6139;Maria;Montalvo;Narvaez;ut5502;13/02/2007;05/11/2008;Septiembre;0,36
+Ordenador cuantico;Pa'cerme el chulo;24/05/2007;Ana;Ubeda;Valenzuela;AnaUbedaValenzuela@upm.es;4244;Pepe;de la Hoz;Montalvo;je3775;16/05/2015;09/02/2013;Septiembre;4,37
+Evasión regularizada de clases presenciales;Datos de prueba;12/04/2012;Angeles;Urkerl;Schwarzenegger;AngelesUrkerlSchwarzenegger@upm.es;9015;Antonia;Montalvo;Martinez;mi8715;02/01/2007;18/06/2011;Septiembre;7,39
+Evasión regularizada de clases presenciales;trfvhyuok,;19/11/2015;Daniel;Rodriguez;Martinez;DanielRodriguezMartinez@upm.es;3807;Alberto;Urkerl;Schwarzenegger;cu1782;28/08/2008;29/01/2009;Junio;1,86
+Investigación de la Maltodetrina;Datos de prueba;19/02/2013;Maria;Montalvo;Haro;MariaMontalvoHaro@upm.es;8624;Luis;Haro;Haro;el3993;17/03/2014;23/03/2007;Junio;2,30
+Ordenador cuantico;trfvhyuok,;15/02/2011;Guillermo;Garcia;de la Hoz;GuillermoGarciade la Hoz@upm.es;5903;Arnold;Garcia;Narvaez;gc2702;18/07/2016;19/01/2012;Junio;4,25
+Robot asesino;Llevadme ante vuestro lider;21/10/2008;David;Montalvo;Franco;DavidMontalvoFranco@upm.es;7121;Carmen;Franco;de la Hoz;gn5507;22/08/2013;01/05/2015;Septiembre;7,41
+Evasión regularizada de clases presenciales;Llevadme ante vuestro lider;25/10/2011;Pepe;Haro;Rodriguez;PepeHaroRodriguez@upm.es;3034;Angeles;Rodriguez;Narvaez;xp498;09/06/2015;03/01/2012;Septiembre;0,18
+Evasión regularizada de clases presenciales;Pa'cerme el chulo;03/10/2012;Angeles;Newton;Rodriguez;AngelesNewtonRodriguez@upm.es;6851;Lucia;Schwarzenegger;Urkerl;go6651;24/11/2014;10/01/2009;Junio;4,63
+Evasión regularizada de clases presenciales;Pa'cerme el chulo;11/11/2005;Daniel;Haro;Haro;DanielHaroHaro@upm.es;9311;Angeles;Schwarzenegger;de la Hoz;pn1526;20/08/2005;07/02/2008;Junio;7,39
+Ordenador cuantico;Llevadme ante vuestro lider;15/01/2008;Antonia;Narvaez;Valenzuela;AntoniaNarvaezValenzuela@upm.es;543;Luis;Franco;Valenzuela;ut5365;26/10/2016;10/08/2011;Septiembre;0,76
+Investigación de la Maltodetrina;trfvhyuok,;21/08/2016;Jose;Rodriguez;Urkerl;JoseRodriguezUrkerl@upm.es;8857;Antonia;Narvaez;Franco;kk2171;17/04/2007;05/01/2010;Junio;8,28
+Evasión regularizada de clases presenciales;This is Sparta;27/05/2010;Maria;Schwarzenegger;Valenzuela;MariaSchwarzeneggerValenzuela@upm.es;6818;David;Martinez;Montalvo;jk4309;20/04/2015;16/10/2009;Junio;2,58
+Evasión regularizada de clases presenciales;Pa'cerme el chulo;08/06/2012;Nuria;Rodriguez;Newton;NuriaRodriguezNewton@upm.es;5614;Guillermo;Ubeda;Franco;nv4663;12/07/2006;01/04/2005;Septiembre;0,90
+Robot asesino;Pa'cerme el chulo;31/08/2012;Daniela;Franco;Urkerl;DanielaFrancoUrkerl@upm.es;4268;Angeles;Garcia;Rodriguez;mc1431;10/04/2008;10/05/2010;Junio;1,89
+Evasión regularizada de clases presenciales;This is Sparta;19/09/2012;Guillermo;Ubeda;Valenzuela;GuillermoUbedaValenzuela@upm.es;4349;David;Schwarzenegger;Ubeda;ig3153;20/07/2014;21/09/2011;Septiembre;10,00
+Investigación de la Maltodetrina;trfvhyuok,;21/05/2009;Ana;Ubeda;Garcia;AnaUbedaGarcia@upm.es;4697;Pedro;Newton;Ubeda;hy8906;03/07/2014;07/10/2008;Junio;3,79
+Robot asesino;Pa'cerme el chulo;05/09/2005;Antonia;Narvaez;Montalvo;AntoniaNarvaezMontalvo@upm.es;7419;Juan;Ubeda;Newton;ix1547;01/03/2008;11/10/2011;Junio;4,78
+Investigación de la Maltodetrina;This is Sparta;05/03/2006;Carmen;Ubeda;Schwarzenegger;CarmenUbedaSchwarzenegger@upm.es;6544;Pedro;Schwarzenegger;Ubeda;ab5672;29/05/2011;01/09/2009;Junio;6,89
+Robot asesino;trfvhyuok,;29/10/2015;Daniela;Valenzuela;Schwarzenegger;DanielaValenzuelaSchwarzenegger@upm.es;842;Lucia;Martinez;Franco;qt2549;23/08/2012;30/08/2013;Septiembre;2,27
+Robot asesino;Datos de prueba;03/09/2009;Daniel;de la Hoz;Garcia;Danielde la HozGarcia@upm.es;5609;Daniela;Narvaez;Garcia;gv6703;13/11/2016;21/05/2006;Septiembre;7,78
+Investigación de la Maltodetrina;Datos de prueba;19/04/2006;Maria;Valenzuela;Rodriguez;MariaValenzuelaRodriguez@upm.es;8614;Daniel;Haro;Garcia;ab6396;22/03/2012;19/05/2008;Septiembre;1,89
+Evasión regularizada de clases presenciales;Esto es una pruebita;30/09/2011;Alvaro;Schwarzenegger;Narvaez;AlvaroSchwarzeneggerNarvaez@upm.es;9516;Pedro;Narvaez;Montalvo;qh1058;26/06/2013;01/05/2005;Junio;2,04
+Evasión regularizada de clases presenciales;Pa'cerme el chulo;04/05/2008;Ana;Urkerl;Montalvo;AnaUrkerlMontalvo@upm.es;3195;Lucia;Martinez;Montalvo;gi5560;16/07/2009;03/03/2005;Junio;0,14
+Investigación de la Maltodetrina;Pa'cerme el chulo;09/03/2008;Nuria;Schwarzenegger;Montalvo;NuriaSchwarzeneggerMontalvo@upm.es;3896;Ana;Urkerl;Montalvo;lg1553;30/06/2013;12/02/2008;Septiembre;4,03
+Ordenador cuantico;This is Sparta;19/04/2009;Daniela;de la Hoz;Haro;Danielade la HozHaro@upm.es;2948;Luis;Urkerl;Newton;hq8054;09/04/2007;26/02/2006;Septiembre;8,56
+Robot asesino;Llevadme ante vuestro lider;10/07/2016;Daniela;Schwarzenegger;Schwarzenegger;DanielaSchwarzeneggerSchwarzenegger@upm.es;6634;Ana;Garcia;Narvaez;iw2051;16/10/2007;29/09/2009;Junio;8,12
+Ordenador cuantico;Datos de prueba;23/09/2011;Maria;Valenzuela;Schwarzenegger;MariaValenzuelaSchwarzenegger@upm.es;1422;Jose;Franco;Garcia;kx3350;01/06/2006;05/01/2012;Septiembre;0,88
+Evasión regularizada de clases presenciales;This is Sparta;11/10/2008;Daniela;Martinez;Montalvo;DanielaMartinezMontalvo@upm.es;6895;Lucia;Schwarzenegger;Rodriguez;cx9491;10/06/2016;05/07/2010;Junio;1,46
+Ordenador cuantico;Esto es una pruebita;04/01/2010;Antonia;Garcia;Haro;AntoniaGarciaHaro@upm.es;6914;Luis;Schwarzenegger;Garcia;nt9808;15/03/2015;18/02/2012;Septiembre;5,80
+Investigación de la Maltodetrina;Datos de prueba;11/01/2014;Luis;Newton;Franco;LuisNewtonFranco@upm.es;4046;Antonia;Urkerl;Narvaez;fc2516;21/04/2014;14/08/2005;Junio;2,74
+Evasión regularizada de clases presenciales;trfvhyuok,;24/04/2012;Juan;Newton;Newton;JuanNewtonNewton@upm.es;2958;Antonia;Ubeda;Schwarzenegger;gd1405;09/07/2011;10/09/2006;Septiembre;10,00
+Ordenador cuantico;Pa'cerme el chulo;04/11/2011;Daniel;Schwarzenegger;Rodriguez;DanielSchwarzeneggerRodriguez@upm.es;9626;Maria;Martinez;Martinez;cm314;08/09/2005;22/11/2009;Septiembre;0,13
+Evasión regularizada de clases presenciales;trfvhyuok,;16/08/2015;Arnold;Urkerl;Haro;ArnoldUrkerlHaro@upm.es;4460;Antonia;Franco;Newton;cd8434;13/06/2008;02/10/2009;Junio;5,61
+Robot asesino;Llevadme ante vuestro lider;16/07/2014;Alvaro;Schwarzenegger;Martinez;AlvaroSchwarzeneggerMartinez@upm.es;3394;Daniela;Narvaez;Martinez;kq3082;23/11/2012;10/09/2015;Septiembre;6,62
+Ordenador cuantico;Llevadme ante vuestro lider;15/10/2009;Luis;Garcia;de la Hoz;LuisGarciade la Hoz@upm.es;1155;Alvaro;Rodriguez;Haro;ix7115;14/08/2015;05/01/2006;Septiembre;7,42
+Investigación de la Maltodetrina;Esto es una pruebita;07/09/2011;Guillermo;Rodriguez;Narvaez;GuillermoRodriguezNarvaez@upm.es;8101;Maria;Urkerl;Montalvo;xt8811;12/05/2006;01/03/2016;Septiembre;3,38
+Investigación de la Maltodetrina;Pa'cerme el chulo;26/05/2016;Carmen;Newton;Ubeda;CarmenNewtonUbeda@upm.es;395;Pepe;Urkerl;Rodriguez;fc4087;22/02/2009;08/04/2007;Junio;10,00
+Evasión regularizada de clases presenciales;Esto es una pruebita;01/11/2014;Ana;Schwarzenegger;Ubeda;AnaSchwarzeneggerUbeda@upm.es;7739;Jose;Schwarzenegger;Haro;uw166;01/02/2009;04/11/2016;Junio;1,09
+Evasión regularizada de clases presenciales;Datos de prueba;31/01/2007;Jose;Narvaez;de la Hoz;JoseNarvaezde la Hoz@upm.es;445;Pepe;Newton;Haro;wb8363;13/02/2005;02/11/2008;Septiembre;1,16
+Evasión regularizada de clases presenciales;Llevadme ante vuestro lider;05/08/2015;Arnold;Newton;Urkerl;ArnoldNewtonUrkerl@upm.es;9927;Carmen;Martinez;Garcia;kf3346;24/08/2006;13/11/2013;Junio;1,16
+Ordenador cuantico;Datos de prueba;21/11/2011;David;Haro;Martinez;DavidHaroMartinez@upm.es;1830;Alvaro;Valenzuela;Haro;ic2479;13/07/2013;04/04/2007;Septiembre;4,50
+Robot asesino;trfvhyuok,;19/02/2006;Jose;Garcia;Ubeda;JoseGarciaUbeda@upm.es;5966;David;de la Hoz;Newton;nk5799;12/02/2007;06/08/2008;Septiembre;8,31
+Evasión regularizada de clases presenciales;Esto es una pruebita;09/10/2005;Daniela;Garcia;Martinez;DanielaGarciaMartinez@upm.es;8305;Arnold;Garcia;Martinez;bd1492;07/02/2009;19/05/2013;Septiembre;4,91
+Evasión regularizada de clases presenciales;Datos de prueba;07/08/2006;Antonia;Valenzuela;Valenzuela;AntoniaValenzuelaValenzuela@upm.es;5432;Daniel;Garcia;Martinez;kv2024;06/07/2007;31/05/2012;Septiembre;5,04
+Ordenador cuantico;Pa'cerme el chulo;13/06/2010;Daniel;Haro;Martinez;DanielHaroMartinez@upm.es;213;Pedro;Valenzuela;Haro;qw1149;25/10/2011;22/02/2008;Junio;3,19
+Robot asesino;trfvhyuok,;18/08/2009;Angeles;Martinez;Ubeda;AngelesMartinezUbeda@upm.es;4232;Luis;Ubeda;de la Hoz;bv3080;31/10/2013;02/08/2012;Septiembre;8,82
+Ordenador cuantico;This is Sparta;26/02/2006;Pepe;de la Hoz;de la Hoz;Pepede la Hozde la Hoz@upm.es;6917;David;Rodriguez;Martinez;sq2159;06/11/2010;18/02/2014;Septiembre;3,14
+Investigación de la Maltodetrina;Pa'cerme el chulo;17/10/2015;Daniela;Garcia;Montalvo;DanielaGarciaMontalvo@upm.es;3200;Pedro;Garcia;Montalvo;gj7203;23/07/2010;07/10/2010;Junio;0,94
+Evasión regularizada de clases presenciales;This is Sparta;02/06/2014;Alberto;Rodriguez;Ubeda;AlbertoRodriguezUbeda@upm.es;1463;Alvaro;Rodriguez;Rodriguez;yy4282;30/01/2010;23/04/2010;Septiembre;0,55
+Evasión regularizada de clases presenciales;Esto es una pruebita;27/04/2005;Arnold;Franco;Franco;ArnoldFrancoFranco@upm.es;2673;Maria;Martinez;Schwarzenegger;mh6901;28/08/2007;09/05/2006;Junio;7,67
+Evasión regularizada de clases presenciales;trfvhyuok,;16/11/2006;Guillermo;de la Hoz;Haro;Guillermode la HozHaro@upm.es;3565;Luis;Ubeda;Valenzuela;us7053;22/09/2007;10/05/2006;Junio;9,85
+Robot asesino;Llevadme ante vuestro lider;02/11/2007;Ana;Rodriguez;Narvaez;AnaRodriguezNarvaez@upm.es;8140;Guillermo;Garcia;Franco;kl6351;30/04/2015;08/09/2014;Septiembre;3,51
+Investigación de la Maltodetrina;trfvhyuok,;04/08/2005;Antonia;Garcia;Martinez;AntoniaGarciaMartinez@upm.es;5796;Pedro;Garcia;Franco;tg2649;21/11/2016;23/09/2010;Septiembre;9,34
+Robot asesino;Llevadme ante vuestro lider;07/08/2013;Alvaro;Urkerl;Valenzuela;AlvaroUrkerlValenzuela@upm.es;8266;Daniela;Narvaez;Rodriguez;uw8486;05/04/2012;27/04/2010;Septiembre;7,35
+Investigación de la Maltodetrina;This is Sparta;22/07/2013;Pedro;Franco;Haro;PedroFrancoHaro@upm.es;2597;Nuria;Franco;Urkerl;hr2636;19/04/2008;12/03/2012;Septiembre;1,02
+Ordenador cuantico;Datos de prueba;02/02/2013;Arnold;Franco;Schwarzenegger;ArnoldFrancoSchwarzenegger@upm.es;9785;Jose;Garcia;Garcia;ot8889;26/06/2015;23/02/2012;Septiembre;5,64
+Investigación de la Maltodetrina;Llevadme ante vuestro lider;01/02/2006;Lucia;Valenzuela;Urkerl;LuciaValenzuelaUrkerl@upm.es;2090;Pepe;Newton;Valenzuela;wb5982;30/09/2015;24/05/2016;Junio;4,46
+Evasión regularizada de clases presenciales;Llevadme ante vuestro lider;18/07/2005;Angeles;Valenzuela;Martinez;AngelesValenzuelaMartinez@upm.es;2330;Juan;Schwarzenegger;Newton;tn6919;31/05/2015;08/02/2006;Junio;10,00
+Robot asesino;trfvhyuok,;11/08/2011;Ana;Rodriguez;Ubeda;AnaRodriguezUbeda@upm.es;1775;Carmen;Valenzuela;Valenzuela;ng4428;21/04/2011;19/08/2008;Septiembre;6,41
+Ordenador cuantico;Datos de prueba;06/10/2013;Pepe;de la Hoz;Martinez;Pepede la HozMartinez@upm.es;7480;Carmen;Ubeda;Garcia;pl7336;08/11/2009;06/04/2009;Septiembre;5,98
+Investigación de la Maltodetrina;Datos de prueba;24/10/2015;Arnold;Valenzuela;Garcia;ArnoldValenzuelaGarcia@upm.es;5946;Daniel;Garcia;de la Hoz;wa1654;27/04/2013;22/07/2015;Septiembre;8,48
+Investigación de la Maltodetrina;Esto es una pruebita;25/10/2014;Maria;Schwarzenegger;Valenzuela;MariaSchwarzeneggerValenzuela@upm.es;4548;Luis;Valenzuela;Urkerl;oh5631;12/09/2005;13/01/2011;Septiembre;10,00
+Robot asesino;Esto es una pruebita;27/07/2010;Arnold;Valenzuela;Montalvo;ArnoldValenzuelaMontalvo@upm.es;5130;Antonia;Garcia;Garcia;na7917;04/06/2009;19/03/2009;Septiembre;6,27
+Ordenador cuantico;This is Sparta;18/08/2011;Pedro;Haro;de la Hoz;PedroHarode la Hoz@upm.es;5663;Alvaro;de la Hoz;Martinez;bj89;03/06/2008;09/03/2014;Junio;10,00
+Robot asesino;This is Sparta;11/10/2011;Maria;Garcia;Martinez;MariaGarciaMartinez@upm.es;5621;Pepe;Valenzuela;Rodriguez;yt3032;23/08/2010;27/06/2005;Junio;5,19
+Investigación de la Maltodetrina;This is Sparta;01/08/2014;Guillermo;Franco;Montalvo;GuillermoFrancoMontalvo@upm.es;9305;Daniel;Narvaez;Schwarzenegger;yc6050;28/09/2014;21/10/2015;Junio;6,26
+Robot asesino;Pa'cerme el chulo;10/06/2009;Alberto;Franco;de la Hoz;AlbertoFrancode la Hoz@upm.es;6535;Alvaro;Montalvo;Urkerl;lm9583;04/04/2012;28/03/2008;Septiembre;7,52
+Evasión regularizada de clases presenciales;Esto es una pruebita;09/06/2006;Daniela;Rodriguez;Garcia;DanielaRodriguezGarcia@upm.es;7701;Guillermo;Martinez;Ubeda;nf7515;18/03/2013;08/01/2006;Junio;5,72
+Robot asesino;Datos de prueba;30/01/2005;Antonia;Newton;Newton;AntoniaNewtonNewton@upm.es;867;Arnold;Montalvo;Newton;so1473;30/04/2006;18/06/2007;Junio;5,26
+Investigación de la Maltodetrina;Pa'cerme el chulo;27/09/2012;Carmen;Martinez;Valenzuela;CarmenMartinezValenzuela@upm.es;4872;Alberto;de la Hoz;Garcia;ix4610;20/06/2013;22/06/2010;Junio;3,19
+Robot asesino;trfvhyuok,;17/10/2016;Luis;Montalvo;Franco;LuisMontalvoFranco@upm.es;974;Ana;Rodriguez;Urkerl;yi8137;12/02/2007;02/10/2015;Junio;2,36
+Investigación de la Maltodetrina;This is Sparta;12/02/2012;Luis;Garcia;Rodriguez;LuisGarciaRodriguez@upm.es;252;Pedro;Ubeda;Narvaez;qu867;24/08/2010;27/09/2013;Junio;5,21
+Robot asesino;This is Sparta;06/03/2013;Guillermo;Ubeda;Haro;GuillermoUbedaHaro@upm.es;6030;Maria;Schwarzenegger;Narvaez;wf9166;25/05/2009;15/08/2011;Junio;2,73
+Ordenador cuantico;trfvhyuok,;01/05/2016;Juan;Valenzuela;de la Hoz;JuanValenzuelade la Hoz@upm.es;6067;Juan;Martinez;de la Hoz;bo4370;26/03/2012;05/02/2015;Junio;7,69

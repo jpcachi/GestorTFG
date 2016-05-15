@@ -1,0 +1,7 @@
+F:\Users\Juan Pedro_2\Documents\Visual Studio 2015\Projects\GestorTFG\GestorTFG_Console\bin\Debug\GestorTFG_Console.exe
+F:\Users\Juan Pedro_2\Documents\Visual Studio 2015\Projects\GestorTFG\GestorTFG_Console\bin\Debug\GestorTFG_Console.pdb
+F:\Users\Juan Pedro_2\Documents\Visual Studio 2015\Projects\GestorTFG\GestorTFG_Console\bin\Debug\Gestor_nucleo.dll
+F:\Users\Juan Pedro_2\Documents\Visual Studio 2015\Projects\GestorTFG\GestorTFG_Console\bin\Debug\Gestor_nucleo.pdb
+F:\Users\Juan Pedro_2\Documents\Visual Studio 2015\Projects\GestorTFG\GestorTFG_Console\obj\Debug\GestorTFG_Console.csprojResolveAssemblyReference.cache
+F:\Users\Juan Pedro_2\Documents\Visual Studio 2015\Projects\GestorTFG\GestorTFG_Console\obj\Debug\GestorTFG_Console.exe
+F:\Users\Juan Pedro_2\Documents\Visual Studio 2015\Projects\GestorTFG\GestorTFG_Console\obj\Debug\GestorTFG_Console.pdb

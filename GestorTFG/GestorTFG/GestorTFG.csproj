@@ -47,6 +47,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Gestor_nucleo">
+      <HintPath>..\Gestor_nucleo\bin\Debug\Gestor_nucleo.dll</HintPath>
+    </Reference>
     <Reference Include="PdfiumViewer, Version=2.9.0.0, Culture=neutral, PublicKeyToken=91e4789cfb0609e0, processorArchitecture=MSIL">
       <HintPath>..\packages\PdfiumViewer.2.9.0.0\lib\net20\PdfiumViewer.dll</HintPath>
       <Private>True</Private>
@@ -65,13 +68,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Buscador.cs" />
-    <Compile Include="CAlumno.cs" />
     <Compile Include="CEventos.cs" />
     <Compile Include="Constantes.cs" />
     <Compile Include="Copiar.cs" />
-    <Compile Include="CProyectos.cs" />
     <Compile Include="DeshacerRehacer.cs" />
-    <Compile Include="EscribirArchivo.cs" />
     <Compile Include="FiltroFecha.cs" />
     <Compile Include="Forms\Form_Profesor.cs">
       <SubType>Form</SubType>
@@ -134,24 +134,9 @@
       <DependentUpon>Form_Informacion.cs</DependentUpon>
     </Compile>
     <Compile Include="NativesMethods.cs" />
-    <Compile Include="Instanciar.cs" />
-    <Compile Include="LeerArchivo.cs" />
-    <Compile Include="LeerEscribirArchivo.cs" />
     <Compile Include="ListViewItemUtilidades.cs" />
     <Compile Include="ListViewVisualStyles.cs" />
-    <Compile Include="MAlumno.cs" />
-    <Compile Include="MFinalizado.cs" />
-    <Compile Include="MListaProyectos.cs" />
-    <Compile Include="MPersona.cs" />
-    <Compile Include="MProfesor.cs" />
-    <Compile Include="MProyecto.cs" />
-    <Compile Include="MProyectos.cs" />
-    <Compile Include="MTFG.cs" />
     <Compile Include="NativeToolStripRenderer.cs" />
-    <Compile Include="NuevoMFinalizado.cs" />
-    <Compile Include="NuevoMPersona.cs" />
-    <Compile Include="NuevoMProyecto.cs" />
-    <Compile Include="NuevoMTFG.cs" />
     <Compile Include="Operación.cs" />
     <Compile Include="Controles\PictureBoxInterpolated.cs">
       <SubType>Component</SubType>
@@ -165,10 +150,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ProyectoIndice.cs" />
-    <Compile Include="StringExtension.cs" />
-    <Compile Include="TCampos.cs" />
     <Compile Include="TDatos.cs" />
-    <Compile Include="TipoLista.cs" />
     <Compile Include="TOperacion.cs" />
     <Compile Include="VistaGrafica.cs" />
     <Compile Include="Controles\VistaLista.cs">
