@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
@@ -10,18 +11,25 @@ namespace GestorTFG_Console
     {
         static void Main(string[] args)
         {
-            if (args.Length == 1)
+            try
             {
-                if (args[0].ToUpperInvariant().Trim() == "-CONSOLE")
-                    new MenuPrincipal();
+                if (args.Length == 1)
+                {
+                    if (args[0].ToUpperInvariant().Trim() == "-VENTANA")
+                        Process.Start("GestorTFG.exe");
+                    else
+                    {
+                        new MenuPrincipal();
+                    }
+                }
                 else
                 {
-                    Process.Start("GestorTFG.exe");
+                    new MenuPrincipal();
                 }
-            }
-            else
+            } catch(Exception e)
             {
-                Process.Start("GestorTFG.exe");
+                Console.WriteLine(e.Message);
+                Console.ReadKey();
             }
           
         }

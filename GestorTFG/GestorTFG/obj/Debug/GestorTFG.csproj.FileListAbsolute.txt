@@ -82,3 +82,7 @@ C:\Users\Toshiba\Desktop\FIS\GestorTFG-master (1)\GestorTFG-master\GestorTFG\Ges
 C:\Users\Toshiba\Desktop\FIS\GestorTFG-master (1)\GestorTFG-master\GestorTFG\GestorTFG\obj\Debug\GestorTFG.csproj.GenerateResource.Cache
 F:\Users\Juan Pedro_2\Documents\Visual Studio 2015\Projects\GestorTFG\GestorTFG\bin\Debug\Gestor_nucleo.dll
 F:\Users\Juan Pedro_2\Documents\Visual Studio 2015\Projects\GestorTFG\GestorTFG\bin\Debug\Gestor_nucleo.pdb
+F:\Users\Juan Pedro_2\Documents\Visual Studio 2015\Projects\GestorTFG\GestorTFG\bin\Debug\GestorTFG.exe.manifest
+F:\Users\Juan Pedro_2\Documents\Visual Studio 2015\Projects\GestorTFG\GestorTFG\bin\Debug\GestorTFG.application
+F:\Users\Juan Pedro_2\Documents\Visual Studio 2015\Projects\GestorTFG\GestorTFG\obj\Debug\GestorTFG.exe.manifest
+F:\Users\Juan Pedro_2\Documents\Visual Studio 2015\Projects\GestorTFG\GestorTFG\obj\Debug\GestorTFG.application

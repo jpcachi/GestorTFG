@@ -1,0 +1,1 @@
+start GestorTFG_Console.exe -ventana

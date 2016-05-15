@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using GestorTFG;
+using System.IO;
 
 namespace GestorTFG_Console
 {
@@ -15,6 +16,9 @@ namespace GestorTFG_Console
         private string[] opciones = { "Añadir proyecto", "Eliminar proyecto", "Asignar Alumno", "Eliminar Alumno", "Modificar Proyecto", "Visualizar Proyectos", "Guardar Proyectos", "Salir" };
         public MenuPrincipal()
         {
+            Directory.CreateDirectory("Proyectos");
+            FileStream aux = new FileStream("Proyectos/listaTFG.txt", FileMode.OpenOrCreate);
+            aux.Close();
             fichero = new LeerEscribirArchivo();
             fichero.AbrirLectura("Proyectos/listaTFG.txt");
             try
@@ -83,7 +87,8 @@ namespace GestorTFG_Console
                         break;
                     case 7:
                         fichero.CerrarFichero();
-                        Console.WriteLine("Cerrando...");
+                        Console.WriteLine("Presione una tecla para continuar...");
+                        Console.ReadKey();
                         break;
                 }
             } while (seleccion != opciones.Length - 1);

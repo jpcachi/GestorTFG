@@ -1,4 +1,6 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
+using System.Text;
 
 namespace GestorTFG
 {
@@ -32,9 +34,11 @@ namespace GestorTFG
         }
         public LeerEscribirArchivo()
         {
+            byte[] descodificar = Convert.FromBase64String("TnVldmEgbGlzdGEgZGUgcHJveWVjdG9z");
+            string proyecto = Encoding.UTF8.GetString(descodificar);
             //fs = File.Open("lista.tfg", FileMode.OpenOrCreate);
-            fs = new FileStream("Nueva lista de proyectos", FileMode.OpenOrCreate);
-            path = "Nueva lista de proyectos";
+            fs = new FileStream("TnVldmEgbGlzdGEgZGUgcHJveWVjdG9z", FileMode.OpenOrCreate);
+            path = proyecto;
             leerArchivo = new LeerArchivo(fs);
             escribirArchivo = new EscribirArchivo(fs);
         }

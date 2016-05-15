@@ -5,3 +5,10 @@ F:\Users\Juan Pedro_2\Documents\Visual Studio 2015\Projects\GestorTFG\GestorTFG_
 F:\Users\Juan Pedro_2\Documents\Visual Studio 2015\Projects\GestorTFG\GestorTFG_Console\obj\Debug\GestorTFG_Console.csprojResolveAssemblyReference.cache
 F:\Users\Juan Pedro_2\Documents\Visual Studio 2015\Projects\GestorTFG\GestorTFG_Console\obj\Debug\GestorTFG_Console.exe
 F:\Users\Juan Pedro_2\Documents\Visual Studio 2015\Projects\GestorTFG\GestorTFG_Console\obj\Debug\GestorTFG_Console.pdb
+F:\Users\Juan Pedro_2\Documents\Visual Studio 2015\Projects\GestorTFG\GestorTFG_Console\bin\Debug\GestorTFG_Console.exe.manifest
+F:\Users\Juan Pedro_2\Documents\Visual Studio 2015\Projects\GestorTFG\GestorTFG_Console\bin\Debug\GestorTFG_Console.application
+F:\Users\Juan Pedro_2\Documents\Visual Studio 2015\Projects\GestorTFG\GestorTFG_Console\obj\Debug\GestorTFG_Console.Properties.Resources.resources
+F:\Users\Juan Pedro_2\Documents\Visual Studio 2015\Projects\GestorTFG\GestorTFG_Console\obj\Debug\GestorTFG_Console.csproj.GenerateResource.Cache
+F:\Users\Juan Pedro_2\Documents\Visual Studio 2015\Projects\GestorTFG\GestorTFG_Console\obj\Debug\GestorTFG_Console.TrustInfo.xml
+F:\Users\Juan Pedro_2\Documents\Visual Studio 2015\Projects\GestorTFG\GestorTFG_Console\obj\Debug\GestorTFG_Console.exe.manifest
+F:\Users\Juan Pedro_2\Documents\Visual Studio 2015\Projects\GestorTFG\GestorTFG_Console\obj\Debug\GestorTFG_Console.application
