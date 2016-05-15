@@ -28,6 +28,9 @@ namespace GestorTFG_Console
             {
                 Console.WriteLine(e.Message);
                 Console.ReadLine();
+            } finally
+            {
+                fichero.CerrarLectura();
             }
             cProyectos = new CProyectos();
             cAlumno = new CAlumno();
@@ -37,7 +40,7 @@ namespace GestorTFG_Console
                 Console.Clear();
                 Console.WriteLine("GESTOR TFG\n-----------");
                 seleccion = MenuUtilidades.CrearMenu(opciones);
-                switch (seleccion)
+                switch (seleccion - 1)
                 {
                     case 0:
                         Console.ForegroundColor = ConsoleColor.DarkGreen;
@@ -78,10 +81,10 @@ namespace GestorTFG_Console
                         new MenuVisualizar();
                         break;
                     case 6:
-                        fichero.CerrarLectura();
                         fichero.AbrirEscritura("Proyectos/listaTFG.txt");
                         Console.WriteLine("Espere mientras se guardan los datos de proyecto...");
                         fichero.ExportarArchivo();
+                        fichero.CerrarEscritura();
                         Console.WriteLine("Lista de proyectos guardada con éxito. Pulse una tecla para continuar...");
                         Console.ReadKey();
                         break;
@@ -91,7 +94,7 @@ namespace GestorTFG_Console
                         Console.ReadKey();
                         break;
                 }
-            } while (seleccion != opciones.Length - 1);
+            } while (seleccion != 0);
         }
     }
 }

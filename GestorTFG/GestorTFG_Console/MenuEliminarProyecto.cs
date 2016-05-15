@@ -20,10 +20,10 @@ namespace GestorTFG_Console
             Console.WriteLine("ELIMINAR PROYECTO\n------------------");
             opciones = MListaProyectos.getMListaProyectos.getMProyectos.getProyectos.ToArray();
             seleccion = MenuUtilidades.CrearMenu(opciones);
-            if (seleccion < opciones.Length)
+            if (seleccion > 0)
             {
                 
-                Console.WriteLine("¿Está seguro de que quiere eliminar el proyecto " + opciones[seleccion].getMTFG.Titulo + "? (S/N)");
+                Console.WriteLine("¿Está seguro de que quiere eliminar el proyecto " + opciones[seleccion - 1].getMTFG.Titulo + "? (S/N)");
                 string confirmacion;
                 do
                 {
@@ -31,8 +31,8 @@ namespace GestorTFG_Console
                 } while (confirmacion.ToUpperInvariant().Trim() != "S" && confirmacion.ToUpperInvariant().Trim() != "N");
                 if (confirmacion.ToUpperInvariant().Trim() == "S")
                 {
-                    cProyectos.EliminarProyecto(seleccion);
-                    Console.WriteLine("Proyecto " + opciones[seleccion].getMTFG.Titulo + " eliminado correctamente. Pulse una tecla para continuar...\n");
+                    cProyectos.EliminarProyecto(seleccion - 1);
+                    Console.WriteLine("Proyecto " + opciones[seleccion - 1].getMTFG.Titulo + " eliminado correctamente. Pulse una tecla para continuar...\n");
                     Console.ReadKey();
                 }
             } 

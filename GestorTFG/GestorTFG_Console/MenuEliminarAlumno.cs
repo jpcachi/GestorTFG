@@ -14,24 +14,24 @@ namespace GestorTFG_Console
 
         public MenuEliminarAlumno()
         {
-            cAlumno = new CAlumno();
-            Console.ForegroundColor = ConsoleColor.Red;
-            Console.Clear();
-            Console.WriteLine("ELIMINAR ALUMNO\n----------------");
-            List<MProyecto> proyectosAsignados = new List<MProyecto>();
-            foreach(MProyecto proyecto in MListaProyectos.getMListaProyectos.getMProyectos.getProyectos)
-            {
-                if (proyecto.Asignado)
-                    proyectosAsignados.Add(proyecto);
-            }
-            opciones = proyectosAsignados.ToArray();
+            cAlumno = new CAlumno();                   
             do
             {
-                seleccion = MenuUtilidades.CrearMenu(opciones);
-                if (seleccion < opciones.Length)
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.Clear();
+                List<MProyecto> proyectosAsignados = new List<MProyecto>();
+                Console.WriteLine("ELIMINAR ALUMNO\n----------------");
+                foreach (MProyecto proyecto in MListaProyectos.getMListaProyectos.getMProyectos.getProyectos)
                 {
-                    string alumno = opciones[seleccion].Alumno.Nombre + " " + opciones[seleccion].Alumno.PrimerApellido + " " + opciones[seleccion].Alumno.SegundoApellido;
-                    Console.WriteLine("¿Está seguro de que quiere eliminar al alumno " + alumno + " del proyecto " + opciones[seleccion].getMTFG.Titulo + "? (S/N)");
+                    if (proyecto.Asignado)
+                        proyectosAsignados.Add(proyecto);
+                }
+                opciones = proyectosAsignados.ToArray();
+                seleccion = MenuUtilidades.CrearMenu(opciones);
+                if (seleccion > 0)
+                {
+                    string alumno = opciones[seleccion - 1].Alumno.Nombre + " " + opciones[seleccion - 1].Alumno.PrimerApellido + " " + opciones[seleccion - 1].Alumno.SegundoApellido;
+                    Console.WriteLine("¿Está seguro de que quiere eliminar al alumno " + alumno + " del proyecto " + opciones[seleccion - 1].getMTFG.Titulo + "? (S/N)");
                     string confirmacion;
                     do
                     {
@@ -39,12 +39,12 @@ namespace GestorTFG_Console
                     } while (confirmacion.ToUpperInvariant().Trim() != "S" && confirmacion.ToUpperInvariant().Trim() != "N");
                     if (confirmacion.ToUpperInvariant().Trim() == "S")
                     {
-                        cAlumno.EliminarAlumno(MListaProyectos.getMListaProyectos.getMProyectos.getProyectos.IndexOf(opciones[seleccion]));
+                        cAlumno.EliminarAlumno(MListaProyectos.getMListaProyectos.getMProyectos.getProyectos.IndexOf(opciones[seleccion - 1]));
                         Console.WriteLine("Alumno " + alumno + " eliminado correctamente. Pulse una tecla para continuar...");
                         Console.ReadKey();
                     }
                 }
-            } while (seleccion != opciones.Length);
+            } while (seleccion != 0);
         }
     }
 }

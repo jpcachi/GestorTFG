@@ -7,14 +7,14 @@
     <framework targetVersion="4.0" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="GestorTFG.exe.manifest" size="6310">
+    <dependentAssembly dependencyType="install" codebase="GestorTFG.exe.manifest" size="6677">
       <assemblyIdentity name="GestorTFG.exe" version="1.0.0.1" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>DlhUg7JdXKxTjOwguA1N1qH2aFk=</dsig:DigestValue>
+        <dsig:DigestValue>jgTwTzmLpWl4fQ8ql9ry2W1oY/Y=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

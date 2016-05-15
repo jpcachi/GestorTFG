@@ -60,7 +60,7 @@
     <SignManifests>true</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>card file %283%29.ico</ApplicationIcon>
+    <ApplicationIcon>Cabinet.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Gestor_nucleo">
@@ -218,8 +218,6 @@
     <EmbeddedResource Include="Controles\VistaLista.resx">
       <DependentUpon>VistaLista.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="GestorTFG_ClaveTemporal.pfx" />
-    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -257,6 +255,7 @@
     <None Include="Resources\Print-icon.png" />
     <None Include="Resources\Zoom-In-icon.png" />
     <None Include="Resources\Zoom-Out-icon.png" />
+    <Content Include="Cabinet.ico" />
     <Content Include="card file %283%29.ico" />
     <Content Include="x64\pdfium.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

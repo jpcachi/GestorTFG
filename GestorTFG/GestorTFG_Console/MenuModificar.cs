@@ -22,11 +22,11 @@ namespace GestorTFG_Console
                 Console.Clear();
                 Console.WriteLine("MODIFICAR PROYECTO\n-------------------");
                 seleccion = MenuUtilidades.CrearMenu(opciones);
-                if (seleccion < opciones.Length)
+                if (seleccion > 0)
                 {
-                    new MenuModificarProyecto(seleccion, cProyectos);   
+                    new MenuModificarProyecto(seleccion - 1, cProyectos);   
                 }
-            } while (seleccion != opciones.Length);
+            } while (seleccion != 0);
         }
 
         private class MenuModificarAlumno
@@ -44,7 +44,7 @@ namespace GestorTFG_Console
                     Console.Clear();
                     Console.WriteLine("MODIFICAR ALUMNO\n-------------------");
                     seleccion = MenuUtilidades.CrearMenu(opciones);
-                    switch (seleccion)
+                    switch (seleccion - 1)
                     {
                         case 0:
                             Console.WriteLine("Nombre actual: " + MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[indiceProyecto].getMTFG.Titulo);
@@ -82,7 +82,7 @@ namespace GestorTFG_Console
                             Console.ReadKey();
                             break;
                     }
-                } while (seleccion != opciones.Length - 1);
+                } while (seleccion != 0);
             }
         }
 
@@ -101,7 +101,7 @@ namespace GestorTFG_Console
                     Console.Clear();
                     Console.WriteLine("MODIFICAR PROFESOR\n---------------------");
                     seleccion = MenuUtilidades.CrearMenu(opciones);
-                    switch (seleccion)
+                    switch (seleccion - 1)
                     {
                         case 0:
                             Console.WriteLine("Nombre actual: " + MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[indiceProyecto].getMTFG.Titulo);
@@ -139,7 +139,7 @@ namespace GestorTFG_Console
                             Console.ReadKey();
                             break;
                     }
-                } while (seleccion != opciones.Length - 1);
+                } while (seleccion != 0);
             }
         }
 
@@ -171,7 +171,7 @@ namespace GestorTFG_Console
                     Console.Clear();
                     Console.WriteLine("MODIFICAR PROYECTO\n-------------------");
                     seleccion = MenuUtilidades.CrearMenu(opciones);
-                    switch (seleccion)
+                    switch (seleccion - 1)
                     {
                         case 0:
                             Console.WriteLine("Título actual: " + MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[indiceProyecto].getMTFG.Titulo);
@@ -198,14 +198,20 @@ namespace GestorTFG_Console
                             new MenuModificarProfesor(indiceProyecto, cProyectos);
                             break;
                         case 4:
-                            new MenuModificarAlumno(indiceProyecto, cProyectos);
+                            //if (seleccion != opciones.Length - 1)
+                            //{
+                                new MenuModificarAlumno(indiceProyecto, cProyectos);
+                            //}
                             break;
                         case 5:
-                            Console.WriteLine("Fecha de defensa actual: " + MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[indiceProyecto].getMTFG.getMFinalizado.Defensa);
-                            string[] defensa = MenuUtilidades.introducirDatos("Nueva fecha de defensa");
-                            cProyectos.ModificarProyecto(8, defensa[0], indiceProyecto);
-                            Console.WriteLine("Fecha de defensa modificada correctamente. Pulse una tecla para continuar...\n");
-                            Console.ReadKey();
+                            //if (seleccion != opciones.Length - 1)
+                            //{
+                                Console.WriteLine("Fecha de defensa actual: " + MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[indiceProyecto].getMTFG.getMFinalizado.Defensa);
+                                string[] defensa = MenuUtilidades.introducirDatos("Nueva fecha de defensa");
+                                cProyectos.ModificarProyecto(8, defensa[0], indiceProyecto);
+                                Console.WriteLine("Fecha de defensa modificada correctamente. Pulse una tecla para continuar...\n");
+                                Console.ReadKey();
+                            //}
                             break;
                         case 6:
                             Console.WriteLine("Convocatoria actual: " + MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[indiceProyecto].getMTFG.getMFinalizado.Convocatoria);
@@ -223,7 +229,7 @@ namespace GestorTFG_Console
                             Console.ReadKey();
                             break;
                     }
-                } while (seleccion != opciones.Length - 1);
+                } while (seleccion != 0);
             }
         }
     }

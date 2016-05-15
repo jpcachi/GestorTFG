@@ -20,10 +20,11 @@ namespace GestorTFG_Console
         public static int CrearMenu(params string[] opciones)
         {
             Console.WriteLine("Seleccione una opción\n");
-            for (int i = 0; i < opciones.Length; i++)
+            for (int i = 1; i < opciones.Length; i++)
             {
-                Console.WriteLine(i + ". " + opciones[i]);
+                Console.WriteLine(i + ". " + opciones[i - 1]);
             }
+            Console.WriteLine("0. Salir");
             int seleccion = -1;
             while (!esSeleccionValida(out seleccion, opciones.Length)) ;
             return seleccion;
@@ -34,9 +35,9 @@ namespace GestorTFG_Console
             Console.WriteLine("Seleccione una opción\n");
             for (int i = 0; i < opciones.Length; i++)
             {
-                Console.WriteLine(i + ". " + opciones[i].getMTFG.Titulo + ";" + opciones[i].getMTFG.Descripcion);
+                Console.WriteLine((i + 1) + ". " + opciones[i].getMTFG.Titulo + ";" + opciones[i].getMTFG.Descripcion);
             }
-            Console.WriteLine(opciones.Length + ". Salir");
+            Console.WriteLine("0. Salir");
             int seleccion = -1;
             while (!esSeleccionValida(out seleccion, opciones.Length + 1)) ;
             return seleccion;

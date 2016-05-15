@@ -16,7 +16,14 @@ namespace GestorTFG
         {
             System.Diagnostics.ProcessStartInfo sInfo = new System.Diagnostics.ProcessStartInfo("https://github.com/jpcachi/GestorTFG");
             System.Diagnostics.Process.Start(sInfo);
-            this.Close();
+            Close();
+        }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.ProcessStartInfo sInfo = new System.Diagnostics.ProcessStartInfo("https://drive.google.com/open?id=0B-Itw97yB5ExVE9Qb2ZSSzMwZEU");
+            System.Diagnostics.Process.Start(sInfo);
+            Close();
         }
     }
 }
