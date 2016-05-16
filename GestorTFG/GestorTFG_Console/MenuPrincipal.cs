@@ -13,7 +13,7 @@ namespace GestorTFG_Console
         private CProyectos cProyectos;
         private CAlumno cAlumno;
         private int seleccion;
-        private string[] opciones = { "Añadir proyecto", "Eliminar proyecto", "Asignar Alumno", "Eliminar Alumno", "Modificar Proyecto", "Visualizar Proyectos", "Guardar Proyectos", "Salir" };
+        private string[] opciones = { "Añadir proyecto", "Eliminar proyecto", "Asignar Alumno", "Eliminar Alumno", "Modificar Proyecto", "Visualizar Proyectos", "Guardar Proyectos", "Cambiar color de fondo", "Salir" };
         public MenuPrincipal()
         {
             Directory.CreateDirectory("Proyectos");
@@ -24,11 +24,13 @@ namespace GestorTFG_Console
             try
             {
                 fichero.ImportarArchivo();
-            } catch (Exception e)
+            }
+            catch (Exception e)
             {
                 Console.WriteLine(e.Message);
                 Console.ReadLine();
-            } finally
+            }
+            finally
             {
                 fichero.CerrarLectura();
             }
@@ -36,16 +38,21 @@ namespace GestorTFG_Console
             cAlumno = new CAlumno();
             do
             {
-                Console.ResetColor();
+                //Console.ResetColor();
                 Console.Clear();
-                Console.WriteLine("GESTOR TFG\n-----------");
+                Console.WriteLine("GESTOR TFG\n--------------------------------------------------------------------------------");
                 seleccion = MenuUtilidades.CrearMenu(opciones);
                 switch (seleccion - 1)
                 {
+                    case -1:
+                        fichero.CerrarFichero();
+                        Console.WriteLine("Presione una tecla para continuar...");
+                        Console.ReadKey();
+                        break;
                     case 0:
                         Console.ForegroundColor = ConsoleColor.DarkGreen;
                         Console.Clear();
-                        Console.WriteLine("AÑADIR TFG\n-----------");
+                        Console.WriteLine("AÑADIR TFG\n--------------------------------------------------------------------------------");
                         string[] datos = MenuUtilidades.introducirDatos("Título", "Descripción", "Fecha", "Nombre del profesor", "Primer apellido del profesor", "Segundo apellido del profesor", "Correo del profesor", "Despacho del profesor");
                         cProyectos.AñadirProyecto(datos);
                         Console.WriteLine("Proyecto \"" + datos[0] + "\" añadido correctamente\n¿Desea añadir un alumno al proyecto? (S/N)");
@@ -58,7 +65,7 @@ namespace GestorTFG_Console
                         {
                             Console.Clear();
                             Console.ForegroundColor = ConsoleColor.DarkYellow;
-                            Console.WriteLine("ASIGNAR ALUMNO A " + MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[MListaProyectos.getMListaProyectos.getMProyectos.getProyectos.Count - 1].getMTFG.Titulo + "\n---------------------------------");
+                            Console.WriteLine("ASIGNAR ALUMNO A " + MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[MListaProyectos.getMListaProyectos.getMProyectos.getProyectos.Count - 1].getMTFG.Titulo + "\n--------------------------------------------------------------------------------");
                             datos = MenuUtilidades.introducirDatos("Nombre", "Primer apellido", "Segundo apellido", "Matrícula", "Fecha de inicio");
                             cAlumno.AsignarAlumno(MListaProyectos.getMListaProyectos.getMProyectos.getProyectos.Count - 1, datos);
                             Console.WriteLine("Alumno \"" + datos[0] + "\" asignado correctamente. Pulse una tecla para continuar...\n");
@@ -86,11 +93,6 @@ namespace GestorTFG_Console
                         fichero.ExportarArchivo();
                         fichero.CerrarEscritura();
                         Console.WriteLine("Lista de proyectos guardada con éxito. Pulse una tecla para continuar...");
-                        Console.ReadKey();
-                        break;
-                    case 7:
-                        fichero.CerrarFichero();
-                        Console.WriteLine("Presione una tecla para continuar...");
                         Console.ReadKey();
                         break;
                 }

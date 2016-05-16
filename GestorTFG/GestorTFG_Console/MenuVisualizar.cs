@@ -17,7 +17,7 @@ namespace GestorTFG_Console
             {
                 Console.ForegroundColor = ConsoleColor.Green;
                 Console.Clear();
-                Console.WriteLine("VISUALIZAR PROYECTOS\n----------------------");
+                Console.WriteLine("VISUALIZAR PROYECTOS\n--------------------------------------------------------------------------------");
                 seleccion = MenuUtilidades.CrearMenu(opciones);
                 switch (seleccion - 1)
                 {
@@ -42,11 +42,10 @@ namespace GestorTFG_Console
             public MenuVisualizarTodos()
             {
                 Console.Clear();
-                Console.WriteLine("VISUALIZAR TODOS\n-------------------");
+                Console.WriteLine("VISUALIZAR TODOS\n--------------------------------------------------------------------------------");
                 opciones = MListaProyectos.getMListaProyectos.getMProyectos.getProyectos.ToArray();
                 do
                 {
-                    
                     seleccion = MenuUtilidades.CrearMenu(opciones);
                     if (seleccion > 0)
                     {
@@ -54,9 +53,12 @@ namespace GestorTFG_Console
                         int _seleccion;
                         do
                         {
+                            Console.Clear();
+                            Console.WriteLine(opciones[seleccion - 1].getMTFG.Titulo + "\n--------------------------------------------------------------------------------");
                             _seleccion = MenuUtilidades.CrearMenu(_opciones);
                             if (_seleccion == 1)
                             {
+                                Console.Clear();
                                 MenuUtilidades.MostrarInformacion(seleccion - 1);
                             }
                         } while (_seleccion != _opciones.Length - 1);
@@ -78,7 +80,7 @@ namespace GestorTFG_Console
                 do
                 {
                     Console.Clear();
-                    Console.WriteLine("VISUALIZAR NO ASIGNADOS\n--------------------------");
+                    Console.WriteLine("VISUALIZAR NO ASIGNADOS\n--------------------------------------------------------------------------------");
                     opciones = MListaProyectos.getMListaProyectos.getMProyectos.getProyectosNoAsignados.ToArray();
                     seleccion = MenuUtilidades.CrearMenu(opciones);
                     if (seleccion > 0)
@@ -88,7 +90,7 @@ namespace GestorTFG_Console
                         do
                         {
                             Console.Clear();
-                            Console.WriteLine(MListaProyectos.getMListaProyectos.getMProyectos.getProyectosNoAsignados[seleccion - 1].getMTFG.Titulo + "\n--------------------------");
+                            Console.WriteLine(MListaProyectos.getMListaProyectos.getMProyectos.getProyectosNoAsignados[seleccion - 1].getMTFG.Titulo + "\n--------------------------------------------------------------------------------");
                             _seleccion = MenuUtilidades.CrearMenu(_opciones);
                             if (_seleccion == 1)
                             {
@@ -97,7 +99,7 @@ namespace GestorTFG_Console
                             {
                                 Console.ForegroundColor = ConsoleColor.DarkYellow;
                                 Console.Clear();
-                                Console.WriteLine("ASIGNAR ALUMNO A " + MListaProyectos.getMListaProyectos.getMProyectos.getProyectosNoAsignados[seleccion - 1].getMTFG.Titulo + "\n---------------------------------");
+                                Console.WriteLine("ASIGNAR ALUMNO A " + MListaProyectos.getMListaProyectos.getMProyectos.getProyectosNoAsignados[seleccion - 1].getMTFG.Titulo + "\n--------------------------------------------------------------------------------");
                                 string[] datos = MenuUtilidades.introducirDatos("Nombre", "Primer apellido", "Segundo apellido", "Matrícula", "Fecha de inicio");
                                 cAlumno.AsignarAlumno(MListaProyectos.getMListaProyectos.getMProyectos.getProyectos.IndexOf(MListaProyectos.getMListaProyectos.getMProyectos.getProyectosNoAsignados[seleccion - 1]), datos);
                                 string alumno = opciones[seleccion - 1].Alumno.Nombre + " " + opciones[seleccion - 1].Alumno.PrimerApellido + " " + opciones[seleccion - 1].Alumno.SegundoApellido;

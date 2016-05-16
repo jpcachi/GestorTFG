@@ -59,15 +59,5 @@ namespace GestorTFG.Properties {
                 resourceCulture = value;
             }
         }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Byte[].
-        /// </summary>
-        internal static byte[] GuíaGestorTFG {
-            get {
-                object obj = ResourceManager.GetObject("GuíaGestorTFG", resourceCulture);
-                return ((byte[])(obj));
-            }
-        }
     }
 }

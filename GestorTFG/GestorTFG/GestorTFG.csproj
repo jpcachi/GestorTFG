@@ -64,7 +64,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Gestor_nucleo">
-      <HintPath>..\Gestor_nucleo\bin\Debug\Gestor_nucleo.dll</HintPath>
+      <HintPath>..\Gestor_nucleo\obj\Debug\Gestor_nucleo.dll</HintPath>
     </Reference>
     <Reference Include="PdfiumViewer, Version=2.9.0.0, Culture=neutral, PublicKeyToken=91e4789cfb0609e0, processorArchitecture=MSIL">
       <HintPath>..\packages\PdfiumViewer.2.9.0.0\lib\net20\PdfiumViewer.dll</HintPath>
@@ -201,6 +201,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Form_Ayuda.resx">
       <DependentUpon>Form_Ayuda.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Form_Preferencias.resx">
       <DependentUpon>Form_Preferencias.cs</DependentUpon>
@@ -227,9 +228,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="Resources\GuíaGestorTFG.pdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
+    <None Include="Resources\GuíaGestorTFG.pdf" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.0">
@@ -250,11 +249,6 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <None Include="Resources\print_16.png" />
-    <None Include="Resources\inicio.png" />
-    <None Include="Resources\Print-icon.png" />
-    <None Include="Resources\Zoom-In-icon.png" />
-    <None Include="Resources\Zoom-Out-icon.png" />
     <Content Include="Cabinet.ico" />
     <Content Include="card file %283%29.ico" />
     <Content Include="x64\pdfium.dll">

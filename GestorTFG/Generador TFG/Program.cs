@@ -22,10 +22,13 @@ namespace Generador_TFG
                     new GeneradorTFGSinFinalizar(num);
                     break;
                 case "FINALIZADOS":
-                    new GeneradorTFGFinalizados(num);
+                    new GeneradorTFGSinFinalizar(num);
                     break;
                 case "NO_ASIGNADOS":
                     new GeneradorTFGSinAsignar(num);
+                    break;
+                case "TODOS":
+                    new GeneradorMezclados(num);
                     break;
                 default:
                     new GeneradorTFGSinFinalizar(num);

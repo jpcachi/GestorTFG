@@ -1490,10 +1490,17 @@ namespace GestorTFG
             if (listView3.SelectedIndices.Count > 0)
             {
                 if (listView3.SelectedIndices.Count == 1)
+                {
                     copyToolStripButton1.Enabled = true;
+                    vista.ActualizarDatosRichTextBox(ref richTextBox1, listView3, TipoLista.Finalizados, TDatos.TFG);
+                    vista.ActualizarDatosRichTextBox(ref richTextBox2, listView3, TipoLista.Finalizados, TDatos.Profesor);
+                }
                 else copyToolStripButton1.Enabled = false;
             }
-            else copyToolStripButton1.Enabled = false;
+            else
+            {
+                copyToolStripButton1.Enabled = false; 
+            }
         }
 
         private void copyToolStripButton1_Click(object sender, EventArgs e)

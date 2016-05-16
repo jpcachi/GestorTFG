@@ -14,6 +14,12 @@ namespace Generador_TFG
             GuardarDatos("Finalizados.txt");
         }
 
+        public GeneradorTFGFinalizados(int tam, string path)
+        {
+            GenerarDatos(tam);
+            GuardarDatos(path);
+        }
+
         public override void GenerarDatos(int tamaño)
         {
             Random rand = new Random();

@@ -43,26 +43,26 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Gestor_nucleo.dll" size="20480">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Gestor_nucleo.dll" size="21504">
       <assemblyIdentity name="Gestor_nucleo" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>MRHbWUznXGYWoVvpTe8hUzqsjmk=</dsig:DigestValue>
+        <dsig:DigestValue>dfGonDjWvxJzvp8dZ8JIV6I2WlE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="GestorTFG.exe" size="3516888">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="GestorTFG.exe" size="3162112">
       <assemblyIdentity name="GestorTFG" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>G1kLDw4dijZYTIe0tVEE7K5svh0=</dsig:DigestValue>
+        <dsig:DigestValue>5e2hFQlLEhEhK0j3LO+3s5gKN+E=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

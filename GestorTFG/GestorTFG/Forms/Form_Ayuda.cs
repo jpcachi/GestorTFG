@@ -19,20 +19,21 @@ namespace GestorTFG
 
             ToolStrip pdfViewerToolStrip = pdfViewer1.Controls[1] as ToolStrip;
             pdfViewerToolStrip.GripStyle = ToolStripGripStyle.Visible;
-            pdfViewerToolStrip.Items.Insert(0, new ToolStripButton((Image)(currentResources.GetObject("inicio"))));
+            pdfViewerToolStrip.Items.Insert(0, new ToolStripButton((Image)(currentResources.GetObject("toolStripButton1.Image"))));
             pdfViewerToolStrip.Items[0].ToolTipText = "Inicio";
             pdfViewerToolStrip.Items[0].Click += Inicio_Click;
             pdfViewerToolStrip.Items.RemoveAt(1);
-            pdfViewerToolStrip.Items[1].Image = ((Image)(currentResources.GetObject("Print-icon")));
+            pdfViewerToolStrip.Items[1].Image = ((Image)(currentResources.GetObject("toolStripButton2.Image")));
             pdfViewerToolStrip.Items[1].ToolTipText = "Imprimir";
-            pdfViewerToolStrip.Items[3].Image = ((Image)(currentResources.GetObject("Zoom-In-icon")));
+            pdfViewerToolStrip.Items[3].Image = ((Image)(currentResources.GetObject("toolStripButton3.Image")));
             pdfViewerToolStrip.Items[3].ToolTipText = "Ampliar zoom";
-            pdfViewerToolStrip.Items[4].Image = ((Image)(currentResources.GetObject("Zoom-Out-icon")));
+            pdfViewerToolStrip.Items[4].Image = ((Image)(currentResources.GetObject("toolStripButton4.Image")));
             pdfViewerToolStrip.Items[4].ToolTipText = "Reducir zoom";
             pdfViewerToolStrip.Renderer = new ToolStripAeroRenderer(ToolbarTheme.HelpBar);
             try
             {
-                LoadPdf(Resources.GuíaGestorTFG);
+                byte[] file = (byte[]) currentResources.GetObject("GuíaGestorTFG");
+                LoadPdf(file);
                 pdfViewer1.Renderer.Page = page;
             } catch (Exception e)
             {

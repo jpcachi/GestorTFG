@@ -33,6 +33,7 @@ namespace GestorTFG
                 string proyecto = Encoding.UTF8.GetString(descodificar);
                 string[] datos;
                 datos = proyecto.Split(';');
+                if (datos.Length < 7) throw new IOException();
                 MProyecto mProyecto = Instanciar.NuevoProyecto.Crear(datos[0], datos[1], datos[2], datos[3], datos[4], datos[5], datos[7], datos[6]);
                 if (!string.IsNullOrWhiteSpace(datos[8] + datos[9] + datos[10] + datos[11] + datos[12]))
                 {
@@ -52,19 +53,12 @@ namespace GestorTFG
 
         public void leerListaProyectos()
         {
-            //MListaProyectos.getMListaProyectos.getMProyectos.CopiarListas(out respaldo);
+            MListaProyectos.getMListaProyectos.getMProyectos.CopiarListas(ref respaldo);
             MListaProyectos.getMListaProyectos.getMProyectos.getProyectos.Clear();
             MListaProyectos.getMListaProyectos.getMProyectos.getBusquedaProyecto.Clear();
             MListaProyectos.getMListaProyectos.getMProyectos.getProyectosFinalizados.Clear();
             MListaProyectos.getMListaProyectos.getMProyectos.getProyectosNoAsignados.Clear();
-            try
-            {
-                while (leerProyecto() != null) ;
-            } catch(Exception e)
-            {
-                Console.WriteLine(e.Message);
-                //MListaProyectos.getMListaProyectos.getMProyectos.AñadirListas(respaldo);
-            }
+            while (leerProyecto() != null) ;
         }
 
         public string ImportarProyecto()

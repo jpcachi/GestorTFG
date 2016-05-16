@@ -20,13 +20,13 @@ namespace GestorTFG_Console
             {
                 Console.ForegroundColor = ConsoleColor.DarkYellow;
                 Console.Clear();
-                Console.WriteLine("ASIGNAR ALUMNO\n--------------");
+                Console.WriteLine("ASIGNAR ALUMNO\n--------------------------------------------------------------------------------");
                 opciones = MListaProyectos.getMListaProyectos.getMProyectos.getProyectosNoAsignados.ToArray();
                 seleccion = MenuUtilidades.CrearMenu(opciones);
                 if (seleccion > 0)
                 {
                     Console.Clear();
-                    Console.WriteLine("ASIGNAR ALUMNO A " + MListaProyectos.getMListaProyectos.getMProyectos.getProyectosNoAsignados[seleccion - 1].getMTFG.Titulo + "\n---------------------------------");
+                    Console.WriteLine("ASIGNAR ALUMNO A " + MListaProyectos.getMListaProyectos.getMProyectos.getProyectosNoAsignados[seleccion - 1].getMTFG.Titulo + "\n--------------------------------------------------------------------------------");
                     string[] datos = MenuUtilidades.introducirDatos("Nombre", "Primer apellido", "Segundo apellido", "Matrícula", "Fecha de inicio");
                     cAlumno.AsignarAlumno(MListaProyectos.getMListaProyectos.getMProyectos.getProyectos.IndexOf(MListaProyectos.getMListaProyectos.getMProyectos.getProyectosNoAsignados[seleccion - 1]), datos);
                     string alumno = opciones[seleccion - 1].Alumno.Nombre + " " + opciones[seleccion - 1].Alumno.PrimerApellido + " " + opciones[seleccion - 1].Alumno.SegundoApellido;

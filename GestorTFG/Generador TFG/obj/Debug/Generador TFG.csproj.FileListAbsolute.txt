@@ -1,6 +1,5 @@
 F:\Users\Juan Pedro_2\Documents\Visual Studio 2015\Projects\GestorTFG\Generador TFG\bin\Debug\Generador TFG.exe
 F:\Users\Juan Pedro_2\Documents\Visual Studio 2015\Projects\GestorTFG\Generador TFG\bin\Debug\Generador TFG.pdb
-F:\Users\Juan Pedro_2\Documents\Visual Studio 2015\Projects\GestorTFG\Generador TFG\obj\Debug\Generador TFG.csprojResolveAssemblyReference.cache
 F:\Users\Juan Pedro_2\Documents\Visual Studio 2015\Projects\GestorTFG\Generador TFG\obj\Debug\Generador TFG.exe
 F:\Users\Juan Pedro_2\Documents\Visual Studio 2015\Projects\GestorTFG\Generador TFG\obj\Debug\Generador TFG.pdb
 C:\Users\Toshiba\Desktop\FIS\GestorTFG-master (1)\GestorTFG-master\GestorTFG\Generador TFG\obj\Debug\Generador TFG.exe
@@ -8,3 +7,11 @@ C:\Users\Toshiba\Desktop\FIS\GestorTFG-master (1)\GestorTFG-master\GestorTFG\Gen
 C:\Users\Toshiba\Desktop\FIS\GestorTFG-master (1)\GestorTFG-master\GestorTFG\Generador TFG\bin\Debug\Generador TFG.exe
 C:\Users\Toshiba\Desktop\FIS\GestorTFG-master (1)\GestorTFG-master\GestorTFG\Generador TFG\bin\Debug\Generador TFG.pdb
 C:\Users\Toshiba\Desktop\FIS\GestorTFG-master (1)\GestorTFG-master\GestorTFG\Generador TFG\obj\Debug\Generador TFG.csprojResolveAssemblyReference.cache
+F:\Users\Juan Pedro_2\Documents\Visual Studio 2015\Projects\GestorTFG\Generador TFG\bin2\Generador TFG.exe
+F:\Users\Juan Pedro_2\Documents\Visual Studio 2015\Projects\GestorTFG\Generador TFG\bin2\Generador TFG.pdb
+F:\Users\Juan Pedro_2\Documents\Visual Studio 2015\Projects\GestorTFG\bin2\Generador TFG.exe
+F:\Users\Juan Pedro_2\Documents\Visual Studio 2015\Projects\GestorTFG\bin2\Generador TFG.pdb
+F:\Users\Juan Pedro_2\Documents\Visual Studio 2015\Projects\GestorTFG\bin\Generador TFG.exe
+F:\Users\Juan Pedro_2\Documents\Visual Studio 2015\Projects\GestorTFG\bin\Generador TFG.pdb
+F:\Users\Juan Pedro_2\Documents\Visual Studio 2015\Projects\GestorTFG\GestorTFG_Deploy\Generador TFG.exe
+F:\Users\Juan Pedro_2\Documents\Visual Studio 2015\Projects\GestorTFG\GestorTFG_Deploy\Generador TFG.pdb

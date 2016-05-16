@@ -12,6 +12,13 @@ namespace Generador_TFG
             GenerarDatos(tamaño);
             GuardarDatos("SinFinalizar.txt");
         }
+
+        public GeneradorTFGSinFinalizar(int tam, string path)
+        {
+            GenerarDatos(tam);
+            GuardarDatos(path);
+        }
+
         public override void GenerarDatos(int tamaño)
         {
             Random rand = new Random();

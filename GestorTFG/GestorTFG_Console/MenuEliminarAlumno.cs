@@ -20,7 +20,7 @@ namespace GestorTFG_Console
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.Clear();
                 List<MProyecto> proyectosAsignados = new List<MProyecto>();
-                Console.WriteLine("ELIMINAR ALUMNO\n----------------");
+                Console.WriteLine("ELIMINAR ALUMNO\n--------------------------------------------------------------------------------");
                 foreach (MProyecto proyecto in MListaProyectos.getMListaProyectos.getMProyectos.getProyectos)
                 {
                     if (proyecto.Asignado)

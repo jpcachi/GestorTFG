@@ -20,7 +20,7 @@ namespace GestorTFG_Console
             do
             {
                 Console.Clear();
-                Console.WriteLine("MODIFICAR PROYECTO\n-------------------");
+                Console.WriteLine("MODIFICAR PROYECTO\n--------------------------------------------------------------------------------");
                 seleccion = MenuUtilidades.CrearMenu(opciones);
                 if (seleccion > 0)
                 {
@@ -42,7 +42,7 @@ namespace GestorTFG_Console
                 do
                 {
                     Console.Clear();
-                    Console.WriteLine("MODIFICAR ALUMNO\n-------------------");
+                    Console.WriteLine("MODIFICAR ALUMNO\n--------------------------------------------------------------------------------");
                     seleccion = MenuUtilidades.CrearMenu(opciones);
                     switch (seleccion - 1)
                     {
@@ -99,7 +99,7 @@ namespace GestorTFG_Console
                 do
                 {
                     Console.Clear();
-                    Console.WriteLine("MODIFICAR PROFESOR\n---------------------");
+                    Console.WriteLine("MODIFICAR PROFESOR\n--------------------------------------------------------------------------------");
                     seleccion = MenuUtilidades.CrearMenu(opciones);
                     switch (seleccion - 1)
                     {
@@ -169,7 +169,7 @@ namespace GestorTFG_Console
                 do
                 {
                     Console.Clear();
-                    Console.WriteLine("MODIFICAR PROYECTO\n-------------------");
+                    Console.WriteLine("MODIFICAR PROYECTO\n--------------------------------------------------------------------------------");
                     seleccion = MenuUtilidades.CrearMenu(opciones);
                     switch (seleccion - 1)
                     {

@@ -17,7 +17,7 @@ namespace GestorTFG_Console
             cProyectos = new CProyectos();
             Console.ForegroundColor = ConsoleColor.DarkRed;
             Console.Clear();
-            Console.WriteLine("ELIMINAR PROYECTO\n------------------");
+            Console.WriteLine("ELIMINAR PROYECTO\n--------------------------------------------------------------------------------");
             opciones = MListaProyectos.getMListaProyectos.getMProyectos.getProyectos.ToArray();
             seleccion = MenuUtilidades.CrearMenu(opciones);
             if (seleccion > 0)

@@ -12,6 +12,13 @@ namespace Generador_TFG
             GenerarDatos(tamaño);
             GuardarDatos("NoAsignados.txt");
         }
+
+        public GeneradorTFGSinAsignar(int tam, string path)
+        {
+            GenerarDatos(tam);
+            GuardarDatos(path);
+        }
+
         public override void GenerarDatos(int tamaño)
         {
             Random rand = new Random();
