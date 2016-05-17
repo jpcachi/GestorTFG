@@ -31,9 +31,7 @@ namespace Generador_TFG
                     new GeneradorMezclados(num);
                     break;
                 default:
-                    new GeneradorTFGSinFinalizar(num);
-                    new GeneradorTFGFinalizados(num);
-                    new GeneradorTFGSinAsignar(num);
+                    new GeneradorMezclados(num);
                     break;
             }
         }

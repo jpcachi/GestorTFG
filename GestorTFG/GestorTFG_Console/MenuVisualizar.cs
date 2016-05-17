@@ -41,27 +41,19 @@ namespace GestorTFG_Console
 
             public MenuVisualizarTodos()
             {
-                Console.Clear();
-                Console.WriteLine("┌──────────────────────────┐\n│     VISUALIZAR TODOS     │\n└──────────────────────────┘");
-                opciones = MListaProyectos.getMListaProyectos.getMProyectos.getProyectos.ToArray();
                 do
                 {
+                    Console.Clear();
+                    Console.WriteLine("┌──────────────────────────┐\n│     VISUALIZAR TODOS     │\n└──────────────────────────┘");
+                    opciones = MListaProyectos.getMListaProyectos.getMProyectos.getProyectos.ToArray();
                     seleccion = MenuUtilidades.CrearMenu(opciones);
                     if (seleccion > 0)
                     {
-                        string[] _opciones = { "Mostrar información detallada", "Salir" };
-                        int _seleccion;
-                        do
+                        if (seleccion == 1)
                         {
                             Console.Clear();
-                            Console.WriteLine("┌─────" + MenuUtilidades.EscribirBordes(opciones[seleccion - 1].getMTFG.Titulo) +"┐\n│     " + opciones[seleccion - 1].getMTFG.Titulo + "     │\n└─────" + MenuUtilidades.EscribirBordes(opciones[seleccion - 1].getMTFG.Titulo) + "┘");
-                            _seleccion = MenuUtilidades.CrearMenu(_opciones);
-                            if (_seleccion == 1)
-                            {
-                                Console.Clear();
-                                MenuUtilidades.MostrarInformacion(seleccion - 1);
-                            }
-                        } while (_seleccion != 0);
+                            MenuUtilidades.MostrarInformacion(seleccion - 1);
+                        }
                     }
                 } while (seleccion != 0);
             }

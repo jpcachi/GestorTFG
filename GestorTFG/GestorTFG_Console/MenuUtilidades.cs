@@ -18,17 +18,58 @@ namespace GestorTFG_Console
             return resul;
         }
 
+        private static bool sonSeleccionesValidas(string entrada, ref List<int> opcionesSeleccionadas, int length)
+        {
+            opcionesSeleccionadas.Clear();
+            if(entrada.ToUpperInvariant() == "TODOS")
+            {
+                for(int i = 1; i < length; i++)
+                {
+                    opcionesSeleccionadas.Add(i);
+                }
+                return true;
+            }
+            string[] selecciones = entrada.Split(' ');
+            foreach(string seleccion in selecciones)
+            {
+                int numero;
+                if(!int.TryParse(seleccion, out numero))
+                {
+                    return false;
+                } else
+                {
+                    if(numero >= length || numero < 0)
+                    {
+                        return false;
+                    }
+                    opcionesSeleccionadas.Add(numero);
+                }
+            }
+            return true;
+        }
+
         public static int CrearMenu(params string[] opciones)
         {
-            Console.WriteLine("Seleccione una opción:\n");
-            for (int i = 1; i < opciones.Length; i++)
+            return CrearMenu(false, opciones);
+        }
+
+        public static int[] CrearMenuEliminar(params MProyecto[] opciones)
+        {
+            Console.WriteLine("Seleccione una o varias opciones (separadas por espacios):\n");
+            for (int i = 0; i < opciones.Length; i++)
             {
-                Console.WriteLine(i + ". " + opciones[i - 1]);
+                Console.WriteLine((i + 1) + ". " + opciones[i].getMTFG.Titulo + ";" + opciones[i].getMTFG.Descripcion);
             }
-            Console.WriteLine("0. Salir");
-            int seleccion = -1;
-            while (!esSeleccionValida(out seleccion, opciones.Length)) ;
-            return seleccion;
+            Console.WriteLine("0. Atrás");
+            List<int> selecciones = new List<int>();
+            string entrada;
+            do
+            {
+                entrada = Console.ReadLine();
+
+            } while (!sonSeleccionesValidas(entrada, ref selecciones, opciones.Length + 1));
+            selecciones.Sort();
+            return selecciones.ToArray();
         }
 
         public static int CrearMenu(params MProyecto[] opciones)
@@ -38,9 +79,22 @@ namespace GestorTFG_Console
             {
                 Console.WriteLine((i + 1) + ". " + opciones[i].getMTFG.Titulo + ";" + opciones[i].getMTFG.Descripcion);
             }
-            Console.WriteLine("0. Salir");
+            Console.WriteLine("0. Atrás");
             int seleccion = -1;
             while (!esSeleccionValida(out seleccion, opciones.Length + 1)) ;
+            return seleccion;
+        }
+
+        public static int CrearMenu(bool menuPrincipal, params string[] opciones)
+        {
+            Console.WriteLine("Seleccione una opción:\n");
+            for (int i = 1; i < opciones.Length; i++)
+            {
+                Console.WriteLine(i + ". " + opciones[i - 1]);
+            }
+            Console.WriteLine("0. " + (menuPrincipal ? "Salir" : "Atrás"));
+            int seleccion = -1;
+            while (!esSeleccionValida(out seleccion, opciones.Length)) ;
             return seleccion;
         }
 

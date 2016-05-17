@@ -3,3 +3,7 @@ F:\Users\Juan Pedro_2\Documents\Visual Studio 2015\Projects\GestorTFG\GestorTFG_
 F:\Users\Juan Pedro_2\Documents\Visual Studio 2015\Projects\GestorTFG\Gestor_nucleo\obj\Release\Gestor_nucleo.csprojResolveAssemblyReference.cache
 F:\Users\Juan Pedro_2\Documents\Visual Studio 2015\Projects\GestorTFG\Gestor_nucleo\obj\Release\Gestor_nucleo.dll
 F:\Users\Juan Pedro_2\Documents\Visual Studio 2015\Projects\GestorTFG\Gestor_nucleo\obj\Release\Gestor_nucleo.pdb
+F:\Users\Juan Pedro_2\Documents\Visual Studio 2015\Projects\GestorTFG\Program\Gestor_nucleo.dll
+F:\Users\Juan Pedro_2\Documents\Visual Studio 2015\Projects\GestorTFG\Program\Gestor_nucleo.pdb
+F:\Users\Juan Pedro_2\Documents\Visual Studio 2015\Projects\GestorTFG\Application\Gestor_nucleo.dll
+F:\Users\Juan Pedro_2\Documents\Visual Studio 2015\Projects\GestorTFG\Application\Gestor_nucleo.pdb

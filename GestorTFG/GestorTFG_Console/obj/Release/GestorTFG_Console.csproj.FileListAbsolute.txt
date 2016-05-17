@@ -6,3 +6,11 @@ F:\Users\Juan Pedro_2\Documents\Visual Studio 2015\Projects\GestorTFG\GestorTFG_
 F:\Users\Juan Pedro_2\Documents\Visual Studio 2015\Projects\GestorTFG\GestorTFG_Console\obj\Release\GestorTFG_Console.csproj.GenerateResource.Cache
 F:\Users\Juan Pedro_2\Documents\Visual Studio 2015\Projects\GestorTFG\GestorTFG_Console\obj\Release\GestorTFG_Console.exe
 F:\Users\Juan Pedro_2\Documents\Visual Studio 2015\Projects\GestorTFG\GestorTFG_Console\obj\Release\GestorTFG_Console.pdb
+F:\Users\Juan Pedro_2\Documents\Visual Studio 2015\Projects\GestorTFG\Program\x64\pdfium.dll
+F:\Users\Juan Pedro_2\Documents\Visual Studio 2015\Projects\GestorTFG\Program\x86\pdfium.dll
+F:\Users\Juan Pedro_2\Documents\Visual Studio 2015\Projects\GestorTFG\Program\GestorTFG_Console.exe
+F:\Users\Juan Pedro_2\Documents\Visual Studio 2015\Projects\GestorTFG\Program\GestorTFG_Console.pdb
+F:\Users\Juan Pedro_2\Documents\Visual Studio 2015\Projects\GestorTFG\Application\x64\pdfium.dll
+F:\Users\Juan Pedro_2\Documents\Visual Studio 2015\Projects\GestorTFG\Application\x86\pdfium.dll
+F:\Users\Juan Pedro_2\Documents\Visual Studio 2015\Projects\GestorTFG\Application\GestorTFG_Console.exe
+F:\Users\Juan Pedro_2\Documents\Visual Studio 2015\Projects\GestorTFG\Application\GestorTFG_Console.pdb

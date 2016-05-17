@@ -41,7 +41,7 @@ namespace GestorTFG_Console
                 Console.ForegroundColor = ConsoleColor.Gray;
                 Console.Clear();
                 Console.WriteLine("┌────────────────────┐\n│     GESTOR TFG     │\n└────────────────────┘");
-                seleccion = MenuUtilidades.CrearMenu(opciones);
+                seleccion = MenuUtilidades.CrearMenu(true, opciones);
                 switch (seleccion - 1)
                 {
                     case -1:

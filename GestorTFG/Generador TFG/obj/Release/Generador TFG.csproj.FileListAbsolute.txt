@@ -2,3 +2,7 @@ F:\Users\Juan Pedro_2\Documents\Visual Studio 2015\Projects\GestorTFG\GestorTFG_
 F:\Users\Juan Pedro_2\Documents\Visual Studio 2015\Projects\GestorTFG\GestorTFG_Deploy\Generador TFG.pdb
 F:\Users\Juan Pedro_2\Documents\Visual Studio 2015\Projects\GestorTFG\Generador TFG\obj\Release\Generador TFG.exe
 F:\Users\Juan Pedro_2\Documents\Visual Studio 2015\Projects\GestorTFG\Generador TFG\obj\Release\Generador TFG.pdb
+F:\Users\Juan Pedro_2\Documents\Visual Studio 2015\Projects\GestorTFG\Program\Generador TFG.exe
+F:\Users\Juan Pedro_2\Documents\Visual Studio 2015\Projects\GestorTFG\Program\Generador TFG.pdb
+F:\Users\Juan Pedro_2\Documents\Visual Studio 2015\Projects\GestorTFG\Application\Generador TFG.exe
+F:\Users\Juan Pedro_2\Documents\Visual Studio 2015\Projects\GestorTFG\Application\Generador TFG.pdb
