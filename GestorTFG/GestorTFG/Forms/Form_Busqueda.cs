@@ -15,6 +15,7 @@ namespace GestorTFG
         public Form4(Form1 ventanaPadre, string busqueda, TCampos campo, int index1, int index2, DateTime date, decimal nota, bool filtro, LeerEscribirArchivo fichero)
         {
             InitializeComponent();
+            toolStrip1.Renderer = new ToolStripVisualStyles.ToolStripAeroRenderer(ToolStripVisualStyles.ToolbarTheme.Toolbar);
             this.fichero = fichero;
             vista = new VistaGrafica();
             copiar = new Copiar(copiarPorCampoToolStripMenuItem);

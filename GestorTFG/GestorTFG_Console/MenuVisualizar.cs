@@ -17,7 +17,7 @@ namespace GestorTFG_Console
             {
                 Console.ForegroundColor = ConsoleColor.Green;
                 Console.Clear();
-                Console.WriteLine("VISUALIZAR PROYECTOS\n--------------------------------------------------------------------------------");
+                Console.WriteLine("┌──────────────────────────────┐\n│     VISUALIZAR PROYECTOS     │\n└──────────────────────────────┘");
                 seleccion = MenuUtilidades.CrearMenu(opciones);
                 switch (seleccion - 1)
                 {
@@ -42,7 +42,7 @@ namespace GestorTFG_Console
             public MenuVisualizarTodos()
             {
                 Console.Clear();
-                Console.WriteLine("VISUALIZAR TODOS\n--------------------------------------------------------------------------------");
+                Console.WriteLine("┌──────────────────────────┐\n│     VISUALIZAR TODOS     │\n└──────────────────────────┘");
                 opciones = MListaProyectos.getMListaProyectos.getMProyectos.getProyectos.ToArray();
                 do
                 {
@@ -54,14 +54,14 @@ namespace GestorTFG_Console
                         do
                         {
                             Console.Clear();
-                            Console.WriteLine(opciones[seleccion - 1].getMTFG.Titulo + "\n--------------------------------------------------------------------------------");
+                            Console.WriteLine("┌─────" + MenuUtilidades.EscribirBordes(opciones[seleccion - 1].getMTFG.Titulo) +"┐\n│     " + opciones[seleccion - 1].getMTFG.Titulo + "     │\n└─────" + MenuUtilidades.EscribirBordes(opciones[seleccion - 1].getMTFG.Titulo) + "┘");
                             _seleccion = MenuUtilidades.CrearMenu(_opciones);
                             if (_seleccion == 1)
                             {
                                 Console.Clear();
                                 MenuUtilidades.MostrarInformacion(seleccion - 1);
                             }
-                        } while (_seleccion != _opciones.Length - 1);
+                        } while (_seleccion != 0);
                     }
                 } while (seleccion != 0);
             }
@@ -80,7 +80,7 @@ namespace GestorTFG_Console
                 do
                 {
                     Console.Clear();
-                    Console.WriteLine("VISUALIZAR NO ASIGNADOS\n--------------------------------------------------------------------------------");
+                    Console.WriteLine("┌─────────────────────────────────┐\n│     VISUALIZAR NO ASIGNADOS     │\n└─────────────────────────────────┘");
                     opciones = MListaProyectos.getMListaProyectos.getMProyectos.getProyectosNoAsignados.ToArray();
                     seleccion = MenuUtilidades.CrearMenu(opciones);
                     if (seleccion > 0)
@@ -90,16 +90,17 @@ namespace GestorTFG_Console
                         do
                         {
                             Console.Clear();
-                            Console.WriteLine(MListaProyectos.getMListaProyectos.getMProyectos.getProyectosNoAsignados[seleccion - 1].getMTFG.Titulo + "\n--------------------------------------------------------------------------------");
+                            Console.WriteLine("┌─────" + MenuUtilidades.EscribirBordes(opciones[seleccion - 1].getMTFG.Titulo) + "┐\n│     " + opciones[seleccion - 1].getMTFG.Titulo + "     │\n└─────" + MenuUtilidades.EscribirBordes(opciones[seleccion - 1].getMTFG.Titulo) + "┘");
                             _seleccion = MenuUtilidades.CrearMenu(_opciones);
                             if (_seleccion == 1)
                             {
+                                Console.Clear();
                                 MenuUtilidades.MostrarInformacion(MListaProyectos.getMListaProyectos.getMProyectos.getProyectos.IndexOf(opciones[seleccion - 1]));
                             } else if(_seleccion == 2)
                             {
                                 Console.ForegroundColor = ConsoleColor.DarkYellow;
                                 Console.Clear();
-                                Console.WriteLine("ASIGNAR ALUMNO A " + MListaProyectos.getMListaProyectos.getMProyectos.getProyectosNoAsignados[seleccion - 1].getMTFG.Titulo + "\n--------------------------------------------------------------------------------");
+                                Console.WriteLine("┌──────────────────────" + MenuUtilidades.EscribirBordes(MListaProyectos.getMListaProyectos.getMProyectos.getProyectosNoAsignados[seleccion - 1].getMTFG.Titulo) + "┐\n│     ASIGNAR ALUMNO A " + MListaProyectos.getMListaProyectos.getMProyectos.getProyectosNoAsignados[seleccion - 1].getMTFG.Titulo + "     │\n└──────────────────────" + MenuUtilidades.EscribirBordes(MListaProyectos.getMListaProyectos.getMProyectos.getProyectosNoAsignados[seleccion - 1].getMTFG.Titulo) + "┘");
                                 string[] datos = MenuUtilidades.introducirDatos("Nombre", "Primer apellido", "Segundo apellido", "Matrícula", "Fecha de inicio");
                                 cAlumno.AsignarAlumno(MListaProyectos.getMListaProyectos.getMProyectos.getProyectos.IndexOf(MListaProyectos.getMListaProyectos.getMProyectos.getProyectosNoAsignados[seleccion - 1]), datos);
                                 string alumno = opciones[seleccion - 1].Alumno.Nombre + " " + opciones[seleccion - 1].Alumno.PrimerApellido + " " + opciones[seleccion - 1].Alumno.SegundoApellido;

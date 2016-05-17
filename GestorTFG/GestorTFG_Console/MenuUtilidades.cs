@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 
 namespace GestorTFG_Console
 {
@@ -19,7 +20,7 @@ namespace GestorTFG_Console
 
         public static int CrearMenu(params string[] opciones)
         {
-            Console.WriteLine("Seleccione una opción\n");
+            Console.WriteLine("Seleccione una opción:\n");
             for (int i = 1; i < opciones.Length; i++)
             {
                 Console.WriteLine(i + ". " + opciones[i - 1]);
@@ -32,7 +33,7 @@ namespace GestorTFG_Console
 
         public static int CrearMenu(params MProyecto[] opciones)
         {
-            Console.WriteLine("Seleccione una opción\n");
+            Console.WriteLine("Seleccione una opción:\n");
             for (int i = 0; i < opciones.Length; i++)
             {
                 Console.WriteLine((i + 1) + ". " + opciones[i].getMTFG.Titulo + ";" + opciones[i].getMTFG.Descripcion);
@@ -46,7 +47,7 @@ namespace GestorTFG_Console
         public static string[] introducirDatos(params string[] opciones)
         {
             string[] datos = new string[opciones.Length];
-            Console.WriteLine("Introduzca los siguientes datos:");
+            Console.WriteLine("Introduzca los siguientes datos:\n");
             for (int i = 0; i < opciones.Length; i++)
             {
                 do
@@ -72,24 +73,30 @@ namespace GestorTFG_Console
         public static void MostrarInformacion(int indice)
         {
             MProyecto mProyecto = MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[indice];
-            Console.WriteLine("INFORMACIÓN DETALLADA\n-----------------------");
+            Console.WriteLine("┌───────────────────────────────┐\n│     INFORMACIÓN DETALLADA     │\n└───────────────────────────────┘");
             Console.WriteLine("TÍTULO: " + mProyecto.getMTFG.Titulo +
                 "\nDESCRIPCIÓN: " + mProyecto.getMTFG.Descripcion +
-                "\nFECHA DE REGISTRO: " + mProyecto.getMTFG.Fecha + "\n\nINFORMACIÓN PROFESOR\n-------------------\nNOMBRE: " + mProyecto.Profesor.Nombre +
+                "\nFECHA DE REGISTRO: " + mProyecto.getMTFG.Fecha + "\n\n┌──────────────────────────────┐\n│     INFORMACIÓN PROFESOR     │\n└──────────────────────────────┘\nNOMBRE: " + mProyecto.Profesor.Nombre +
                 "\nPRIMER APELLIDO: " + mProyecto.Profesor.PrimerApellido + "\nSEGUNDO APELLIDO: " + mProyecto.Profesor.SegundoApellido + "\nCORREO ELECTRÓNICO: " + mProyecto.Profesor.Correo +
                 "\nDESPACHO: " + mProyecto.Profesor.Despacho);
             if (mProyecto.Asignado)
             {
-                Console.WriteLine("\n\nINFORMACIÓN ALUMNO\n--------------------\nNOMBRE: " + mProyecto.Alumno.Nombre +
+                Console.WriteLine("\n\n┌────────────────────────────┐\n│     INFORMACIÓN ALUMNO     │\n└────────────────────────────┘\nNOMBRE: " + mProyecto.Alumno.Nombre +
                 "\nPRIMER APELLIDO: " + mProyecto.Alumno.PrimerApellido + "\nSEGUNDO APELLIDO: " + mProyecto.Alumno.SegundoApellido + "\nMATRÍCULA: " + mProyecto.Alumno.Matricula +
                 "\nFECHA DE INICIO: " + mProyecto.Alumno.FechaInicio);
                 if (mProyecto.getMTFG.Finalizado)
                 {
-                    Console.WriteLine("\n\nDATOS DE FINALIZACIÓN\n-----------------------\nFECHA DE LA DEFENSA: " + mProyecto.getMTFG.getMFinalizado.Defensa +
+                    Console.WriteLine("\n\n┌───────────────────────────────┐\n│     DATOS DE FINALIZACIÓN     │\n└───────────────────────────────┘\nFECHA DE LA DEFENSA: " + mProyecto.getMTFG.getMFinalizado.Defensa +
                     "\nCONVOCATORIA: " + mProyecto.getMTFG.getMFinalizado.Convocatoria + "\nCALIFICACIÓN: " + mProyecto.getMTFG.getMFinalizado.Nota);
                 }
             }
+            Console.WriteLine("\nPulse una tecla para continuar...");
             Console.ReadKey();
+        }
+
+        public static string EscribirBordes(string palabra)
+        {
+            return Regex.Replace(palabra, ".", "─") + "─────";
         }
     }
 }

@@ -13,7 +13,7 @@ namespace GestorTFG_Console
         private CProyectos cProyectos;
         private CAlumno cAlumno;
         private int seleccion;
-        private string[] opciones = { "Añadir proyecto", "Eliminar proyecto", "Asignar Alumno", "Eliminar Alumno", "Modificar Proyecto", "Visualizar Proyectos", "Guardar Proyectos", "Cambiar color de fondo", "Salir" };
+        private string[] opciones = { "Añadir proyecto", "Eliminar proyecto", "Asignar Alumno", "Eliminar Alumno", "Modificar Proyecto", "Visualizar Proyectos", "Guardar Proyectos", "Salir" };
         public MenuPrincipal()
         {
             Directory.CreateDirectory("Proyectos");
@@ -38,9 +38,9 @@ namespace GestorTFG_Console
             cAlumno = new CAlumno();
             do
             {
-                //Console.ResetColor();
+                Console.ForegroundColor = ConsoleColor.Gray;
                 Console.Clear();
-                Console.WriteLine("GESTOR TFG\n--------------------------------------------------------------------------------");
+                Console.WriteLine("┌────────────────────┐\n│     GESTOR TFG     │\n└────────────────────┘");
                 seleccion = MenuUtilidades.CrearMenu(opciones);
                 switch (seleccion - 1)
                 {
@@ -52,7 +52,7 @@ namespace GestorTFG_Console
                     case 0:
                         Console.ForegroundColor = ConsoleColor.DarkGreen;
                         Console.Clear();
-                        Console.WriteLine("AÑADIR TFG\n--------------------------------------------------------------------------------");
+                        Console.WriteLine("┌─────────────────────────┐\n│     AÑADIR PROYECTO     │\n└─────────────────────────┘");
                         string[] datos = MenuUtilidades.introducirDatos("Título", "Descripción", "Fecha", "Nombre del profesor", "Primer apellido del profesor", "Segundo apellido del profesor", "Correo del profesor", "Despacho del profesor");
                         cProyectos.AñadirProyecto(datos);
                         Console.WriteLine("Proyecto \"" + datos[0] + "\" añadido correctamente\n¿Desea añadir un alumno al proyecto? (S/N)");
@@ -65,7 +65,7 @@ namespace GestorTFG_Console
                         {
                             Console.Clear();
                             Console.ForegroundColor = ConsoleColor.DarkYellow;
-                            Console.WriteLine("ASIGNAR ALUMNO A " + MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[MListaProyectos.getMListaProyectos.getMProyectos.getProyectos.Count - 1].getMTFG.Titulo + "\n--------------------------------------------------------------------------------");
+                            Console.WriteLine("┌──────────────────────" + MenuUtilidades.EscribirBordes(MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[MListaProyectos.getMListaProyectos.getMProyectos.getProyectos.Count - 1].getMTFG.Titulo) + "┐\n│     ASIGNAR ALUMNO A " + MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[MListaProyectos.getMListaProyectos.getMProyectos.getProyectos.Count - 1].getMTFG.Titulo + "     │\n└──────────────────────" + MenuUtilidades.EscribirBordes(MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[MListaProyectos.getMListaProyectos.getMProyectos.getProyectos.Count - 1].getMTFG.Titulo) + "┘");
                             datos = MenuUtilidades.introducirDatos("Nombre", "Primer apellido", "Segundo apellido", "Matrícula", "Fecha de inicio");
                             cAlumno.AsignarAlumno(MListaProyectos.getMListaProyectos.getMProyectos.getProyectos.Count - 1, datos);
                             Console.WriteLine("Alumno \"" + datos[0] + "\" asignado correctamente. Pulse una tecla para continuar...\n");

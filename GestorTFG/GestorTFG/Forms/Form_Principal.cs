@@ -42,10 +42,11 @@ namespace GestorTFG
             toolStripComboBox1.Items.Add("Alumno");
             toolStripComboBox1.Items.Add("Profesor");
             toolStripComboBox2.Items.Add("- Borrar búsquedas recientes -");
-            toolStripComboBox1.SelectedIndex = 0;
-            toolStrip2.Renderer = new ToolStripAeroRenderer(ToolbarTheme.HelpBar);
+            toolStripComboBox1.SelectedIndex = 0;  
+            toolStrip2.Renderer = new ToolStripAeroRenderer(ToolbarTheme.Toolbar);
             menuStrip1.Renderer = new ToolStripAeroRenderer(ToolbarTheme.HelpBar);
             contextMenuStrip1.Renderer = new ToolStripAeroRenderer(ToolbarTheme.HelpBar);
+            statusStrip1.Renderer = new ToolStripAeroRenderer(ToolbarTheme.HelpBar);
 
             ListViewVisualStyles.Listas.Add(listView1);
             ListViewVisualStyles.Listas.Add(listView2);
