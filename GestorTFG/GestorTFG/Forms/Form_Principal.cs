@@ -647,6 +647,9 @@ namespace GestorTFG
                 
                 try
                 {
+                    listView1.SelectedIndices.Clear();
+                    listView2.SelectedIndices.Clear();
+                    listView3.SelectedIndices.Clear();
                     fichero.CerrarEscritura();
                     fichero.AbrirLectura(cargar.FileName);
 
