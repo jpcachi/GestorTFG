@@ -655,14 +655,15 @@ namespace GestorTFG
 
                     //this.fichero.LeerArchivo();
                     fichero.ImportarArchivo();
-                    listView1.SelectedIndices.Clear();
-                    listView2.SelectedIndices.Clear();
-                    listView3.SelectedIndices.Clear();
                     vista.ActualizarVistaTabla(ref listView1, TipoLista.Todos);
                     vista.ActualizarVistaTabla(ref listView2, TipoLista.Sin_Asignar);
                     vista.ActualizarVistaTabla(ref listView3, TipoLista.Finalizados);
+                    tabControl3.SelectedIndex = 0;
                     if (MListaProyectos.getMListaProyectos.getMProyectos.getProyectos.Count > 0)
+                    {
+                        listView1.EnsureVisible(0);
                         vista.RefrescarItemsVistaTabla(ref listView1, TipoLista.Todos);
+                    }
                     if (MListaProyectos.getMListaProyectos.getMProyectos.getProyectosNoAsignados.Count > 0)
                         vista.RefrescarItemsVistaTabla(ref listView2, TipoLista.Sin_Asignar);
                     if (MListaProyectos.getMListaProyectos.getMProyectos.getProyectosFinalizados.Count > 0)

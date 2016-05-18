@@ -11,7 +11,7 @@ namespace GestorTFG
             InitializeComponent();
             ventanaPrincipal = new Form1();
             timer1.Enabled = true;
-            timer1.Interval = 500;
+            timer1.Interval = 750;
         }
 
         private void timer1_Tick(object sender, EventArgs e)
