@@ -44,7 +44,7 @@ namespace GestorTFG
 
 
             if (MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[3].Count > 0)
-                new Form4(ventanaPadre, clave, campo, index1, index2, date1.Value, number.Value, filtro, fichero).ShowDialog(ventanaPadre);
+                new Form4(ventanaPadre, clave, campo, index1, index2, index3, index4, date1.Value, date2.Value, date3.Value, number.Value, filtro, fichero).ShowDialog(ventanaPadre);
             else
                 MessageBox.Show("No se han encontrado proyectos que coincidan con los parámetros de búsqueda.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
         }
