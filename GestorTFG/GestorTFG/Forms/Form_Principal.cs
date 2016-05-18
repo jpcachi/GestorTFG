@@ -182,6 +182,7 @@ namespace GestorTFG
             fichero.LeerArchivo();
             vista.ActualizarVistaTabla(ref listView1, TipoLista.Todos);
             vista.ActualizarVistaTabla(ref listView3, TipoLista.Finalizados);
+            actualizarStatusLabelNumeroProyectos();
         }
 
         private void comboBox7_TextUpdate(object sender, EventArgs e)
@@ -603,6 +604,7 @@ namespace GestorTFG
             richTextBox1.Clear();
             richTextBox2.Clear();
             toolStripStatusLabel1.Text = "Nueva lista de proyectos";
+            actualizarStatusLabelNumeroProyectos();
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
@@ -669,7 +671,7 @@ namespace GestorTFG
                     if (MListaProyectos.getMListaProyectos.getMProyectos.getProyectosFinalizados.Count > 0)
                         vista.RefrescarItemsVistaTabla(ref listView3, TipoLista.Finalizados);
                     toolStripStatusLabel1.Text = fichero.ArchivoActual;
-                    //this.fichero.CerrarLectura();
+                    toolStripStatusLabel2.Text = listView1.Items.Count + " proyectos";
                     toolStripStatusLabel1.Text = fichero.ArchivoActual;
                     vista.GuardarLista();
                     deshacer.VaciarPilas();
@@ -685,6 +687,7 @@ namespace GestorTFG
                     vista.ActualizarVistaTabla(ref listView1, TipoLista.Todos);
                     vista.ActualizarVistaTabla(ref listView2, TipoLista.Sin_Asignar);
                     vista.ActualizarVistaTabla(ref listView3, TipoLista.Finalizados);
+                    actualizarStatusLabelNumeroProyectos();
                     MessageBox.Show("El archivo no tiene el formato especificado.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
                     Console.WriteLine(ex.Message);
                 }
@@ -1088,6 +1091,14 @@ namespace GestorTFG
                 vista.ActualizarVistaTabla(ref listView1, TipoLista.Todos);
                 vista.ActualizarVistaTabla(ref listView2, TipoLista.Sin_Asignar);
                 vista.ActualizarVistaTabla(ref listView3, TipoLista.Finalizados);
+                actualizarStatusLabelNumeroProyectos();
+                if (tabControl3.SelectedIndex == 0)
+                    toolStripStatusLabel2.Text = listView1.Items.Count + " proyectos";
+                else if (tabControl3.SelectedIndex == 1)
+                    toolStripStatusLabel2.Text = listView2.Items.Count + " proyectos";
+                else if (tabControl3.SelectedIndex == 2)
+                    toolStripStatusLabel2.Text = listView3.Items.Count + " proyectos";
+
             } else if(operacion == TOperacion.EliminarAlumno || operacion == TOperacion.AsignarAlumno)
             {
                 foreach (int indice in indices)
@@ -1158,6 +1169,7 @@ namespace GestorTFG
                 vista.ActualizarVistaTabla(ref listView1, TipoLista.Todos);
                 vista.ActualizarVistaTabla(ref listView2, TipoLista.Sin_Asignar);
                 vista.ActualizarVistaTabla(ref listView3, TipoLista.Finalizados);
+                actualizarStatusLabelNumeroProyectos();
             }
             else if (operacion == TOperacion.EliminarAlumno || operacion == TOperacion.AsignarAlumno)
             {
@@ -1166,6 +1178,7 @@ namespace GestorTFG
                     listView1.RedrawItems(indice, indice, false);
                 }
                 vista.ActualizarVistaTabla(ref listView2, TipoLista.Sin_Asignar);
+                actualizarStatusLabelNumeroProyectos();
             }
             else
             {
@@ -1339,8 +1352,9 @@ namespace GestorTFG
                     vista.ActualizarVistaTabla(ref listView1, TipoLista.Todos);
                     vista.ActualizarVistaTabla(ref listView2, TipoLista.Sin_Asignar);
                     vista.ActualizarVistaTabla(ref listView3, TipoLista.Finalizados);
-                    
-                    if(MListaProyectos.getMListaProyectos.getMProyectos.getProyectos.Count > 0)
+                    actualizarStatusLabelNumeroProyectos();
+
+                    if (MListaProyectos.getMListaProyectos.getMProyectos.getProyectos.Count > 0)
                         vista.RefrescarItemsVistaTabla(ref listView1, TipoLista.Todos);
                     if (MListaProyectos.getMListaProyectos.getMProyectos.getProyectosNoAsignados.Count > 0)
                         vista.RefrescarItemsVistaTabla(ref listView2, TipoLista.Sin_Asignar);
@@ -1361,6 +1375,7 @@ namespace GestorTFG
                     vista.ActualizarVistaTabla(ref listView1, TipoLista.Todos);
                     vista.ActualizarVistaTabla(ref listView2, TipoLista.Sin_Asignar);
                     vista.ActualizarVistaTabla(ref listView3, TipoLista.Finalizados);
+                    actualizarStatusLabelNumeroProyectos();
                     MessageBox.Show("El archivo no tiene el formato especificado.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
                     Console.WriteLine(ex.Message);
                     this.fichero.ArchivoActual = fichero;
@@ -1422,6 +1437,7 @@ namespace GestorTFG
         {
             button9.Enabled = false;
             button8.Enabled = false;
+            actualizarStatusLabelNumeroProyectos();
             if (tabControl3.SelectedIndex == 1)
             {
                 vista.ActualizarVistaTabla(ref listView2, TipoLista.Sin_Asignar);
@@ -1445,6 +1461,7 @@ namespace GestorTFG
             button9.Enabled = false;
             button8.Enabled = false;
             toolStripMenuItem19.Visible = false;
+            actualizarStatusLabelNumeroProyectos();
             if (e.TabPageIndex == 1)
             {
                 vista.ActualizarVistaTabla(ref listView2, TipoLista.Sin_Asignar);
@@ -1812,7 +1829,16 @@ namespace GestorTFG
 
         private void Form1_ResizeEnd(object sender, EventArgs e)
         {
-            
+
+        }
+        private void actualizarStatusLabelNumeroProyectos()
+        {
+            if (tabControl3.SelectedIndex == 0)
+                toolStripStatusLabel2.Text = listView1.Items.Count + " proyectos";
+            else if (tabControl3.SelectedIndex == 1)
+                toolStripStatusLabel2.Text = listView2.Items.Count + " proyectos";
+            else if (tabControl3.SelectedIndex == 2)
+                toolStripStatusLabel2.Text = listView3.Items.Count + " proyectos";
         }
 
         private void comboBox7_SelectedIndexChanged(object sender, EventArgs e)

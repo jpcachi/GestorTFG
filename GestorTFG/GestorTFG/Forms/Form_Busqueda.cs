@@ -12,10 +12,11 @@ namespace GestorTFG
 
         private string busqueda;
         private TCampos campo;
-        public Form4(Form1 ventanaPadre, string busqueda, TCampos campo, int index1, int index2, DateTime date, decimal nota, bool filtro, LeerEscribirArchivo fichero)
+        public Form4(Form1 ventanaPadre, string busqueda, TCampos campo, int index1, int index2, int index3, int index4, DateTime date1, DateTime date2, DateTime date3, decimal nota, bool filtro, LeerEscribirArchivo fichero)
         {
             InitializeComponent();
             toolStrip1.Renderer = new ToolStripVisualStyles.ToolStripAeroRenderer(ToolStripVisualStyles.ToolbarTheme.Toolbar);
+            statusStrip1.Renderer = new ToolStripVisualStyles.ToolStripAeroRenderer(ToolStripVisualStyles.ToolbarTheme.Toolbar);
             this.fichero = fichero;
             vista = new VistaGrafica();
             copiar = new Copiar(copiarPorCampoToolStripMenuItem);
@@ -23,44 +24,84 @@ namespace GestorTFG
             this.busqueda = busqueda;
             this.campo = campo;
 
-            toolStripStatusLabel2.Text = busqueda;
-            if(index1 + index2 > 0 && filtro)
+            toolStripStatusLabel1.Text += busqueda;
+            if(index1 + index2 + index3 + index4 > 0 && filtro)
             {
-                string item = "Filtro:";
-                if(index1 * index2 != 0)
+                toolStripStatusLabel2.Text = " Filtro:";
+                if (index1 * index2 * index3 * index4 != 0)
                 {
-                    item = "Filtros:";
+                    toolStripStatusLabel2.Text = " Filtros:";
                 }
                 switch (index1)
                 {
                     case 1:
-                        item += " fecha posterior a " + date.Day + "/" + date.Month + "/" + date.Year;
+                        toolStripStatusLabel2.Text += " fecha de registro posterior a " + date1.Day + "/" + date1.Month + "/" + date1.Year;
                         break;
                     case 2:
-                        item += " fecha anterior a " + date.Day + "/" + date.Month + "/" + date.Year;
+                        toolStripStatusLabel2.Text += " fecha de registro anterior a " + date1.Day + "/" + date1.Month + "/" + date1.Year;
                         break;
                     case 3:
-                        item += " fecha igual a " + date.Day + "/" + date.Month + "/" + date.Year;
+                        toolStripStatusLabel2.Text += " fecha de registro igual a " + date1.Day + "/" + date1.Month + "/" + date1.Year;
                         break;
+                }
+                if(index2 != 0)
+                {
+                    toolStripStatusLabel2.Text += ";";
                 }
                 switch (index2)
                 {
                     case 1:
-                        item += " nota superior a " + nota;
+                        toolStripStatusLabel2.Text += " fecha de inicio posterior a " + date2.Day + "/" + date2.Month + "/" + date2.Year;
                         break;
                     case 2:
-                        item += " nota inferior a " + nota;
+                        toolStripStatusLabel2.Text += " fecha de inicio anterior a " + date2.Day + "/" + date2.Month + "/" + date2.Year;
                         break;
                     case 3:
-                        item += " nota igual a " + nota;
+                        toolStripStatusLabel2.Text += " fecha de inicio igual a " + date2.Day + "/" + date2.Month + "/" + date2.Year;
                         break;
                 }
-                statusStrip1.Items.Add(new ToolStripSeparator());
-                statusStrip1.Items.Add(item);
+                if (index3 != 0)
+                {
+                    toolStripStatusLabel2.Text += ";";
+                }
+                switch (index3)
+                {
+                    case 1:
+                        toolStripStatusLabel2.Text += " fecha de defensa posterior a " + date3.Day + "/" + date3.Month + "/" + date3.Year;
+                        break;
+                    case 2:
+                        toolStripStatusLabel2.Text += " fecha de defensa anterior a " + date3.Day + "/" + date3.Month + "/" + date3.Year;
+                        break;
+                    case 3:
+                        toolStripStatusLabel2.Text += " fecha de defensa igual a " + date3.Day + "/" + date3.Month + "/" + date3.Year;
+                        break;
+                }
+                if (index4 != 0)
+                {
+                    toolStripStatusLabel2.Text += ";";
+                }
+                switch (index4)
+                {
+                    case 1:
+                        toolStripStatusLabel2.Text += " nota superior a " + nota;
+                        break;
+                    case 2:
+                        toolStripStatusLabel2.Text += " nota superior o igual a " + nota;
+                        break;
+                    case 3:
+                        toolStripStatusLabel2.Text += " nota inferior a " + nota;
+                        break;
+                    case 4:
+                        toolStripStatusLabel2.Text += " nota inferior o igual a " + nota;
+                        break;
+                    case 5:
+                        toolStripStatusLabel2.Text += " nota igual a " + nota;
+                        break;
+                }
             }
-
             contextMenuStrip1.Renderer = new ToolStripVisualStyles.ToolStripAeroRenderer(ToolStripVisualStyles.ToolbarTheme.HelpBar);
-            vista.ActualizarVistaTabla(ref listView1, TipoLista.Busqueda);         
+            vista.ActualizarVistaTabla(ref listView1, TipoLista.Busqueda);
+            toolStripStatusLabel3.Text = listView1.Items.Count + " proyectos";
         }
 
         private void listView1_MouseClick(object sender, MouseEventArgs e)
