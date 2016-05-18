@@ -33,6 +33,7 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
@@ -93,26 +94,45 @@
             // 
             // statusStrip1
             // 
+            this.statusStrip1.AutoSize = false;
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1,
-            this.toolStripStatusLabel2});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 498);
+            this.toolStripStatusLabel2,
+            this.toolStripStatusLabel3});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 534);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(754, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(959, 27);
             this.statusStrip1.TabIndex = 6;
             this.statusStrip1.Text = "statusStrip1";
             // 
             // toolStripStatusLabel1
             // 
+            this.toolStripStatusLabel1.BorderSides = ((System.Windows.Forms.ToolStripStatusLabelBorderSides)((System.Windows.Forms.ToolStripStatusLabelBorderSides.Top | System.Windows.Forms.ToolStripStatusLabelBorderSides.Right)));
+            this.toolStripStatusLabel1.BorderStyle = System.Windows.Forms.Border3DStyle.SunkenOuter;
+            this.toolStripStatusLabel1.Margin = new System.Windows.Forms.Padding(0);
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(141, 17);
-            this.toolStripStatusLabel1.Text = "Mostrando resultados de:";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(148, 27);
+            this.toolStripStatusLabel1.Text = "Mostrando resultados de: ";
             // 
             // toolStripStatusLabel2
             // 
+            this.toolStripStatusLabel2.BorderSides = ((System.Windows.Forms.ToolStripStatusLabelBorderSides)(((System.Windows.Forms.ToolStripStatusLabelBorderSides.Left | System.Windows.Forms.ToolStripStatusLabelBorderSides.Top) 
+            | System.Windows.Forms.ToolStripStatusLabelBorderSides.Right)));
+            this.toolStripStatusLabel2.BorderStyle = System.Windows.Forms.Border3DStyle.SunkenOuter;
+            this.toolStripStatusLabel2.Margin = new System.Windows.Forms.Padding(0);
             this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
-            this.toolStripStatusLabel2.Size = new System.Drawing.Size(43, 17);
-            this.toolStripStatusLabel2.Text = "\"texto\"";
+            this.toolStripStatusLabel2.Size = new System.Drawing.Size(674, 27);
+            this.toolStripStatusLabel2.Spring = true;
+            this.toolStripStatusLabel2.Text = "toolStripStatusLabel2";
+            this.toolStripStatusLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // toolStripStatusLabel3
+            // 
+            this.toolStripStatusLabel3.BorderSides = ((System.Windows.Forms.ToolStripStatusLabelBorderSides)((System.Windows.Forms.ToolStripStatusLabelBorderSides.Left | System.Windows.Forms.ToolStripStatusLabelBorderSides.Top)));
+            this.toolStripStatusLabel3.Margin = new System.Windows.Forms.Padding(0);
+            this.toolStripStatusLabel3.Name = "toolStripStatusLabel3";
+            this.toolStripStatusLabel3.Size = new System.Drawing.Size(122, 27);
+            this.toolStripStatusLabel3.Text = "toolStripStatusLabel3";
             // 
             // tabControl1
             // 
@@ -122,7 +142,7 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(754, 120);
+            this.tabControl1.Size = new System.Drawing.Size(959, 131);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -131,7 +151,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(746, 94);
+            this.tabPage1.Size = new System.Drawing.Size(951, 105);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Datos TFG";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -142,7 +162,7 @@
             this.richTextBox1.Location = new System.Drawing.Point(3, 3);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.ReadOnly = true;
-            this.richTextBox1.Size = new System.Drawing.Size(740, 88);
+            this.richTextBox1.Size = new System.Drawing.Size(945, 99);
             this.richTextBox1.TabIndex = 0;
             this.richTextBox1.Text = "";
             // 
@@ -152,7 +172,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(746, 94);
+            this.tabPage2.Size = new System.Drawing.Size(951, 105);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Datos Profesor";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -163,7 +183,7 @@
             this.richTextBox2.Location = new System.Drawing.Point(3, 3);
             this.richTextBox2.Name = "richTextBox2";
             this.richTextBox2.ReadOnly = true;
-            this.richTextBox2.Size = new System.Drawing.Size(740, 88);
+            this.richTextBox2.Size = new System.Drawing.Size(945, 99);
             this.richTextBox2.TabIndex = 0;
             this.richTextBox2.Text = "";
             // 
@@ -183,8 +203,8 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.tabControl1);
-            this.splitContainer1.Size = new System.Drawing.Size(754, 498);
-            this.splitContainer1.SplitterDistance = 374;
+            this.splitContainer1.Size = new System.Drawing.Size(959, 534);
+            this.splitContainer1.SplitterDistance = 399;
             this.splitContainer1.TabIndex = 7;
             // 
             // listView1
@@ -210,7 +230,7 @@
             this.listView1.MultiSelect = false;
             this.listView1.Name = "listView1";
             this.listView1.OwnerDraw = true;
-            this.listView1.Size = new System.Drawing.Size(754, 349);
+            this.listView1.Size = new System.Drawing.Size(959, 374);
             this.listView1.TabIndex = 5;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -290,7 +310,7 @@
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.toolStrip1.Size = new System.Drawing.Size(754, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(959, 25);
             this.toolStrip1.TabIndex = 6;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -516,7 +536,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(754, 520);
+            this.ClientSize = new System.Drawing.Size(959, 561);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.statusStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -540,14 +560,12 @@
             this.toolStrip1.PerformLayout();
             this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
@@ -594,5 +612,7 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem4;
         private System.Windows.Forms.ToolStripMenuItem matrículaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mostrarInformaciónDetalladaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel3;
     }
 }

@@ -75,6 +75,7 @@
             this.acercadeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -100,6 +101,7 @@
             this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.printDialog1 = new System.Windows.Forms.PrintDialog();
             this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
             this.tabControl3 = new System.Windows.Forms.TabControl();
             this.tabPage6 = new System.Windows.Forms.TabPage();
@@ -205,7 +207,6 @@
             this.removeStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.deleteStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.printDialog1 = new System.Windows.Forms.PrintDialog();
             this.listView1 = new GestorTFG.VistaLista();
             this.Título = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Descripcion = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -671,20 +672,41 @@
             // 
             // statusStrip1
             // 
+            this.statusStrip1.AutoSize = false;
             this.statusStrip1.BackColor = System.Drawing.SystemColors.Control;
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabel1});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 659);
+            this.toolStripStatusLabel1,
+            this.toolStripStatusLabel2});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 654);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1264, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(1264, 27);
             this.statusStrip1.TabIndex = 3;
             this.statusStrip1.Text = "statusStrip1";
             // 
             // toolStripStatusLabel1
             // 
+            this.toolStripStatusLabel1.BorderSides = ((System.Windows.Forms.ToolStripStatusLabelBorderSides)((System.Windows.Forms.ToolStripStatusLabelBorderSides.Top | System.Windows.Forms.ToolStripStatusLabelBorderSides.Right)));
+            this.toolStripStatusLabel1.BorderStyle = System.Windows.Forms.Border3DStyle.SunkenOuter;
+            this.toolStripStatusLabel1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripStatusLabel1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.toolStripStatusLabel1.Margin = new System.Windows.Forms.Padding(3, 0, 2, 0);
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(118, 17);
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(1162, 27);
+            this.toolStripStatusLabel1.Spring = true;
             this.toolStripStatusLabel1.Text = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // toolStripStatusLabel2
+            // 
+            this.toolStripStatusLabel2.BorderSides = ((System.Windows.Forms.ToolStripStatusLabelBorderSides)((System.Windows.Forms.ToolStripStatusLabelBorderSides.Left | System.Windows.Forms.ToolStripStatusLabelBorderSides.Top)));
+            this.toolStripStatusLabel2.BorderStyle = System.Windows.Forms.Border3DStyle.SunkenOuter;
+            this.toolStripStatusLabel2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripStatusLabel2.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.toolStripStatusLabel2.Margin = new System.Windows.Forms.Padding(0, 0, 10, 0);
+            this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
+            this.toolStripStatusLabel2.Size = new System.Drawing.Size(72, 27);
+            this.toolStripStatusLabel2.Text = "0 proyectos";
+            this.toolStripStatusLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // contextMenuStrip1
             // 
@@ -873,6 +895,10 @@
             // 
             this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
             // 
+            // printDialog1
+            // 
+            this.printDialog1.UseEXDialog = true;
+            // 
             // toolStripContainer1
             // 
             this.toolStripContainer1.AllowDrop = true;
@@ -886,13 +912,13 @@
             this.toolStripContainer1.ContentPanel.Controls.Add(this.tabControl1);
             this.toolStripContainer1.ContentPanel.Controls.Add(this.panel2);
             this.toolStripContainer1.ContentPanel.Controls.Add(this.panel4);
-            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(1264, 610);
+            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(1264, 605);
             this.toolStripContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.toolStripContainer1.LeftToolStripPanelVisible = false;
             this.toolStripContainer1.Location = new System.Drawing.Point(0, 24);
             this.toolStripContainer1.Name = "toolStripContainer1";
             this.toolStripContainer1.RightToolStripPanelVisible = false;
-            this.toolStripContainer1.Size = new System.Drawing.Size(1264, 635);
+            this.toolStripContainer1.Size = new System.Drawing.Size(1264, 630);
             this.toolStripContainer1.TabIndex = 11;
             this.toolStripContainer1.Text = "toolStripContainer1";
             // 
@@ -911,7 +937,7 @@
             this.tabControl3.Location = new System.Drawing.Point(250, 0);
             this.tabControl3.Name = "tabControl3";
             this.tabControl3.SelectedIndex = 0;
-            this.tabControl3.Size = new System.Drawing.Size(741, 510);
+            this.tabControl3.Size = new System.Drawing.Size(741, 505);
             this.tabControl3.TabIndex = 8;
             this.tabControl3.Selecting += new System.Windows.Forms.TabControlCancelEventHandler(this.tabControl3_Selecting);
             this.tabControl3.Deselected += new System.Windows.Forms.TabControlEventHandler(this.tabControl3_Deselected);
@@ -919,14 +945,14 @@
             // 
             // tabPage6
             // 
+            this.tabPage6.BackColor = System.Drawing.Color.Transparent;
             this.tabPage6.Controls.Add(this.listView1);
             this.tabPage6.Location = new System.Drawing.Point(4, 22);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(733, 484);
+            this.tabPage6.Size = new System.Drawing.Size(733, 479);
             this.tabPage6.TabIndex = 0;
             this.tabPage6.Text = "Todos";
-            this.tabPage6.UseVisualStyleBackColor = true;
             // 
             // tabPage7
             // 
@@ -934,7 +960,7 @@
             this.tabPage7.Location = new System.Drawing.Point(4, 22);
             this.tabPage7.Name = "tabPage7";
             this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage7.Size = new System.Drawing.Size(727, 484);
+            this.tabPage7.Size = new System.Drawing.Size(733, 479);
             this.tabPage7.TabIndex = 1;
             this.tabPage7.Text = "Sin Asignar";
             this.tabPage7.UseVisualStyleBackColor = true;
@@ -945,7 +971,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(727, 484);
+            this.tabPage3.Size = new System.Drawing.Size(733, 479);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Finalizados";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -955,7 +981,7 @@
             this.tabControl2.Controls.Add(this.tabPage4);
             this.tabControl2.Controls.Add(this.tabPage5);
             this.tabControl2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tabControl2.Location = new System.Drawing.Point(250, 510);
+            this.tabControl2.Location = new System.Drawing.Point(250, 505);
             this.tabControl2.MinimumSize = new System.Drawing.Size(0, 100);
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.SelectedIndex = 0;
@@ -990,7 +1016,7 @@
             this.tabPage5.Location = new System.Drawing.Point(4, 22);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(727, 74);
+            this.tabPage5.Size = new System.Drawing.Size(733, 74);
             this.tabPage5.TabIndex = 1;
             this.tabPage5.Text = "Datos Profesor";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -1001,7 +1027,7 @@
             this.richTextBox2.Location = new System.Drawing.Point(3, 3);
             this.richTextBox2.Name = "richTextBox2";
             this.richTextBox2.ReadOnly = true;
-            this.richTextBox2.Size = new System.Drawing.Size(721, 68);
+            this.richTextBox2.Size = new System.Drawing.Size(727, 68);
             this.richTextBox2.TabIndex = 0;
             this.richTextBox2.Text = "";
             // 
@@ -1013,7 +1039,7 @@
             this.tabControl1.Location = new System.Drawing.Point(991, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(251, 610);
+            this.tabControl1.Size = new System.Drawing.Size(251, 605);
             this.tabControl1.TabIndex = 2;
             // 
             // tabPage1
@@ -1025,7 +1051,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(243, 584);
+            this.tabPage1.Size = new System.Drawing.Size(243, 579);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Añadir TFG";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -1035,7 +1061,7 @@
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(3, 553);
+            this.panel1.Location = new System.Drawing.Point(3, 548);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(237, 28);
             this.panel1.TabIndex = 4;
@@ -1288,7 +1314,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(243, 584);
+            this.tabPage2.Size = new System.Drawing.Size(243, 579);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Modificar TFG";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -1577,7 +1603,7 @@
             // panel2
             // 
             this.panel2.AutoScroll = true;
-            this.panel2.BackColor = System.Drawing.SystemColors.Control;
+            this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.Controls.Add(this.groupBox4);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 0);
@@ -1590,6 +1616,7 @@
             // groupBox4
             // 
             this.groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox4.BackColor = System.Drawing.Color.Transparent;
             this.groupBox4.Controls.Add(this.label18);
             this.groupBox4.Controls.Add(this.button10);
             this.groupBox4.Controls.Add(this.comboBox10);
@@ -1852,7 +1879,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel4.Location = new System.Drawing.Point(1242, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(22, 610);
+            this.panel4.Size = new System.Drawing.Size(22, 605);
             this.panel4.TabIndex = 10;
             // 
             // toolStrip1
@@ -2118,10 +2145,6 @@
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
-            // printDialog1
-            // 
-            this.printDialog1.UseEXDialog = true;
-            // 
             // listView1
             // 
             this.listView1.BackColor = System.Drawing.SystemColors.Window;
@@ -2144,7 +2167,7 @@
             this.listView1.Location = new System.Drawing.Point(3, 3);
             this.listView1.Name = "listView1";
             this.listView1.OwnerDraw = true;
-            this.listView1.Size = new System.Drawing.Size(727, 478);
+            this.listView1.Size = new System.Drawing.Size(727, 473);
             this.listView1.TabIndex = 4;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -2224,7 +2247,7 @@
             this.listView2.Location = new System.Drawing.Point(3, 3);
             this.listView2.Name = "listView2";
             this.listView2.OwnerDraw = true;
-            this.listView2.Size = new System.Drawing.Size(721, 478);
+            this.listView2.Size = new System.Drawing.Size(727, 473);
             this.listView2.TabIndex = 0;
             this.listView2.UseCompatibleStateImageBehavior = false;
             this.listView2.View = System.Windows.Forms.View.Details;
@@ -2268,7 +2291,7 @@
             this.listView3.Location = new System.Drawing.Point(3, 3);
             this.listView3.Name = "listView3";
             this.listView3.OwnerDraw = true;
-            this.listView3.Size = new System.Drawing.Size(721, 478);
+            this.listView3.Size = new System.Drawing.Size(727, 473);
             this.listView3.TabIndex = 5;
             this.listView3.UseCompatibleStateImageBehavior = false;
             this.listView3.View = System.Windows.Forms.View.Details;
@@ -2340,6 +2363,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.toolStripContainer1);
             this.Controls.Add(this.menuStrip1);
@@ -2604,6 +2628,7 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem19;
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.PrintDialog printDialog1;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
     }
 }
 
