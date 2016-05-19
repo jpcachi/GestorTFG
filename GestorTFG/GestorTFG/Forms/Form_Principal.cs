@@ -1098,19 +1098,11 @@ namespace GestorTFG
                 vista.ActualizarVistaTabla(ref listView2, TipoLista.Sin_Asignar);
                 vista.ActualizarVistaTabla(ref listView3, TipoLista.Finalizados);
                 actualizarStatusLabelNumeroProyectos();
-<<<<<<< HEAD
                 if (tabControl3.SelectedIndex == 0)
                     toolStripStatusLabel2.Text = listView1.Items.Count + " proyectos";
                 else if (tabControl3.SelectedIndex == 1)
                     toolStripStatusLabel2.Text = listView2.Items.Count + " proyectos";
                 else if (tabControl3.SelectedIndex == 2)
-=======
-                if (tabControl3.SelectedIndex == 0)
-                    toolStripStatusLabel2.Text = listView1.Items.Count + " proyectos";
-                else if (tabControl3.SelectedIndex == 1)
-                    toolStripStatusLabel2.Text = listView2.Items.Count + " proyectos";
-                else if (tabControl3.SelectedIndex == 2)
->>>>>>> origin/master
                     toolStripStatusLabel2.Text = listView3.Items.Count + " proyectos";
 
             } else if(operacion == TOperacion.EliminarAlumno || operacion == TOperacion.AsignarAlumno)
@@ -1366,13 +1358,7 @@ namespace GestorTFG
                     vista.ActualizarVistaTabla(ref listView1, TipoLista.Todos);
                     vista.ActualizarVistaTabla(ref listView2, TipoLista.Sin_Asignar);
                     vista.ActualizarVistaTabla(ref listView3, TipoLista.Finalizados);
-<<<<<<< HEAD
                     actualizarStatusLabelNumeroProyectos();
-
-=======
-                    actualizarStatusLabelNumeroProyectos();
-
->>>>>>> origin/master
                     if (MListaProyectos.getMListaProyectos.getMProyectos.getProyectos.Count > 0)
                         vista.RefrescarItemsVistaTabla(ref listView1, TipoLista.Todos);
                     if (MListaProyectos.getMListaProyectos.getMProyectos.getProyectosNoAsignados.Count > 0)
@@ -1847,7 +1833,6 @@ namespace GestorTFG
         }
 
         private void Form1_ResizeEnd(object sender, EventArgs e)
-<<<<<<< HEAD
         {
 
         }
@@ -1858,18 +1843,6 @@ namespace GestorTFG
             else if (tabControl3.SelectedIndex == 1)
                 toolStripStatusLabel2.Text = listView2.Items.Count + " proyectos";
             else if (tabControl3.SelectedIndex == 2)
-=======
-        {
-
-        }
-        private void actualizarStatusLabelNumeroProyectos()
-        {
-            if (tabControl3.SelectedIndex == 0)
-                toolStripStatusLabel2.Text = listView1.Items.Count + " proyectos";
-            else if (tabControl3.SelectedIndex == 1)
-                toolStripStatusLabel2.Text = listView2.Items.Count + " proyectos";
-            else if (tabControl3.SelectedIndex == 2)
->>>>>>> origin/master
                 toolStripStatusLabel2.Text = listView3.Items.Count + " proyectos";
         }
 
