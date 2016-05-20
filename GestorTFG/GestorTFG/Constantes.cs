@@ -36,7 +36,7 @@ namespace GestorTFG
         public const int DECIMALES_DESPUES_DE_COMA = 2;
         public const decimal LIMITE_NOTA_SUSPENSA = 4.99m;
         public const decimal LIMITE_NOTA_APROBADA = 5m;
-        public const float TAMAÑO_RELATIVO_RESOLUCION = 0.9f;
+        public const float TAMAÑO_RELATIVO_RESOLUCION = 0.75f;
         public const int COLUMNA_TITULO = 0;
         public const int COLUMNA_DESCRIPCION = 1;
         public const int COLUMNA_FECHA_REGISTRO = 2;

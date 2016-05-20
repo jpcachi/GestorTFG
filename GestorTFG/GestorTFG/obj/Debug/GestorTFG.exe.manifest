@@ -4,7 +4,7 @@
   <description asmv2:iconFile="Cabinet.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
-    <assemblyIdentity name="GestorTFG" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <assemblyIdentity name="GestorTFG" version="2.0.0.0" language="neutral" processorArchitecture="msil" />
     <commandLine file="GestorTFG.exe" parameters="" />
   </entryPoint>
   <trustInfo>
@@ -55,14 +55,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="GestorTFG.exe" size="3990016">
-      <assemblyIdentity name="GestorTFG" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="GestorTFG.exe" size="4959232">
+      <assemblyIdentity name="GestorTFG" version="2.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>7qcdIWHQ0cjUI/mxXc82rOq9JYA=</dsig:DigestValue>
+        <dsig:DigestValue>1crqSE8pKIQCxKOpJjS1CIoVhgc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -97,15 +97,6 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
       <dsig:DigestValue>MWhKC6hCdkTWLQyoWp5qWRRhNIU=</dsig:DigestValue>
-    </hash>
-  </file>
-  <file name="card file (3).ico" size="148718">
-    <hash>
-      <dsig:Transforms>
-        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-      </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>qLWX68lxqzT/xSce/LMRD4Mcpww=</dsig:DigestValue>
     </hash>
   </file>
   <file name="x64\pdfium.dll" size="11655680">

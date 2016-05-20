@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Preferencias));
-            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("Colores y fuentes");
-            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("Temas y estilos visuales");
+            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("Colores y fuentes");
+            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("Temas y estilos visuales");
             this.Colores = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button10 = new System.Windows.Forms.Button();
@@ -129,6 +129,7 @@
             // 
             // button12
             // 
+            this.button12.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.button12.Location = new System.Drawing.Point(425, 12);
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(75, 23);
@@ -222,6 +223,7 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(30, 20);
             this.button3.TabIndex = 11;
+            this.button3.TabStop = false;
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -232,6 +234,7 @@
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(30, 20);
             this.button4.TabIndex = 10;
+            this.button4.TabStop = false;
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
@@ -270,6 +273,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(30, 20);
             this.button2.TabIndex = 6;
+            this.button2.TabStop = false;
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -282,6 +286,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(30, 20);
             this.button1.TabIndex = 5;
+            this.button1.TabStop = false;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -322,10 +327,12 @@
             this.Titulo.Name = "Titulo";
             this.Titulo.Size = new System.Drawing.Size(710, 85);
             this.Titulo.TabIndex = 1;
+            this.Titulo.Paint += new System.Windows.Forms.PaintEventHandler(this.Titulo_Paint);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(25, 8);
             this.pictureBox1.Name = "pictureBox1";
@@ -337,10 +344,11 @@
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(106, 28);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(231, 31);
+            this.label1.Size = new System.Drawing.Size(214, 31);
             this.label1.TabIndex = 0;
             this.label1.Text = "Colores y estilos";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -350,13 +358,13 @@
             this.treeView1.HideSelection = false;
             this.treeView1.Location = new System.Drawing.Point(1, 0);
             this.treeView1.Name = "treeView1";
-            treeNode5.Name = "Nodo0";
-            treeNode5.Text = "Colores y fuentes";
-            treeNode6.Name = "Nodo1";
-            treeNode6.Text = "Temas y estilos visuales";
+            treeNode9.Name = "Nodo0";
+            treeNode9.Text = "Colores y fuentes";
+            treeNode10.Name = "Nodo1";
+            treeNode10.Text = "Temas y estilos visuales";
             this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode5,
-            treeNode6});
+            treeNode9,
+            treeNode10});
             this.treeView1.Size = new System.Drawing.Size(186, 373);
             this.treeView1.TabIndex = 0;
             this.treeView1.Visible = false;
@@ -458,8 +466,10 @@
             // 
             // Preferencias
             // 
+            this.AcceptButton = this.button11;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.button12;
             this.ClientSize = new System.Drawing.Size(697, 386);
             this.Controls.Add(this.Colores);
             this.Controls.Add(this.Temas);

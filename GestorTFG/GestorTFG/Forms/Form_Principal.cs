@@ -48,7 +48,7 @@ namespace GestorTFG
             contextMenuStrip1.Renderer = new ToolStripAeroRenderer(ToolbarTheme.HelpBar);
             //statusStrip1.Renderer = new ToolStripAeroRenderer(ToolbarTheme.BrowserTabBar);
             //toolStrip2.Parent = this;
-            toolStrip2.Dock = DockStyle.Top;
+            //toolStrip2.Dock = DockStyle.Top;
             //menuStrip1.SendToBack();
             toolStrip2.Renderer = new ToolStripAeroRenderer(ToolbarTheme.HelpBar);
             //toolStripContainer1.TopToolStripPanel.Renderer = new ToolStripAeroRenderer(ToolbarTheme.BrowserTabBar);
@@ -1270,7 +1270,7 @@ namespace GestorTFG
 
         private void pantallaCompletaToolStripMenuItem_CheckedChanged(object sender, EventArgs e)
         {
-            if (pantallaCompletaToolStripMenuItem.Checked)
+            if (pantallaCompletaToolStripMenuItem1.Checked)
             {
                 if (WindowState == FormWindowState.Maximized)
                     WindowState = FormWindowState.Normal;
@@ -1634,151 +1634,151 @@ namespace GestorTFG
         private void toolStripMenuItem7_DropDownOpening(object sender, EventArgs e)
         {
             if(tabControl3.SelectedIndex == 0)
-                copiar.copiarPorCampoToolStripMenuItem_DropDownOpening(listView1, TipoLista.Todos, sender, e);
+                copiar.copiarPorCampoToolStripMenuItem_DropDownOpening(listView1.SelectedIndices[0], TipoLista.Todos, sender, e);
             else if(tabControl3.SelectedIndex == 1)
-                copiar.copiarPorCampoToolStripMenuItem_DropDownOpening(listView2, TipoLista.Sin_Asignar, sender, e);
+                copiar.copiarPorCampoToolStripMenuItem_DropDownOpening(listView2.SelectedIndices[0], TipoLista.Sin_Asignar, sender, e);
             else if (tabControl3.SelectedIndex == 2)
-                copiar.copiarPorCampoToolStripMenuItem_DropDownOpening(listView3, TipoLista.Finalizados, sender, e);
+                copiar.copiarPorCampoToolStripMenuItem_DropDownOpening(listView3.SelectedIndices[0], TipoLista.Finalizados, sender, e);
         }
 
         private void toolStripMenuItem5_Click(object sender, EventArgs e)
         {
             if (tabControl3.SelectedIndex == 0)
-                copiar.toolStripMenuItem1_Click(listView1, TipoLista.Todos, sender, e);
+                copiar.toolStripMenuItem1_Click(listView1.SelectedIndices[0], TipoLista.Todos, sender, e);
             else if (tabControl3.SelectedIndex == 1)
-                copiar.toolStripMenuItem1_Click(listView2, TipoLista.Sin_Asignar, sender, e);
+                copiar.toolStripMenuItem1_Click(listView2.SelectedIndices[0], TipoLista.Sin_Asignar, sender, e);
             else if (tabControl3.SelectedIndex == 2)
-                copiar.toolStripMenuItem1_Click(listView3, TipoLista.Finalizados, sender, e);
+                copiar.toolStripMenuItem1_Click(listView3.SelectedIndices[0], TipoLista.Finalizados, sender, e);
         }
 
         private void toolStripMenuItem6_Click(object sender, EventArgs e)
         {
             if (tabControl3.SelectedIndex == 0)
-                copiar.copiarDatosDeProfesorToolStripMenuItem_Click(listView1, TipoLista.Todos, sender, e);
+                copiar.copiarDatosDeProfesorToolStripMenuItem_Click(listView1.SelectedIndices[0], TipoLista.Todos, sender, e);
             else if (tabControl3.SelectedIndex == 1)
-                copiar.copiarDatosDeProfesorToolStripMenuItem_Click(listView2, TipoLista.Sin_Asignar, sender, e);
+                copiar.copiarDatosDeProfesorToolStripMenuItem_Click(listView2.SelectedIndices[0], TipoLista.Sin_Asignar, sender, e);
             else if (tabControl3.SelectedIndex == 2)
-                copiar.copiarDatosDeProfesorToolStripMenuItem_Click(listView3, TipoLista.Finalizados, sender, e);
+                copiar.copiarDatosDeProfesorToolStripMenuItem_Click(listView3.SelectedIndices[0], TipoLista.Finalizados, sender, e);
         }
 
         private void toolStripMenuItem8_Click(object sender, EventArgs e)
         {
             if (tabControl3.SelectedIndex == 0)
-                copiar.títuloToolStripMenuItem_Click(listView1, TipoLista.Todos, sender, e);
+                copiar.títuloToolStripMenuItem_Click(listView1.SelectedIndices[0], TipoLista.Todos, sender, e);
             else if (tabControl3.SelectedIndex == 1)
-                copiar.copiarDatosDeProfesorToolStripMenuItem_Click(listView2, TipoLista.Sin_Asignar, sender, e);
+                copiar.copiarDatosDeProfesorToolStripMenuItem_Click(listView2.SelectedIndices[0], TipoLista.Sin_Asignar, sender, e);
             else if (tabControl3.SelectedIndex == 2)
-                copiar.copiarDatosDeProfesorToolStripMenuItem_Click(listView3, TipoLista.Finalizados, sender, e);
+                copiar.copiarDatosDeProfesorToolStripMenuItem_Click(listView3.SelectedIndices[0], TipoLista.Finalizados, sender, e);
         }
 
         private void toolStripMenuItem9_Click(object sender, EventArgs e)
         {
             if (tabControl3.SelectedIndex == 0)
-                copiar.descripciónToolStripMenuItem_Click(listView1, TipoLista.Todos, sender, e);
+                copiar.descripciónToolStripMenuItem_Click(listView1.SelectedIndices[0], TipoLista.Todos, sender, e);
             else if (tabControl3.SelectedIndex == 1)
-                copiar.descripciónToolStripMenuItem_Click(listView2, TipoLista.Sin_Asignar, sender, e);
+                copiar.descripciónToolStripMenuItem_Click(listView2.SelectedIndices[0], TipoLista.Sin_Asignar, sender, e);
             else if (tabControl3.SelectedIndex == 2)
-                copiar.descripciónToolStripMenuItem_Click(listView3, TipoLista.Finalizados, sender, e);
+                copiar.descripciónToolStripMenuItem_Click(listView3.SelectedIndices[0], TipoLista.Finalizados, sender, e);
         }
 
         private void toolStripMenuItem10_Click(object sender, EventArgs e)
         {
             if (tabControl3.SelectedIndex == 0)
-                copiar.fechaDeRegistroToolStripMenuItem_Click(listView1, TipoLista.Todos, sender, e);
+                copiar.fechaDeRegistroToolStripMenuItem_Click(listView1.SelectedIndices[0], TipoLista.Todos, sender, e);
             else if (tabControl3.SelectedIndex == 1)
-                copiar.fechaDeRegistroToolStripMenuItem_Click(listView2, TipoLista.Sin_Asignar, sender, e);
+                copiar.fechaDeRegistroToolStripMenuItem_Click(listView2.SelectedIndices[0], TipoLista.Sin_Asignar, sender, e);
             else if (tabControl3.SelectedIndex == 2)
-                copiar.fechaDeRegistroToolStripMenuItem_Click(listView3, TipoLista.Finalizados, sender, e);
+                copiar.fechaDeRegistroToolStripMenuItem_Click(listView3.SelectedIndices[0], TipoLista.Finalizados, sender, e);
         }
 
         private void toolStripMenuItem11_Click(object sender, EventArgs e)
         {
             if (tabControl3.SelectedIndex == 0)
-                copiar.nombreDelAlumnoToolStripMenuItem_Click(listView1, TipoLista.Todos, sender, e);
+                copiar.nombreDelAlumnoToolStripMenuItem_Click(listView1.SelectedIndices[0], TipoLista.Todos, sender, e);
             else if (tabControl3.SelectedIndex == 1)
-                copiar.nombreDelAlumnoToolStripMenuItem_Click(listView2, TipoLista.Sin_Asignar, sender, e);
+                copiar.nombreDelAlumnoToolStripMenuItem_Click(listView2.SelectedIndices[0], TipoLista.Sin_Asignar, sender, e);
             else if (tabControl3.SelectedIndex == 2)
-                copiar.nombreDelAlumnoToolStripMenuItem_Click(listView3, TipoLista.Finalizados, sender, e);
+                copiar.nombreDelAlumnoToolStripMenuItem_Click(listView3.SelectedIndices[0], TipoLista.Finalizados, sender, e);
         }
 
         private void toolStripMenuItem12_Click(object sender, EventArgs e)
         {
             if (tabControl3.SelectedIndex == 0)
-                copiar.primerApellidoDelAlumnoToolStripMenuItem_Click(listView1, TipoLista.Todos, sender, e);
+                copiar.primerApellidoDelAlumnoToolStripMenuItem_Click(listView1.SelectedIndices[0], TipoLista.Todos, sender, e);
             else if (tabControl3.SelectedIndex == 1)
-                copiar.primerApellidoDelAlumnoToolStripMenuItem_Click(listView2, TipoLista.Sin_Asignar, sender, e);
+                copiar.primerApellidoDelAlumnoToolStripMenuItem_Click(listView2.SelectedIndices[0], TipoLista.Sin_Asignar, sender, e);
             else if (tabControl3.SelectedIndex == 2)
-                copiar.primerApellidoDelAlumnoToolStripMenuItem_Click(listView3, TipoLista.Finalizados, sender, e);
+                copiar.primerApellidoDelAlumnoToolStripMenuItem_Click(listView3.SelectedIndices[0], TipoLista.Finalizados, sender, e);
         }
 
         private void toolStripMenuItem13_Click(object sender, EventArgs e)
         {
             if (tabControl3.SelectedIndex == 0)
-                copiar.segundoApellidoDelAlumnoToolStripMenuItem_Click(listView1, TipoLista.Todos, sender, e);
+                copiar.segundoApellidoDelAlumnoToolStripMenuItem_Click(listView1.SelectedIndices[0], TipoLista.Todos, sender, e);
             else if (tabControl3.SelectedIndex == 1)
-                copiar.segundoApellidoDelAlumnoToolStripMenuItem_Click(listView2, TipoLista.Sin_Asignar, sender, e);
+                copiar.segundoApellidoDelAlumnoToolStripMenuItem_Click(listView2.SelectedIndices[0], TipoLista.Sin_Asignar, sender, e);
             else if (tabControl3.SelectedIndex == 2)
-                copiar.segundoApellidoDelAlumnoToolStripMenuItem_Click(listView3, TipoLista.Finalizados, sender, e);
+                copiar.segundoApellidoDelAlumnoToolStripMenuItem_Click(listView3.SelectedIndices[0], TipoLista.Finalizados, sender, e);
         }
 
         private void toolStripMenuItem14_Click(object sender, EventArgs e)
         {
             if (tabControl3.SelectedIndex == 0)
-                copiar.matrículaToolStripMenuItem_Click(listView1, TipoLista.Todos, sender, e);
+                copiar.matrículaToolStripMenuItem_Click(listView1.SelectedIndices[0], TipoLista.Todos, sender, e);
             else if (tabControl3.SelectedIndex == 1)
-                copiar.matrículaToolStripMenuItem_Click(listView2, TipoLista.Sin_Asignar, sender, e);
+                copiar.matrículaToolStripMenuItem_Click(listView2.SelectedIndices[0], TipoLista.Sin_Asignar, sender, e);
             else if (tabControl3.SelectedIndex == 2)
-                copiar.matrículaToolStripMenuItem_Click(listView3, TipoLista.Finalizados, sender, e);
+                copiar.matrículaToolStripMenuItem_Click(listView3.SelectedIndices[0], TipoLista.Finalizados, sender, e);
         }
 
         private void toolStripMenuItem15_Click(object sender, EventArgs e)
         {
             if (tabControl3.SelectedIndex == 0)
-                copiar.fechaDeInicioToolStripMenuItem_Click(listView1, TipoLista.Todos, sender, e);
+                copiar.fechaDeInicioToolStripMenuItem_Click(listView1.SelectedIndices[0], TipoLista.Todos, sender, e);
             else if (tabControl3.SelectedIndex == 1)
-                copiar.fechaDeInicioToolStripMenuItem_Click(listView2, TipoLista.Sin_Asignar, sender, e);
+                copiar.fechaDeInicioToolStripMenuItem_Click(listView2.SelectedIndices[0], TipoLista.Sin_Asignar, sender, e);
             else if (tabControl3.SelectedIndex == 2)
-                copiar.fechaDeInicioToolStripMenuItem_Click(listView3, TipoLista.Finalizados, sender, e);
+                copiar.fechaDeInicioToolStripMenuItem_Click(listView3.SelectedIndices[0], TipoLista.Finalizados, sender, e);
         }
 
         private void toolStripMenuItem16_Click(object sender, EventArgs e)
         {
             if (tabControl3.SelectedIndex == 0)
-                copiar.fechaDeDefensaToolStripMenuItem_Click(listView1, TipoLista.Todos, sender, e);
+                copiar.fechaDeDefensaToolStripMenuItem_Click(listView1.SelectedIndices[0], TipoLista.Todos, sender, e);
             else if (tabControl3.SelectedIndex == 1)
-                copiar.fechaDeDefensaToolStripMenuItem_Click(listView2, TipoLista.Sin_Asignar, sender, e);
+                copiar.fechaDeDefensaToolStripMenuItem_Click(listView2.SelectedIndices[0], TipoLista.Sin_Asignar, sender, e);
             else if (tabControl3.SelectedIndex == 2)
-                copiar.fechaDeDefensaToolStripMenuItem_Click(listView3, TipoLista.Finalizados, sender, e);
+                copiar.fechaDeDefensaToolStripMenuItem_Click(listView3.SelectedIndices[0], TipoLista.Finalizados, sender, e);
         }
 
         private void toolStripMenuItem17_Click(object sender, EventArgs e)
         {
             if (tabControl3.SelectedIndex == 0)
-                copiar.convocatoriaToolStripMenuItem_Click(listView1, TipoLista.Todos, sender, e);
+                copiar.convocatoriaToolStripMenuItem_Click(listView1.SelectedIndices[0], TipoLista.Todos, sender, e);
             else if (tabControl3.SelectedIndex == 1)
-                copiar.convocatoriaToolStripMenuItem_Click(listView2, TipoLista.Sin_Asignar, sender, e);
+                copiar.convocatoriaToolStripMenuItem_Click(listView2.SelectedIndices[0], TipoLista.Sin_Asignar, sender, e);
             else if (tabControl3.SelectedIndex == 2)
-                copiar.convocatoriaToolStripMenuItem_Click(listView3, TipoLista.Finalizados, sender, e);
+                copiar.convocatoriaToolStripMenuItem_Click(listView3.SelectedIndices[0], TipoLista.Finalizados, sender, e);
         }
 
         private void toolStripMenuItem18_Click(object sender, EventArgs e)
         {
             if (tabControl3.SelectedIndex == 0)
-                copiar.notaToolStripMenuItem_Click(listView1, TipoLista.Todos, sender, e);
+                copiar.notaToolStripMenuItem_Click(listView1.SelectedIndices[0], TipoLista.Todos, sender, e);
             else if (tabControl3.SelectedIndex == 1)
-                copiar.notaToolStripMenuItem_Click(listView2, TipoLista.Sin_Asignar, sender, e);
+                copiar.notaToolStripMenuItem_Click(listView2.SelectedIndices[0], TipoLista.Sin_Asignar, sender, e);
             else if (tabControl3.SelectedIndex == 2)
-                copiar.notaToolStripMenuItem_Click(listView3, TipoLista.Finalizados, sender, e);
+                copiar.notaToolStripMenuItem_Click(listView3.SelectedIndices[0], TipoLista.Finalizados, sender, e);
         }
 
         private void toolStripMenuItem2_Click(object sender, EventArgs e)
         {
             if (tabControl3.SelectedIndex == 0)
-                copiar.copiarConFormato_Click(listView1, TipoLista.Todos, sender, e);
+                copiar.copiarConFormato_Click(listView1.SelectedIndices[0], TipoLista.Todos, sender, e);
             else if (tabControl3.SelectedIndex == 1)
-                copiar.copiarConFormato_Click(listView2, TipoLista.Sin_Asignar, sender, e);
+                copiar.copiarConFormato_Click(listView2.SelectedIndices[0], TipoLista.Sin_Asignar, sender, e);
             else if (tabControl3.SelectedIndex == 2)
-                copiar.copiarConFormato_Click(listView3, TipoLista.Finalizados, sender, e);
+                copiar.copiarConFormato_Click(listView3.SelectedIndices[0], TipoLista.Finalizados, sender, e);
         }
         #endregion
 
@@ -1803,8 +1803,8 @@ namespace GestorTFG
                 tipoLista = TipoLista.Finalizados;
                 lista = listView3;
             }
-
-            new Form8(lista, tipoLista).ShowDialog();
+            new Form12(lista.SelectedIndices[0], tipoLista).Show();
+            //new Form8(lista, tipoLista).ShowDialog();
         }
 
         private void listView_MouseDoubleClick(object sender, MouseEventArgs e)
@@ -1826,8 +1826,8 @@ namespace GestorTFG
                         tipoLista = TipoLista.Finalizados;
                         lista = listView3;
                     }
-
-                    new Form8(lista, tipoLista).ShowDialog();
+                    new Form12(lista.SelectedIndices[0], tipoLista).Show();
+                    //new Form8(lista, tipoLista).ShowDialog();
                 }
             }
         }
@@ -1986,6 +1986,11 @@ namespace GestorTFG
                 toolStripButton1.Enabled = false;
                 toolStripDropDownButton1.Enabled = false;
             }
+        }
+
+        private void button11_EnabledChanged(object sender, EventArgs e)
+        {
+            editStripButton2.Enabled = button11.Enabled;
         }
     }
 

@@ -99,9 +99,9 @@
             this.toolStripStatusLabel1,
             this.toolStripStatusLabel2,
             this.toolStripStatusLabel3});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 534);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 535);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(959, 27);
+            this.statusStrip1.Size = new System.Drawing.Size(959, 26);
             this.statusStrip1.TabIndex = 6;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -111,7 +111,7 @@
             this.toolStripStatusLabel1.BorderStyle = System.Windows.Forms.Border3DStyle.SunkenOuter;
             this.toolStripStatusLabel1.Margin = new System.Windows.Forms.Padding(0);
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(148, 27);
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(148, 26);
             this.toolStripStatusLabel1.Text = "Mostrando resultados de: ";
             // 
             // toolStripStatusLabel2
@@ -121,7 +121,7 @@
             this.toolStripStatusLabel2.BorderStyle = System.Windows.Forms.Border3DStyle.SunkenOuter;
             this.toolStripStatusLabel2.Margin = new System.Windows.Forms.Padding(0);
             this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
-            this.toolStripStatusLabel2.Size = new System.Drawing.Size(674, 27);
+            this.toolStripStatusLabel2.Size = new System.Drawing.Size(643, 26);
             this.toolStripStatusLabel2.Spring = true;
             this.toolStripStatusLabel2.Text = "toolStripStatusLabel2";
             this.toolStripStatusLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -131,7 +131,7 @@
             this.toolStripStatusLabel3.BorderSides = ((System.Windows.Forms.ToolStripStatusLabelBorderSides)((System.Windows.Forms.ToolStripStatusLabelBorderSides.Left | System.Windows.Forms.ToolStripStatusLabelBorderSides.Top)));
             this.toolStripStatusLabel3.Margin = new System.Windows.Forms.Padding(0);
             this.toolStripStatusLabel3.Name = "toolStripStatusLabel3";
-            this.toolStripStatusLabel3.Size = new System.Drawing.Size(122, 27);
+            this.toolStripStatusLabel3.Size = new System.Drawing.Size(122, 26);
             this.toolStripStatusLabel3.Text = "toolStripStatusLabel3";
             // 
             // tabControl1
@@ -142,7 +142,7 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(959, 131);
+            this.tabControl1.Size = new System.Drawing.Size(959, 132);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -151,7 +151,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(951, 105);
+            this.tabPage1.Size = new System.Drawing.Size(951, 106);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Datos TFG";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -162,7 +162,7 @@
             this.richTextBox1.Location = new System.Drawing.Point(3, 3);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.ReadOnly = true;
-            this.richTextBox1.Size = new System.Drawing.Size(945, 99);
+            this.richTextBox1.Size = new System.Drawing.Size(945, 100);
             this.richTextBox1.TabIndex = 0;
             this.richTextBox1.Text = "";
             // 
@@ -203,7 +203,7 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.tabControl1);
-            this.splitContainer1.Size = new System.Drawing.Size(959, 534);
+            this.splitContainer1.Size = new System.Drawing.Size(959, 535);
             this.splitContainer1.SplitterDistance = 399;
             this.splitContainer1.TabIndex = 7;
             // 
@@ -560,6 +560,7 @@
             this.toolStrip1.PerformLayout();
             this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
+
         }
 
         #endregion

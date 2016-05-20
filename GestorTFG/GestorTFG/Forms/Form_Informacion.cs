@@ -100,7 +100,7 @@ namespace GestorTFG
 
         private void boton_copiar_Click(object sender, EventArgs e)
         {
-            copiar.copiarConFormato_Click(listView, lista, sender, e);
+            copiar.copiarConFormato_Click(listView.SelectedIndices[0], lista, sender, e);
             MessageBox.Show("Los datos han sido copiados al portapapeles", "Copiar al portapapeles", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }

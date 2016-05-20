@@ -11,33 +11,33 @@ namespace GestorTFG
         {
             this.copiarPorCampoToolStripMenuItem = copiarPorCampoToolStripMenuItem;
         }
-        public void toolStripMenuItem1_Click(VistaLista listView1, TipoLista indice, object sender, EventArgs e)
+        public void toolStripMenuItem1_Click(int indiceSeleccionado, TipoLista indice, object sender, EventArgs e)
         {
-            string proyecto = MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)indice][listView1.SelectedIndices[0]].getMTFG.Titulo + ";" +
-                MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)indice][listView1.SelectedIndices[0]].getMTFG.Descripcion + ";" +
-                MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)indice][listView1.SelectedIndices[0]].getMTFG.Fecha;
-            if (MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)indice][listView1.SelectedIndices[0]].Asignado)
+            string proyecto = MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)indice][indiceSeleccionado].getMTFG.Titulo + ";" +
+                MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)indice][indiceSeleccionado].getMTFG.Descripcion + ";" +
+                MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)indice][indiceSeleccionado].getMTFG.Fecha;
+            if (MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)indice][indiceSeleccionado].Asignado)
             {
-                proyecto += ";" + MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)indice][listView1.SelectedIndices[0]].Alumno.Nombre + ";" + MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)indice][listView1.SelectedIndices[0]].Alumno.PrimerApellido +
-                    ";" + MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)indice][listView1.SelectedIndices[0]].Alumno.SegundoApellido + ";" + MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)indice][listView1.SelectedIndices[0]].Alumno.Matricula +
-                    ";" + MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)indice][listView1.SelectedIndices[0]].Alumno.FechaInicio;
-                if (MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)indice][listView1.SelectedIndices[0]].getMTFG.Finalizado)
-                    proyecto += ";" + MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)indice][listView1.SelectedIndices[0]].getMTFG.getMFinalizado.Defensa + ";" + MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)indice][listView1.SelectedIndices[0]].getMTFG.getMFinalizado.Convocatoria +
-                        ";" + MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)indice][listView1.SelectedIndices[0]].getMTFG.getMFinalizado.Nota;
+                proyecto += ";" + MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)indice][indiceSeleccionado].Alumno.Nombre + ";" + MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)indice][indiceSeleccionado].Alumno.PrimerApellido +
+                    ";" + MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)indice][indiceSeleccionado].Alumno.SegundoApellido + ";" + MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)indice][indiceSeleccionado].Alumno.Matricula +
+                    ";" + MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)indice][indiceSeleccionado].Alumno.FechaInicio;
+                if (MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)indice][indiceSeleccionado].getMTFG.Finalizado)
+                    proyecto += ";" + MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)indice][indiceSeleccionado].getMTFG.getMFinalizado.Defensa + ";" + MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)indice][indiceSeleccionado].getMTFG.getMFinalizado.Convocatoria +
+                        ";" + MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)indice][indiceSeleccionado].getMTFG.getMFinalizado.Nota;
             }
             Clipboard.SetText(proyecto);
         }
 
-        public void copiarPorCampoToolStripMenuItem_DropDownOpening(VistaLista listView1, TipoLista indice, object sender, EventArgs e)
+        public void copiarPorCampoToolStripMenuItem_DropDownOpening(int indiceSeleccionado, TipoLista indice, object sender, EventArgs e)
         {
-            if (MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)indice][listView1.SelectedIndices[0]].Asignado)
+            if (MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)indice][indiceSeleccionado].Asignado)
             {
                 copiarPorCampoToolStripMenuItem.DropDownItems[3].Visible = true;
                 copiarPorCampoToolStripMenuItem.DropDownItems[4].Visible = true;
                 copiarPorCampoToolStripMenuItem.DropDownItems[5].Visible = true;
                 copiarPorCampoToolStripMenuItem.DropDownItems[6].Visible = true;
                 copiarPorCampoToolStripMenuItem.DropDownItems[7].Visible = true;
-                if (MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)indice][listView1.SelectedIndices[0]].getMTFG.Finalizado)
+                if (MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)indice][indiceSeleccionado].getMTFG.Finalizado)
                 {
                     copiarPorCampoToolStripMenuItem.DropDownItems[8].Visible = true;
                     copiarPorCampoToolStripMenuItem.DropDownItems[9].Visible = true;
@@ -63,83 +63,103 @@ namespace GestorTFG
             }
         }
 
-        public void títuloToolStripMenuItem_Click(VistaLista listView1, TipoLista indice, object sender, EventArgs e)
+        public void títuloToolStripMenuItem_Click(int indiceSeleccionado, TipoLista indice, object sender, EventArgs e)
         {
-            Clipboard.SetText(MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)indice][listView1.SelectedIndices[0]].getMTFG.Titulo);
+            Clipboard.SetText(MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)indice][indiceSeleccionado].getMTFG.Titulo);
         }
 
-        public void descripciónToolStripMenuItem_Click(VistaLista listView1, TipoLista indice, object sender, EventArgs e)
+        public void descripciónToolStripMenuItem_Click(int indiceSeleccionado, TipoLista indice, object sender, EventArgs e)
         {
-            Clipboard.SetText(MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)indice][listView1.SelectedIndices[0]].getMTFG.Descripcion);
+            Clipboard.SetText(MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)indice][indiceSeleccionado].getMTFG.Descripcion);
         }
 
-        public void fechaDeRegistroToolStripMenuItem_Click(VistaLista listView1, TipoLista indice, object sender, EventArgs e)
+        public void fechaDeRegistroToolStripMenuItem_Click(int indiceSeleccionado, TipoLista indice, object sender, EventArgs e)
         {
-            Clipboard.SetText(MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)indice][listView1.SelectedIndices[0]].getMTFG.Fecha);
+            Clipboard.SetText(MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)indice][indiceSeleccionado].getMTFG.Fecha);
         }
 
-        public void nombreDelAlumnoToolStripMenuItem_Click(VistaLista listView1, TipoLista indice, object sender, EventArgs e)
+        public void nombreDelAlumnoToolStripMenuItem_Click(int indiceSeleccionado, TipoLista indice, object sender, EventArgs e)
         {
-            Clipboard.SetText(MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)indice][listView1.SelectedIndices[0]].Alumno.Nombre);
+            Clipboard.SetText(MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)indice][indiceSeleccionado].Alumno.Nombre);
         }
 
-        public void primerApellidoDelAlumnoToolStripMenuItem_Click(VistaLista listView1, TipoLista indice, object sender, EventArgs e)
+        public void primerApellidoDelAlumnoToolStripMenuItem_Click(int indiceSeleccionado, TipoLista indice, object sender, EventArgs e)
         {
-            Clipboard.SetText(MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)indice][listView1.SelectedIndices[0]].Alumno.PrimerApellido);
+            Clipboard.SetText(MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)indice][indiceSeleccionado].Alumno.PrimerApellido);
         }
 
-        public void segundoApellidoDelAlumnoToolStripMenuItem_Click(VistaLista listView1, TipoLista indice, object sender, EventArgs e)
+        public void segundoApellidoDelAlumnoToolStripMenuItem_Click(int indiceSeleccionado, TipoLista indice, object sender, EventArgs e)
         {
-            Clipboard.SetText(MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)indice][listView1.SelectedIndices[0]].Alumno.SegundoApellido);
+            Clipboard.SetText(MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)indice][indiceSeleccionado].Alumno.SegundoApellido);
         }
 
-        public void matrículaToolStripMenuItem_Click(VistaLista listView1, TipoLista indice, object sender, EventArgs e)
+        public void matrículaToolStripMenuItem_Click(int indiceSeleccionado, TipoLista indice, object sender, EventArgs e)
         {
-            Clipboard.SetText(MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)indice][listView1.SelectedIndices[0]].Alumno.Matricula);
+            Clipboard.SetText(MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)indice][indiceSeleccionado].Alumno.Matricula);
         }
 
-        public void fechaDeInicioToolStripMenuItem_Click(VistaLista listView1, TipoLista indice, object sender, EventArgs e)
+        public void fechaDeInicioToolStripMenuItem_Click(int indiceSeleccionado, TipoLista indice, object sender, EventArgs e)
         {
-            Clipboard.SetText(MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)indice][listView1.SelectedIndices[0]].Alumno.FechaInicio);
+            Clipboard.SetText(MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)indice][indiceSeleccionado].Alumno.FechaInicio);
         }
 
-        public void fechaDeDefensaToolStripMenuItem_Click(VistaLista listView1, TipoLista indice, object sender, EventArgs e)
+        public void fechaDeDefensaToolStripMenuItem_Click(int indiceSeleccionado, TipoLista indice, object sender, EventArgs e)
         {
-            Clipboard.SetText(MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)indice][listView1.SelectedIndices[0]].getMTFG.getMFinalizado.Defensa);
+            Clipboard.SetText(MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)indice][indiceSeleccionado].getMTFG.getMFinalizado.Defensa);
         }
 
-        public void convocatoriaToolStripMenuItem_Click(VistaLista listView1, TipoLista indice, object sender, EventArgs e)
+        public void convocatoriaToolStripMenuItem_Click(int indiceSeleccionado, TipoLista indice, object sender, EventArgs e)
         {
-            Clipboard.SetText(MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)indice][listView1.SelectedIndices[0]].getMTFG.getMFinalizado.Convocatoria);
+            Clipboard.SetText(MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)indice][indiceSeleccionado].getMTFG.getMFinalizado.Convocatoria);
         }
 
-        public void notaToolStripMenuItem_Click(VistaLista listView1, TipoLista indice, object sender, EventArgs e)
+        public void notaToolStripMenuItem_Click(int indiceSeleccionado, TipoLista indice, object sender, EventArgs e)
         {
-            Clipboard.SetText(MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)indice][listView1.SelectedIndices[0]].getMTFG.getMFinalizado.Nota.ToString());
+            Clipboard.SetText(MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)indice][indiceSeleccionado].getMTFG.getMFinalizado.Nota.ToString());
         }
 
-        public void copiarDatosDeProfesorToolStripMenuItem_Click(VistaLista listView1, TipoLista indice, object sender, EventArgs e)
+        public void copiarDatosDeProfesorToolStripMenuItem_Click(int indiceSeleccionado, TipoLista indice, object sender, EventArgs e)
         {
-            Clipboard.SetText(MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)indice][listView1.SelectedIndices[0]].Profesor.Nombre +
-                ";" + MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)indice][listView1.SelectedIndices[0]].Profesor.PrimerApellido + ";" + MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)indice][listView1.SelectedIndices[0]].Profesor.SegundoApellido + ";" +
-                MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)indice][listView1.SelectedIndices[0]].Profesor.Despacho + ";" + MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)indice][listView1.SelectedIndices[0]].Profesor.Correo);
+            Clipboard.SetText(MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)indice][indiceSeleccionado].Profesor.Nombre +
+                ";" + MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)indice][indiceSeleccionado].Profesor.PrimerApellido + ";" + MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)indice][indiceSeleccionado].Profesor.SegundoApellido + ";" +
+                MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)indice][indiceSeleccionado].Profesor.Despacho + ";" + MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)indice][indiceSeleccionado].Profesor.Correo);
         }
 
-        public void copiarConFormato_Click(VistaLista listView1, TipoLista indice, object sender, EventArgs e)
+        public void CopiarNombreCompletoProfesor(int indiceSeleccionado, TipoLista indice, object sender, EventArgs e)
         {
-            string proyecto = "Título: " + MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)indice][listView1.SelectedIndices[0]].getMTFG.Titulo + "\r\nDescripción: " +
-                MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)indice][listView1.SelectedIndices[0]].getMTFG.Descripcion + "\r\nRegistrado el: " +
-                MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)indice][listView1.SelectedIndices[0]].getMTFG.Fecha + "\r\nNombre del profesor: " + MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)indice][listView1.SelectedIndices[0]].Profesor.Nombre +
-                " " + MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)indice][listView1.SelectedIndices[0]].Profesor.PrimerApellido + " " + MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)indice][listView1.SelectedIndices[0]].Profesor.SegundoApellido + "\r\nDespacho: " +
-                MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)indice][listView1.SelectedIndices[0]].Profesor.Despacho + "\r\nCorreo electrónico: " + MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)indice][listView1.SelectedIndices[0]].Profesor.Correo;
-            if (MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)indice][listView1.SelectedIndices[0]].Asignado)
+            Clipboard.SetText(MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)indice][indiceSeleccionado].Profesor.Nombre + " " + MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)indice][indiceSeleccionado].Profesor.PrimerApellido + " " + MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)indice][indiceSeleccionado].Profesor.SegundoApellido);
+        }
+
+        public void CopiarCorreoProfesor(int indiceSeleccionado, TipoLista indice, object sender, EventArgs e)
+        {
+            Clipboard.SetText(MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)indice][indiceSeleccionado].Profesor.Correo);
+        }
+
+        public void CopiarDespachoProfesor(int indiceSeleccionado, TipoLista indice, object sender, EventArgs e)
+        {
+            Clipboard.SetText(MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)indice][indiceSeleccionado].Profesor.Despacho);
+        }
+
+        public void CopiarNombreCompletoAlumno(int indiceSeleccionado, TipoLista indice, object sender, EventArgs e)
+        {
+            Clipboard.SetText(MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)indice][indiceSeleccionado].Alumno.Nombre + " " + MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)indice][indiceSeleccionado].Alumno.PrimerApellido + " " + MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)indice][indiceSeleccionado].Alumno.SegundoApellido);
+        }
+
+        public void copiarConFormato_Click(int indiceSeleccionado, TipoLista indice, object sender, EventArgs e)
+        {
+            string proyecto = "Título: " + MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)indice][indiceSeleccionado].getMTFG.Titulo + "\r\nDescripción: " +
+                MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)indice][indiceSeleccionado].getMTFG.Descripcion + "\r\nRegistrado el: " +
+                MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)indice][indiceSeleccionado].getMTFG.Fecha + "\r\nNombre del profesor: " + MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)indice][indiceSeleccionado].Profesor.Nombre +
+                " " + MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)indice][indiceSeleccionado].Profesor.PrimerApellido + " " + MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)indice][indiceSeleccionado].Profesor.SegundoApellido + "\r\nDespacho: " +
+                MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)indice][indiceSeleccionado].Profesor.Despacho + "\r\nCorreo electrónico: " + MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)indice][indiceSeleccionado].Profesor.Correo;
+            if (MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)indice][indiceSeleccionado].Asignado)
             {
-                proyecto += "\r\nNombre del alumno" + MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)indice][listView1.SelectedIndices[0]].Alumno.Nombre + " " + MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)indice][listView1.SelectedIndices[0]].Alumno.PrimerApellido +
-                    " " + MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)indice][listView1.SelectedIndices[0]].Alumno.SegundoApellido + "\r\nMatrícula: " + MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)indice][listView1.SelectedIndices[0]].Alumno.Matricula +
-                    "\r\nFecha de inicio" + MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)indice][listView1.SelectedIndices[0]].Alumno.FechaInicio;
-                if (MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)indice][listView1.SelectedIndices[0]].getMTFG.Finalizado)
-                    proyecto += "\r\nFecha de la defensa: " + MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)indice][listView1.SelectedIndices[0]].getMTFG.getMFinalizado.Defensa + "\r\nConvocatoria: " + MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)indice][listView1.SelectedIndices[0]].getMTFG.getMFinalizado.Convocatoria +
-                        "\r\nCalificación: " + MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)indice][listView1.SelectedIndices[0]].getMTFG.getMFinalizado.Nota;
+                proyecto += "\r\nNombre del alumno" + MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)indice][indiceSeleccionado].Alumno.Nombre + " " + MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)indice][indiceSeleccionado].Alumno.PrimerApellido +
+                    " " + MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)indice][indiceSeleccionado].Alumno.SegundoApellido + "\r\nMatrícula: " + MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)indice][indiceSeleccionado].Alumno.Matricula +
+                    "\r\nFecha de inicio" + MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)indice][indiceSeleccionado].Alumno.FechaInicio;
+                if (MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)indice][indiceSeleccionado].getMTFG.Finalizado)
+                    proyecto += "\r\nFecha de la defensa: " + MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)indice][indiceSeleccionado].getMTFG.getMFinalizado.Defensa + "\r\nConvocatoria: " + MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)indice][indiceSeleccionado].getMTFG.getMFinalizado.Convocatoria +
+                        "\r\nCalificación: " + MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)indice][indiceSeleccionado].getMTFG.getMFinalizado.Nota;
             }
             Clipboard.SetText(proyecto);
         }

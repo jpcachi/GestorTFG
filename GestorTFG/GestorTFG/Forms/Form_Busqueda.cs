@@ -167,7 +167,7 @@ namespace GestorTFG
                         ";" + MListaProyectos.getMListaProyectos.getMProyectos.getBusquedaProyecto[listView1.SelectedIndices[0]].getMTFG.getMFinalizado.Nota;
             }
             Clipboard.SetText(proyecto);*/
-            copiar.toolStripMenuItem1_Click(listView1, TipoLista.Busqueda, sender, e);
+            copiar.toolStripMenuItem1_Click(listView1.SelectedIndices[0], TipoLista.Busqueda, sender, e);
         }
 
         private void copiarPorCampoToolStripMenuItem_DropDownOpening(object sender, EventArgs e)
@@ -202,7 +202,7 @@ namespace GestorTFG
                 copiarPorCampoToolStripMenuItem.DropDownItems[9].Visible = false;
                 copiarPorCampoToolStripMenuItem.DropDownItems[10].Visible = false;
             }*/
-            copiar.copiarPorCampoToolStripMenuItem_DropDownOpening(listView1, TipoLista.Busqueda, sender, e);
+            copiar.copiarPorCampoToolStripMenuItem_DropDownOpening(listView1.SelectedIndices[0], TipoLista.Busqueda, sender, e);
         }
 
         private void títuloToolStripMenuItem_Click(object sender, EventArgs e)
@@ -265,7 +265,7 @@ namespace GestorTFG
             /*Clipboard.SetText(MListaProyectos.getMListaProyectos.getMProyectos.getBusquedaProyecto[listView1.SelectedIndices[0]].Profesor.Nombre +
                 ";" + MListaProyectos.getMListaProyectos.getMProyectos.getBusquedaProyecto[listView1.SelectedIndices[0]].Profesor.PrimerApellido + ";" + MListaProyectos.getMListaProyectos.getMProyectos.getBusquedaProyecto[listView1.SelectedIndices[0]].Profesor.SegundoApellido + ";" +
                 MListaProyectos.getMListaProyectos.getMProyectos.getBusquedaProyecto[listView1.SelectedIndices[0]].Profesor.Despacho + ";" + MListaProyectos.getMListaProyectos.getMProyectos.getBusquedaProyecto[listView1.SelectedIndices[0]].Profesor.Correo);*/
-            copiar.copiarDatosDeProfesorToolStripMenuItem_Click(listView1, TipoLista.Busqueda, sender, e);
+            copiar.copiarDatosDeProfesorToolStripMenuItem_Click(listView1.SelectedIndices[0], TipoLista.Busqueda, sender, e);
         }
 
         private void toolStripMenuItem2_Click(object sender, EventArgs e)
@@ -285,7 +285,7 @@ namespace GestorTFG
                         "\r\nCalificación: " + MListaProyectos.getMListaProyectos.getMProyectos.getBusquedaProyecto[listView1.SelectedIndices[0]].getMTFG.getMFinalizado.Nota;
             }
             Clipboard.SetText(proyecto);*/
-            copiar.copiarConFormato_Click(listView1, TipoLista.Busqueda, sender, e);
+            copiar.copiarConFormato_Click(listView1.SelectedIndices[0], TipoLista.Busqueda, sender, e);
         }
 
         private void toolStripMenuItem3_Click(object sender, EventArgs e)
@@ -322,19 +322,19 @@ namespace GestorTFG
 
         private void copiarToolStripButton1_Click(object sender, EventArgs e)
         {
-            copiar.toolStripMenuItem1_Click(listView1, TipoLista.Busqueda, sender, e);
+            copiar.toolStripMenuItem1_Click(listView1.SelectedIndices[0], TipoLista.Busqueda, sender, e);
         }
 
         private void mostrarInformaciónDetalladaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            new Form8(listView1, TipoLista.Busqueda).ShowDialog(this);
+            new Form12(listView1.SelectedIndices[0], TipoLista.Busqueda).Show();
         }
 
         private void listView1_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             if(e.Button == MouseButtons.Left)
             {
-                new Form8(listView1, TipoLista.Busqueda).ShowDialog(this);
+                new Form12(listView1.SelectedIndices[0], TipoLista.Busqueda).Show();
             }
         }
     }

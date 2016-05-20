@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
 namespace GestorTFG
@@ -17,7 +18,7 @@ namespace GestorTFG
             try
             {
                 Application.Run(new Form3());
-            } catch(Exception e)
+            } catch(FileNotFoundException e)
             {
                 MessageBox.Show("El programa no puede iniciarse porque falta Gestor_nucleo.dll en el equipo. Intente reinstalar el programa para corregir este problema.", "GestorTFG.exe - Error del sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 StreamWriter log = new StreamWriter("ERROR.log", true);

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Windows.Forms;
 
 namespace GestorTFG
@@ -145,6 +146,16 @@ namespace GestorTFG
             ListViewVisualStyles.FuenteItem = fuenteItem;
             ListViewVisualStyles.CambiarColorFondo();
         }
+
+        private void Titulo_Paint(object sender, PaintEventArgs e)
+        {
+            Color color1 = SystemColors.GradientActiveCaption;
+            Color color2 = SystemColors.ActiveCaption;
+            Rectangle rect = new Rectangle(0, 0, Width, Titulo.Height - 1);
+            LinearGradientBrush linearGradientBrush = new LinearGradientBrush(rect, color1, color2, LinearGradientMode.Horizontal);
+            e.Graphics.FillRectangle(linearGradientBrush, rect);
+        }
+
         private void button11_Click(object sender, EventArgs e)//aceptar
         {
             DialogResult = DialogResult.OK;
