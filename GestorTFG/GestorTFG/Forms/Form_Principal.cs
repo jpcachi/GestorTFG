@@ -47,11 +47,7 @@ namespace GestorTFG
             menuStrip1.Renderer = new ToolStripAeroRenderer(ToolbarTheme.HelpBar);
             contextMenuStrip1.Renderer = new ToolStripAeroRenderer(ToolbarTheme.HelpBar);
             //statusStrip1.Renderer = new ToolStripAeroRenderer(ToolbarTheme.BrowserTabBar);
-            //toolStrip2.Parent = this;
-            //toolStrip2.Dock = DockStyle.Top;
-            //menuStrip1.SendToBack();
             toolStrip2.Renderer = new ToolStripAeroRenderer(ToolbarTheme.HelpBar);
-            //toolStripContainer1.TopToolStripPanel.Renderer = new ToolStripAeroRenderer(ToolbarTheme.BrowserTabBar);
 
             ListViewVisualStyles.Listas.Add(listView1);
             ListViewVisualStyles.Listas.Add(listView2);
