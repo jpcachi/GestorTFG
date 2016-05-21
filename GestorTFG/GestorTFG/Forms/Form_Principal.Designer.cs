@@ -1064,7 +1064,7 @@
             this.tabPage7.Location = new System.Drawing.Point(4, 22);
             this.tabPage7.Name = "tabPage7";
             this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage7.Size = new System.Drawing.Size(724, 424);
+            this.tabPage7.Size = new System.Drawing.Size(724, 422);
             this.tabPage7.TabIndex = 1;
             this.tabPage7.Text = "Sin Asignar";
             this.tabPage7.UseVisualStyleBackColor = true;
@@ -1081,7 +1081,7 @@
             this.listView2.Location = new System.Drawing.Point(3, 3);
             this.listView2.Name = "listView2";
             this.listView2.OwnerDraw = true;
-            this.listView2.Size = new System.Drawing.Size(718, 418);
+            this.listView2.Size = new System.Drawing.Size(718, 416);
             this.listView2.TabIndex = 0;
             this.listView2.UseCompatibleStateImageBehavior = false;
             this.listView2.View = System.Windows.Forms.View.Details;
@@ -1545,7 +1545,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(243, 553);
+            this.tabPage2.Size = new System.Drawing.Size(243, 555);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Modificar TFG";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -1563,7 +1563,7 @@
             this.comboBox3.Size = new System.Drawing.Size(224, 21);
             this.comboBox3.TabIndex = 16;
             this.comboBox3.Visible = false;
-            this.comboBox3.TextChanged += new System.EventHandler(this.textBox8_comboBox3_TextChanged);
+            this.comboBox3.TextChanged += new System.EventHandler(this.textBox8_comboBox3_dateTimePicker3_numericUpDown1_TextChanged);
             this.comboBox3.Enter += new System.EventHandler(this.CampoEditable_Enter);
             this.comboBox3.Leave += new System.EventHandler(this.CampoEditable_Leave);
             // 
@@ -1575,6 +1575,7 @@
             this.dateTimePicker3.Size = new System.Drawing.Size(121, 20);
             this.dateTimePicker3.TabIndex = 15;
             this.dateTimePicker3.Visible = false;
+            this.dateTimePicker3.ValueChanged += new System.EventHandler(this.textBox8_comboBox3_dateTimePicker3_numericUpDown1_TextChanged);
             // 
             // groupBox5
             // 
@@ -1775,6 +1776,7 @@
             this.numericUpDown1.Size = new System.Drawing.Size(50, 20);
             this.numericUpDown1.TabIndex = 7;
             this.numericUpDown1.Visible = false;
+            this.numericUpDown1.ValueChanged += new System.EventHandler(this.textBox8_comboBox3_dateTimePicker3_numericUpDown1_TextChanged);
             // 
             // textBox8
             // 
@@ -1784,7 +1786,7 @@
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(224, 20);
             this.textBox8.TabIndex = 6;
-            this.textBox8.TextChanged += new System.EventHandler(this.textBox8_comboBox3_TextChanged);
+            this.textBox8.TextChanged += new System.EventHandler(this.textBox8_comboBox3_dateTimePicker3_numericUpDown1_TextChanged);
             this.textBox8.Enter += new System.EventHandler(this.CampoEditable_Enter);
             this.textBox8.Leave += new System.EventHandler(this.CampoEditable_Leave);
             // 
@@ -1830,7 +1832,7 @@
             this.comboBox1.Size = new System.Drawing.Size(224, 21);
             this.comboBox1.TabIndex = 0;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
-            this.comboBox1.TextChanged += new System.EventHandler(this.textBox8_comboBox3_TextChanged);
+            this.comboBox1.TextChanged += new System.EventHandler(this.textBox8_comboBox3_dateTimePicker3_numericUpDown1_TextChanged);
             // 
             // panel2
             // 

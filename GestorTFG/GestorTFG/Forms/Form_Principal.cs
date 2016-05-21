@@ -384,6 +384,7 @@ namespace GestorTFG
                         comboBox3.Visible = false;
                         break;
                 }
+                button5.Enabled = false;
             }
         }
 
@@ -850,13 +851,70 @@ namespace GestorTFG
             toolStripStatusLabel1.Text = fichero.ArchivoActual + '*';
         }
 
-        private void textBox8_comboBox3_TextChanged(object sender, EventArgs e)
+        private void textBox8_comboBox3_dateTimePicker3_numericUpDown1_TextChanged(object sender, EventArgs e)
         {
-            string texto = "";
+            int indiceLista = tabControl3.SelectedIndex;
+            int indiceSeleccionado = 0;
+            string valorCampoProyecto = string.Empty;
+            string texto = string.Empty;
+
             if (textBox8.Visible) texto = textBox8.Text;
             else if (comboBox3.Visible) texto = comboBox3.Text;
+            else if (dateTimePicker3.Visible) texto = dateTimePicker3.Text;
+            else if (numericUpDown1.Visible) texto = numericUpDown1.Value.ToString();
 
-            if (string.IsNullOrWhiteSpace(texto + comboBox1.Text))
+            
+            switch (indiceLista)
+            {
+                case 0:
+                    indiceSeleccionado = listView1.SelectedIndices[0];
+                    break;
+                case 1:
+                    indiceSeleccionado = listView2.SelectedIndices[0];
+                    break;
+                case 2:
+                    indiceSeleccionado = listView3.SelectedIndices[0];
+                    break;
+            }
+
+            switch (comboBox1.SelectedIndex)
+            {
+                case 0:
+                    valorCampoProyecto = MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[indiceLista][indiceSeleccionado].getMTFG.Titulo;
+                    break;
+                case 1:
+                    valorCampoProyecto = MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[indiceLista][indiceSeleccionado].getMTFG.Descripcion;
+                    break;
+                case 2:
+                    valorCampoProyecto = MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[indiceLista][indiceSeleccionado].getMTFG.Fecha;
+                    break;
+                case 3:
+                    valorCampoProyecto = MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[indiceLista][indiceSeleccionado].Alumno.Nombre;
+                    break;
+                case 4:
+                    valorCampoProyecto = MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[indiceLista][indiceSeleccionado].Alumno.PrimerApellido;
+                    break;
+                case 5:
+                    valorCampoProyecto = MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[indiceLista][indiceSeleccionado].Alumno.SegundoApellido;
+                    break;
+                case 6:
+                    valorCampoProyecto = MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[indiceLista][indiceSeleccionado].Alumno.Matricula;
+                    break;
+                case 7:
+                    valorCampoProyecto = MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[indiceLista][indiceSeleccionado].Alumno.FechaInicio;
+                    break;
+                case 8:
+                    valorCampoProyecto = MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[indiceLista][indiceSeleccionado].getMTFG.getMFinalizado.Defensa;
+                    break;
+                case 9:
+                    valorCampoProyecto = MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[indiceLista][indiceSeleccionado].getMTFG.getMFinalizado.Convocatoria;
+                    break;
+                case 10:
+                    valorCampoProyecto = MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[indiceLista][indiceSeleccionado].getMTFG.getMFinalizado.Nota.ToString();
+                    break;
+            }
+
+            if (string.IsNullOrWhiteSpace(texto) || texto.Trim() == valorCampoProyecto)
             {
                 button5.Enabled = false;
             }
