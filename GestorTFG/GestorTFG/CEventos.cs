@@ -140,7 +140,7 @@ namespace GestorTFG
                     buttons[3].Enabled = true;
                     buttons[2].Enabled = false;
                 }
-                ActualizarComboBoxModificar(ref comboBox1, listView);
+                ActualizarComboBoxModificar(ref comboBox1, listView, TipoLista.Todos);
             }
             else
             {
@@ -159,7 +159,7 @@ namespace GestorTFG
             }
         }
 
-        public void OnListView2SelectedIndexChange(ListView listView, ref RichTextBox richTextBox1, ref RichTextBox richTextBox2, params Button[] buttons) //8 y 9
+        public void OnListView2SelectedIndexChange(ListView listView, ref ComboBox comboBox1, TextBox textBox8, DateTimePicker dateTimePicker3, NumericUpDown numericUpDown1, ref RichTextBox richTextBox1, ref RichTextBox richTextBox2, params Button[] buttons) //8 y 9
         {
             buttons[1].Enabled = true;
             if (listView.SelectedIndices.Count == 1)
@@ -167,12 +167,22 @@ namespace GestorTFG
                 buttons[0].Enabled = true;
                 richTextBox1.Text = ActualizarDatosRichTextBox(listView.SelectedIndices[0], TipoLista.Sin_Asignar, TDatos.TFG);
                 richTextBox2.Text = ActualizarDatosRichTextBox(listView.SelectedIndices[0], TipoLista.Sin_Asignar, TDatos.Profesor);
+                comboBox1.Enabled = true;
+                textBox8.Enabled = true;
+                dateTimePicker3.Enabled = true;
+                numericUpDown1.Enabled = true;
             }
             else if (listView.SelectedIndices.Count > 1)
             {
                 buttons[0].Enabled = false;
                 richTextBox1.Clear();
                 richTextBox2.Clear();
+                comboBox1.SelectedItem = null;
+                comboBox1.Enabled = false;
+                textBox8.Clear();
+                textBox8.Enabled = false;
+                dateTimePicker3.Enabled = false;
+                numericUpDown1.Enabled = false;
             }
             else
             {
@@ -181,29 +191,52 @@ namespace GestorTFG
                 richTextBox1.Clear();
                 richTextBox2.Clear();
             }
+            ActualizarComboBoxModificar(ref comboBox1, listView, TipoLista.Sin_Asignar);
         }
 
-        public void ActualizarComboBoxModificar(ref ComboBox comboBox1, ListView listView)
+        public void OnListView3SelectedIndexChange(ListView listView, ref ComboBox comboBox1, TextBox textBox8, DateTimePicker dateTimePicker3, NumericUpDown numericUpDown1)
+        {
+            if(listView.SelectedIndices.Count == 1)
+            {
+                comboBox1.Enabled = true;
+                textBox8.Enabled = true;
+                dateTimePicker3.Enabled = true;
+                numericUpDown1.Enabled = true;
+            }
+            else
+            {
+                comboBox1.Enabled = false;
+                textBox8.Enabled = false;
+                dateTimePicker3.Enabled = false;
+                numericUpDown1.Enabled = false;
+            }
+            ActualizarComboBoxModificar(ref comboBox1, listView, TipoLista.Finalizados);
+        }
+
+        public void ActualizarComboBoxModificar(ref ComboBox comboBox1, ListView listView, TipoLista lista)
         {
             int longitud = comboBox1.Items.Count;
             if (longitud >= 3)
             {
                 for (int i = longitud - 1; i > 2; i--) comboBox1.Items.RemoveAt(i);
             }
-            if (MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[listView.SelectedIndices[0]].Asignado)
+            if (listView.SelectedIndices.Count == 1)
             {
-                comboBox1.Items.Add("Nombre del Alumno");
-                comboBox1.Items.Add("Primer Apellido");
-                comboBox1.Items.Add("Segundo Apellido");
-                comboBox1.Items.Add("Matrícula");
-                comboBox1.Items.Add("Fecha de inicio");
-                if (MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[listView.SelectedIndices[0]].getMTFG.Finalizado)
+                if (MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)lista][listView.SelectedIndices[0]].Asignado)
                 {
-                    comboBox1.Items.Add("Fecha de defensa");
-                    comboBox1.Items.Add("Convocatoria");
-                    comboBox1.Items.Add("Calificación");
+                    comboBox1.Items.Add("Nombre del Alumno");
+                    comboBox1.Items.Add("Primer Apellido");
+                    comboBox1.Items.Add("Segundo Apellido");
+                    comboBox1.Items.Add("Matrícula");
+                    comboBox1.Items.Add("Fecha de inicio");
+                    if (MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)lista][listView.SelectedIndices[0]].getMTFG.Finalizado)
+                    {
+                        comboBox1.Items.Add("Fecha de defensa");
+                        comboBox1.Items.Add("Convocatoria");
+                        comboBox1.Items.Add("Calificación");
+                    }
                 }
-            }
+            } 
         }
 
         public string ActualizarDatosRichTextBox(int indice, TipoLista indiceLista, TDatos mostrar)

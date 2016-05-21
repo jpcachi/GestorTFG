@@ -157,9 +157,14 @@ namespace GestorTFG
             cEventos.OnListView1SelectedIndexChange(listView, ref comboBox1, textBox8, dateTimePicker3, numericUpDown1, groupBox3, richTextBox1, richTextBox2, buttons);
         }
 
-        public void ItemSeleccionadoLista2(ListView listView, ref RichTextBox richTextBox1, ref RichTextBox richTextBox2, params Button[] buttons)
+        public void ItemSeleccionadoLista2(ListView listView, ref ComboBox comboBox1, TextBox textBox8, DateTimePicker dateTimePicker3, NumericUpDown numericUpDown1, ref RichTextBox richTextBox1, ref RichTextBox richTextBox2, params Button[] buttons)
         {
-            cEventos.OnListView2SelectedIndexChange(listView, ref richTextBox1, ref richTextBox2, buttons);
+            cEventos.OnListView2SelectedIndexChange(listView, ref comboBox1, textBox8, dateTimePicker3, numericUpDown1 ,ref richTextBox1, ref richTextBox2, buttons);
+        }
+
+        public void ItemSeleccionadoLista3(ListView listView, ref ComboBox comboBox1, TextBox textBox8, DateTimePicker dateTimePicker3, NumericUpDown numericUpDown1)
+        {
+            cEventos.OnListView3SelectedIndexChange(listView, ref comboBox1, textBox8, dateTimePicker3, numericUpDown1);
         }
 
         public bool BotonAñadirAlumno(Form1 ventanaAnterior, ref TabControl tabControl3, ref VistaLista listView1, VistaLista listView2, ref Button button7, ref Button button8, ref GroupBox groupBox3)
@@ -253,10 +258,11 @@ namespace GestorTFG
             cProyectos.GuardarProyectos();
         }
         
-        public void BotonModificar(ComboBox comboBox1, TextBox textBox8, ComboBox comboBox3, DateTimePicker dateTimePicker3, NumericUpDown numericUpDown1, ref VistaLista listView)
+        public void BotonModificar(ComboBox comboBox1, TextBox textBox8, ComboBox comboBox3, DateTimePicker dateTimePicker3, NumericUpDown numericUpDown1, ref VistaLista listView, TipoLista indiceLista)
         {
             string valor = "";
-            int indice = listView.SelectedIndices[0];
+            //int indice = listView.SelectedIndices[0];
+            int indice = MListaProyectos.getMListaProyectos.getMProyectos.getProyectos.IndexOf(MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)indiceLista][listView.SelectedIndices[0]]);//listView.SelectedIndices[0];
             switch (comboBox1.SelectedIndex)
             {
                 case 2: case 7: case 8: valor = dateTimePicker3.Text; break;
@@ -266,9 +272,9 @@ namespace GestorTFG
             }
 
             cProyectos.ModificarProyecto(comboBox1.SelectedIndex, valor, indice);
-            listView.RedrawItems(indice, indice, false);
-            //ActualizarVistaTabla(ref listView, TipoLista.Todos);
-            listView.Items[indice].Selected = true;
+            listView.RedrawItems(listView.SelectedIndices[0], listView.SelectedIndices[0], false);
+            //ActualizarVistaTabla(ref listView, indiceLista);
+            //listView.Items[indice].Selected = true;
         }
 
         public void BotonFinalizar(DateTimePicker dateTimePicker2, ComboBox comboBox2, NumericUpDown numericUpDown2, ref VistaLista listView1)
@@ -285,9 +291,9 @@ namespace GestorTFG
             listView1.RedrawItems(listView1.SelectedIndices[0], listView1.SelectedIndices[listView1.SelectedIndices.Count - 1], false);
         }
         
-        public void ActualizarComboBoxModificar(ref ComboBox comboBox1, ListView listView1) 
+        public void ActualizarComboBoxModificar(ref ComboBox comboBox1, ListView listView, TipoLista lista) 
         {
-            cEventos.ActualizarComboBoxModificar(ref comboBox1, listView1);
+            cEventos.ActualizarComboBoxModificar(ref comboBox1, listView, lista);
         }
 
         public void ActualizarDatosRichTextBox(ref RichTextBox richTextBox, ListView listView, TipoLista indiceLista ,TDatos mostrar)

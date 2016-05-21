@@ -9,7 +9,7 @@ namespace GestorTFG
         {
             InitializeComponent();
             textBox1.Text = "María del Carmen Gutierrez de Gregorio\r\nDavid Merinero Haro\r\nJuan Pedro Cachinero Bocanegra\r\nDavid Rodríguez Ardila\r\nGuillermo Escolar Fernández\r\nDaniel Martínez Hortelano";
-            label2.Text = "Versión " + Application.ProductVersion + "a. (Compilación " + Assembly.GetEntryAssembly().ImageRuntimeVersion + ").";
+            label2.Text = "Versión " + Application.ProductVersion + ". (Compilación " + Assembly.GetEntryAssembly().ImageRuntimeVersion + ").";
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

@@ -35,3 +35,4 @@ F:\Users\Juan Pedro_2\Documents\Visual Studio 2015\Projects\GestorTFG\Applicatio
 F:\Users\Juan Pedro_2\Documents\Visual Studio 2015\Projects\GestorTFG\Application\GestorTFG.application
 F:\Users\Juan Pedro_2\Documents\Visual Studio 2015\Projects\GestorTFG\Application\GestorTFG.exe
 F:\Users\Juan Pedro_2\Documents\Visual Studio 2015\Projects\GestorTFG\Application\GestorTFG.pdb
+F:\Users\Juan Pedro_2\Documents\Visual Studio 2015\Projects\GestorTFG\GestorTFG\obj\Release\GestorTFG.Form12.resources
