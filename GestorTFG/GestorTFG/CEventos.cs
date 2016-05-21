@@ -99,36 +99,29 @@ namespace GestorTFG
 
                 richTextBox2.Clear();
                 richTextBox1.Clear();
+
             }
             else if (listView.SelectedIndices.Count == 1)
             {
+                comboBox1.ResetText();
                 comboBox1.Enabled = true;
                 textBox8.Enabled = true;
                 dateTimePicker3.Enabled = true;
                 numericUpDown1.Enabled = true;
+                comboBox1.SelectedItem = null;
+                textBox8.Clear();
                 if (MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[listView.SelectedIndices[0]].Asignado)
                 {
                     if (!MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[listView.SelectedIndices[0]].getMTFG.Finalizado)
                         groupBox3.Enabled = true;
                 }
                 else groupBox3.Enabled = false;
-                buttons[0].Enabled = true;
                 buttons[1].Enabled = true;
                 buttons[4].Enabled = true;
 
-                richTextBox2.Text = ActualizarDatosRichTextBox(listView.SelectedIndices[0], TipoLista.Todos, TDatos.Profesor);/*
-                    "Información sobre el Profesor:\r\nNombre: " + 
-                    MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[listView.SelectedIndices[0]].Profesor.Nombre + "\r\nPrimer apellido: " +
-                    MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[listView.SelectedIndices[0]].Profesor.PrimerApellido + "\r\nSegundo apellido: " +
-                    MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[listView.SelectedIndices[0]].Profesor.SegundoApellido + "\r\nCorreo electrónico: " +
-                    MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[listView.SelectedIndices[0]].Profesor.Correo + "\r\nDespacho: " + 
-                    MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[listView.SelectedIndices[0]].Profesor.Despacho;*/
-
+                richTextBox2.Text = ActualizarDatosRichTextBox(listView.SelectedIndices[0], TipoLista.Todos, TDatos.Profesor);
                 richTextBox1.Text = ActualizarDatosRichTextBox(listView.SelectedIndices[0], TipoLista.Todos, TDatos.TFG);
-                    /*"Información sobre el TFG:\r\nTítulo: " + MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[listView.SelectedIndices[0]].getMTFG.Titulo + "\r\nDescripción: " +
-                    MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[listView.SelectedIndices[0]].getMTFG.Descripcion + "\r\nAsignado: " + MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[listView.SelectedIndices[0]].Asignado +
-                    "\r\nFinalizado: " + MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[listView.SelectedIndices[0]].getMTFG.Finalizado;*/
-
+                 
                 if (MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[listView.SelectedIndices[0]].Asignado)
                 {
                     buttons[3].Enabled = false;
@@ -137,6 +130,8 @@ namespace GestorTFG
                 }
                 else
                 {
+                    groupBox3.Enabled = false;
+
                     buttons[3].Enabled = true;
                     buttons[2].Enabled = false;
                 }
@@ -144,11 +139,14 @@ namespace GestorTFG
             }
             else
             {
-                comboBox1.Enabled = false;
+                comboBox1.SelectedItem = null;
+                comboBox1.Enabled = false;            
+                textBox8.Clear();
                 textBox8.Enabled = false;
                 dateTimePicker3.Enabled = false;
                 numericUpDown1.Enabled = false;
-                groupBox3.Enabled = false;
+
+                groupBox3.Enabled = false;        
                 buttons[0].Enabled = false;
                 buttons[1].Enabled = false;
                 buttons[2].Enabled = false;
@@ -161,46 +159,54 @@ namespace GestorTFG
 
         public void OnListView2SelectedIndexChange(ListView listView, ref ComboBox comboBox1, TextBox textBox8, DateTimePicker dateTimePicker3, NumericUpDown numericUpDown1, ref RichTextBox richTextBox1, ref RichTextBox richTextBox2, params Button[] buttons) //8 y 9
         {
-            buttons[1].Enabled = true;
-            if (listView.SelectedIndices.Count == 1)
+            
+            if (listView.SelectedIndices.Count > 1)
             {
+                buttons[1].Enabled = true;
+                buttons[0].Enabled = false;
+                richTextBox1.Clear();
+                richTextBox2.Clear();
+                comboBox1.SelectedItem = null;
+                comboBox1.Enabled = false;
+                textBox8.Clear();
+                textBox8.Enabled = false;
+                dateTimePicker3.Enabled = false;
+                numericUpDown1.Enabled = false;
+            }
+            else if (listView.SelectedIndices.Count == 1)
+            {
+                buttons[1].Enabled = true;
                 buttons[0].Enabled = true;
-                richTextBox1.Text = ActualizarDatosRichTextBox(listView.SelectedIndices[0], TipoLista.Sin_Asignar, TDatos.TFG);
-                richTextBox2.Text = ActualizarDatosRichTextBox(listView.SelectedIndices[0], TipoLista.Sin_Asignar, TDatos.Profesor);
+                comboBox1.ResetText();
                 comboBox1.Enabled = true;
                 textBox8.Enabled = true;
                 dateTimePicker3.Enabled = true;
                 numericUpDown1.Enabled = true;
+                comboBox1.SelectedItem = null;
+                textBox8.Clear();
+                richTextBox1.Text = ActualizarDatosRichTextBox(listView.SelectedIndices[0], TipoLista.Sin_Asignar, TDatos.TFG);
+                richTextBox2.Text = ActualizarDatosRichTextBox(listView.SelectedIndices[0], TipoLista.Sin_Asignar, TDatos.Profesor);
+                ActualizarComboBoxModificar(ref comboBox1, listView, TipoLista.Sin_Asignar);
             }
-            else if (listView.SelectedIndices.Count > 1)
+            else
             {
-                buttons[0].Enabled = false;
-                richTextBox1.Clear();
-                richTextBox2.Clear();
+                comboBox1.ResetText();
                 comboBox1.SelectedItem = null;
                 comboBox1.Enabled = false;
                 textBox8.Clear();
                 textBox8.Enabled = false;
                 dateTimePicker3.Enabled = false;
                 numericUpDown1.Enabled = false;
-            }
-            else
-            {
+
                 buttons[0].Enabled = false;
                 buttons[1].Enabled = false;
                 richTextBox1.Clear();
                 richTextBox2.Clear();
-                comboBox1.SelectedItem = null;
-                comboBox1.Enabled = false;
-                textBox8.Clear();
-                textBox8.Enabled = false;
-                dateTimePicker3.Enabled = false;
-                numericUpDown1.Enabled = false;
             }
-            ActualizarComboBoxModificar(ref comboBox1, listView, TipoLista.Sin_Asignar);
+            //ActualizarComboBoxModificar(ref comboBox1, listView, TipoLista.Sin_Asignar);
         }
 
-        public void OnListView3SelectedIndexChange(ListView listView, ref ComboBox comboBox1, TextBox textBox8, DateTimePicker dateTimePicker3, NumericUpDown numericUpDown1)
+        public void OnListView3SelectedIndexChange(ListView listView, ref ComboBox comboBox1, TextBox textBox8, DateTimePicker dateTimePicker3, NumericUpDown numericUpDown1, RichTextBox richTextBox1, RichTextBox richTextBox2)
         {
             if(listView.SelectedIndices.Count == 1)
             {
@@ -208,6 +214,8 @@ namespace GestorTFG
                 textBox8.Enabled = true;
                 dateTimePicker3.Enabled = true;
                 numericUpDown1.Enabled = true;
+                comboBox1.SelectedItem = null;
+                textBox8.Clear();
             }
             else
             {
@@ -215,6 +223,10 @@ namespace GestorTFG
                 textBox8.Enabled = false;
                 dateTimePicker3.Enabled = false;
                 numericUpDown1.Enabled = false;
+                comboBox1.SelectedItem = null;
+                textBox8.Clear();
+                richTextBox2.Clear();
+                richTextBox1.Clear();
             }
             ActualizarComboBoxModificar(ref comboBox1, listView, TipoLista.Finalizados);
         }
@@ -242,6 +254,9 @@ namespace GestorTFG
                         comboBox1.Items.Add("Calificación");
                     }
                 }
+            } else
+            {
+                comboBox1.Items.Clear();
             } 
         }
 

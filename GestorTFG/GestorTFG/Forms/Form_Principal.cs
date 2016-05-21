@@ -226,13 +226,30 @@ namespace GestorTFG
             }
             else
             {
+                button8.Enabled = false;
+                button9.Enabled = false;
+                comboBox1.ResetText();
+                comboBox1.Enabled = false;
+                button5.Enabled = false;
+                button6.Enabled = false;
+                textBox8.Clear();
+                textBox8.Enabled = false;
+                comboBox3.Enabled = false;
+                dateTimePicker3.Enabled = false;
+                numericUpDown1.Enabled = false;
+                comboBox3.Visible = false;
+                dateTimePicker3.Visible = false;
+                numericUpDown1.Visible = false;
+                textBox8.Visible = true;
                 copyToolStripButton1.Enabled = false;
                 button11.Enabled = false;
+                richTextBox1.Clear();
+                richTextBox2.Clear();
             }
-                SelectedIndexChangedTimer.Enabled = true;
+               /* SelectedIndexChangedTimer.Enabled = true;
                 SelectedIndexChangedTimer.Interval = Constantes.TEMPORIZADOR_SELECCION_PROYECTO;
                 SelectedIndexChangedTimer.Start();
-                SelectedIndexChangedTimer.Tick += SelectedIndexChangedTimer_Tick;
+                SelectedIndexChangedTimer.Tick += SelectedIndexChangedTimer_Tick;*/
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -288,13 +305,16 @@ namespace GestorTFG
                 switch (indiceLista)
                 {
                     case 0:
-                        indiceSeleccionado = listView1.SelectedIndices[0];
+                        if(listView1.SelectedIndices.Count > 0)
+                            indiceSeleccionado = listView1.SelectedIndices[0];
                         break;
                     case 1:
-                        indiceSeleccionado = listView2.SelectedIndices[0];
+                        if (listView2.SelectedIndices.Count > 0)
+                            indiceSeleccionado = listView2.SelectedIndices[0];
                         break;
                     case 2:
-                        indiceSeleccionado = listView3.SelectedIndices[0];
+                        if (listView3.SelectedIndices.Count > 0)
+                            indiceSeleccionado = listView3.SelectedIndices[0];
                         break;
                 }
                 switch (comboBox1.SelectedIndex)
@@ -455,10 +475,10 @@ namespace GestorTFG
         }
 
         private void listView2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            vista.ItemSeleccionadoLista2(listView2,ref comboBox1, textBox8, dateTimePicker3, numericUpDown1, ref richTextBox1, ref richTextBox2, button8, button9);
+        {      
             if (listView2.SelectedIndices.Count > 0)
             {
+                vista.ItemSeleccionadoLista2(listView2, ref comboBox1, textBox8, dateTimePicker3, numericUpDown1, ref richTextBox1, ref richTextBox2, button8, button9);
                 if (listView2.SelectedIndices.Count == 1)
                 {
                     copyToolStripButton1.Enabled = true;
@@ -472,8 +492,26 @@ namespace GestorTFG
             }
             else
             {
+                button7.Enabled = false;
+                button8.Enabled = false;
+                button9.Enabled = false;
+                comboBox1.ResetText();
+                comboBox1.Enabled = false;
+                button5.Enabled = false;
+                button6.Enabled = false;
+                textBox8.Clear();
+                textBox8.Enabled = false;
+                comboBox3.Enabled = false;
+                dateTimePicker3.Enabled = false;
+                numericUpDown1.Enabled = false;
+                comboBox3.Visible = false;
+                dateTimePicker3.Visible = false;
+                numericUpDown1.Visible = false;
+                textBox8.Visible = true;
                 copyToolStripButton1.Enabled = false;
                 button11.Enabled = false;
+                richTextBox1.Clear();
+                richTextBox2.Clear();
             }
         }
 
@@ -854,7 +892,7 @@ namespace GestorTFG
         private void textBox8_comboBox3_dateTimePicker3_numericUpDown1_TextChanged(object sender, EventArgs e)
         {
             int indiceLista = tabControl3.SelectedIndex;
-            int indiceSeleccionado = 0;
+            int indiceSeleccionado = -1;
             string valorCampoProyecto = string.Empty;
             string texto = string.Empty;
 
@@ -867,54 +905,59 @@ namespace GestorTFG
             switch (indiceLista)
             {
                 case 0:
-                    indiceSeleccionado = listView1.SelectedIndices[0];
+                    if(listView1.SelectedIndices.Count > 0)
+                        indiceSeleccionado = listView1.SelectedIndices[0];
                     break;
                 case 1:
-                    indiceSeleccionado = listView2.SelectedIndices[0];
+                    if (listView2.SelectedIndices.Count > 0)
+                        indiceSeleccionado = listView2.SelectedIndices[0];
                     break;
                 case 2:
-                    indiceSeleccionado = listView3.SelectedIndices[0];
+                    if (listView3.SelectedIndices.Count > 0)
+                        indiceSeleccionado = listView3.SelectedIndices[0];
                     break;
             }
-
-            switch (comboBox1.SelectedIndex)
+            if (indiceSeleccionado != -1)
             {
-                case 0:
-                    valorCampoProyecto = MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[indiceLista][indiceSeleccionado].getMTFG.Titulo;
-                    break;
-                case 1:
-                    valorCampoProyecto = MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[indiceLista][indiceSeleccionado].getMTFG.Descripcion;
-                    break;
-                case 2:
-                    valorCampoProyecto = MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[indiceLista][indiceSeleccionado].getMTFG.Fecha;
-                    break;
-                case 3:
-                    valorCampoProyecto = MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[indiceLista][indiceSeleccionado].Alumno.Nombre;
-                    break;
-                case 4:
-                    valorCampoProyecto = MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[indiceLista][indiceSeleccionado].Alumno.PrimerApellido;
-                    break;
-                case 5:
-                    valorCampoProyecto = MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[indiceLista][indiceSeleccionado].Alumno.SegundoApellido;
-                    break;
-                case 6:
-                    valorCampoProyecto = MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[indiceLista][indiceSeleccionado].Alumno.Matricula;
-                    break;
-                case 7:
-                    valorCampoProyecto = MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[indiceLista][indiceSeleccionado].Alumno.FechaInicio;
-                    break;
-                case 8:
-                    valorCampoProyecto = MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[indiceLista][indiceSeleccionado].getMTFG.getMFinalizado.Defensa;
-                    break;
-                case 9:
-                    valorCampoProyecto = MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[indiceLista][indiceSeleccionado].getMTFG.getMFinalizado.Convocatoria;
-                    break;
-                case 10:
-                    valorCampoProyecto = MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[indiceLista][indiceSeleccionado].getMTFG.getMFinalizado.Nota.ToString();
-                    break;
+                switch (comboBox1.SelectedIndex)
+                {
+                    case 0:
+                        valorCampoProyecto = MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[indiceLista][indiceSeleccionado].getMTFG.Titulo;
+                        break;
+                    case 1:
+                        valorCampoProyecto = MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[indiceLista][indiceSeleccionado].getMTFG.Descripcion;
+                        break;
+                    case 2:
+                        valorCampoProyecto = MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[indiceLista][indiceSeleccionado].getMTFG.Fecha;
+                        break;
+                    case 3:
+                        valorCampoProyecto = MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[indiceLista][indiceSeleccionado].Alumno.Nombre;
+                        break;
+                    case 4:
+                        valorCampoProyecto = MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[indiceLista][indiceSeleccionado].Alumno.PrimerApellido;
+                        break;
+                    case 5:
+                        valorCampoProyecto = MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[indiceLista][indiceSeleccionado].Alumno.SegundoApellido;
+                        break;
+                    case 6:
+                        valorCampoProyecto = MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[indiceLista][indiceSeleccionado].Alumno.Matricula;
+                        break;
+                    case 7:
+                        valorCampoProyecto = MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[indiceLista][indiceSeleccionado].Alumno.FechaInicio;
+                        break;
+                    case 8:
+                        valorCampoProyecto = MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[indiceLista][indiceSeleccionado].getMTFG.getMFinalizado.Defensa;
+                        break;
+                    case 9:
+                        valorCampoProyecto = MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[indiceLista][indiceSeleccionado].getMTFG.getMFinalizado.Convocatoria;
+                        break;
+                    case 10:
+                        valorCampoProyecto = MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[indiceLista][indiceSeleccionado].getMTFG.getMFinalizado.Nota.ToString();
+                        break;
+                }
             }
 
-            if (string.IsNullOrWhiteSpace(texto) || texto.Trim() == valorCampoProyecto)
+            if (string.IsNullOrWhiteSpace(texto) || texto.Trim() == valorCampoProyecto || string.IsNullOrWhiteSpace(comboBox1.Text))
             {
                 button5.Enabled = false;
             }
@@ -1615,21 +1658,38 @@ namespace GestorTFG
         }
 
         private void listView3_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            vista.ItemSeleccionadoLista3(listView3, ref comboBox1, textBox8, dateTimePicker3, numericUpDown1);
+        {  
             if (listView3.SelectedIndices.Count > 0)
             {
+                vista.ItemSeleccionadoLista3(listView3, ref comboBox1, textBox8, dateTimePicker3, numericUpDown1, richTextBox1, richTextBox2);
                 if (listView3.SelectedIndices.Count == 1)
                 {
                     copyToolStripButton1.Enabled = true;
                     vista.ActualizarDatosRichTextBox(ref richTextBox1, listView3, TipoLista.Finalizados, TDatos.TFG);
                     vista.ActualizarDatosRichTextBox(ref richTextBox2, listView3, TipoLista.Finalizados, TDatos.Profesor);
                 }
-                else copyToolStripButton1.Enabled = false;
+                else
+                {
+                    copyToolStripButton1.Enabled = false;
+                }
             }
             else
             {
-                copyToolStripButton1.Enabled = false; 
+                comboBox1.Enabled = false;
+                button5.Enabled = false;
+                button6.Enabled = false;
+                textBox8.Clear();
+                textBox8.Enabled = false;
+                comboBox3.Enabled = false;
+                dateTimePicker3.Enabled = false;
+                numericUpDown1.Enabled = false;
+                comboBox3.Visible = false;
+                dateTimePicker3.Visible = false;
+                numericUpDown1.Visible = false;
+                textBox8.Visible = true;
+                copyToolStripButton1.Enabled = false;
+                richTextBox1.Clear();
+                richTextBox2.Clear();
             }
         }
 
@@ -2094,6 +2154,26 @@ namespace GestorTFG
         private void button11_EnabledChanged(object sender, EventArgs e)
         {
             editStripButton2.Enabled = button11.Enabled;
+        }
+
+        private void comboBox1_EnabledChanged(object sender, EventArgs e)
+        {
+            if(!comboBox1.Enabled)
+                comboBox1.SelectedIndex = -1;
+        }
+
+        private void tabControl1_Selecting(object sender, TabControlCancelEventArgs e)
+        {
+            if(tabControl1.SelectedIndex != 0)
+            {
+                textBox1.Clear();
+                textBox2.Clear();
+                textBox3.Clear();
+                textBox4.Clear();
+                textBox5.Clear();
+                textBox6.Clear();
+                textBox7.Clear();
+            }
         }
     }
 

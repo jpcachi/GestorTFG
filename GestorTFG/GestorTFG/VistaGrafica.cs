@@ -162,9 +162,9 @@ namespace GestorTFG
             cEventos.OnListView2SelectedIndexChange(listView, ref comboBox1, textBox8, dateTimePicker3, numericUpDown1 ,ref richTextBox1, ref richTextBox2, buttons);
         }
 
-        public void ItemSeleccionadoLista3(ListView listView, ref ComboBox comboBox1, TextBox textBox8, DateTimePicker dateTimePicker3, NumericUpDown numericUpDown1)
+        public void ItemSeleccionadoLista3(ListView listView, ref ComboBox comboBox1, TextBox textBox8, DateTimePicker dateTimePicker3, NumericUpDown numericUpDown1, RichTextBox richTextBox1, RichTextBox richTextBox2)
         {
-            cEventos.OnListView3SelectedIndexChange(listView, ref comboBox1, textBox8, dateTimePicker3, numericUpDown1);
+            cEventos.OnListView3SelectedIndexChange(listView, ref comboBox1, textBox8, dateTimePicker3, numericUpDown1, richTextBox1, richTextBox2);
         }
 
         public bool BotonAñadirAlumno(Form1 ventanaAnterior, ref TabControl tabControl3, ref VistaLista listView1, VistaLista listView2, ref Button button7, ref Button button8, ref GroupBox groupBox3)
