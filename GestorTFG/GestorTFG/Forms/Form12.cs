@@ -112,7 +112,7 @@ namespace GestorTFG
         private void copiarDatos_Click(object sender, EventArgs e)
         {
             copiar.copiarConFormato_Click(indice, tLista, sender, e);
-            MessageBox.Show("Los datos han sido copiados al portapapeles.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Todos los datos han sido copiados al portapapeles.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void copiarProfesor_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

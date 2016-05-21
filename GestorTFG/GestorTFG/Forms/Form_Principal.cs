@@ -273,6 +273,10 @@ namespace GestorTFG
             listView1.SelectedIndices.Clear();
             listView2.SelectedIndices.Clear();
             listView3.SelectedIndices.Clear();
+            comboBox1.Enabled = false;
+            textBox8.Enabled = false;
+            dateTimePicker3.Enabled = false;
+            numericUpDown1.Enabled = false;
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)

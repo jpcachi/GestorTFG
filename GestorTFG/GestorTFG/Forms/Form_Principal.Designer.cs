@@ -926,7 +926,7 @@
             this.toolStripContainer1.ContentPanel.Controls.Add(this.tabControl1);
             this.toolStripContainer1.ContentPanel.Controls.Add(this.panel2);
             this.toolStripContainer1.ContentPanel.Controls.Add(this.panel4);
-            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(1264, 606);
+            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(1264, 581);
             this.toolStripContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.toolStripContainer1.LeftToolStripPanelVisible = false;
             this.toolStripContainer1.Location = new System.Drawing.Point(0, 24);
@@ -939,8 +939,8 @@
             // toolStripContainer1.TopToolStripPanel
             // 
             this.toolStripContainer1.TopToolStripPanel.BackColor = System.Drawing.SystemColors.Window;
-            this.toolStripContainer1.TopToolStripPanel.Controls.Add(this.toolStrip1);
             this.toolStripContainer1.TopToolStripPanel.Controls.Add(this.toolStrip2);
+            this.toolStripContainer1.TopToolStripPanel.Controls.Add(this.toolStrip1);
             // 
             // tabControl3
             // 
@@ -951,7 +951,7 @@
             this.tabControl3.Location = new System.Drawing.Point(259, 0);
             this.tabControl3.Name = "tabControl3";
             this.tabControl3.SelectedIndex = 0;
-            this.tabControl3.Size = new System.Drawing.Size(732, 475);
+            this.tabControl3.Size = new System.Drawing.Size(732, 450);
             this.tabControl3.TabIndex = 8;
             this.tabControl3.Selecting += new System.Windows.Forms.TabControlCancelEventHandler(this.tabControl3_Selecting);
             this.tabControl3.Deselected += new System.Windows.Forms.TabControlEventHandler(this.tabControl3_Deselected);
@@ -964,7 +964,7 @@
             this.tabPage6.Location = new System.Drawing.Point(4, 22);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(724, 449);
+            this.tabPage6.Size = new System.Drawing.Size(724, 424);
             this.tabPage6.TabIndex = 0;
             this.tabPage6.Text = "Todos";
             // 
@@ -990,7 +990,7 @@
             this.listView1.Location = new System.Drawing.Point(3, 3);
             this.listView1.Name = "listView1";
             this.listView1.OwnerDraw = true;
-            this.listView1.Size = new System.Drawing.Size(718, 443);
+            this.listView1.Size = new System.Drawing.Size(718, 418);
             this.listView1.TabIndex = 4;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -1064,7 +1064,7 @@
             this.tabPage7.Location = new System.Drawing.Point(4, 22);
             this.tabPage7.Name = "tabPage7";
             this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage7.Size = new System.Drawing.Size(724, 447);
+            this.tabPage7.Size = new System.Drawing.Size(724, 424);
             this.tabPage7.TabIndex = 1;
             this.tabPage7.Text = "Sin Asignar";
             this.tabPage7.UseVisualStyleBackColor = true;
@@ -1081,7 +1081,7 @@
             this.listView2.Location = new System.Drawing.Point(3, 3);
             this.listView2.Name = "listView2";
             this.listView2.OwnerDraw = true;
-            this.listView2.Size = new System.Drawing.Size(718, 441);
+            this.listView2.Size = new System.Drawing.Size(718, 418);
             this.listView2.TabIndex = 0;
             this.listView2.UseCompatibleStateImageBehavior = false;
             this.listView2.View = System.Windows.Forms.View.Details;
@@ -1110,7 +1110,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(724, 447);
+            this.tabPage3.Size = new System.Drawing.Size(724, 422);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Finalizados";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -1136,7 +1136,7 @@
             this.listView3.Location = new System.Drawing.Point(3, 3);
             this.listView3.Name = "listView3";
             this.listView3.OwnerDraw = true;
-            this.listView3.Size = new System.Drawing.Size(718, 441);
+            this.listView3.Size = new System.Drawing.Size(718, 416);
             this.listView3.TabIndex = 5;
             this.listView3.UseCompatibleStateImageBehavior = false;
             this.listView3.View = System.Windows.Forms.View.Details;
@@ -1209,7 +1209,7 @@
             this.tabControl2.Controls.Add(this.tabPage4);
             this.tabControl2.Controls.Add(this.tabPage5);
             this.tabControl2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tabControl2.Location = new System.Drawing.Point(259, 475);
+            this.tabControl2.Location = new System.Drawing.Point(259, 450);
             this.tabControl2.MinimumSize = new System.Drawing.Size(0, 100);
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.SelectedIndex = 0;
@@ -1267,7 +1267,7 @@
             this.tabControl1.Location = new System.Drawing.Point(991, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(251, 606);
+            this.tabControl1.Size = new System.Drawing.Size(251, 581);
             this.tabControl1.TabIndex = 2;
             // 
             // tabPage1
@@ -1279,7 +1279,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(243, 580);
+            this.tabPage1.Size = new System.Drawing.Size(243, 555);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Añadir TFG";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -1370,7 +1370,7 @@
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(3, 545);
+            this.panel1.Location = new System.Drawing.Point(3, 520);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(237, 32);
             this.panel1.TabIndex = 4;
@@ -1545,7 +1545,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(243, 578);
+            this.tabPage2.Size = new System.Drawing.Size(243, 553);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Modificar TFG";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -1841,7 +1841,7 @@
             this.panel2.MaximumSize = new System.Drawing.Size(440, 585);
             this.panel2.MinimumSize = new System.Drawing.Size(220, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(259, 585);
+            this.panel2.Size = new System.Drawing.Size(259, 581);
             this.panel2.TabIndex = 9;
             // 
             // groupBox4
@@ -2106,7 +2106,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel4.Location = new System.Drawing.Point(1242, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(22, 606);
+            this.panel4.Size = new System.Drawing.Size(22, 581);
             this.panel4.TabIndex = 10;
             // 
             // toolStrip1
@@ -2121,7 +2121,7 @@
             this.toolStripDropDownButton1,
             this.toolStripSeparator2,
             this.helpToolStripButton1});
-            this.toolStrip1.Location = new System.Drawing.Point(332, 0);
+            this.toolStrip1.Location = new System.Drawing.Point(3, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(532, 25);
             this.toolStrip1.TabIndex = 3;
@@ -2225,7 +2225,7 @@
             this.removeStripButton1,
             this.deleteStripButton1,
             this.toolStripSeparator1});
-            this.toolStrip2.Location = new System.Drawing.Point(3, 0);
+            this.toolStrip2.Location = new System.Drawing.Point(3, 25);
             this.toolStrip2.Name = "toolStrip2";
             this.toolStrip2.Size = new System.Drawing.Size(329, 25);
             this.toolStrip2.TabIndex = 2;

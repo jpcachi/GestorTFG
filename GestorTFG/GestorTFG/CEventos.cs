@@ -186,10 +186,16 @@ namespace GestorTFG
             }
             else
             {
-                buttons[1].Enabled = false;
+                buttons[0].Enabled = false;
                 buttons[1].Enabled = false;
                 richTextBox1.Clear();
                 richTextBox2.Clear();
+                comboBox1.SelectedItem = null;
+                comboBox1.Enabled = false;
+                textBox8.Clear();
+                textBox8.Enabled = false;
+                dateTimePicker3.Enabled = false;
+                numericUpDown1.Enabled = false;
             }
             ActualizarComboBoxModificar(ref comboBox1, listView, TipoLista.Sin_Asignar);
         }
