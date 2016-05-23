@@ -53,7 +53,7 @@ namespace GestorTFG_Console
                         Console.ForegroundColor = ConsoleColor.DarkGreen;
                         Console.Clear();
                         Console.WriteLine("┌─────────────────────────┐\n│     AÑADIR PROYECTO     │\n└─────────────────────────┘");
-                        string[] datos = MenuUtilidades.introducirDatos("Título", "Descripción", "Fecha", "Nombre del profesor", "Primer apellido del profesor", "Segundo apellido del profesor", "Correo del profesor", "Despacho del profesor");
+                        string[] datos = MenuUtilidades.introducirDatos(new int[] { 2},"Título", "Descripción", "Fecha de registro (DD/MM/YYYY)", "Nombre del profesor", "Primer apellido del profesor", "Segundo apellido del profesor", "Correo del profesor", "Despacho del profesor");
                         cProyectos.AñadirProyecto(datos);
                         Console.WriteLine("Proyecto \"" + datos[0] + "\" añadido correctamente\n¿Desea añadir un alumno al proyecto? (S/N)");
                         string confirmacion;

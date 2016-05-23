@@ -76,7 +76,7 @@ namespace GestorTFG_Console
                             break;
                         case 4:
                             Console.WriteLine("Fecha de inicio actual: " + MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[indiceProyecto].Alumno.FechaInicio);
-                            string[] fecha = MenuUtilidades.introducirDatos("Nueva fecha de inicio");
+                            string[] fecha = MenuUtilidades.introducirDatos(new int[] { 0 }, "Nueva fecha de inicio");
                             cProyectos.ModificarProyecto(6, fecha[0], indiceProyecto);
                             Console.WriteLine("Fecha de inicio modificada correctamente. Pulse una tecla para continuar...\n");
                             Console.ReadKey();
@@ -91,7 +91,7 @@ namespace GestorTFG_Console
             private int seleccion;
             private int indiceProyecto;
             private CProyectos cProyectos;
-            string[] opciones = { "Nombre", "Primer apellido", "Segundo apellido", "Matrícula", "Fecha de inicio", "Salir" };
+            string[] opciones = { "Nombre", "Primer apellido", "Segundo apellido", "Correo electrónico", "Despacho", "Salir" };
             public MenuModificarProfesor(int indice, CProyectos cProyectos)
             {
                 this.cProyectos = cProyectos;
@@ -189,7 +189,7 @@ namespace GestorTFG_Console
                             break;
                         case 2:
                             Console.WriteLine("Fecha de registro actual: " + MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[indiceProyecto].getMTFG.Fecha);
-                            string[] fecha = MenuUtilidades.introducirDatos("Nueva fecha de registro");
+                            string[] fecha = MenuUtilidades.introducirDatos(new int[] { 0 }, "Nueva fecha de registro");
                             cProyectos.ModificarProyecto(2, fecha[0], indiceProyecto);
                             Console.WriteLine("Fecha de registro modificada correctamente. Pulse una tecla para continuar...\n");
                             Console.ReadKey();
@@ -207,7 +207,7 @@ namespace GestorTFG_Console
                             //if (seleccion != opciones.Length - 1)
                             //{
                                 Console.WriteLine("Fecha de defensa actual: " + MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[indiceProyecto].getMTFG.getMFinalizado.Defensa);
-                                string[] defensa = MenuUtilidades.introducirDatos("Nueva fecha de defensa");
+                                string[] defensa = MenuUtilidades.introducirDatos(new int[] { 0 }, "Nueva fecha de defensa");
                                 cProyectos.ModificarProyecto(8, defensa[0], indiceProyecto);
                                 Console.WriteLine("Fecha de defensa modificada correctamente. Pulse una tecla para continuar...\n");
                                 Console.ReadKey();

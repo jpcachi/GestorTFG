@@ -1,0 +1,35 @@
+Instrucciones para compilar y ejecutar el programa:
+
+1-Ejecutar el archivo por lotes "Compilar.bat"
+2-Entrar en la carpeta "Application" generada y ejecutar el programa "GestorTFG.exe"
+
+Contenido de "Compilar.bat":
+C:\Windows\Microsoft.NET\Framework64\v4.0.30319\MSBuild.exe GestorTFG.sln /t:rebuild /p:Configuration=Release /p:Platform="any cpu" /p:OutputPath=..\Application\ /clp:Nosummary
+
+Si se desea, se puede ejecutar el archivo "GestorTFG_Console.exe" para una versión del gestor
+en consola. También es posible lanzar la aplicación en ventana desde este mismo ejecutable con el
+parámetro -ventana
+
+El ejecutable "GeneradorTFG.exe" es una herramienta desarrollada para realizar las pruebas de almacenamiento de
+los datos en ficheros y su lectura al cargar la lista de proyectos en la memoria interna.
+Se debe ejecutar de la siguiente manera:
+
+GestorTFG.exe [tipo] [N]
+
+Parámetros:
+-[tipo] : String. Especifica una cadena de caracteres indicando el tipo de proyectos que se generaran en fichero.
+   *  "NO_ASIGNADOS" : genera una lista de proyectos sin asignar dentro de un archivo "NoAsignados.txt"
+   *  "NO_FINALIZADOS" : genera una lista de proyectos sin finalizar dentro de un archivo "SinFinalizar.txt"
+   *  "FINALIZADOS" : genera una lista de proyectos finalizados dentro de un archivo "NoAsignados.txt"
+   *  "TODOS" : genera una lista de proyectos de cualquier tipo dentro de un archivo "ListaTFG.txt"
+
+-[N] : Integer. Especifica el número de proyectos que se generaran dentro del fichero.
+
+
+Si el archivo por lotes "Compilar.bat" no genera una carpeta "Application" pruebe lo siguiente
+
+-Edite "Compilar.bat" (Click derecho, editar) y remplace su contenido por el siguiente texto:
+C:\Windows\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe GestorTFG.sln /t:rebuild /p:Configuration=Release /p:Platform="any cpu" /p:OutputPath=..\Application\ /clp:Nosummary
+
+-En el caso de que la anterior opción no haya funcionado, como última alternativa podrá ejecutar los diferentes proyectos directamente desde Visual Studio,
+haciendo click derecho en el proyecto que desee probar y haciendo click en ejecutar.

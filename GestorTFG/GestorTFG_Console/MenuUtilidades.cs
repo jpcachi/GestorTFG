@@ -113,6 +113,21 @@ namespace GestorTFG_Console
             return datos;
         }
 
+        public static string[] introducirDatos(int[] indiceFechas, params string[] opciones)
+        {
+            string[] datos = new string[opciones.Length];
+            Console.WriteLine("Introduzca los siguientes datos:");
+            for (int i = 0; i < opciones.Length; i++)
+            {
+                do
+                {
+                    Console.WriteLine(opciones[i] + ": ");
+                    datos[i] = Console.ReadLine();
+                } while (string.IsNullOrWhiteSpace(datos[i]) || (indiceFechas.Contains<int>(i) && !esFechaCorrecta(datos[i])));
+            }
+            return datos;
+        }
+
         public static float IntroducirNota()
         {
             float resultado;
@@ -122,6 +137,17 @@ namespace GestorTFG_Console
                 correcto = float.TryParse(Console.ReadLine(), out resultado);
             } while (!correcto);
             return resultado;
+        }
+
+        public static bool esFechaCorrecta(string valor)
+        {
+            DateTime fecha;
+            bool resul = DateTime.TryParse(valor, out fecha);
+            if (!resul)
+            {
+                Console.WriteLine("La formato de fecha introducido no es correcto");
+            }
+            return resul;
         }
 
         public static void MostrarInformacion(int indice)

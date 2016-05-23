@@ -149,10 +149,10 @@ namespace GestorTFG
 
         private void Titulo_Paint(object sender, PaintEventArgs e)
         {
-            Color color1 = SystemColors.GradientActiveCaption;
-            Color color2 = SystemColors.ActiveCaption;
+            Color color1 = SystemColors.ControlLight;
+            Color color2 = SystemColors.ControlDark;
             Rectangle rect = new Rectangle(0, 0, Width, Titulo.Height - 1);
-            LinearGradientBrush linearGradientBrush = new LinearGradientBrush(rect, color1, color2, LinearGradientMode.Horizontal);
+            LinearGradientBrush linearGradientBrush = new LinearGradientBrush(rect, color1, color2, LinearGradientMode.Vertical);
             e.Graphics.FillRectangle(linearGradientBrush, rect);
         }
 
