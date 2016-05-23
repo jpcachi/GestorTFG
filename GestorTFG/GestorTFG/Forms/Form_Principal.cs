@@ -321,6 +321,8 @@ namespace GestorTFG
                 {
                     case 0:
                         textBox8.Visible = true;
+                        textBox8.Enabled = true;
+                        button6.Enabled = true;
                         textBox8.Text = MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[indiceLista][indiceSeleccionado].getMTFG.Titulo;
                         numericUpDown1.Visible = false;
                         dateTimePicker3.Visible = false;
@@ -329,6 +331,8 @@ namespace GestorTFG
 
                     case 1:
                         textBox8.Visible = true;
+                        textBox8.Enabled = true;
+                        button6.Enabled = true;
                         textBox8.Text = MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[indiceLista][indiceSeleccionado].getMTFG.Descripcion;
                         numericUpDown1.Visible = false;
                         dateTimePicker3.Visible = false;
@@ -336,6 +340,7 @@ namespace GestorTFG
                         break;
                     case 2:
                         textBox8.Visible = false;
+                        button6.Enabled = true;
                         numericUpDown1.Visible = false;
                         dateTimePicker3.Visible = true;
                         dateTimePicker3.Value = DateTime.Parse(MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[indiceLista][indiceSeleccionado].getMTFG.Fecha);
@@ -343,6 +348,8 @@ namespace GestorTFG
                         break;
                     case 3:
                         textBox8.Visible = true;
+                        textBox8.Enabled = true;
+                        button6.Enabled = true;
                         textBox8.Text = MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[indiceLista][indiceSeleccionado].Alumno.Nombre;
                         numericUpDown1.Visible = false;
                         dateTimePicker3.Visible = false;
@@ -350,6 +357,8 @@ namespace GestorTFG
                         break;
                     case 4:
                         textBox8.Visible = true;
+                        textBox8.Enabled = true;
+                        button6.Enabled = true;
                         textBox8.Text = MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[indiceLista][indiceSeleccionado].Alumno.PrimerApellido;
                         numericUpDown1.Visible = false;
                         dateTimePicker3.Visible = false;
@@ -357,6 +366,8 @@ namespace GestorTFG
                         break;
                     case 5:
                         textBox8.Visible = true;
+                        textBox8.Enabled = true;
+                        button6.Enabled = true;
                         textBox8.Text = MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[indiceLista][indiceSeleccionado].Alumno.SegundoApellido;
                         numericUpDown1.Visible = false;
                         dateTimePicker3.Visible = false;
@@ -364,6 +375,8 @@ namespace GestorTFG
                         break;
                     case 6:
                         textBox8.Visible = true;
+                        textBox8.Enabled = true;
+                        button6.Enabled = true;
                         textBox8.Text = MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[indiceLista][indiceSeleccionado].Alumno.Matricula;
                         numericUpDown1.Visible = false;
                         dateTimePicker3.Visible = false;
@@ -371,6 +384,7 @@ namespace GestorTFG
                         break;
                     case 7:
                         textBox8.Visible = false;
+                        button6.Enabled = true;
                         numericUpDown1.Visible = false;
                         dateTimePicker3.Visible = true;
                         dateTimePicker3.Value = DateTime.Parse(MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[indiceLista][indiceSeleccionado].Alumno.FechaInicio);
@@ -378,6 +392,7 @@ namespace GestorTFG
                         break;
                     case 8:
                         textBox8.Visible = false;
+                        button6.Enabled = true;
                         numericUpDown1.Visible = false;
                         dateTimePicker3.Visible = true;
                         dateTimePicker3.Value = DateTime.Parse(MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[indiceLista][indiceSeleccionado].getMTFG.getMFinalizado.Defensa);
@@ -385,6 +400,7 @@ namespace GestorTFG
                         break;
                     case 9:
                         textBox8.Visible = false;
+                        button6.Enabled = true;
                         numericUpDown1.Visible = false;
                         dateTimePicker3.Visible = false;
                         comboBox3.Visible = true;
@@ -392,6 +408,7 @@ namespace GestorTFG
                         break;
                     case 10:
                         textBox8.Visible = false;
+                        button6.Enabled = true;
                         numericUpDown1.Visible = true;
                         numericUpDown1.Value = (decimal)MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[indiceLista][indiceSeleccionado].getMTFG.getMFinalizado.Nota;
                         dateTimePicker3.Visible = false;
@@ -399,6 +416,8 @@ namespace GestorTFG
                         break;
                     default:
                         textBox8.Visible = true;
+                        textBox8.Enabled = false;
+                        button6.Enabled = false;
                         numericUpDown1.Visible = false;
                         dateTimePicker3.Visible = false;
                         comboBox3.Visible = false;

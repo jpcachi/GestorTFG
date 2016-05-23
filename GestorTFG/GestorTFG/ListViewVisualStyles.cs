@@ -104,7 +104,11 @@ namespace GestorTFG
         /// <param name="e"></param>
         public static void DibujarItemListView(object sender, DrawListViewItemEventArgs e)
         {
-            int posX = e.Item.SubItems[e.Item.SubItems.Count - 1].Bounds.X + e.Item.SubItems[e.Item.SubItems.Count - 1].Bounds.Width;
+            int posX = 0;
+            if (e.Item.SubItems.Count > 0)
+            {
+                posX = e.Item.SubItems[e.Item.SubItems.Count - 1].Bounds.X + e.Item.SubItems[e.Item.SubItems.Count - 1].Bounds.Width;
+            }
             if (e.Item.Selected)
             {
                 try

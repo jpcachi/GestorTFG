@@ -105,18 +105,18 @@ namespace GestorTFG
             {
                 comboBox1.ResetText();
                 comboBox1.Enabled = true;
-                textBox8.Enabled = true;
                 dateTimePicker3.Enabled = true;
                 numericUpDown1.Enabled = true;
                 comboBox1.SelectedItem = null;
                 textBox8.Clear();
+                textBox8.Enabled = false;
                 if (MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[listView.SelectedIndices[0]].Asignado)
                 {
                     if (!MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[listView.SelectedIndices[0]].getMTFG.Finalizado)
                         groupBox3.Enabled = true;
                 }
                 else groupBox3.Enabled = false;
-                buttons[1].Enabled = true;
+                buttons[1].Enabled = false;
                 buttons[4].Enabled = true;
 
                 richTextBox2.Text = ActualizarDatosRichTextBox(listView.SelectedIndices[0], TipoLista.Todos, TDatos.Profesor);
@@ -179,7 +179,7 @@ namespace GestorTFG
                 buttons[0].Enabled = true;
                 comboBox1.ResetText();
                 comboBox1.Enabled = true;
-                textBox8.Enabled = true;
+                textBox8.Enabled = false;
                 dateTimePicker3.Enabled = true;
                 numericUpDown1.Enabled = true;
                 comboBox1.SelectedItem = null;
@@ -211,7 +211,7 @@ namespace GestorTFG
             if(listView.SelectedIndices.Count == 1)
             {
                 comboBox1.Enabled = true;
-                textBox8.Enabled = true;
+                textBox8.Enabled = false;
                 dateTimePicker3.Enabled = true;
                 numericUpDown1.Enabled = true;
                 comboBox1.SelectedItem = null;
