@@ -85,6 +85,20 @@ namespace GestorTFG
                     }
                     ActualizarVistaTabla(ref listView1, TipoLista.Todos);
                     ActualizarVistaTabla(ref listView2, TipoLista.Sin_Asignar);
+                    listView2.SelectedIndices.Clear();
+                } else if (tabControl3.SelectedIndex == 2)
+                {
+                    for (int i = listView3.SelectedIndices.Count - 1; i > -1; i--)
+                    {
+                        int numelems = MListaProyectos.getMListaProyectos.getMProyectos.getProyectos.IndexOf(MListaProyectos.getMListaProyectos.getMProyectos.getProyectosFinalizados[listView3.SelectedIndices[i]]);
+                        //listView1.Items.RemoveAt(MListaProyectos.getMListaProyectos.getMProyectos.getProyectos.IndexOf(MListaProyectos.getMListaProyectos.getMProyectos.getProyectosNoAsignados[numelems]));
+                        //listView2.Items.RemoveAt(listView2.SelectedIndices[numelems]);
+                        //MListaProyectos.getMListaProyectos.getMProyectos.Borrar(MListaProyectos.getMListaProyectos.getMProyectos.getProyectosNoAsignados[numelems]);
+                        cProyectos.EliminarProyecto(numelems);
+                    }
+                    ActualizarVistaTabla(ref listView1, TipoLista.Todos);
+                    ActualizarVistaTabla(ref listView3, TipoLista.Finalizados);
+                    listView3.SelectedIndices.Clear();
                 }
                 resul = true;
             }
@@ -228,7 +242,7 @@ namespace GestorTFG
 
         }
 
-        public bool BotonModificarProfesor(Form1 ventanaAnterior, ref TabControl tabControl3, ref VistaLista listView1, VistaLista listView2)
+        public bool BotonModificarProfesor(Form1 ventanaAnterior, ref TabControl tabControl3, ref VistaLista listView1, VistaLista listView2, VistaLista listView3)
         {
             string[] datosProfesor = new string[5];
             int indice = 0;
@@ -238,6 +252,9 @@ namespace GestorTFG
             } else if(tabControl3.SelectedIndex == 1)
             {
                 indice = MListaProyectos.getMListaProyectos.getMProyectos.getProyectos.IndexOf(MListaProyectos.getMListaProyectos.getMProyectos.getProyectosNoAsignados[listView2.SelectedIndices[0]]);
+            } else if (tabControl3.SelectedIndex == 2)
+            {
+                indice = MListaProyectos.getMListaProyectos.getMProyectos.getProyectos.IndexOf(MListaProyectos.getMListaProyectos.getMProyectos.getProyectosFinalizados[listView3.SelectedIndices[0]]);
             }
             datosProfesor[0] = MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[indice].Profesor.Nombre;
             datosProfesor[1] = MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[indice].Profesor.PrimerApellido;

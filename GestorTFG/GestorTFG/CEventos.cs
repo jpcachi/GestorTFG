@@ -162,6 +162,7 @@ namespace GestorTFG
             
             if (listView.SelectedIndices.Count > 1)
             {
+
                 buttons[1].Enabled = true;
                 buttons[0].Enabled = false;
                 richTextBox1.Clear();

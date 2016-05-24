@@ -5,6 +5,7 @@ using System.Windows.Forms;
 using System.IO;
 using ToolStripVisualStyles;
 using System.Windows.Forms.VisualStyles;
+using System.Drawing.Drawing2D;
 
 namespace GestorTFG
 {
@@ -212,6 +213,7 @@ namespace GestorTFG
         {
             if (listView1.SelectedIndices.Count > 0)
             {
+                button9.Enabled = true;
                 vista.ItemSeleccionadoLista(listView1, ref comboBox1, textBox8, dateTimePicker3, numericUpDown1, groupBox3, richTextBox1, richTextBox2, button5, button6, button7, button8, button9);
                 if (listView1.SelectedIndices.Count == 1)
                 {
@@ -226,6 +228,8 @@ namespace GestorTFG
             }
             else
             {
+                groupBox3.Enabled = false;
+                button7.Enabled = false;
                 button8.Enabled = false;
                 button9.Enabled = false;
                 comboBox1.ResetText();
@@ -246,10 +250,10 @@ namespace GestorTFG
                 richTextBox1.Clear();
                 richTextBox2.Clear();
             }
-               /* SelectedIndexChangedTimer.Enabled = true;
-                SelectedIndexChangedTimer.Interval = Constantes.TEMPORIZADOR_SELECCION_PROYECTO;
-                SelectedIndexChangedTimer.Start();
-                SelectedIndexChangedTimer.Tick += SelectedIndexChangedTimer_Tick;*/
+            /* SelectedIndexChangedTimer.Enabled = true;
+             SelectedIndexChangedTimer.Interval = Constantes.TEMPORIZADOR_SELECCION_PROYECTO;
+             SelectedIndexChangedTimer.Start();
+             SelectedIndexChangedTimer.Tick += SelectedIndexChangedTimer_Tick;*/
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -294,6 +298,11 @@ namespace GestorTFG
             textBox8.Enabled = false;
             dateTimePicker3.Enabled = false;
             numericUpDown1.Enabled = false;
+            button9.Enabled = false;
+            button8.Enabled = false;
+            button7.Enabled = false;
+            button11.Enabled = false;
+            groupBox3.Enabled = false;
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -458,7 +467,7 @@ namespace GestorTFG
 
         private void button12_Click(object sender, EventArgs e)
         {
-            ProyectoIndice[] antesdeEliminar;
+            ProyectoIndice[] antesdeEliminar = null;
             if (tabControl3.SelectedIndex == 0)
             {
                 antesdeEliminar = new ProyectoIndice[listView1.SelectedIndices.Count];
@@ -476,9 +485,14 @@ namespace GestorTFG
                         MListaProyectos.getMListaProyectos.getMProyectos.getProyectos.IndexOf(MListaProyectos.getMListaProyectos.getMProyectos.getProyectosNoAsignados[listView2.SelectedIndices[i]]));
                 }
             }
-            else
+            else if (tabControl3.SelectedIndex == 2)
             {
-                antesdeEliminar = new ProyectoIndice[0];
+                antesdeEliminar = new ProyectoIndice[listView3.SelectedIndices.Count];
+                for (int i = 0; i < listView3.SelectedIndices.Count; i++)
+                {
+                    antesdeEliminar[i] = new ProyectoIndice(MListaProyectos.getMListaProyectos.getMProyectos.getProyectosFinalizados[listView3.SelectedIndices[i]].Copiar(),
+                        MListaProyectos.getMListaProyectos.getMProyectos.getProyectos.IndexOf(MListaProyectos.getMListaProyectos.getMProyectos.getProyectosFinalizados[listView3.SelectedIndices[i]]));
+                }
             }
 
             if (vista.BotonEliminarProyecto(ref listView1, ref listView2, ref listView3, tabControl3))
@@ -490,6 +504,9 @@ namespace GestorTFG
                 deshacerToolStripMenuItem.Enabled = true;
                 BackToolStripButton1.Enabled = true;
                 toolStripStatusLabel1.Text = fichero.ArchivoActual + '*';
+                button9.Enabled = false;
+                button7.Enabled = false;
+                actualizarStatusLabelNumeroProyectos();
             }
         }
 
@@ -1627,8 +1644,6 @@ namespace GestorTFG
 
         private void tabControl3_Selecting(object sender, TabControlCancelEventArgs e)
         {
-            button9.Enabled = false;
-            button8.Enabled = false;
             toolStripMenuItem19.Visible = false;
             actualizarStatusLabelNumeroProyectos();
             if (e.TabPageIndex == 1)
@@ -1684,16 +1699,22 @@ namespace GestorTFG
                 if (listView3.SelectedIndices.Count == 1)
                 {
                     copyToolStripButton1.Enabled = true;
+                    button11.Enabled = true;
+                    button9.Enabled = true;
                     vista.ActualizarDatosRichTextBox(ref richTextBox1, listView3, TipoLista.Finalizados, TDatos.TFG);
                     vista.ActualizarDatosRichTextBox(ref richTextBox2, listView3, TipoLista.Finalizados, TDatos.Profesor);
                 }
                 else
                 {
+                    button11.Enabled = false;
+                    button9.Enabled = true;
                     copyToolStripButton1.Enabled = false;
                 }
             }
             else
             {
+                button11.Enabled = false;
+                button9.Enabled = false;
                 comboBox1.Enabled = false;
                 button5.Enabled = false;
                 button6.Enabled = false;
@@ -1810,7 +1831,7 @@ namespace GestorTFG
                     contextMenuStrip1.Show();
                     contextMenuStrip1.Location = MousePosition;
                 }
-            }
+            } 
         }
         #region COPIAR
         private void toolStripMenuItem7_DropDownOpening(object sender, EventArgs e)
@@ -2132,8 +2153,12 @@ namespace GestorTFG
             {
                 indice = MListaProyectos.getMListaProyectos.getMProyectos.getProyectos.IndexOf(MListaProyectos.getMListaProyectos.getMProyectos.getProyectosNoAsignados[listView2.SelectedIndices[0]]);
             }
+            else if (tabControl3.SelectedIndex == 1)
+            {
+                indice = MListaProyectos.getMListaProyectos.getMProyectos.getProyectos.IndexOf(MListaProyectos.getMListaProyectos.getMProyectos.getProyectosFinalizados[listView3.SelectedIndices[0]]);
+            }
             ProyectoIndice proyectoAntesAñadir = new ProyectoIndice(MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[indice].Copiar(), indice);
-            if (vista.BotonModificarProfesor(this, ref tabControl3, ref listView1, listView2))
+            if (vista.BotonModificarProfesor(this, ref tabControl3, ref listView1, listView2, listView3))
             {
                 MessageBox.Show("Datos de profesor actualizados con éxito", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Operacion op = new Operacion(TOperacion.Modificar, proyectoAntesAñadir);
@@ -2148,11 +2173,16 @@ namespace GestorTFG
                 if (tabControl3.SelectedIndex == 0)
                 {
                     vista.ActualizarDatosRichTextBox(ref richTextBox2, listView1, TipoLista.Todos, TDatos.Profesor);
-                } else if (tabControl3.SelectedIndex == 1)
+                }
+                else if (tabControl3.SelectedIndex == 1)
                 {
                     vista.ActualizarDatosRichTextBox(ref richTextBox2, listView2, TipoLista.Sin_Asignar, TDatos.Profesor);
                 }
-                toolStripStatusLabel1.Text = fichero.ArchivoActual + '*';
+                else if (tabControl3.SelectedIndex == 1)
+                {
+                    vista.ActualizarDatosRichTextBox(ref richTextBox2, listView3, TipoLista.Finalizados, TDatos.Profesor);
+                }
+                    toolStripStatusLabel1.Text = fichero.ArchivoActual + '*';
             }
         }
 
@@ -2193,6 +2223,60 @@ namespace GestorTFG
                 textBox6.Clear();
                 textBox7.Clear();
             }
+        }
+
+        private void Form1_Paint(object sender, PaintEventArgs e)
+        {
+            Color color1 = SystemColors.ControlDark;
+            Color color2 = SystemColors.ControlDarkDark;
+            Rectangle rect = new Rectangle(0, 0, Width, Height);
+            LinearGradientBrush linearGradientBrush = new LinearGradientBrush(rect, color1, color2, LinearGradientMode.Vertical);
+            e.Graphics.FillRectangle(linearGradientBrush, rect);
+        }
+
+        private void toolStripContainer1_ContentPanel_Paint(object sender, PaintEventArgs e)
+        {
+            Color color1 = SystemColors.ControlDark;
+            Color color2 = SystemColors.ControlDarkDark;
+            Rectangle rect = new Rectangle(0, 0, ((Control)sender).Width, ((Control)sender).Height);
+            LinearGradientBrush linearGradientBrush = new LinearGradientBrush(rect, color1, color2, LinearGradientMode.Vertical);
+            e.Graphics.FillRectangle(linearGradientBrush, rect);
+        }
+
+        private void tabPage1_Paint(object sender, PaintEventArgs e)
+        {
+            Color color1 = SystemColors.ControlDarkDark;
+            Color color2 = SystemColors.MenuText;
+            Rectangle rect = new Rectangle(0, 0, ((Control)sender).Width, ((Control)sender).Height);
+            LinearGradientBrush linearGradientBrush = new LinearGradientBrush(rect, color1, color2, LinearGradientMode.Vertical);
+            e.Graphics.FillRectangle(linearGradientBrush, rect);
+        }
+
+        private void listView_VirtualItemsSelectionRangeChanged(object sender, ListViewVirtualItemsSelectionRangeChangedEventArgs e)
+        {
+            if (e.IsSelected)
+            {
+                button9.Enabled = true;
+                if (tabControl3.SelectedIndex == 0)
+                {
+                    bool enc = false;
+                    for (int i = e.StartIndex; i < e.EndIndex; i++)
+                    {
+                        enc = false;
+                        if (MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[i].Asignado)
+                        {
+                            if (MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[i].getMTFG.Finalizado)
+                            {
+                                enc = false;
+                            }
+                            else enc = true;
+                        }
+                        if (!enc) break;
+                    }
+
+                    if (enc) button7.Enabled = true;
+                }
+            } 
         }
     }
 

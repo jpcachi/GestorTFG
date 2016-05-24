@@ -106,35 +106,8 @@
             this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
             this.tabControl3 = new System.Windows.Forms.TabControl();
             this.tabPage6 = new System.Windows.Forms.TabPage();
-            this.listView1 = new GestorTFG.VistaLista();
-            this.Título = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Descripcion = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.FechaPropuesta = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.NombreAlumno = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Apellido1Alumno = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Apellido2Alumno = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Matricula = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.FechaInicio = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.FechaDefensa = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Convocatoria = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Calificación = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tabPage7 = new System.Windows.Forms.TabPage();
-            this.listView2 = new GestorTFG.VistaLista();
-            this.Titulo2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Descripcion2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.listView3 = new GestorTFG.VistaLista();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
@@ -209,6 +182,17 @@
             this.comboBox9 = new System.Windows.Forms.ComboBox();
             this.comboBox7 = new System.Windows.Forms.ComboBox();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripComboBox1 = new System.Windows.Forms.ToolStripComboBox();
+            this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripComboBox2 = new System.Windows.Forms.ToolStripComboBox();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.aprobadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.suspensosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.helpToolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
             this.newToolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.openToolStripButton1 = new System.Windows.Forms.ToolStripButton();
@@ -226,17 +210,33 @@
             this.removeStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.deleteStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripComboBox1 = new System.Windows.Forms.ToolStripComboBox();
-            this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripComboBox2 = new System.Windows.Forms.ToolStripComboBox();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
-            this.aprobadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.suspensosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.helpToolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.listView1 = new GestorTFG.VistaLista();
+            this.Título = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Descripcion = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.FechaPropuesta = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.NombreAlumno = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Apellido1Alumno = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Apellido2Alumno = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Matricula = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.FechaInicio = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.FechaDefensa = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Convocatoria = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Calificación = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.listView2 = new GestorTFG.VistaLista();
+            this.Titulo2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Descripcion2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.listView3 = new GestorTFG.VistaLista();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
@@ -265,8 +265,8 @@
             this.groupBox4.SuspendLayout();
             this.groupBox6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
-            this.toolStrip2.SuspendLayout();
             this.toolStrip1.SuspendLayout();
+            this.toolStrip2.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -939,8 +939,8 @@
             // toolStripContainer1.TopToolStripPanel
             // 
             this.toolStripContainer1.TopToolStripPanel.BackColor = System.Drawing.SystemColors.Window;
-            this.toolStripContainer1.TopToolStripPanel.Controls.Add(this.toolStrip1);
             this.toolStripContainer1.TopToolStripPanel.Controls.Add(this.toolStrip2);
+            this.toolStripContainer1.TopToolStripPanel.Controls.Add(this.toolStrip1);
             // 
             // tabControl3
             // 
@@ -968,141 +968,16 @@
             this.tabPage6.TabIndex = 0;
             this.tabPage6.Text = "Todos";
             // 
-            // listView1
-            // 
-            this.listView1.BackColor = System.Drawing.SystemColors.Window;
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.Título,
-            this.Descripcion,
-            this.FechaPropuesta,
-            this.NombreAlumno,
-            this.Apellido1Alumno,
-            this.Apellido2Alumno,
-            this.Matricula,
-            this.FechaInicio,
-            this.FechaDefensa,
-            this.Convocatoria,
-            this.Calificación});
-            this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listView1.FullRowSelect = true;
-            this.listView1.GridLines = true;
-            this.listView1.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
-            this.listView1.Location = new System.Drawing.Point(3, 3);
-            this.listView1.Name = "listView1";
-            this.listView1.OwnerDraw = true;
-            this.listView1.Size = new System.Drawing.Size(718, 443);
-            this.listView1.TabIndex = 4;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
-            this.listView1.VirtualMode = true;
-            this.listView1.DrawColumnHeader += new System.Windows.Forms.DrawListViewColumnHeaderEventHandler(this.listView1_DrawColumnHeader);
-            this.listView1.DrawItem += new System.Windows.Forms.DrawListViewItemEventHandler(this.listView1_DrawItem);
-            this.listView1.DrawSubItem += new System.Windows.Forms.DrawListViewSubItemEventHandler(this.listView1_DrawSubItem);
-            this.listView1.RetrieveVirtualItem += new System.Windows.Forms.RetrieveVirtualItemEventHandler(this.listView1_RetrieveVirtualItem);
-            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
-            this.listView1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.listView_MouseClick);
-            this.listView1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.listView_MouseDoubleClick);
-            // 
-            // Título
-            // 
-            this.Título.Text = "Título";
-            this.Título.Width = 300;
-            // 
-            // Descripcion
-            // 
-            this.Descripcion.Text = "Descripción";
-            this.Descripcion.Width = 400;
-            // 
-            // FechaPropuesta
-            // 
-            this.FechaPropuesta.Text = "Fecha de registro";
-            this.FechaPropuesta.Width = 110;
-            // 
-            // NombreAlumno
-            // 
-            this.NombreAlumno.Text = "Nombre del Alumno";
-            this.NombreAlumno.Width = 120;
-            // 
-            // Apellido1Alumno
-            // 
-            this.Apellido1Alumno.Text = "Primer Apellido";
-            this.Apellido1Alumno.Width = 120;
-            // 
-            // Apellido2Alumno
-            // 
-            this.Apellido2Alumno.Text = "Segundo Apellido";
-            this.Apellido2Alumno.Width = 120;
-            // 
-            // Matricula
-            // 
-            this.Matricula.Text = "Matrícula";
-            this.Matricula.Width = 100;
-            // 
-            // FechaInicio
-            // 
-            this.FechaInicio.Text = "Fecha de inicio";
-            this.FechaInicio.Width = 110;
-            // 
-            // FechaDefensa
-            // 
-            this.FechaDefensa.Text = "Fecha de la defensa";
-            this.FechaDefensa.Width = 110;
-            // 
-            // Convocatoria
-            // 
-            this.Convocatoria.Text = "Convocatoria";
-            this.Convocatoria.Width = 120;
-            // 
-            // Calificación
-            // 
-            this.Calificación.Text = "Calificación";
-            this.Calificación.Width = 85;
-            // 
             // tabPage7
             // 
             this.tabPage7.Controls.Add(this.listView2);
             this.tabPage7.Location = new System.Drawing.Point(4, 22);
             this.tabPage7.Name = "tabPage7";
             this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage7.Size = new System.Drawing.Size(724, 447);
+            this.tabPage7.Size = new System.Drawing.Size(724, 449);
             this.tabPage7.TabIndex = 1;
             this.tabPage7.Text = "Sin Asignar";
             this.tabPage7.UseVisualStyleBackColor = true;
-            // 
-            // listView2
-            // 
-            this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.Titulo2,
-            this.Descripcion2});
-            this.listView2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listView2.FullRowSelect = true;
-            this.listView2.GridLines = true;
-            this.listView2.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
-            this.listView2.Location = new System.Drawing.Point(3, 3);
-            this.listView2.Name = "listView2";
-            this.listView2.OwnerDraw = true;
-            this.listView2.Size = new System.Drawing.Size(718, 441);
-            this.listView2.TabIndex = 0;
-            this.listView2.UseCompatibleStateImageBehavior = false;
-            this.listView2.View = System.Windows.Forms.View.Details;
-            this.listView2.VirtualMode = true;
-            this.listView2.DrawColumnHeader += new System.Windows.Forms.DrawListViewColumnHeaderEventHandler(this.listView2_DrawColumnHeader);
-            this.listView2.DrawItem += new System.Windows.Forms.DrawListViewItemEventHandler(this.listView2_DrawItem);
-            this.listView2.DrawSubItem += new System.Windows.Forms.DrawListViewSubItemEventHandler(this.listView2_DrawSubItem);
-            this.listView2.RetrieveVirtualItem += new System.Windows.Forms.RetrieveVirtualItemEventHandler(this.listView2_RetrieveVirtualItem);
-            this.listView2.SelectedIndexChanged += new System.EventHandler(this.listView2_SelectedIndexChanged);
-            this.listView2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.listView_MouseClick);
-            this.listView2.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.listView_MouseDoubleClick);
-            // 
-            // Titulo2
-            // 
-            this.Titulo2.Text = "Título";
-            this.Titulo2.Width = 400;
-            // 
-            // Descripcion2
-            // 
-            this.Descripcion2.Text = "Descripción";
-            this.Descripcion2.Width = 1100;
             // 
             // tabPage3
             // 
@@ -1110,99 +985,10 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(724, 447);
+            this.tabPage3.Size = new System.Drawing.Size(724, 449);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Finalizados";
             this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // listView3
-            // 
-            this.listView3.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3,
-            this.columnHeader4,
-            this.columnHeader5,
-            this.columnHeader6,
-            this.columnHeader11,
-            this.columnHeader7,
-            this.columnHeader8,
-            this.columnHeader9,
-            this.columnHeader10});
-            this.listView3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listView3.FullRowSelect = true;
-            this.listView3.GridLines = true;
-            this.listView3.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
-            this.listView3.Location = new System.Drawing.Point(3, 3);
-            this.listView3.Name = "listView3";
-            this.listView3.OwnerDraw = true;
-            this.listView3.Size = new System.Drawing.Size(718, 441);
-            this.listView3.TabIndex = 5;
-            this.listView3.UseCompatibleStateImageBehavior = false;
-            this.listView3.View = System.Windows.Forms.View.Details;
-            this.listView3.VirtualMode = true;
-            this.listView3.DrawColumnHeader += new System.Windows.Forms.DrawListViewColumnHeaderEventHandler(this.listView3_DrawColumnHeader);
-            this.listView3.DrawItem += new System.Windows.Forms.DrawListViewItemEventHandler(this.listView3_DrawItem);
-            this.listView3.DrawSubItem += new System.Windows.Forms.DrawListViewSubItemEventHandler(this.listView3_DrawSubItem);
-            this.listView3.RetrieveVirtualItem += new System.Windows.Forms.RetrieveVirtualItemEventHandler(this.listView3_RetrieveVirtualItem);
-            this.listView3.SelectedIndexChanged += new System.EventHandler(this.listView3_SelectedIndexChanged);
-            this.listView3.MouseClick += new System.Windows.Forms.MouseEventHandler(this.listView_MouseClick);
-            this.listView3.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.listView_MouseDoubleClick);
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "Título";
-            this.columnHeader1.Width = 300;
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Descripción";
-            this.columnHeader2.Width = 400;
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "Fecha de registro";
-            this.columnHeader3.Width = 110;
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "Nombre del Alumno";
-            this.columnHeader4.Width = 120;
-            // 
-            // columnHeader5
-            // 
-            this.columnHeader5.Text = "Primer Apellido";
-            this.columnHeader5.Width = 120;
-            // 
-            // columnHeader6
-            // 
-            this.columnHeader6.Text = "Segundo Apellido";
-            this.columnHeader6.Width = 120;
-            // 
-            // columnHeader11
-            // 
-            this.columnHeader11.Text = "Matrícula";
-            this.columnHeader11.Width = 85;
-            // 
-            // columnHeader7
-            // 
-            this.columnHeader7.Text = "Fecha de inicio";
-            this.columnHeader7.Width = 110;
-            // 
-            // columnHeader8
-            // 
-            this.columnHeader8.Text = "Fecha de la defensa";
-            this.columnHeader8.Width = 110;
-            // 
-            // columnHeader9
-            // 
-            this.columnHeader9.Text = "Convocatoria";
-            this.columnHeader9.Width = 120;
-            // 
-            // columnHeader10
-            // 
-            this.columnHeader10.Text = "Calificación";
-            this.columnHeader10.Width = 85;
             // 
             // tabControl2
             // 
@@ -1546,7 +1332,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(243, 578);
+            this.tabPage2.Size = new System.Drawing.Size(243, 580);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Modificar TFG";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -2113,6 +1899,102 @@
             this.panel4.Size = new System.Drawing.Size(22, 606);
             this.panel4.TabIndex = 10;
             // 
+            // toolStrip1
+            // 
+            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.None;
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripLabel1,
+            this.toolStripComboBox1,
+            this.toolStripLabel2,
+            this.toolStripComboBox2,
+            this.toolStripButton1,
+            this.toolStripDropDownButton1,
+            this.toolStripSeparator2,
+            this.helpToolStripButton1});
+            this.toolStrip1.Location = new System.Drawing.Point(332, 0);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(532, 25);
+            this.toolStrip1.TabIndex = 3;
+            // 
+            // toolStripLabel1
+            // 
+            this.toolStripLabel1.Name = "toolStripLabel1";
+            this.toolStripLabel1.Size = new System.Drawing.Size(46, 22);
+            this.toolStripLabel1.Text = "Campo";
+            // 
+            // toolStripComboBox1
+            // 
+            this.toolStripComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.toolStripComboBox1.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.toolStripComboBox1.Name = "toolStripComboBox1";
+            this.toolStripComboBox1.Size = new System.Drawing.Size(121, 25);
+            // 
+            // toolStripLabel2
+            // 
+            this.toolStripLabel2.Name = "toolStripLabel2";
+            this.toolStripLabel2.Size = new System.Drawing.Size(42, 22);
+            this.toolStripLabel2.Text = "Buscar";
+            // 
+            // toolStripComboBox2
+            // 
+            this.toolStripComboBox2.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.toolStripComboBox2.Name = "toolStripComboBox2";
+            this.toolStripComboBox2.Size = new System.Drawing.Size(189, 25);
+            this.toolStripComboBox2.SelectedIndexChanged += new System.EventHandler(this.toolStripComboBox2_SelectedIndexChanged);
+            this.toolStripComboBox2.TextUpdate += new System.EventHandler(this.toolStripComboBox2_TextUpdate);
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton1.Enabled = false;
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton1.Text = "Buscar";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            // 
+            // toolStripDropDownButton1
+            // 
+            this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.aprobadosToolStripMenuItem,
+            this.suspensosToolStripMenuItem});
+            this.toolStripDropDownButton1.Enabled = false;
+            this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
+            this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
+            this.toolStripDropDownButton1.Size = new System.Drawing.Size(66, 22);
+            this.toolStripDropDownButton1.Text = "Filtrar";
+            // 
+            // aprobadosToolStripMenuItem
+            // 
+            this.aprobadosToolStripMenuItem.Name = "aprobadosToolStripMenuItem";
+            this.aprobadosToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
+            this.aprobadosToolStripMenuItem.Text = "Aprobados";
+            this.aprobadosToolStripMenuItem.Click += new System.EventHandler(this.aprobadosToolStripMenuItem_Click_1);
+            // 
+            // suspensosToolStripMenuItem
+            // 
+            this.suspensosToolStripMenuItem.Name = "suspensosToolStripMenuItem";
+            this.suspensosToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
+            this.suspensosToolStripMenuItem.Text = "Suspensos";
+            this.suspensosToolStripMenuItem.Click += new System.EventHandler(this.suspensosToolStripMenuItem_Click_1);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
+            // 
+            // helpToolStripButton1
+            // 
+            this.helpToolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.helpToolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("helpToolStripButton1.Image")));
+            this.helpToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.helpToolStripButton1.Name = "helpToolStripButton1";
+            this.helpToolStripButton1.Size = new System.Drawing.Size(23, 22);
+            this.helpToolStripButton1.Text = "Ay&uda";
+            this.helpToolStripButton1.Click += new System.EventHandler(this.helpToolStripButton1_Click);
+            // 
             // toolStrip2
             // 
             this.toolStrip2.Dock = System.Windows.Forms.DockStyle.None;
@@ -2292,101 +2174,222 @@
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
-            // toolStrip1
+            // listView1
             // 
-            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.None;
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripLabel1,
-            this.toolStripComboBox1,
-            this.toolStripLabel2,
-            this.toolStripComboBox2,
-            this.toolStripButton1,
-            this.toolStripDropDownButton1,
-            this.toolStripSeparator2,
-            this.helpToolStripButton1});
-            this.toolStrip1.Location = new System.Drawing.Point(332, 0);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(532, 25);
-            this.toolStrip1.TabIndex = 3;
+            this.listView1.BackColor = System.Drawing.SystemColors.Window;
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.Título,
+            this.Descripcion,
+            this.FechaPropuesta,
+            this.NombreAlumno,
+            this.Apellido1Alumno,
+            this.Apellido2Alumno,
+            this.Matricula,
+            this.FechaInicio,
+            this.FechaDefensa,
+            this.Convocatoria,
+            this.Calificación});
+            this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listView1.FullRowSelect = true;
+            this.listView1.GridLines = true;
+            this.listView1.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+            this.listView1.Location = new System.Drawing.Point(3, 3);
+            this.listView1.Name = "listView1";
+            this.listView1.OwnerDraw = true;
+            this.listView1.Size = new System.Drawing.Size(718, 443);
+            this.listView1.TabIndex = 4;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
+            this.listView1.VirtualMode = true;
+            this.listView1.DrawColumnHeader += new System.Windows.Forms.DrawListViewColumnHeaderEventHandler(this.listView1_DrawColumnHeader);
+            this.listView1.DrawItem += new System.Windows.Forms.DrawListViewItemEventHandler(this.listView1_DrawItem);
+            this.listView1.DrawSubItem += new System.Windows.Forms.DrawListViewSubItemEventHandler(this.listView1_DrawSubItem);
+            this.listView1.RetrieveVirtualItem += new System.Windows.Forms.RetrieveVirtualItemEventHandler(this.listView1_RetrieveVirtualItem);
+            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
+            this.listView1.VirtualItemsSelectionRangeChanged += new System.Windows.Forms.ListViewVirtualItemsSelectionRangeChangedEventHandler(this.listView_VirtualItemsSelectionRangeChanged);
+            this.listView1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.listView_MouseClick);
+            this.listView1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.listView_MouseDoubleClick);
             // 
-            // toolStripLabel1
+            // Título
             // 
-            this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(46, 22);
-            this.toolStripLabel1.Text = "Campo";
+            this.Título.Text = "Título";
+            this.Título.Width = 300;
             // 
-            // toolStripComboBox1
+            // Descripcion
             // 
-            this.toolStripComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.toolStripComboBox1.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.toolStripComboBox1.Name = "toolStripComboBox1";
-            this.toolStripComboBox1.Size = new System.Drawing.Size(121, 25);
+            this.Descripcion.Text = "Descripción";
+            this.Descripcion.Width = 400;
             // 
-            // toolStripLabel2
+            // FechaPropuesta
             // 
-            this.toolStripLabel2.Name = "toolStripLabel2";
-            this.toolStripLabel2.Size = new System.Drawing.Size(42, 22);
-            this.toolStripLabel2.Text = "Buscar";
+            this.FechaPropuesta.Text = "Fecha de registro";
+            this.FechaPropuesta.Width = 110;
             // 
-            // toolStripComboBox2
+            // NombreAlumno
             // 
-            this.toolStripComboBox2.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.toolStripComboBox2.Name = "toolStripComboBox2";
-            this.toolStripComboBox2.Size = new System.Drawing.Size(189, 25);
-            this.toolStripComboBox2.SelectedIndexChanged += new System.EventHandler(this.toolStripComboBox2_SelectedIndexChanged);
-            this.toolStripComboBox2.TextUpdate += new System.EventHandler(this.toolStripComboBox2_TextUpdate);
+            this.NombreAlumno.Text = "Nombre del Alumno";
+            this.NombreAlumno.Width = 120;
             // 
-            // toolStripButton1
+            // Apellido1Alumno
             // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.Enabled = false;
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton1.Text = "Buscar";
-            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            this.Apellido1Alumno.Text = "Primer Apellido";
+            this.Apellido1Alumno.Width = 120;
             // 
-            // toolStripDropDownButton1
+            // Apellido2Alumno
             // 
-            this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.aprobadosToolStripMenuItem,
-            this.suspensosToolStripMenuItem});
-            this.toolStripDropDownButton1.Enabled = false;
-            this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
-            this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
-            this.toolStripDropDownButton1.Size = new System.Drawing.Size(66, 22);
-            this.toolStripDropDownButton1.Text = "Filtrar";
+            this.Apellido2Alumno.Text = "Segundo Apellido";
+            this.Apellido2Alumno.Width = 120;
             // 
-            // aprobadosToolStripMenuItem
+            // Matricula
             // 
-            this.aprobadosToolStripMenuItem.Name = "aprobadosToolStripMenuItem";
-            this.aprobadosToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
-            this.aprobadosToolStripMenuItem.Text = "Aprobados";
-            this.aprobadosToolStripMenuItem.Click += new System.EventHandler(this.aprobadosToolStripMenuItem_Click_1);
+            this.Matricula.Text = "Matrícula";
+            this.Matricula.Width = 100;
             // 
-            // suspensosToolStripMenuItem
+            // FechaInicio
             // 
-            this.suspensosToolStripMenuItem.Name = "suspensosToolStripMenuItem";
-            this.suspensosToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
-            this.suspensosToolStripMenuItem.Text = "Suspensos";
-            this.suspensosToolStripMenuItem.Click += new System.EventHandler(this.suspensosToolStripMenuItem_Click_1);
+            this.FechaInicio.Text = "Fecha de inicio";
+            this.FechaInicio.Width = 110;
             // 
-            // toolStripSeparator2
+            // FechaDefensa
             // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
+            this.FechaDefensa.Text = "Fecha de la defensa";
+            this.FechaDefensa.Width = 110;
             // 
-            // helpToolStripButton1
+            // Convocatoria
             // 
-            this.helpToolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.helpToolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("helpToolStripButton1.Image")));
-            this.helpToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.helpToolStripButton1.Name = "helpToolStripButton1";
-            this.helpToolStripButton1.Size = new System.Drawing.Size(23, 22);
-            this.helpToolStripButton1.Text = "Ay&uda";
-            this.helpToolStripButton1.Click += new System.EventHandler(this.helpToolStripButton1_Click);
+            this.Convocatoria.Text = "Convocatoria";
+            this.Convocatoria.Width = 120;
+            // 
+            // Calificación
+            // 
+            this.Calificación.Text = "Calificación";
+            this.Calificación.Width = 85;
+            // 
+            // listView2
+            // 
+            this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.Titulo2,
+            this.Descripcion2});
+            this.listView2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listView2.FullRowSelect = true;
+            this.listView2.GridLines = true;
+            this.listView2.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+            this.listView2.Location = new System.Drawing.Point(3, 3);
+            this.listView2.Name = "listView2";
+            this.listView2.OwnerDraw = true;
+            this.listView2.Size = new System.Drawing.Size(718, 443);
+            this.listView2.TabIndex = 0;
+            this.listView2.UseCompatibleStateImageBehavior = false;
+            this.listView2.View = System.Windows.Forms.View.Details;
+            this.listView2.VirtualMode = true;
+            this.listView2.DrawColumnHeader += new System.Windows.Forms.DrawListViewColumnHeaderEventHandler(this.listView2_DrawColumnHeader);
+            this.listView2.DrawItem += new System.Windows.Forms.DrawListViewItemEventHandler(this.listView2_DrawItem);
+            this.listView2.DrawSubItem += new System.Windows.Forms.DrawListViewSubItemEventHandler(this.listView2_DrawSubItem);
+            this.listView2.RetrieveVirtualItem += new System.Windows.Forms.RetrieveVirtualItemEventHandler(this.listView2_RetrieveVirtualItem);
+            this.listView2.SelectedIndexChanged += new System.EventHandler(this.listView2_SelectedIndexChanged);
+            this.listView2.VirtualItemsSelectionRangeChanged += new System.Windows.Forms.ListViewVirtualItemsSelectionRangeChangedEventHandler(this.listView_VirtualItemsSelectionRangeChanged);
+            this.listView2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.listView_MouseClick);
+            this.listView2.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.listView_MouseDoubleClick);
+            // 
+            // Titulo2
+            // 
+            this.Titulo2.Text = "Título";
+            this.Titulo2.Width = 400;
+            // 
+            // Descripcion2
+            // 
+            this.Descripcion2.Text = "Descripción";
+            this.Descripcion2.Width = 1100;
+            // 
+            // listView3
+            // 
+            this.listView3.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4,
+            this.columnHeader5,
+            this.columnHeader6,
+            this.columnHeader11,
+            this.columnHeader7,
+            this.columnHeader8,
+            this.columnHeader9,
+            this.columnHeader10});
+            this.listView3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listView3.FullRowSelect = true;
+            this.listView3.GridLines = true;
+            this.listView3.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+            this.listView3.Location = new System.Drawing.Point(3, 3);
+            this.listView3.Name = "listView3";
+            this.listView3.OwnerDraw = true;
+            this.listView3.Size = new System.Drawing.Size(718, 443);
+            this.listView3.TabIndex = 5;
+            this.listView3.UseCompatibleStateImageBehavior = false;
+            this.listView3.View = System.Windows.Forms.View.Details;
+            this.listView3.VirtualMode = true;
+            this.listView3.DrawColumnHeader += new System.Windows.Forms.DrawListViewColumnHeaderEventHandler(this.listView3_DrawColumnHeader);
+            this.listView3.DrawItem += new System.Windows.Forms.DrawListViewItemEventHandler(this.listView3_DrawItem);
+            this.listView3.DrawSubItem += new System.Windows.Forms.DrawListViewSubItemEventHandler(this.listView3_DrawSubItem);
+            this.listView3.RetrieveVirtualItem += new System.Windows.Forms.RetrieveVirtualItemEventHandler(this.listView3_RetrieveVirtualItem);
+            this.listView3.SelectedIndexChanged += new System.EventHandler(this.listView3_SelectedIndexChanged);
+            this.listView3.VirtualItemsSelectionRangeChanged += new System.Windows.Forms.ListViewVirtualItemsSelectionRangeChangedEventHandler(this.listView_VirtualItemsSelectionRangeChanged);
+            this.listView3.MouseClick += new System.Windows.Forms.MouseEventHandler(this.listView_MouseClick);
+            this.listView3.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.listView_MouseDoubleClick);
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Título";
+            this.columnHeader1.Width = 300;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Descripción";
+            this.columnHeader2.Width = 400;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Fecha de registro";
+            this.columnHeader3.Width = 110;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Nombre del Alumno";
+            this.columnHeader4.Width = 120;
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "Primer Apellido";
+            this.columnHeader5.Width = 120;
+            // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "Segundo Apellido";
+            this.columnHeader6.Width = 120;
+            // 
+            // columnHeader11
+            // 
+            this.columnHeader11.Text = "Matrícula";
+            this.columnHeader11.Width = 85;
+            // 
+            // columnHeader7
+            // 
+            this.columnHeader7.Text = "Fecha de inicio";
+            this.columnHeader7.Width = 110;
+            // 
+            // columnHeader8
+            // 
+            this.columnHeader8.Text = "Fecha de la defensa";
+            this.columnHeader8.Width = 110;
+            // 
+            // columnHeader9
+            // 
+            this.columnHeader9.Text = "Convocatoria";
+            this.columnHeader9.Width = 120;
+            // 
+            // columnHeader10
+            // 
+            this.columnHeader10.Text = "Calificación";
+            this.columnHeader10.Width = 85;
             // 
             // Form1
             // 
@@ -2404,6 +2407,7 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResizeEnd += new System.EventHandler(this.Form1_ResizeEnd);
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.Form1_Paint);
             this.Resize += new System.EventHandler(this.Form1_Resize);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -2443,10 +2447,10 @@
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
-            this.toolStrip2.ResumeLayout(false);
-            this.toolStrip2.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
+            this.toolStrip2.ResumeLayout(false);
+            this.toolStrip2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

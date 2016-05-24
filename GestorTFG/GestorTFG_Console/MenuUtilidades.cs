@@ -123,7 +123,7 @@ namespace GestorTFG_Console
                 {
                     Console.WriteLine(opciones[i] + ": ");
                     datos[i] = Console.ReadLine();
-                } while (string.IsNullOrWhiteSpace(datos[i]) || (indiceFechas.Contains<int>(i) && !esFechaCorrecta(datos[i])));
+                } while (string.IsNullOrWhiteSpace(datos[i]) || (indiceFechas.Contains(i) && !esFechaCorrecta(datos[i])));
             }
             return datos;
         }
