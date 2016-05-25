@@ -164,5 +164,10 @@ namespace GestorTFG
         {
             Close();
         }
+
+        private void Form12_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

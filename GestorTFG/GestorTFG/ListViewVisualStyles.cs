@@ -104,16 +104,13 @@ namespace GestorTFG
         /// <param name="e"></param>
         public static void DibujarItemListView(object sender, DrawListViewItemEventArgs e)
         {
-            int posX = 0;
-            if (e.Item.SubItems.Count > 0)
-            {
-                posX = e.Item.SubItems[e.Item.SubItems.Count - 1].Bounds.X + e.Item.SubItems[e.Item.SubItems.Count - 1].Bounds.Width;
-            }
+            /*int posX = e.Item.SubItems[e.Item.SubItems.Count - 1].Bounds.X + e.Item.SubItems[e.Item.SubItems.Count - 1].Bounds.Width;
             if (e.Item.Selected)
             {
                 try
                 {
-                    e.Graphics.FillRectangle(new SolidBrush(Color.FromArgb(209, 232, 255)), new Rectangle(posX, e.Bounds.Y, e.Bounds.Width, e.Bounds.Height));
+                    //new SolidBrush(Color.FromArgb(209, 232, 255));
+                    //e.Graphics.FillRectangle(SystemBrushes.InactiveCaption, new Rectangle(posX, e.Bounds.Y, e.Bounds.Width, e.Bounds.Height));
                 } catch (Exception ex)
                 {
                     Console.WriteLine(ex.Message);
@@ -121,7 +118,7 @@ namespace GestorTFG
             } else
             {
                 //e.Graphics.FillRectangle(new SolidBrush(colorBackgroundItem), new Rectangle(posX, e.Bounds.Y, e.Bounds.Width, e.Bounds.Height));
-            }
+            }*/
             
         }
         /// <summary>

@@ -55,14 +55,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="GestorTFG.exe" size="4977152">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="GestorTFG.exe" size="4976640">
       <assemblyIdentity name="GestorTFG" version="2.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>sb0QyVtn31vUdfbo0e4zaLPq+sw=</dsig:DigestValue>
+        <dsig:DigestValue>W8FlVP6hFXjQEbwX+os+yPbelAA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

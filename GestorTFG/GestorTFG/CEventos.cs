@@ -241,6 +241,12 @@ namespace GestorTFG
             }
             if (listView.SelectedIndices.Count == 1)
             {
+                if(comboBox1.Items.Count == 0)
+                {
+                    comboBox1.Items.Add("Título");
+                    comboBox1.Items.Add("Descripción");
+                    comboBox1.Items.Add("Fecha de registro");
+                }
                 if (MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)lista][listView.SelectedIndices[0]].Asignado)
                 {
                     comboBox1.Items.Add("Nombre del Alumno");

@@ -10,7 +10,7 @@ namespace GestorTFG_Console
     class Program
     {
         static void Main(string[] args)
-        {
+        {     
             try
             {
                 if (args.Length == 1)

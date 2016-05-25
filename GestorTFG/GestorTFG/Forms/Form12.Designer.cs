@@ -232,7 +232,7 @@
             this.calificacion_label.BackColor = System.Drawing.Color.Transparent;
             this.calificacion_label.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.calificacion_label.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.calificacion_label.Location = new System.Drawing.Point(33, 381);
+            this.calificacion_label.Location = new System.Drawing.Point(25, 381);
             this.calificacion_label.Name = "calificacion_label";
             this.calificacion_label.Size = new System.Drawing.Size(65, 14);
             this.calificacion_label.TabIndex = 20;
@@ -244,7 +244,7 @@
             this.defensa_label.BackColor = System.Drawing.Color.Transparent;
             this.defensa_label.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.defensa_label.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.defensa_label.Location = new System.Drawing.Point(33, 329);
+            this.defensa_label.Location = new System.Drawing.Point(25, 329);
             this.defensa_label.Name = "defensa_label";
             this.defensa_label.Size = new System.Drawing.Size(67, 14);
             this.defensa_label.TabIndex = 15;
@@ -256,7 +256,7 @@
             this.convocatoria_label.BackColor = System.Drawing.Color.Transparent;
             this.convocatoria_label.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.convocatoria_label.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.convocatoria_label.Location = new System.Drawing.Point(33, 355);
+            this.convocatoria_label.Location = new System.Drawing.Point(25, 355);
             this.convocatoria_label.Name = "convocatoria_label";
             this.convocatoria_label.Size = new System.Drawing.Size(74, 14);
             this.convocatoria_label.TabIndex = 17;
@@ -292,7 +292,7 @@
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label11.Location = new System.Drawing.Point(33, 173);
+            this.label11.Location = new System.Drawing.Point(25, 173);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(61, 14);
             this.label11.TabIndex = 16;
@@ -328,7 +328,7 @@
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label9.Location = new System.Drawing.Point(33, 225);
+            this.label9.Location = new System.Drawing.Point(25, 225);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(59, 14);
             this.label9.TabIndex = 13;
@@ -340,7 +340,7 @@
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label8.Location = new System.Drawing.Point(33, 199);
+            this.label8.Location = new System.Drawing.Point(25, 199);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(43, 14);
             this.label8.TabIndex = 12;
@@ -349,7 +349,7 @@
             // copiarProfesor
             // 
             this.copiarProfesor.AutoSize = true;
-            this.copiarProfesor.Location = new System.Drawing.Point(531, 173);
+            this.copiarProfesor.Location = new System.Drawing.Point(543, 173);
             this.copiarProfesor.Name = "copiarProfesor";
             this.copiarProfesor.Size = new System.Drawing.Size(112, 13);
             this.copiarProfesor.TabIndex = 32;
@@ -360,7 +360,7 @@
             // copiarCorreo
             // 
             this.copiarCorreo.AutoSize = true;
-            this.copiarCorreo.Location = new System.Drawing.Point(531, 199);
+            this.copiarCorreo.Location = new System.Drawing.Point(543, 199);
             this.copiarCorreo.Name = "copiarCorreo";
             this.copiarCorreo.Size = new System.Drawing.Size(112, 13);
             this.copiarCorreo.TabIndex = 33;
@@ -371,7 +371,7 @@
             // copiarDespacho
             // 
             this.copiarDespacho.AutoSize = true;
-            this.copiarDespacho.Location = new System.Drawing.Point(531, 225);
+            this.copiarDespacho.Location = new System.Drawing.Point(543, 225);
             this.copiarDespacho.Name = "copiarDespacho";
             this.copiarDespacho.Size = new System.Drawing.Size(112, 13);
             this.copiarDespacho.TabIndex = 34;
@@ -382,7 +382,7 @@
             // copiarDefensa
             // 
             this.copiarDefensa.AutoSize = true;
-            this.copiarDefensa.Location = new System.Drawing.Point(531, 329);
+            this.copiarDefensa.Location = new System.Drawing.Point(543, 329);
             this.copiarDefensa.Name = "copiarDefensa";
             this.copiarDefensa.Size = new System.Drawing.Size(112, 13);
             this.copiarDefensa.TabIndex = 35;
@@ -393,7 +393,7 @@
             // copiarConvocatoria
             // 
             this.copiarConvocatoria.AutoSize = true;
-            this.copiarConvocatoria.Location = new System.Drawing.Point(531, 355);
+            this.copiarConvocatoria.Location = new System.Drawing.Point(543, 355);
             this.copiarConvocatoria.Name = "copiarConvocatoria";
             this.copiarConvocatoria.Size = new System.Drawing.Size(112, 13);
             this.copiarConvocatoria.TabIndex = 36;
@@ -404,7 +404,7 @@
             // copiarNota
             // 
             this.copiarNota.AutoSize = true;
-            this.copiarNota.Location = new System.Drawing.Point(531, 381);
+            this.copiarNota.Location = new System.Drawing.Point(543, 381);
             this.copiarNota.Name = "copiarNota";
             this.copiarNota.Size = new System.Drawing.Size(112, 13);
             this.copiarNota.TabIndex = 37;
@@ -446,7 +446,7 @@
             // copiarFechaInicio
             // 
             this.copiarFechaInicio.AutoSize = true;
-            this.copiarFechaInicio.Location = new System.Drawing.Point(531, 303);
+            this.copiarFechaInicio.Location = new System.Drawing.Point(543, 303);
             this.copiarFechaInicio.Name = "copiarFechaInicio";
             this.copiarFechaInicio.Size = new System.Drawing.Size(112, 13);
             this.copiarFechaInicio.TabIndex = 50;
@@ -457,7 +457,7 @@
             // copiarMatricula
             // 
             this.copiarMatricula.AutoSize = true;
-            this.copiarMatricula.Location = new System.Drawing.Point(531, 277);
+            this.copiarMatricula.Location = new System.Drawing.Point(542, 277);
             this.copiarMatricula.Name = "copiarMatricula";
             this.copiarMatricula.Size = new System.Drawing.Size(112, 13);
             this.copiarMatricula.TabIndex = 49;
@@ -468,7 +468,7 @@
             // copiarAlumno
             // 
             this.copiarAlumno.AutoSize = true;
-            this.copiarAlumno.Location = new System.Drawing.Point(531, 251);
+            this.copiarAlumno.Location = new System.Drawing.Point(543, 251);
             this.copiarAlumno.Name = "copiarAlumno";
             this.copiarAlumno.Size = new System.Drawing.Size(112, 13);
             this.copiarAlumno.TabIndex = 48;
@@ -494,7 +494,7 @@
             this.alumno_label.BackColor = System.Drawing.Color.Transparent;
             this.alumno_label.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.alumno_label.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.alumno_label.Location = new System.Drawing.Point(33, 251);
+            this.alumno_label.Location = new System.Drawing.Point(25, 251);
             this.alumno_label.Name = "alumno_label";
             this.alumno_label.Size = new System.Drawing.Size(73, 14);
             this.alumno_label.TabIndex = 42;
@@ -530,7 +530,7 @@
             this.matricula_label.BackColor = System.Drawing.Color.Transparent;
             this.matricula_label.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.matricula_label.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.matricula_label.Location = new System.Drawing.Point(33, 277);
+            this.matricula_label.Location = new System.Drawing.Point(25, 277);
             this.matricula_label.Name = "matricula_label";
             this.matricula_label.Size = new System.Drawing.Size(53, 14);
             this.matricula_label.TabIndex = 44;
@@ -542,7 +542,7 @@
             this.fecha_inicio_label.BackColor = System.Drawing.Color.Transparent;
             this.fecha_inicio_label.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fecha_inicio_label.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.fecha_inicio_label.Location = new System.Drawing.Point(33, 303);
+            this.fecha_inicio_label.Location = new System.Drawing.Point(25, 303);
             this.fecha_inicio_label.Name = "fecha_inicio_label";
             this.fecha_inicio_label.Size = new System.Drawing.Size(82, 14);
             this.fecha_inicio_label.TabIndex = 45;
@@ -588,6 +588,7 @@
             this.MaximizeBox = false;
             this.Name = "Form12";
             this.Text = "Información detallada";
+            this.Load += new System.EventHandler(this.Form12_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
