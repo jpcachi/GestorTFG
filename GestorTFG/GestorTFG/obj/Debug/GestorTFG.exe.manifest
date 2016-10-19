@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Gestor_nucleo.dll" size="21504">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Gestor_nucleo.dll" size="20480">
       <assemblyIdentity name="Gestor_nucleo" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>dfGonDjWvxJzvp8dZ8JIV6I2WlE=</dsig:DigestValue>
+        <dsig:DigestValue>ZD7XPbg9XazZoeJ8M37La12RCG4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -62,7 +62,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>W8FlVP6hFXjQEbwX+os+yPbelAA=</dsig:DigestValue>
+        <dsig:DigestValue>ugVEX/EFjWHXczkzE7oMVPYxxiY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

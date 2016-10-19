@@ -413,6 +413,7 @@ namespace GestorTFG
                         numericUpDown1.Visible = false;
                         dateTimePicker3.Visible = false;
                         comboBox3.Visible = true;
+                        comboBox3.Enabled = true;
                         comboBox3.Text = MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[indiceLista][indiceSeleccionado].getMTFG.getMFinalizado.Convocatoria;
                         break;
                     case 10:
@@ -707,8 +708,13 @@ namespace GestorTFG
                 }
             }
             tabControl3.SelectedIndex = 0;
+            listView1.SelectedIndices.Clear();
+            listView2.SelectedIndices.Clear();
+            listView3.SelectedIndices.Clear();
             vista.CrearNuevaLista();
             vista.ActualizarVistaTabla(ref listView1, TipoLista.Todos);
+            ForwardStripButton1.Enabled = false;
+            BackToolStripButton1.Enabled = false;
             richTextBox1.Clear();
             richTextBox2.Clear();
             toolStripStatusLabel1.Text = "Nueva lista de proyectos";
