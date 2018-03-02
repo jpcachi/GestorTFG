@@ -1,4 +1,5 @@
 ﻿using GestorTFG;
+using System;
 using System.Windows.Forms;
 
 namespace GestorTFG
@@ -156,7 +157,7 @@ namespace GestorTFG
             MProyecto mProyecto = MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[MListaProyectos.getMListaProyectos.getMProyectos.getProyectos.Count - 1];
             ListViewItem listViewItem = new ListViewItem(mProyecto.getMTFG.Titulo);
             listViewItem.SubItems.Add(mProyecto.getMTFG.Descripcion);
-            listViewItem.SubItems.Add(mProyecto.getMTFG.Fecha);
+            listViewItem.SubItems.Add(mProyecto.getMTFG.Fecha.Date.ToShortDateString());
             listView.VirtualListSize = MListaProyectos.getMListaProyectos.getMProyectos.getProyectos.Count;
             //listView.Items.Add(listViewItem);
         }
@@ -186,6 +187,7 @@ namespace GestorTFG
             string[] datosAlumno = new string[5];
             Form2 AsignarAlumno = new Form2(datosAlumno);
             AsignarAlumno.VentanaAnterior = ventanaAnterior;
+            AsignarAlumno.fechaPropuesta = (tabControl3.SelectedIndex == 0) ? MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[listView1.SelectedIndices[0]].getMTFG.Fecha : MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[1][listView2.SelectedIndices[0]].getMTFG.Fecha;
             if (AsignarAlumno.ShowDialog(ventanaAnterior) == DialogResult.Cancel) return false;
             if (datosAlumno != null)
             {

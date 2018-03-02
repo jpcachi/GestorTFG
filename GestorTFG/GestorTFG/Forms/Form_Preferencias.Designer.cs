@@ -323,6 +323,7 @@
             this.Titulo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Titulo.Controls.Add(this.pictureBox1);
             this.Titulo.Controls.Add(this.label1);
+            this.Titulo.ForeColor = System.Drawing.Color.Black;
             this.Titulo.Location = new System.Drawing.Point(-1, -9);
             this.Titulo.Name = "Titulo";
             this.Titulo.Size = new System.Drawing.Size(710, 85);

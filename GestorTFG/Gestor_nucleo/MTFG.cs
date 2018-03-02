@@ -1,9 +1,12 @@
-﻿namespace GestorTFG
+﻿using System;
+
+namespace GestorTFG
 {
     public class MTFG
     {
         private string titulo;
         private string descripcion;
+        public DateTime Fecha { get; set; }
         private string fecha;
         private bool finalizado;
         private MFinalizado mFinalizado;
@@ -51,7 +54,7 @@
         /// <summary>
         /// Obtiene la fecha en el que el TFG fue propuesto
         /// </summary>
-        public string Fecha
+        /*public string Fecha
         {
             get
             {
@@ -62,7 +65,7 @@
             {
                 fecha = value;
             }
-        }
+        }*/
         /// <summary>
         /// Propiedad que indica si el TFG está finalizado o no
         /// </summary>
@@ -82,6 +85,15 @@
             this.fecha = fecha;
             finalizado = false;
         }
+
+        public MTFG(string titulo, string descripcion, DateTime fecha, MProyecto mProyecto)
+        {
+            this.mProyecto = mProyecto;
+            this.titulo = titulo;
+            this.descripcion = descripcion;
+            this.Fecha = fecha;
+            finalizado = false;
+        }
         /// <summary>
         /// Finaliza un TFG con los siguientes datos
         /// </summary>
@@ -96,6 +108,17 @@
             finalizado = true;
             MListaProyectos.getMListaProyectos.getMProyectos.ReorganizarListaFinalizados();
                 
+            //}
+        }
+
+        public void Finalizar(DateTime defensa, string convocatoria, float nota)
+        {
+            mFinalizado = Instanciar.NuevoFinalizado.Crear(defensa, convocatoria, nota);
+            //if(mFinalizado != null)
+            //{
+            finalizado = true;
+            MListaProyectos.getMListaProyectos.getMProyectos.ReorganizarListaFinalizados();
+
             //}
         }
         /// <summary>

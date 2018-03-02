@@ -6,6 +6,7 @@ using System.IO;
 using ToolStripVisualStyles;
 using System.Windows.Forms.VisualStyles;
 using System.Drawing.Drawing2D;
+using GestorTFG.Forms;
 
 namespace GestorTFG
 {
@@ -352,7 +353,7 @@ namespace GestorTFG
                         button6.Enabled = true;
                         numericUpDown1.Visible = false;
                         dateTimePicker3.Visible = true;
-                        dateTimePicker3.Value = DateTime.Parse(MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[indiceLista][indiceSeleccionado].getMTFG.Fecha);
+                        dateTimePicker3.Value = /*DateTime.Parse(*/MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[indiceLista][indiceSeleccionado].getMTFG.Fecha;
                         comboBox3.Visible = false;
                         break;
                     case 3:
@@ -396,7 +397,7 @@ namespace GestorTFG
                         button6.Enabled = true;
                         numericUpDown1.Visible = false;
                         dateTimePicker3.Visible = true;
-                        dateTimePicker3.Value = DateTime.Parse(MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[indiceLista][indiceSeleccionado].Alumno.FechaInicio);
+                        dateTimePicker3.Value = DateTime.Parse(MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[indiceLista][indiceSeleccionado].Alumno.FechaInicio.Date.ToShortDateString());
                         comboBox3.Visible = false;
                         break;
                     case 8:
@@ -404,7 +405,7 @@ namespace GestorTFG
                         button6.Enabled = true;
                         numericUpDown1.Visible = false;
                         dateTimePicker3.Visible = true;
-                        dateTimePicker3.Value = DateTime.Parse(MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[indiceLista][indiceSeleccionado].getMTFG.getMFinalizado.Defensa);
+                        dateTimePicker3.Value = DateTime.Parse(MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[indiceLista][indiceSeleccionado].getMTFG.getMFinalizado.Defensa.Date.ToShortDateString());
                         comboBox3.Visible = false;
                         break;
                     case 9:
@@ -643,6 +644,8 @@ namespace GestorTFG
                 else if (tabControl3.SelectedIndex == 1)
                     vista.ActualizarComboBoxModificar(ref comboBox1, listView2, TipoLista.Sin_Asignar);
                 vista.ActualizarDatosRichTextBox(ref richTextBox1, listView1, TipoLista.Todos,TDatos.TFG);
+                listView1.EnsureVisible(listView1.SelectedIndices[listView1.SelectedIndices.Count -1]);
+                tabControl2.SelectedIndex = 0;
                 toolStripStatusLabel1.Text = fichero.ArchivoActual + '*';
             }
         }
@@ -906,6 +909,38 @@ namespace GestorTFG
                     listview = listView3;
                     break;
             }
+
+            if (comboBox1.SelectedIndex == 2)
+            {
+                if (dateTimePicker3.Value > MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[indiceLista][listview.SelectedIndices[0]].Alumno.FechaInicio)
+                {
+                    MessageBox.Show("La fecha de propuesta no puede ser posterior a la fecha de inicio.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    return;
+                }
+            }
+            else if (comboBox1.SelectedIndex == 7)
+            {
+                if (dateTimePicker3.Value < MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[indiceLista][listview.SelectedIndices[0]].getMTFG.Fecha)
+                {
+                    MessageBox.Show("La fecha de inicio no puede ser anterior a la fecha de propuesta.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    return;
+                }
+                else if(dateTimePicker3.Value > MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[indiceLista][listview.SelectedIndices[0]].getMTFG.getMFinalizado.Defensa)
+                {
+                    MessageBox.Show("La fecha de inicio no puede ser posterior a la fecha de defensa.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    return;
+                }
+            }
+            if (comboBox1.SelectedIndex == 8)
+            {
+                if (dateTimePicker3.Value < MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[indiceLista][listview.SelectedIndices[0]].Alumno.FechaInicio)
+                {
+                    MessageBox.Show("La fecha de defensa no puede ser anterior a la fecha de inicio.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    return;
+                }
+            }
+
+
             ProyectoIndice antesdeModificar = new ProyectoIndice(MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[indiceLista][listview.SelectedIndices[0]].Copiar(), MListaProyectos.getMListaProyectos.getMProyectos.getProyectos.IndexOf(MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[indiceLista][listview.SelectedIndices[0]]));
             int indiceModificar = comboBox1.SelectedIndex;
             vista.BotonModificar(comboBox1, textBox8, comboBox3, dateTimePicker3, numericUpDown1, ref listview, (TipoLista) indiceLista);
@@ -970,7 +1005,7 @@ namespace GestorTFG
                         valorCampoProyecto = MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[indiceLista][indiceSeleccionado].getMTFG.Descripcion;
                         break;
                     case 2:
-                        valorCampoProyecto = MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[indiceLista][indiceSeleccionado].getMTFG.Fecha;
+                        valorCampoProyecto = MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[indiceLista][indiceSeleccionado].getMTFG.Fecha.Date.ToShortDateString();
                         break;
                     case 3:
                         valorCampoProyecto = MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[indiceLista][indiceSeleccionado].Alumno.Nombre;
@@ -985,10 +1020,10 @@ namespace GestorTFG
                         valorCampoProyecto = MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[indiceLista][indiceSeleccionado].Alumno.Matricula;
                         break;
                     case 7:
-                        valorCampoProyecto = MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[indiceLista][indiceSeleccionado].Alumno.FechaInicio;
+                        valorCampoProyecto = MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[indiceLista][indiceSeleccionado].Alumno.FechaInicio.Date.ToShortDateString();
                         break;
                     case 8:
-                        valorCampoProyecto = MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[indiceLista][indiceSeleccionado].getMTFG.getMFinalizado.Defensa;
+                        valorCampoProyecto = MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[indiceLista][indiceSeleccionado].getMTFG.getMFinalizado.Defensa.Date.ToShortDateString();
                         break;
                     case 9:
                         valorCampoProyecto = MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[indiceLista][indiceSeleccionado].getMTFG.getMFinalizado.Convocatoria;
@@ -1297,6 +1332,7 @@ namespace GestorTFG
                 foreach (int indice in indices)
                 {
                     listView1.RedrawItems(indice, indice, false);
+                    listView1.EnsureVisible(indice);
                 }
                 vista.ActualizarVistaTabla(ref listView2, TipoLista.Sin_Asignar);
             }
@@ -1369,6 +1405,7 @@ namespace GestorTFG
                 foreach (int indice in indices)
                 {
                     listView1.RedrawItems(indice, indice, false);
+                    listView1.EnsureVisible(indice);
                 }
                 vista.ActualizarVistaTabla(ref listView2, TipoLista.Sin_Asignar);
                 actualizarStatusLabelNumeroProyectos();
@@ -2152,7 +2189,7 @@ namespace GestorTFG
         {
             int indice = 0;
             if (tabControl3.SelectedIndex == 0)
-            {
+            { 
                 indice = listView1.SelectedIndices[0];
             }
             else if (tabControl3.SelectedIndex == 1)
@@ -2166,7 +2203,23 @@ namespace GestorTFG
             ProyectoIndice proyectoAntesAñadir = new ProyectoIndice(MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[indice].Copiar(), indice);
             if (vista.BotonModificarProfesor(this, ref tabControl3, ref listView1, listView2, listView3))
             {
-                MessageBox.Show("Datos de profesor actualizados con éxito", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (tabControl3.SelectedIndex == 0)
+                {
+                    vista.ActualizarDatosRichTextBox(ref richTextBox2, listView1, TipoLista.Todos, TDatos.Profesor);
+                    listView1.EnsureVisible(indice);
+                }
+                else if (tabControl3.SelectedIndex == 1)
+                {
+                    vista.ActualizarDatosRichTextBox(ref richTextBox2, listView2, TipoLista.Sin_Asignar, TDatos.Profesor);
+                    listView2.EnsureVisible(listView2.SelectedIndices[0]);
+                }
+                else if (tabControl3.SelectedIndex == 2)
+                {
+                    vista.ActualizarDatosRichTextBox(ref richTextBox2, listView3, TipoLista.Finalizados, TDatos.Profesor);
+                    listView3.EnsureVisible(listView3.SelectedIndices[0]);
+                }
+                tabControl2.SelectedIndex = 1;
+                MessageBox.Show("Datos de profesor actualizados", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Operacion op = new Operacion(TOperacion.Modificar, proyectoAntesAñadir);
                 ProyectoIndice proyectoAñadidoAlumno = new ProyectoIndice(MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[indice].Copiar(), indice);
                 op.ListaProyectosDespues.Add(proyectoAñadidoAlumno);
@@ -2176,19 +2229,7 @@ namespace GestorTFG
                 ForwardStripButton1.Enabled = false;
                 deshacerToolStripMenuItem.Enabled = true;
                 BackToolStripButton1.Enabled = true;
-                if (tabControl3.SelectedIndex == 0)
-                {
-                    vista.ActualizarDatosRichTextBox(ref richTextBox2, listView1, TipoLista.Todos, TDatos.Profesor);
-                }
-                else if (tabControl3.SelectedIndex == 1)
-                {
-                    vista.ActualizarDatosRichTextBox(ref richTextBox2, listView2, TipoLista.Sin_Asignar, TDatos.Profesor);
-                }
-                else if (tabControl3.SelectedIndex == 1)
-                {
-                    vista.ActualizarDatosRichTextBox(ref richTextBox2, listView3, TipoLista.Finalizados, TDatos.Profesor);
-                }
-                    toolStripStatusLabel1.Text = fichero.ArchivoActual + '*';
+                toolStripStatusLabel1.Text = fichero.ArchivoActual + '*';
             }
         }
 
@@ -2283,6 +2324,22 @@ namespace GestorTFG
                     if (enc) button7.Enabled = true;
                 }
             } 
+        }
+
+        private void listView1_Leave(object sender, EventArgs e)
+        {
+            copyToolStripButton1.Enabled = false;
+        }
+
+        private void listView1_Enter(object sender, EventArgs e)
+        {
+            if(((VistaLista)sender).SelectedIndices.Count == 1)
+                copyToolStripButton1.Enabled = true;
+        }
+
+        private void idiomaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new Form_Idioma().ShowDialog(this);
         }
     }
 

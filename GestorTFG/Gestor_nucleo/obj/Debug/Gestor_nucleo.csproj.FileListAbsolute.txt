@@ -2,7 +2,6 @@ F:\Users\Juan Pedro_2\Documents\Visual Studio 2015\Projects\GestorTFG\Gestor_nuc
 F:\Users\Juan Pedro_2\Documents\Visual Studio 2015\Projects\GestorTFG\Gestor_nucleo\bin\Debug\Gestor_nucleo.pdb
 F:\Users\Juan Pedro_2\Documents\Visual Studio 2015\Projects\GestorTFG\Gestor_nucleo\obj\Debug\Gestor_nucleo.dll
 F:\Users\Juan Pedro_2\Documents\Visual Studio 2015\Projects\GestorTFG\Gestor_nucleo\obj\Debug\Gestor_nucleo.pdb
-F:\Users\Juan Pedro_2\Documents\Visual Studio 2015\Projects\GestorTFG\Gestor_nucleo\obj\Debug\Gestor_nucleo.csprojResolveAssemblyReference.cache
 F:\Users\Juan Pedro_2\Documents\Visual Studio 2015\Projects\GestorTFG\Gestor_nucleo\bin2\Gestor_nucleo.dll
 F:\Users\Juan Pedro_2\Documents\Visual Studio 2015\Projects\GestorTFG\Gestor_nucleo\bin2\Gestor_nucleo.pdb
 F:\Users\Juan Pedro_2\Documents\Visual Studio 2015\Projects\GestorTFG\bin2\Gestor_nucleo.dll

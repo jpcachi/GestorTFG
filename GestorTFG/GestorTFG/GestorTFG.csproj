@@ -63,9 +63,6 @@
     <ApplicationIcon>Cabinet.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Gestor_nucleo">
-      <HintPath>..\Gestor_nucleo\obj\Debug\Gestor_nucleo.dll</HintPath>
-    </Reference>
     <Reference Include="PdfiumViewer, Version=2.9.0.0, Culture=neutral, PublicKeyToken=91e4789cfb0609e0, processorArchitecture=MSIL">
       <HintPath>..\packages\PdfiumViewer.2.9.0.0\lib\net20\PdfiumViewer.dll</HintPath>
       <Private>True</Private>
@@ -94,6 +91,12 @@
     </Compile>
     <Compile Include="Forms\Form12.Designer.cs">
       <DependentUpon>Form12.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Form_Idioma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form_Idioma.Designer.cs">
+      <DependentUpon>Form_Idioma.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Form_Profesor.cs">
       <SubType>Form</SubType>
@@ -155,6 +158,8 @@
     <Compile Include="Forms\Form_Informacion.Designer.cs">
       <DependentUpon>Form_Informacion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Lenguajes\Idioma.cs" />
+    <Compile Include="Lenguajes\Ingles.cs" />
     <Compile Include="NativesMethods.cs" />
     <Compile Include="ListViewItemUtilidades.cs" />
     <Compile Include="ListViewVisualStyles.cs" />
@@ -181,6 +186,9 @@
     </Compile>
     <EmbeddedResource Include="Forms\Form12.resx">
       <DependentUpon>Form12.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Form_Idioma.resx">
+      <DependentUpon>Form_Idioma.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Form_Principal.resx">
       <DependentUpon>Form_Principal.cs</DependentUpon>
@@ -257,7 +265,12 @@
       <Install>true</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Gestor_nucleo\Gestor_nucleo.csproj">
+      <Project>{d965e256-bec6-4592-b491-5ed845c3cbce}</Project>
+      <Name>Gestor_nucleo</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <Content Include="Cabinet.ico" />
     <Content Include="x64\pdfium.dll">

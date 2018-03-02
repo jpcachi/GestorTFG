@@ -34,7 +34,8 @@ namespace GestorTFG
                 string[] datos;
                 datos = proyecto.Split(';');
                 if (datos.Length < 7) throw new IOException();
-                MProyecto mProyecto = Instanciar.NuevoProyecto.Crear(datos[0], datos[1], datos[2], datos[3], datos[4], datos[5], datos[7], datos[6]);
+                DateTime fechaPropuesta = DateTime.Parse(datos[2]);
+                MProyecto mProyecto = Instanciar.NuevoProyecto.Crear(datos[0], datos[1], fechaPropuesta, datos[3], datos[4], datos[5], datos[7], datos[6]);
                 if (!string.IsNullOrWhiteSpace(datos[8] + datos[9] + datos[10] + datos[11] + datos[12]))
                 {
                     mProyecto.AsignarAlumno(datos[8], datos[9], datos[10], datos[11], datos[12]);
@@ -69,18 +70,22 @@ namespace GestorTFG
                 string[] datos;
                 datos = dato.Split(';');
                 if (datos.Length < 16) throw new IOException();
-                DateTime.Parse(datos[2]);
-                MProyecto mProyecto = Instanciar.NuevoProyecto.Crear(datos[0], datos[1], datos[2], datos[3], datos[4], datos[5], datos[7], datos[6]); //datos[2] fecha
+                DateTime fechaPropuesta = DateTime.Parse(datos[2]);
+                MProyecto mProyecto = Instanciar.NuevoProyecto.Crear(datos[0], datos[1], fechaPropuesta, datos[3], datos[4], datos[5], datos[7], datos[6]); //datos[2] fecha
                 if (!string.IsNullOrWhiteSpace(datos[8] + datos[9] + datos[10] + datos[11] + datos[12]))
                 {
-                    DateTime.Parse(datos[12]);
-                    mProyecto.AsignarAlumno(datos[8], datos[9], datos[10], datos[11], datos[12]);
+                    DateTime fechaInicio = DateTime.Parse(datos[12]);
+                    if (fechaPropuesta > fechaInicio)
+                        throw new ArgumentException();
+                    mProyecto.AsignarAlumno(datos[8], datos[9], datos[10], datos[11], fechaInicio);
                     if (!string.IsNullOrWhiteSpace(datos[13] + datos[14] + datos[15]))
                     {
                         float nota;
                         float.TryParse(datos[15], out nota);
-                        DateTime.Parse(datos[13]);
-                        mProyecto.getMTFG.Finalizar(datos[13], datos[14], nota);
+                        DateTime fechaDefensa = DateTime.Parse(datos[13]);
+                        if (fechaDefensa < fechaInicio)
+                            throw new ArgumentException();
+                        mProyecto.getMTFG.Finalizar(fechaDefensa, datos[14], nota);
                     }
                 }
                 MListaProyectos.getMListaProyectos.getMProyectos.Añadir(mProyecto);

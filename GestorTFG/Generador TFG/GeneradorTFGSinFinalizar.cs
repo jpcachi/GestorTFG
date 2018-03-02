@@ -35,7 +35,9 @@ namespace Generador_TFG
                 ary.Add(descripcion[rand.Next(descripcion.Length)]);
 
                 //fecharegistro
-                ary.Add(GeneradorFechas.GenerarFecha());
+                string fechaRegistro = GeneradorFechas.GenerarFecha();
+                DateTime fechaRegistroDate = DateTime.Parse(fechaRegistro);
+                ary.Add(fechaRegistro);
 
                 // profesor
                 //nombre
@@ -70,7 +72,9 @@ namespace Generador_TFG
                 ary.Add(char.ConvertFromUtf32(rand.Next(0x0061, 0x007A)) + char.ConvertFromUtf32(rand.Next(0x0061, 0x007A)) + rand.Next(10000).ToString());
 
                 //fechadeinicio
-                ary.Add(GeneradorFechas.GenerarFecha());
+                string fechaInicio = GeneradorFechas.GenerarFecha(fechaRegistroDate.Year, fechaRegistroDate.Month, fechaRegistroDate.Day);
+                DateTime fechaInicioDate = DateTime.Parse(fechaInicio);
+                ary.Add(fechaInicio);
 
                 //fechadefensa
                 ary.Add(string.Empty);

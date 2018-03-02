@@ -1,4 +1,6 @@
-﻿namespace GestorTFG
+﻿using System;
+
+namespace GestorTFG
 {
     public class NuevoMFinalizado
     {
@@ -10,6 +12,11 @@
         /// <param name="nota"></param>
         /// <returns></returns>
         public MFinalizado Crear(string defensa, string convocatoria, float nota)
+        {
+            return new MFinalizado(defensa, convocatoria, nota);
+        }
+
+        public MFinalizado Crear(DateTime defensa, string convocatoria, float nota)
         {
             return new MFinalizado(defensa, convocatoria, nota);
         }

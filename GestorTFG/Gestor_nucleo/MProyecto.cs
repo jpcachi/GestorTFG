@@ -1,4 +1,6 @@
-﻿namespace GestorTFG
+﻿using System;
+
+namespace GestorTFG
 {
     public class MProyecto
     {
@@ -53,6 +55,13 @@
             profesor = Instanciar.NuevaPersona.CrearProfesor(nombre, apellido1, apellido2, despacho, correo, this);
         }
 
+        public MProyecto(string titulo, string descripcion, DateTime fecha, string nombre, string apellido1, string apellido2, string despacho, string correo)
+        {
+            asignado = false;
+            mTFG = Instanciar.NuevoTFG.Crear(titulo, descripcion, fecha, this);
+            profesor = Instanciar.NuevaPersona.CrearProfesor(nombre, apellido1, apellido2, despacho, correo, this);
+        }
+
         /// <summary>
         /// Asigna un alumno al proyecto con los siguientes datos
         /// </summary>
@@ -61,6 +70,16 @@
             MListaProyectos.getMListaProyectos.getMProyectos.getProyectosNoAsignados.Remove(this);
             alumno = Instanciar.NuevaPersona.CrearAlumno(nombre, apellido1, apellido2, matricula, fechaInicio, this);
             if(alumno != null)
+            {
+                asignado = true;
+            }
+        }
+
+        public void AsignarAlumno(string nombre, string apellido1, string apellido2, string matricula, DateTime fechaInicio)
+        {
+            MListaProyectos.getMListaProyectos.getMProyectos.getProyectosNoAsignados.Remove(this);
+            alumno = Instanciar.NuevaPersona.CrearAlumno(nombre, apellido1, apellido2, matricula, fechaInicio, this);
+            if (alumno != null)
             {
                 asignado = true;
             }

@@ -15,16 +15,16 @@
       </applicationRequestMinimum>
       <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
         <!--
-          Opciones del manifiesto de Control de cuentas de usuario
+          Opciones del manifiesto de UAC
           Si desea cambiar el nivel de Control de cuentas de usuario de Windows, reemplace el 
-          nodo requestedExecutionLevel por alguno de los siguientes.
+          nodo requestedExecutionLevel por uno de los siguientes.
 
         <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
         <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
         <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
 
-         Si desea usar la virtualización de archivos y del Registro para la 
-         compatibilidad con versiones anteriores, elimine el nodo requestedExecutionLevel.
+         Si desea usar Virtualización de archivos y Registro para compatibilidad con 
+         versiones anteriores, elimine el nodo requestedExecutionLevel.
     -->
         <requestedExecutionLevel level="asInvoker" uiAccess="false" />
       </requestedPrivileges>
@@ -43,26 +43,26 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Gestor_nucleo.dll" size="20480">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Gestor_nucleo.dll" size="22528">
       <assemblyIdentity name="Gestor_nucleo" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>ZD7XPbg9XazZoeJ8M37La12RCG4=</dsig:DigestValue>
+        <dsig:DigestValue>ty6VizBV3l9ZlBJB3tu9K6leNT0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="GestorTFG.exe" size="4976640">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="GestorTFG.exe" size="5080576">
       <assemblyIdentity name="GestorTFG" version="2.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>ugVEX/EFjWHXczkzE7oMVPYxxiY=</dsig:DigestValue>
+        <dsig:DigestValue>pBzixK0FqDm01uY8QbBntUaa++Q=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

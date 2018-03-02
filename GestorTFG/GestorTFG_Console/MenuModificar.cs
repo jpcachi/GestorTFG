@@ -75,7 +75,7 @@ namespace GestorTFG_Console
                             Console.ReadKey();
                             break;
                         case 4:
-                            Console.WriteLine("Fecha de inicio actual: " + MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[indiceProyecto].Alumno.FechaInicio);
+                            Console.WriteLine("Fecha de inicio actual: " + MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[indiceProyecto].Alumno.FechaInicio.Date.ToShortDateString());
                             string[] fecha = MenuUtilidades.introducirDatos(new int[] { 0 }, "Nueva fecha de inicio");
                             cProyectos.ModificarProyecto(6, fecha[0], indiceProyecto);
                             Console.WriteLine("Fecha de inicio modificada correctamente. Pulse una tecla para continuar...\n");
@@ -143,7 +143,7 @@ namespace GestorTFG_Console
             }
         }
 
-        private class MenuModificarProyecto
+        public class MenuModificarProyecto
         {
             private int seleccion;
             private int indiceProyecto;
@@ -188,7 +188,7 @@ namespace GestorTFG_Console
                             Console.ReadKey();
                             break;
                         case 2:
-                            Console.WriteLine("Fecha de registro actual: " + MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[indiceProyecto].getMTFG.Fecha);
+                            Console.WriteLine("Fecha de registro actual: " + MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[indiceProyecto].getMTFG.Fecha.Date.ToShortDateString());
                             string[] fecha = MenuUtilidades.introducirDatos(new int[] { 0 }, "Nueva fecha de registro");
                             cProyectos.ModificarProyecto(2, fecha[0], indiceProyecto);
                             Console.WriteLine("Fecha de registro modificada correctamente. Pulse una tecla para continuar...\n");
@@ -206,7 +206,7 @@ namespace GestorTFG_Console
                         case 5:
                             //if (seleccion != opciones.Length - 1)
                             //{
-                                Console.WriteLine("Fecha de defensa actual: " + MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[indiceProyecto].getMTFG.getMFinalizado.Defensa);
+                                Console.WriteLine("Fecha de defensa actual: " + MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[indiceProyecto].getMTFG.getMFinalizado.Defensa.Date.ToShortDateString());
                                 string[] defensa = MenuUtilidades.introducirDatos(new int[] { 0 }, "Nueva fecha de defensa");
                                 cProyectos.ModificarProyecto(8, defensa[0], indiceProyecto);
                                 Console.WriteLine("Fecha de defensa modificada correctamente. Pulse una tecla para continuar...\n");

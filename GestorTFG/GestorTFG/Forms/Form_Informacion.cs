@@ -19,7 +19,7 @@ namespace GestorTFG
 
             titulo.Text = MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)lista][listView.SelectedIndices[0]].getMTFG.Titulo;
             descripcion.Text = MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)lista][listView.SelectedIndices[0]].getMTFG.Descripcion;
-            registro.Text = MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)lista][listView.SelectedIndices[0]].getMTFG.Fecha;
+            registro.Text = MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)lista][listView.SelectedIndices[0]].getMTFG.Fecha.Date.ToShortDateString();
 
             profesor_nombre.Text = MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)lista][listView.SelectedIndices[0]].Profesor.Nombre;
             profesor_apellido_1.Text = MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)lista][listView.SelectedIndices[0]].Profesor.PrimerApellido;
@@ -43,7 +43,7 @@ namespace GestorTFG
                 alumno_apellido_1.Text = MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)lista][listView.SelectedIndices[0]].Alumno.PrimerApellido;
                 alumno_apellido_2.Text = MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)lista][listView.SelectedIndices[0]].Alumno.SegundoApellido;
                 alumno_matricula.Text = MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)lista][listView.SelectedIndices[0]].Alumno.Matricula;
-                alumno_inicio.Text = MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)lista][listView.SelectedIndices[0]].Alumno.FechaInicio;
+                alumno_inicio.Text = MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)lista][listView.SelectedIndices[0]].Alumno.FechaInicio.Date.ToShortDateString();
                 if (MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)lista][listView.SelectedIndices[0]].getMTFG.Finalizado)
                 {
                     finalizar_defensa.Enabled = true;
@@ -52,7 +52,7 @@ namespace GestorTFG
                     finalizar_defensa.BackColor = SystemColors.ControlLightLight;
                     finalizar_convocatoria.BackColor = SystemColors.ControlLightLight;
                     finalizar_calificacion.BackColor = SystemColors.ControlLightLight;
-                    finalizar_defensa.Text = MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)lista][listView.SelectedIndices[0]].getMTFG.getMFinalizado.Defensa;
+                    finalizar_defensa.Text = MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)lista][listView.SelectedIndices[0]].getMTFG.getMFinalizado.Defensa.Date.ToShortDateString();
                     finalizar_convocatoria.Text = MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)lista][listView.SelectedIndices[0]].getMTFG.getMFinalizado.Convocatoria;
                     finalizar_calificacion.Text = MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)lista][listView.SelectedIndices[0]].getMTFG.getMFinalizado.Nota.ToString();
                     estado.Text = "Finalizado";

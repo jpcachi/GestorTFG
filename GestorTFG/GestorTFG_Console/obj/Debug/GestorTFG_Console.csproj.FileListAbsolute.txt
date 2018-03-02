@@ -6,3 +6,4 @@ F:\Users\Juan Pedro_2\Documents\Visual Studio 2015\Projects\GestorTFG\GestorTFG_
 F:\Users\Juan Pedro_2\Documents\Visual Studio 2015\Projects\GestorTFG\GestorTFG_Console\obj\Debug\GestorTFG_Console.csproj.GenerateResource.Cache
 F:\Users\Juan Pedro_2\Documents\Visual Studio 2015\Projects\GestorTFG\GestorTFG_Console\obj\Debug\GestorTFG_Console.exe
 F:\Users\Juan Pedro_2\Documents\Visual Studio 2015\Projects\GestorTFG\GestorTFG_Console\obj\Debug\GestorTFG_Console.pdb
+F:\Users\Juan Pedro_2\Documents\Visual Studio 2015\Projects\GestorTFG\GestorTFG_Console\obj\Debug\GestorTFG_Console.csprojResolveAssemblyReference.cache

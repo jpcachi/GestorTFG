@@ -217,7 +217,7 @@ namespace GestorTFG
 
         private void fechaDeRegistroToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Clipboard.SetText(MListaProyectos.getMListaProyectos.getMProyectos.getBusquedaProyecto[listView1.SelectedIndices[0]].getMTFG.Fecha);
+            Clipboard.SetText(MListaProyectos.getMListaProyectos.getMProyectos.getBusquedaProyecto[listView1.SelectedIndices[0]].getMTFG.Fecha.Date.ToShortDateString());
         }
 
         private void nombreDelAlumnoToolStripMenuItem_Click(object sender, EventArgs e)
@@ -242,12 +242,12 @@ namespace GestorTFG
 
         private void fechaDeInicioToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Clipboard.SetText(MListaProyectos.getMListaProyectos.getMProyectos.getBusquedaProyecto[listView1.SelectedIndices[0]].Alumno.FechaInicio);
+            Clipboard.SetText(MListaProyectos.getMListaProyectos.getMProyectos.getBusquedaProyecto[listView1.SelectedIndices[0]].Alumno.FechaInicio.Date.ToShortDateString());
         }
 
         private void fechaDeDefensaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Clipboard.SetText(MListaProyectos.getMListaProyectos.getMProyectos.getBusquedaProyecto[listView1.SelectedIndices[0]].getMTFG.getMFinalizado.Defensa);
+            Clipboard.SetText(MListaProyectos.getMListaProyectos.getMProyectos.getBusquedaProyecto[listView1.SelectedIndices[0]].getMTFG.getMFinalizado.Defensa.Date.ToShortDateString());
         }
 
         private void convocatoriaToolStripMenuItem_Click(object sender, EventArgs e)

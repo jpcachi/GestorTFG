@@ -15,9 +15,19 @@ namespace Generador_TFG
             return generador.Next(2005, 2017);
         }
 
+        private static int GenerarAño(int min)
+        {
+            return generador.Next(min, 2017);
+        }
+
         private static int GenerarMes()
         {
             return generador.Next(1, 12);
+        }
+
+        private static int GenerarMes(int min)
+        {
+            return generador.Next(min, 12);
         }
 
         private static int GenerarDia(int mes, int año)
@@ -58,6 +68,43 @@ namespace Generador_TFG
             }
 
             if(dia_formato.Length == 1)
+            {
+                dia_formato = "0" + dia_formato;
+            }
+
+            return dia_formato + "/" + mes_formato + "/" + año.ToString();
+        }
+
+        public static string GenerarFecha(int _año, int _mes, int _dia)
+        {
+            int año = GenerarAño(_año);
+            int mes = año == _año ? GenerarMes(_mes) : GenerarMes();
+            int dia = GenerarDia(mes, año);
+
+            while(año == _año && mes == _mes && dia < _dia)
+            {
+                dia = GenerarDia(mes, año);
+            }
+
+            if(mes == 2 && dia > 28 || dia > 30)
+            {
+                mes++;
+                dia = 1;
+                if(mes > 12)
+                {
+                    año++;
+                    mes = 1;
+                } 
+            }
+
+            string mes_formato = mes.ToString();
+            string dia_formato = dia.ToString();
+            if (mes_formato.Length == 1)
+            {
+                mes_formato = "0" + mes_formato;
+            }
+
+            if (dia_formato.Length == 1)
             {
                 dia_formato = "0" + dia_formato;
             }

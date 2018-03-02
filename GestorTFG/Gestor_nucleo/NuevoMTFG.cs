@@ -1,4 +1,6 @@
-﻿namespace GestorTFG
+﻿using System;
+
+namespace GestorTFG
 {
     public class NuevoMTFG
     {
@@ -11,6 +13,11 @@
         /// <param name="mProyecto"></param>
         /// <returns></returns>
         public MTFG Crear(string titulo, string descripcion, string fecha, MProyecto mProyecto)
+        {
+            return new MTFG(titulo, descripcion, fecha, mProyecto);
+        }
+
+        public MTFG Crear(string titulo, string descripcion, DateTime fecha, MProyecto mProyecto)
         {
             return new MTFG(titulo, descripcion, fecha, mProyecto);
         }

@@ -152,26 +152,34 @@ namespace GestorTFG_Console
 
         public static void MostrarInformacion(int indice)
         {
+            MostrarInformacion(indice, true);
+        }
+
+        public static void MostrarInformacion(int indice, bool espera)
+        {
             MProyecto mProyecto = MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[indice];
             Console.WriteLine("┌───────────────────────────────┐\n│     INFORMACIÓN DETALLADA     │\n└───────────────────────────────┘");
             Console.WriteLine("TÍTULO: " + mProyecto.getMTFG.Titulo +
                 "\nDESCRIPCIÓN: " + mProyecto.getMTFG.Descripcion +
-                "\nFECHA DE REGISTRO: " + mProyecto.getMTFG.Fecha + "\n\n┌──────────────────────────────┐\n│     INFORMACIÓN PROFESOR     │\n└──────────────────────────────┘\nNOMBRE: " + mProyecto.Profesor.Nombre +
+                "\nFECHA DE REGISTRO: " + mProyecto.getMTFG.Fecha.Date.ToShortDateString() + "\n\n┌──────────────────────────────┐\n│     INFORMACIÓN PROFESOR     │\n└──────────────────────────────┘\nNOMBRE: " + mProyecto.Profesor.Nombre +
                 "\nPRIMER APELLIDO: " + mProyecto.Profesor.PrimerApellido + "\nSEGUNDO APELLIDO: " + mProyecto.Profesor.SegundoApellido + "\nCORREO ELECTRÓNICO: " + mProyecto.Profesor.Correo +
                 "\nDESPACHO: " + mProyecto.Profesor.Despacho);
             if (mProyecto.Asignado)
             {
                 Console.WriteLine("\n\n┌────────────────────────────┐\n│     INFORMACIÓN ALUMNO     │\n└────────────────────────────┘\nNOMBRE: " + mProyecto.Alumno.Nombre +
                 "\nPRIMER APELLIDO: " + mProyecto.Alumno.PrimerApellido + "\nSEGUNDO APELLIDO: " + mProyecto.Alumno.SegundoApellido + "\nMATRÍCULA: " + mProyecto.Alumno.Matricula +
-                "\nFECHA DE INICIO: " + mProyecto.Alumno.FechaInicio);
+                "\nFECHA DE INICIO: " + mProyecto.Alumno.FechaInicio.Date.ToShortDateString());
                 if (mProyecto.getMTFG.Finalizado)
                 {
-                    Console.WriteLine("\n\n┌───────────────────────────────┐\n│     DATOS DE FINALIZACIÓN     │\n└───────────────────────────────┘\nFECHA DE LA DEFENSA: " + mProyecto.getMTFG.getMFinalizado.Defensa +
+                    Console.WriteLine("\n\n┌───────────────────────────────┐\n│     DATOS DE FINALIZACIÓN     │\n└───────────────────────────────┘\nFECHA DE LA DEFENSA: " + mProyecto.getMTFG.getMFinalizado.Defensa.Date.ToShortDateString() +
                     "\nCONVOCATORIA: " + mProyecto.getMTFG.getMFinalizado.Convocatoria + "\nCALIFICACIÓN: " + mProyecto.getMTFG.getMFinalizado.Nota);
                 }
             }
-            Console.WriteLine("\nPulse una tecla para continuar...");
-            Console.ReadKey();
+            if (espera)
+            {
+                Console.WriteLine("\nPulse una tecla para continuar...");
+                Console.ReadKey();
+            }
         }
 
         public static string EscribirBordes(string palabra)

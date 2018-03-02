@@ -118,3 +118,4 @@ F:\Users\Juan Pedro_2\Documents\Visual Studio 2015\Projects\GestorTFG\GestorTFG_
 F:\Users\Juan Pedro_2\Documents\Visual Studio 2015\Projects\GestorTFG\GestorTFG_Deploy\GestorTFG.pdb
 F:\Users\Juan Pedro_2\Documents\Visual Studio 2015\Projects\GestorTFG\GestorTFG\obj\Debug\GestorTFG.Form12.resources
 F:\Users\Juan Pedro_2\Documents\Visual Studio 2015\Projects\GestorTFG\GestorTFG\obj\Debug\GestorTFG.Form1.resources
+F:\Users\Juan Pedro_2\Documents\Visual Studio 2015\Projects\GestorTFG\GestorTFG\obj\Debug\GestorTFG.Forms.Form_Idioma.resources

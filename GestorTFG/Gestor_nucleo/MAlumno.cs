@@ -1,8 +1,11 @@
-﻿namespace GestorTFG
+﻿using System;
+
+namespace GestorTFG
 {
     public class MAlumno : MPersona
     {
         private string fechaInicio;
+        public DateTime FechaInicio { get; set; }
         private string matricula;
         private MProyecto mProyecto;
 
@@ -20,10 +23,17 @@
             this.matricula = matricula;
             this.mProyecto = mProyecto;
         }
+
+        public MAlumno(string nombre, string apellido1, string apellido2, string matricula, DateTime fechaInicio, MProyecto mProyecto) : base(nombre, apellido1, apellido2)
+        {
+            this.FechaInicio = fechaInicio;
+            this.matricula = matricula;
+            this.mProyecto = mProyecto;
+        }
         /// <summary>
         /// Obtiene o establece la Fecha de Inicio de un TFG por parte de un alumno
         /// </summary>
-        public string FechaInicio
+        /*public string FechaInicio
         {
             get
             {
@@ -34,7 +44,7 @@
             {
                 fechaInicio = value;
             }
-        }
+        }*/
         /// <summary>
         /// Obtiene o establece la Matrícula de un alumno
         /// </summary>

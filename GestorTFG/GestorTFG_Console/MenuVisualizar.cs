@@ -49,11 +49,38 @@ namespace GestorTFG_Console
                     seleccion = MenuUtilidades.CrearMenu(opciones);
                     if (seleccion > 0)
                     {
-                        if (seleccion == 1)
+                        string[] _opciones = { "Modificar", "Salir" };
+                        if(!MListaProyectos.getMListaProyectos.getMProyectos.getProyectos[seleccion - 1].Asignado)
+                        {
+                            _opciones = new string[]{ "Modificar", "Asignar alumno", "Salir" };
+                        }
+                        int _seleccion;
+                        
+                        do
                         {
                             Console.Clear();
-                            MenuUtilidades.MostrarInformacion(seleccion - 1);
-                        }
+                            MenuUtilidades.MostrarInformacion(seleccion - 1, false);
+                            Console.WriteLine("\n──────────────────────────");
+                            _seleccion = MenuUtilidades.CrearMenu(_opciones);
+                            if(_seleccion == 1)
+                            {
+                                new MenuModificar.MenuModificarProyecto(seleccion - 1, new CProyectos());
+                            }
+                            else if (_seleccion == 2)
+                            {
+                                CAlumno cAlumno = new CAlumno();
+                                Console.ForegroundColor = ConsoleColor.DarkYellow;
+                                Console.Clear();
+                                Console.WriteLine("┌──────────────────────" + MenuUtilidades.EscribirBordes(MListaProyectos.getMListaProyectos.getMProyectos.getProyectosNoAsignados[seleccion - 1].getMTFG.Titulo) + "┐\n│     ASIGNAR ALUMNO A " + MListaProyectos.getMListaProyectos.getMProyectos.getProyectosNoAsignados[seleccion - 1].getMTFG.Titulo + "     │\n└──────────────────────" + MenuUtilidades.EscribirBordes(MListaProyectos.getMListaProyectos.getMProyectos.getProyectosNoAsignados[seleccion - 1].getMTFG.Titulo) + "┘");
+                                string[] datos = MenuUtilidades.introducirDatos(new int[] { 4 }, "Nombre", "Primer apellido", "Segundo apellido", "Matrícula", "Fecha de inicio");
+                                cAlumno.AsignarAlumno(seleccion - 1, datos);
+                                string alumno = opciones[seleccion - 1].Alumno.Nombre + " " + opciones[seleccion - 1].Alumno.PrimerApellido + " " + opciones[seleccion - 1].Alumno.SegundoApellido;
+                                Console.WriteLine("Alumno " + alumno + " asignado correctamente. Pulse una tecla para continuar...");
+                                Console.ReadKey();
+                                Console.ForegroundColor = ConsoleColor.Green;
+                            }
+
+                        } while( _seleccion != 0) ;
                     }
                 } while (seleccion != 0);
             }

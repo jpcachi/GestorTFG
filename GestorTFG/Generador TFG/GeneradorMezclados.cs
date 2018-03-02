@@ -36,6 +36,7 @@ namespace Generador_TFG
             string nombre;
             string apellido1;
             string apellido2;
+            DateTime fechaInicioDate = DateTime.Today;
             List<string> ary = new List<string>();
             // titulo
             ary.Add(titulo[rand.Next(titulo.Length)]);
@@ -44,7 +45,9 @@ namespace Generador_TFG
             ary.Add(descripcion[rand.Next(descripcion.Length)]);
 
             //fecharegistro
-            ary.Add(GeneradorFechas.GenerarFecha());
+            string fechaRegistro = GeneradorFechas.GenerarFecha();
+            DateTime fechaRegistroDate = DateTime.Parse(fechaRegistro);
+            ary.Add(fechaRegistro);
 
             // profesor
             //nombre
@@ -99,7 +102,9 @@ namespace Generador_TFG
                 ary.Add(char.ConvertFromUtf32(rand.Next(0x0061, 0x007A)) + char.ConvertFromUtf32(rand.Next(0x0061, 0x007A)) + rand.Next(10000).ToString());
 
                 //fechadeinicio
-                ary.Add(GeneradorFechas.GenerarFecha());
+                string fechaInicio = GeneradorFechas.GenerarFecha(fechaRegistroDate.Year, fechaRegistroDate.Month, fechaRegistroDate.Day);
+                fechaInicioDate = DateTime.Parse(fechaInicio);
+                ary.Add(fechaInicio);
             }
 
             if (opcion == 1 || opcion == 2)
@@ -116,7 +121,7 @@ namespace Generador_TFG
             } else
             {
                 //fechadefensa
-                ary.Add(GeneradorFechas.GenerarFecha());
+                ary.Add(GeneradorFechas.GenerarFecha(fechaInicioDate.Year, fechaInicioDate.Month, fechaInicioDate.Day));
 
                 //convocatoria
                 ary.Add(convocatoria[rand.Next(convocatoria.Length)]);

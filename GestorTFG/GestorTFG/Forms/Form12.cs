@@ -26,7 +26,7 @@ namespace GestorTFG
             InitializeComponent();
             titulo.Text = mProyecto.getMTFG.Titulo;
             descripcion.Text = mProyecto.getMTFG.Descripcion;
-            registro.Text = mProyecto.getMTFG.Fecha;
+            registro.Text = mProyecto.getMTFG.Fecha.Date.ToShortDateString();
             if (mProyecto.Asignado)
             {
                 alumno_label.Visible = true;
@@ -40,7 +40,7 @@ namespace GestorTFG
                 copiarFechaInicio.Visible = true;
                 nombreCompletoAlumno.Text = mProyecto.Alumno.Nombre + " " + mProyecto.Alumno.PrimerApellido + " " + mProyecto.Alumno.SegundoApellido;
                 matriculaAlumno.Text = mProyecto.Alumno.Matricula;
-                fechaAlumno.Text = mProyecto.Alumno.FechaInicio;
+                fechaAlumno.Text = mProyecto.Alumno.FechaInicio.Date.ToShortDateString();
                 if (mProyecto.getMTFG.Finalizado)
                 {
                     estado.Text = "Finalizado";
@@ -53,7 +53,7 @@ namespace GestorTFG
                     calificacion_label.Visible = true;
                     Calificacion.Visible = true;
                     copiarNota.Visible = true;
-                    fechaDefensa.Text = mProyecto.getMTFG.getMFinalizado.Defensa;
+                    fechaDefensa.Text = mProyecto.getMTFG.getMFinalizado.Defensa.Date.ToShortDateString();
                     Convocatoria.Text = mProyecto.getMTFG.getMFinalizado.Convocatoria;
                     Calificacion.Text = mProyecto.getMTFG.getMFinalizado.Nota.ToString();
                 }

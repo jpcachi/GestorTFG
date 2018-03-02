@@ -62,21 +62,21 @@ namespace GestorTFG
                     switch (index1)
                     {
                         case 1: //fecha superior a
-                            if (date1.Value.Date >= DateTime.Parse(MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[3][i].getMTFG.Fecha).Date)
+                            if (date1.Value.Date >= /*DateTime.Parse(*/MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[3][i].getMTFG.Fecha.Date)
                             {
                                 MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[3].Remove(MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[3][i]);
                                 eliminado = true;
                             }
                             break;
                         case 2: //fecha inferior a
-                            if (date1.Value.Date <= DateTime.Parse(MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[3][i].getMTFG.Fecha).Date)
+                            if (date1.Value.Date <= /*DateTime.Parse(*/MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[3][i].getMTFG.Fecha.Date)
                             {
                                 MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[3].Remove(MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[3][i]);
                                 eliminado = true;
                             }
                             break;
                         case 3: // fecha igual a
-                            if (date1.Text != MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[3][i].getMTFG.Fecha)
+                            if (date1.Value != MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[3][i].getMTFG.Fecha)
                             {
                                 MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[3].Remove(MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[3][i]);
                                 eliminado = true;
@@ -91,21 +91,21 @@ namespace GestorTFG
                             switch (index2)
                             {
                                 case 1: //fecha superior a
-                                    if (date2.Value.Date >= DateTime.Parse(MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[3][i].Alumno.FechaInicio).Date)
+                                    if (date2.Value.Date >= /*DateTime.Parse(*/MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[3][i].Alumno.FechaInicio.Date)
                                     {
                                         MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[3].Remove(MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[3][i]);
                                         eliminado = true;
                                     }
                                     break;
                                 case 2: //fecha inferior a
-                                    if (date2.Value.Date <= DateTime.Parse(MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[3][i].Alumno.FechaInicio).Date)
+                                    if (date2.Value.Date <= /*DateTime.Parse(*/MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[3][i].Alumno.FechaInicio.Date)
                                     {
                                         MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[3].Remove(MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[3][i]);
                                         eliminado = true;
                                     }
                                     break;
                                 case 3: // fecha igual a
-                                    if (date2.Text != MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[3][i].Alumno.FechaInicio)
+                                    if (date2.Value != MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[3][i].Alumno.FechaInicio)
                                     {
                                         MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[3].Remove(MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[3][i]);
                                         eliminado = true;
@@ -119,21 +119,21 @@ namespace GestorTFG
                                     switch (index3)
                                     {
                                         case 1: //fecha superior a
-                                            if (date3.Value.Date >= DateTime.Parse(MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[3][i].getMTFG.getMFinalizado.Defensa).Date)
+                                            if (date3.Value.Date >= /*DateTime.Parse(*/MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[3][i].getMTFG.getMFinalizado.Defensa.Date)
                                             {
                                                 MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[3].Remove(MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[3][i]);
                                                 eliminado = true;
                                             }
                                             break;
                                         case 2: //fecha inferior a
-                                            if (date3.Value.Date <= DateTime.Parse(MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[3][i].getMTFG.getMFinalizado.Defensa).Date)
+                                            if (date3.Value.Date <= /*DateTime.Parse(*/MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[3][i].getMTFG.getMFinalizado.Defensa.Date)
                                             {
                                                 MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[3].Remove(MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[3][i]);
                                                 eliminado = true;
                                             }
                                             break;
                                         case 3: // fecha igual a
-                                            if (date3.Text != MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[3][i].getMTFG.getMFinalizado.Defensa)
+                                            if (date3.Value != MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[3][i].getMTFG.getMFinalizado.Defensa)
                                             {
                                                 MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[3].Remove(MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[3][i]);
                                                 eliminado = true;

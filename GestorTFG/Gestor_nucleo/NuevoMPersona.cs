@@ -1,4 +1,6 @@
-﻿namespace GestorTFG
+﻿using System;
+
+namespace GestorTFG
 {
     public class NuevoMPersona
     {
@@ -13,6 +15,11 @@
         /// <param name="mProyecto"></param>
         /// <returns></returns>
         public MAlumno CrearAlumno(string nombre, string apellido1, string apellido2, string matricula, string fechaInicio, MProyecto mProyecto)
+        {
+            return new MAlumno(nombre, apellido1, apellido2, matricula, fechaInicio, mProyecto);
+        }
+
+        public MAlumno CrearAlumno(string nombre, string apellido1, string apellido2, string matricula, DateTime fechaInicio, MProyecto mProyecto)
         {
             return new MAlumno(nombre, apellido1, apellido2, matricula, fechaInicio, mProyecto);
         }

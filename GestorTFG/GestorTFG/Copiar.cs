@@ -75,7 +75,7 @@ namespace GestorTFG
 
         public void fechaDeRegistroToolStripMenuItem_Click(int indiceSeleccionado, TipoLista indice, object sender, EventArgs e)
         {
-            Clipboard.SetText(MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)indice][indiceSeleccionado].getMTFG.Fecha);
+            Clipboard.SetText(MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)indice][indiceSeleccionado].getMTFG.Fecha.Date.ToShortDateString());
         }
 
         public void nombreDelAlumnoToolStripMenuItem_Click(int indiceSeleccionado, TipoLista indice, object sender, EventArgs e)
@@ -100,12 +100,12 @@ namespace GestorTFG
 
         public void fechaDeInicioToolStripMenuItem_Click(int indiceSeleccionado, TipoLista indice, object sender, EventArgs e)
         {
-            Clipboard.SetText(MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)indice][indiceSeleccionado].Alumno.FechaInicio);
+            Clipboard.SetText(MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)indice][indiceSeleccionado].Alumno.FechaInicio.Date.ToShortDateString());
         }
 
         public void fechaDeDefensaToolStripMenuItem_Click(int indiceSeleccionado, TipoLista indice, object sender, EventArgs e)
         {
-            Clipboard.SetText(MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)indice][indiceSeleccionado].getMTFG.getMFinalizado.Defensa);
+            Clipboard.SetText(MListaProyectos.getMListaProyectos.getMProyectos.Proyectos[(int)indice][indiceSeleccionado].getMTFG.getMFinalizado.Defensa.Date.ToShortDateString());
         }
 
         public void convocatoriaToolStripMenuItem_Click(int indiceSeleccionado, TipoLista indice, object sender, EventArgs e)
